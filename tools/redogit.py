@@ -2,9 +2,10 @@
 """Local REDOGIT contract inspector and executor.
 
 Usage:
-  python tools/redogit.py status [REPOSITORY_ROOT]
-  python tools/redogit.py check  [REPOSITORY_ROOT]
-  python tools/redogit.py run    [REPOSITORY_ROOT]
+  python tools/redogit.py status        [REPOSITORY_ROOT]
+  python tools/redogit.py check         [REPOSITORY_ROOT]
+  python tools/redogit.py run           [REPOSITORY_ROOT]
+  python tools/redogit.py public-status [PROFILE_ROOT]
 """
 
 from __future__ import annotations
@@ -30,14 +31,21 @@ EXPECTED_HISTORY_POLICY = {
 }
 
 
-def load_contract(root: Path) -> dict[str, Any]:
-    path = root / "redogit.json"
+def load_json_object(path: Path) -> dict[str, Any]:
     if not path.is_file():
-        raise FileNotFoundError(f"REDOGIT contract not found: {path}")
+        raise FileNotFoundError(path)
     value = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(value, dict):
-        raise ValueError("redogit.json must contain a JSON object")
+        raise ValueError(f"{path.name} must contain a JSON object")
     return value
+
+
+def load_contract(root: Path) -> dict[str, Any]:
+    path = root / "redogit.json"
+    try:
+        return load_json_object(path)
+    except FileNotFoundError as exc:
+        raise FileNotFoundError(f"REDOGIT contract not found: {path}") from exc
 
 
 def validate_contract(root: Path, contract: dict[str, Any]) -> None:
@@ -115,14 +123,52 @@ def execute_declared(root: Path, contract: dict[str, Any]) -> None:
         print(f"PASS {phase}")
 
 
+def load_public_status(root: Path) -> dict[str, Any]:
+    status = load_json_object(root / "PUBLIC_STATUS.json")
+    if status.get("schema") != "redogit/public-status/v1":
+        raise ValueError("PUBLIC_STATUS.json schema must be redogit/public-status/v1")
+    if status.get("scope") != "public repositories only":
+        raise ValueError("PUBLIC_STATUS.json must be explicitly public-only")
+    if status.get("public_contracts_green") is not True:
+        raise ValueError("public REDOGIT contracts are not declared green")
+    repositories = status.get("repositories")
+    if not isinstance(repositories, list) or not repositories:
+        raise ValueError("PUBLIC_STATUS.json repositories must be a non-empty list")
+    names: set[str] = set()
+    for entry in repositories:
+        if not isinstance(entry, dict):
+            raise ValueError("every public status entry must be an object")
+        name = entry.get("repository")
+        if not isinstance(name, str) or not name.startswith("redogit/"):
+            raise ValueError(f"invalid public repository name: {name!r}")
+        if name in names:
+            raise ValueError(f"duplicate public repository: {name}")
+        names.add(name)
+    return status
+
+
+def print_public_status(status: dict[str, Any]) -> None:
+    print(f"snapshot: {status.get('snapshot_date', 'unknown')}")
+    print(f"scope:    {status['scope']}")
+    print("public contracts: GREEN")
+    for entry in status["repositories"]:
+        name = entry["repository"]
+        contract_status = entry.get("contract_status", "unknown")
+        print(f"  - {name}: {contract_status}")
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Inspect or execute a REDOGIT repository contract.")
-    parser.add_argument("command", choices=("status", "check", "run"))
-    parser.add_argument("root", nargs="?", default=".", help="Repository root; defaults to the current directory.")
+    parser = argparse.ArgumentParser(description="Inspect or execute REDOGIT contracts and public status.")
+    parser.add_argument("command", choices=("status", "check", "run", "public-status"))
+    parser.add_argument("root", nargs="?", default=".", help="Repository/profile root; defaults to the current directory.")
     args = parser.parse_args()
 
     root = Path(args.root).resolve()
     try:
+        if args.command == "public-status":
+            print_public_status(load_public_status(root))
+            return 0
+
         contract = load_contract(root)
         validate_contract(root, contract)
 
