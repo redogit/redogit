@@ -10,17 +10,19 @@ See **[REDOGIT.md](REDOGIT.md)** for the rule. Repositories can expose their cur
 
 ## Use it locally
 
-From a clone of this profile repository, the small Python CLI can inspect any local REDOGIT repository:
+From a clone of this profile repository, the small Python CLI can inspect a local REDOGIT repository or the public account snapshot:
 
 ```bash
 python tools/redogit.py status /path/to/repository
 python tools/redogit.py check /path/to/repository
 python tools/redogit.py run /path/to/repository
+python tools/redogit.py public-status .
 ```
 
 - `status` reads the current successor, retained predecessors, boundary, and any recorded blocker.
 - `check` validates the REDOGIT invariants without executing project code.
 - `run` validates the contract and then executes its declared build and verification commands.
+- `public-status` reads the gated [`PUBLIC_STATUS.json`](PUBLIC_STATUS.json) snapshot. It does not enumerate GitHub and contains no private repository identities.
 
 GitHub repositories can use the shared reusable workflow `.github/workflows/verify-redogit.yml` where repository policy permits it. Current shared-workflow callers pin a tested commit rather than following a moving branch implicitly.
 
@@ -43,4 +45,4 @@ The original text and code of this homepage are free to use, copy, modify, and s
 
 ---
 
-[Standalone homepage](index.html) · [REDOGIT contract](redogit.json) · [REDOGIT schema](REDOGIT.schema.json) · [Publishing instructions](PUBLISHING.md) · [Browse repositories](https://github.com/redogit?tab=repositories)
+[Standalone homepage](index.html) · [Public verification status](PUBLIC_STATUS.json) · [REDOGIT contract](redogit.json) · [REDOGIT schema](REDOGIT.schema.json) · [Publishing instructions](PUBLISHING.md) · [Browse repositories](https://github.com/redogit?tab=repositories)
