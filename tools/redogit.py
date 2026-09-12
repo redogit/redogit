@@ -31,6 +31,10 @@ EXPECTED_HISTORY_POLICY = {
 }
 
 
+def is_nonempty_string(value: object) -> bool:
+    return isinstance(value, str) and len(value) > 0
+
+
 def load_json_object(path: Path) -> dict[str, Any]:
     if not path.is_file():
         raise FileNotFoundError(path)
@@ -48,25 +52,42 @@ def load_contract(root: Path) -> dict[str, Any]:
         raise FileNotFoundError(f"REDOGIT contract not found: {path}") from exc
 
 
+def validate_optional_nonempty_string(value: object, field: str) -> None:
+    if value is not None and not is_nonempty_string(value):
+        raise ValueError(f"{field} must be null or a non-empty string")
+
+
 def validate_contract(root: Path, contract: dict[str, Any]) -> None:
     if contract.get("schema") != "redogit/v1":
         raise ValueError("schema must be redogit/v1")
 
     repository = contract.get("repository")
-    if not isinstance(repository, str) or not repository:
+    if not is_nonempty_string(repository):
         raise ValueError("repository is required")
 
     current = contract.get("current")
     if not isinstance(current, dict):
         raise ValueError("current object is required")
-    if not isinstance(current.get("id"), str) or not current["id"]:
+    if not is_nonempty_string(current.get("id")):
         raise ValueError("current.id is required")
-    if current.get("status") not in ALLOWED_STATUSES:
-        raise ValueError(f"unsupported current.status: {current.get('status')!r}")
+
+    status = current.get("status")
+    if status not in ALLOWED_STATUSES:
+        raise ValueError(f"unsupported current.status: {status!r}")
 
     current_path = current.get("path")
+    validate_optional_nonempty_string(current_path, "current.path")
     if current_path not in (None, ".") and not (root / str(current_path)).exists():
         raise ValueError(f"current.path does not exist: {current_path}")
+
+    validate_optional_nonempty_string(current.get("build"), "current.build")
+    validate_optional_nonempty_string(current.get("verify"), "current.verify")
+
+    blocker = current.get("external_blocker")
+    if blocker is not None and not is_nonempty_string(blocker):
+        raise ValueError("current.external_blocker must be a non-empty string when present")
+    if status == "current-with-external-blocker" and not is_nonempty_string(blocker):
+        raise ValueError("current-with-external-blocker requires current.external_blocker")
 
     if contract.get("history_policy") != EXPECTED_HISTORY_POLICY:
         raise ValueError("history_policy violates REDOGIT invariants")
@@ -74,16 +95,23 @@ def validate_contract(root: Path, contract: dict[str, Any]) -> None:
     boundary = contract.get("boundary")
     if not isinstance(boundary, dict):
         raise ValueError("boundary object is required")
-    if not isinstance(boundary.get("owns"), list):
-        raise ValueError("boundary.owns must be a list")
-    if not isinstance(boundary.get("does_not_own"), list):
-        raise ValueError("boundary.does_not_own must be a list")
+    for field in ("owns", "does_not_own"):
+        values = boundary.get(field)
+        if not isinstance(values, list):
+            raise ValueError(f"boundary.{field} must be a list")
+        if any(not is_nonempty_string(value) for value in values):
+            raise ValueError(f"boundary.{field} entries must be non-empty strings")
 
     predecessors = contract.get("predecessors", [])
     if not isinstance(predecessors, list):
         raise ValueError("predecessors must be a list")
     for predecessor in predecessors:
-        if not isinstance(predecessor, dict) or predecessor.get("retained") is not True:
+        if not isinstance(predecessor, dict):
+            raise ValueError("every predecessor must be an object")
+        if not is_nonempty_string(predecessor.get("id")):
+            raise ValueError("every predecessor.id must be a non-empty string")
+        validate_optional_nonempty_string(predecessor.get("path"), "predecessor.path")
+        if predecessor.get("retained") is not True:
             raise ValueError("every declared predecessor must be retained")
 
 
