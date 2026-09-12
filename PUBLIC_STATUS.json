@@ -1,0 +1,79 @@
+{
+  "schema": "redogit/public-status/v1",
+  "snapshot_date": "2026-09-12",
+  "scope": "public repositories only",
+  "authority": "Each repository's own redogit.json remains authoritative for its current contract. This file is a public evidence snapshot and intentionally contains no private repository identities.",
+  "public_contracts_green": true,
+  "repositories": [
+    {
+      "repository": "redogit/redogit",
+      "role": "REDOGIT profile, schema, local CLI, and reusable verifier",
+      "contract_status": "current",
+      "verification": {
+        "workflow": "REDOGIT profile",
+        "run": 34719754539,
+        "conclusion": "success",
+        "checks": ["contract", "schema", "homepage", "local CLI"]
+      }
+    },
+    {
+      "repository": "redogit/conscience64",
+      "role": "privacy-safe static research and Cross-Carrier / Float64 surface",
+      "contract_status": "current",
+      "verification": {
+        "workflow": "REDOGIT local verification",
+        "run": 34719651062,
+        "conclusion": "success",
+        "transport": "exact public GITHUB_SHA materialized with Git; no external Action dependency",
+        "checks": ["REDOGIT self-check", "repository-surface byte counts", "repository-surface SHA-256 hashes"]
+      },
+      "manifest_distinction": {
+        "full_generated_package": "research/cross-carrier/2026-09-12/v2.2/manifest.json",
+        "directly_committed_surface": "research/cross-carrier/2026-09-12/v2.2/repository_manifest.json"
+      }
+    },
+    {
+      "repository": "redogit/MauiBrickBreak",
+      "role": "current reusable game core successor",
+      "contract_status": "current",
+      "current_id": "redogit-2026-v2",
+      "verification": {
+        "workflow": "REDOGIT successor",
+        "run": 34699676596,
+        "conclusion": "success",
+        "checks": ["REDOGIT contract", "REDOGIT.slnx Release build", "v2 self-check"]
+      }
+    },
+    {
+      "repository": "redogit/FirstNeuralNetwork",
+      "role": "current reusable logistic-neuron successor",
+      "contract_status": "current",
+      "current_id": "redogit-2026-v2",
+      "verification": {
+        "workflow": "REDOGIT successor",
+        "run": 34699670019,
+        "conclusion": "success",
+        "checks": ["REDOGIT contract", "REDOGIT.slnx Release build", "v2 self-check"]
+      }
+    },
+    {
+      "repository": "redogit/orbit",
+      "role": "upstream-derived Orbit Engine fork",
+      "contract_status": "provenance-boundary",
+      "verification": {
+        "provenance_contract": {
+          "run": 34719292772,
+          "conclusion": "success"
+        },
+        "verified_predecessor_baseline": {
+          "windows_run": 34719088760,
+          "windows_conclusion": "success",
+          "macos_run": 34719094126,
+          "macos_conclusion": "success",
+          "checks": ["restore", "full multi-target engine build", "test build", "tests", "pack"]
+        }
+      },
+      "boundary": "Upstream authorship remains upstream; local repair deltas remain local; unrelated Orbit Lab research remains outside this repository."
+    }
+  ]
+}
