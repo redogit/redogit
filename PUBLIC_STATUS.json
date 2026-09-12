@@ -4,6 +4,12 @@
   "scope": "public repositories only",
   "authority": "Each repository's own redogit.json remains authoritative for its current contract. This file is a public evidence snapshot and intentionally contains no private repository identities.",
   "public_contracts_green": true,
+  "reusable_verifier": {
+    "tested_commit": "dc2575960b1ac2fbe4b537055be0673cc8146757",
+    "profile_test_run": 34720119756,
+    "conclusion": "success",
+    "invariants": ["retained predecessors are retained", "declared strings are nonempty", "external-blocker status carries a blocker explanation"]
+  },
   "repositories": [
     {
       "repository": "redogit/redogit",
@@ -11,9 +17,9 @@
       "contract_status": "current",
       "verification": {
         "workflow": "REDOGIT profile",
-        "run": 34719754539,
+        "run": 34720119756,
         "conclusion": "success",
-        "checks": ["contract", "schema", "homepage", "local CLI"]
+        "checks": ["contract", "schema", "public status", "homepage", "local CLI"]
       }
     },
     {
@@ -22,7 +28,7 @@
       "contract_status": "current",
       "verification": {
         "workflow": "REDOGIT local verification",
-        "run": 34719651062,
+        "run": 34719913887,
         "conclusion": "success",
         "transport": "exact public GITHUB_SHA materialized with Git; no external Action dependency",
         "checks": ["REDOGIT self-check", "repository-surface byte counts", "repository-surface SHA-256 hashes"]
@@ -39,8 +45,9 @@
       "current_id": "redogit-2026-v2",
       "verification": {
         "workflow": "REDOGIT successor",
-        "run": 34699676596,
+        "run": 34720160081,
         "conclusion": "success",
+        "verifier_commit": "dc2575960b1ac2fbe4b537055be0673cc8146757",
         "checks": ["REDOGIT contract", "REDOGIT.slnx Release build", "v2 self-check"]
       }
     },
@@ -51,8 +58,9 @@
       "current_id": "redogit-2026-v2",
       "verification": {
         "workflow": "REDOGIT successor",
-        "run": 34699670019,
+        "run": 34720166511,
         "conclusion": "success",
+        "verifier_commit": "dc2575960b1ac2fbe4b537055be0673cc8146757",
         "checks": ["REDOGIT contract", "REDOGIT.slnx Release build", "v2 self-check"]
       }
     },
