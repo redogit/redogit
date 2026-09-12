@@ -8,6 +8,7 @@ on:
       - 'REDOGIT.md'
       - 'REDOGIT.schema.json'
       - 'redogit.json'
+      - 'PUBLIC_STATUS.json'
       - 'index.html'
       - 'tools/redogit.py'
       - '.github/workflows/redogit-profile.yml'
@@ -18,6 +19,7 @@ on:
       - 'REDOGIT.md'
       - 'REDOGIT.schema.json'
       - 'redogit.json'
+      - 'PUBLIC_STATUS.json'
       - 'index.html'
       - 'tools/redogit.py'
       - '.github/workflows/redogit-profile.yml'
@@ -35,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Check schema, homepage, and local CLI
+      - name: Check schema, public status, homepage, and local CLI
         run: |
           python3 -m py_compile tools/redogit.py
           python3 tools/redogit.py check .
@@ -48,9 +50,34 @@ jobs:
           schema = json.loads(Path('REDOGIT.schema.json').read_text(encoding='utf-8'))
           assert schema['title'] == 'REDOGIT repository contract'
 
+          status = json.loads(Path('PUBLIC_STATUS.json').read_text(encoding='utf-8'))
+          assert status['schema'] == 'redogit/public-status/v1'
+          assert status['scope'] == 'public repositories only'
+          assert status['public_contracts_green'] is True
+
+          expected_public = {
+              'redogit/redogit',
+              'redogit/conscience64',
+              'redogit/MauiBrickBreak',
+              'redogit/FirstNeuralNetwork',
+              'redogit/orbit',
+          }
+          entries = {entry['repository']: entry for entry in status['repositories']}
+          assert set(entries) == expected_public
+
+          for name, entry in entries.items():
+              verification = entry['verification']
+              if name == 'redogit/orbit':
+                  assert verification['provenance_contract']['conclusion'] == 'success'
+                  baseline = verification['verified_predecessor_baseline']
+                  assert baseline['windows_conclusion'] == 'success'
+                  assert baseline['macos_conclusion'] == 'success'
+              else:
+                  assert verification['conclusion'] == 'success'
+
           class Parser(HTMLParser):
               pass
 
           Parser().feed(Path('index.html').read_text(encoding='utf-8'))
-          print('PASS - REDOGIT schema and homepage parse')
+          print('PASS - REDOGIT schema, public status, homepage, and public/private boundary')
           PY
