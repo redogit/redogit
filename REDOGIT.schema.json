@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/redogit/redogit/main/REDOGIT.schema.json",
+  "title": "REDOGIT repository contract",
+  "type": "object",
+  "required": ["schema", "repository", "current", "history_policy", "boundary"],
+  "properties": {
+    "schema": { "const": "redogit/v1" },
+    "repository": { "type": "string", "minLength": 1 },
+    "current": {
+      "type": "object",
+      "required": ["id", "status"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["current", "current-with-external-blocker", "provenance-boundary"] },
+        "path": { "type": ["string", "null"] },
+        "build": { "type": ["string", "null"] },
+        "verify": { "type": ["string", "null"] }
+      },
+      "additionalProperties": true
+    },
+    "predecessors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "retained"],
+        "properties": {
+          "id": { "type": "string" },
+          "path": { "type": ["string", "null"] },
+          "retained": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "history_policy": {
+      "type": "object",
+      "required": ["preserve_predecessors", "preserve_failures", "rewrite_history"],
+      "properties": {
+        "preserve_predecessors": { "const": true },
+        "preserve_failures": { "const": true },
+        "rewrite_history": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "boundary": {
+      "type": "object",
+      "required": ["owns", "does_not_own"],
+      "properties": {
+        "owns": { "type": "array", "items": { "type": "string" } },
+        "does_not_own": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}
