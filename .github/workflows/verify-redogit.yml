@@ -25,24 +25,42 @@ jobs:
           import json
           from pathlib import Path
 
+          def nonempty(value):
+              return isinstance(value, str) and len(value) > 0
+
+          def optional_nonempty(value, field):
+              assert value is None or nonempty(value), f'{field} must be null or a non-empty string'
+
           path = Path('redogit.json')
           contract = json.loads(path.read_text(encoding='utf-8'))
 
           assert contract.get('schema') == 'redogit/v1', 'schema must be redogit/v1'
-          assert isinstance(contract.get('repository'), str) and contract['repository'], 'repository is required'
+          assert nonempty(contract.get('repository')), 'repository is required'
 
           current = contract.get('current')
           assert isinstance(current, dict), 'current object is required'
-          assert isinstance(current.get('id'), str) and current['id'], 'current.id is required'
-          assert current.get('status') in {
+          assert nonempty(current.get('id')), 'current.id is required'
+
+          status = current.get('status')
+          assert status in {
               'current',
               'current-with-external-blocker',
               'provenance-boundary',
           }, 'unsupported current.status'
 
           current_path = current.get('path')
+          optional_nonempty(current_path, 'current.path')
           if current_path not in (None, '.'):
               assert Path(current_path).exists(), f'current.path does not exist: {current_path}'
+
+          optional_nonempty(current.get('build'), 'current.build')
+          optional_nonempty(current.get('verify'), 'current.verify')
+
+          blocker = current.get('external_blocker')
+          if blocker is not None:
+              assert nonempty(blocker), 'current.external_blocker must be a non-empty string when present'
+          if status == 'current-with-external-blocker':
+              assert nonempty(blocker), 'current-with-external-blocker requires current.external_blocker'
 
           history = contract.get('history_policy')
           assert history == {
@@ -53,15 +71,20 @@ jobs:
 
           boundary = contract.get('boundary')
           assert isinstance(boundary, dict), 'boundary is required'
-          assert isinstance(boundary.get('owns'), list), 'boundary.owns must be a list'
-          assert isinstance(boundary.get('does_not_own'), list), 'boundary.does_not_own must be a list'
+          for field in ('owns', 'does_not_own'):
+              values = boundary.get(field)
+              assert isinstance(values, list), f'boundary.{field} must be a list'
+              assert all(nonempty(value) for value in values), f'boundary.{field} entries must be non-empty strings'
 
           predecessors = contract.get('predecessors', [])
           assert isinstance(predecessors, list), 'predecessors must be a list'
           for predecessor in predecessors:
+              assert isinstance(predecessor, dict), 'every predecessor must be an object'
+              assert nonempty(predecessor.get('id')), 'every predecessor.id must be a non-empty string'
+              optional_nonempty(predecessor.get('path'), 'predecessor.path')
               assert predecessor.get('retained') is True, 'every declared predecessor must be retained'
 
-          print(f"PASS contract {contract['repository']} -> {current['id']} ({current['status']})")
+          print(f"PASS contract {contract['repository']} -> {current['id']} ({status})")
           PY
 
       - name: Set up .NET
