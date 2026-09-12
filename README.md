@@ -22,20 +22,20 @@ python tools/redogit.py run /path/to/repository
 - `check` validates the REDOGIT invariants without executing project code.
 - `run` validates the contract and then executes its declared build and verification commands.
 
-GitHub repositories can use the shared reusable workflow `.github/workflows/verify-redogit.yml`. Current callers pin a tested commit rather than following a moving branch implicitly.
+GitHub repositories can use the shared reusable workflow `.github/workflows/verify-redogit.yml` where repository policy permits it. Current shared-workflow callers pin a tested commit rather than following a moving branch implicitly.
 
 ## Current public projects
 
-- **[Conscience64](https://github.com/redogit/conscience64)** — Privacy-safe static research space and Cross-Carrier / Float64 work. Its current contract favors compact source, provenance, manifests, regeneration, and runner-independent integrity checks. A fresh reusable-workflow caller reproduced the repository's zero-job `startup_failure`, so that external scheduling blocker remains recorded instead of being hidden behind a false green check.
+- **[Conscience64](https://github.com/redogit/conscience64)** — Privacy-safe static research space and Cross-Carrier / Float64 work. Its compact committed v2.2 surface is now green in GitHub-hosted CI: the workflow materializes the exact public commit with Git, runs the REDOGIT self-check, and verifies byte counts and SHA-256 identities from a repository-surface manifest. The original full-package manifest remains separately preserved instead of being rewritten to match the compact repository. Earlier external Action/reusable-workflow startup failures remain historical evidence rather than a current blocker.
 - **[MauiBrickBreak](https://github.com/redogit/MauiBrickBreak)** — The .NET 6 MAUI/Orbit game remains as history. Current v2 is a reusable .NET 10 game core plus a separate verifier for wall, paddle, block, and ball-loss consequences. Its root solution and pinned shared REDOGIT gate are green.
 - **[FirstNeuralNetwork](https://github.com/redogit/FirstNeuralNetwork)** — The original C# experiment remains as history. Current v2 is a reusable deterministic .NET 10 logistic-neuron library plus a separate OR-classification verifier. Its root solution and pinned shared REDOGIT gate are green; earlier ACDN successor work remains preserved too.
-- **[Orbit Engine](https://github.com/redogit/orbit)** — My upstream-derived fork of [bijington/orbit](https://github.com/bijington/orbit). Its REDOGIT provenance contract is green and keeps upstream authorship separate. The inherited .NET 6 MAUI predecessor baseline is now reconstructed and verified on both Windows and macOS: SDK 6.0.428, surviving MAUI 6.0.553 manifests, MAUI Graphics 6.0.501, Android API 31, JDK 11 for the inherited build, full multi-target engine build, tests, and pack all pass. The repair remains an explicit local delta rather than a rewrite of upstream history.
+- **[Orbit Engine](https://github.com/redogit/orbit)** — My upstream-derived fork of [bijington/orbit](https://github.com/bijington/orbit). Its REDOGIT provenance contract is green and keeps upstream authorship separate. The inherited .NET 6 MAUI predecessor baseline is reconstructed and verified on both Windows and macOS: SDK 6.0.428, surviving MAUI 6.0.553 manifests, MAUI Graphics 6.0.501, Android API 31, JDK 11 for the inherited build, full multi-target engine build, tests, and pack all pass. The repair remains an explicit local delta rather than a rewrite of upstream history.
 
 ## The current pattern
 
 `actual predecessor → bounded difference → candidate successor → declared check → PASS → current successor → retained lineage → next bounded difference`
 
-The declaration of “what is current” is part of verification too. For current C# successors, a small caller invokes the pinned shared workflow; that workflow reads `redogit.json`, validates the invariant, builds the declared root solution, and executes the declared verifier.
+The declaration of “what is current” is part of verification too. Current code successors either invoke the pinned shared workflow or, where an external Action path is unavailable, execute the same invariant through a repository-local verifiable transport.
 
 ## Free Use!
 
