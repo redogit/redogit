@@ -13,10 +13,35 @@
       "properties": {
         "id": { "type": "string", "minLength": 1 },
         "status": { "enum": ["current", "current-with-external-blocker", "provenance-boundary"] },
-        "path": { "type": ["string", "null"] },
-        "build": { "type": ["string", "null"] },
-        "verify": { "type": ["string", "null"] }
+        "path": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "minLength": 1 }
+          ]
+        },
+        "build": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "minLength": 1 }
+          ]
+        },
+        "verify": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "minLength": 1 }
+          ]
+        },
+        "external_blocker": { "type": "string", "minLength": 1 }
       },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "status": { "const": "current-with-external-blocker" } },
+            "required": ["status"]
+          },
+          "then": { "required": ["external_blocker"] }
+        }
+      ],
       "additionalProperties": true
     },
     "predecessors": {
@@ -25,9 +50,14 @@
         "type": "object",
         "required": ["id", "retained"],
         "properties": {
-          "id": { "type": "string" },
-          "path": { "type": ["string", "null"] },
-          "retained": { "type": "boolean" }
+          "id": { "type": "string", "minLength": 1 },
+          "path": {
+            "oneOf": [
+              { "type": "null" },
+              { "type": "string", "minLength": 1 }
+            ]
+          },
+          "retained": { "const": true }
         },
         "additionalProperties": true
       }
@@ -46,8 +76,8 @@
       "type": "object",
       "required": ["owns", "does_not_own"],
       "properties": {
-        "owns": { "type": "array", "items": { "type": "string" } },
-        "does_not_own": { "type": "array", "items": { "type": "string" } }
+        "owns": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "does_not_own": { "type": "array", "items": { "type": "string", "minLength": 1 } }
       },
       "additionalProperties": false
     }
