@@ -1,0 +1,24 @@
+{
+  "$schema": "./REDOGIT.schema.json",
+  "schema": "redogit/v1",
+  "repository": "redogit/redogit",
+  "current": {
+    "id": "redogit-profile-rule-v1",
+    "status": "current",
+    "path": ".",
+    "build": null,
+    "verify": null
+  },
+  "predecessors": [
+    { "id": "about-me-profile", "path": null, "retained": true }
+  ],
+  "history_policy": {
+    "preserve_predecessors": true,
+    "preserve_failures": true,
+    "rewrite_history": false
+  },
+  "boundary": {
+    "owns": ["account-level REDOGIT rule", "profile README", "profile homepage", "REDOGIT contract schema"],
+    "does_not_own": ["linked project internals", "third-party project licensing", "upstream fork authorship"]
+  }
+}
