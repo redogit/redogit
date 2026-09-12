@@ -1,0 +1,54 @@
+name: REDOGIT profile
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'REDOGIT.md'
+      - 'REDOGIT.schema.json'
+      - 'redogit.json'
+      - 'index.html'
+      - '.github/workflows/redogit-profile.yml'
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'REDOGIT.md'
+      - 'REDOGIT.schema.json'
+      - 'redogit.json'
+      - 'index.html'
+      - '.github/workflows/redogit-profile.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check REDOGIT contract and homepage
+        run: |
+          python3 - <<'PY'
+          import json
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          schema = json.loads(Path('REDOGIT.schema.json').read_text(encoding='utf-8'))
+          contract = json.loads(Path('redogit.json').read_text(encoding='utf-8'))
+          assert schema['title'] == 'REDOGIT repository contract'
+          assert contract['schema'] == 'redogit/v1'
+          assert contract['repository'] == 'redogit/redogit'
+          history = contract['history_policy']
+          assert history == {
+              'preserve_predecessors': True,
+              'preserve_failures': True,
+              'rewrite_history': False,
+          }
+
+          class Parser(HTMLParser):
+              pass
+
+          Parser().feed(Path('index.html').read_text(encoding='utf-8'))
+          print('PASS - REDOGIT profile contract and HTML parse')
+          PY
