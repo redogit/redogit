@@ -42,6 +42,7 @@ jobs:
           python3 -m py_compile tools/redogit.py
           python3 tools/redogit.py check .
           python3 tools/redogit.py status .
+          python3 tools/redogit.py public-status .
           python3 - <<'PY'
           import json
           from html.parser import HTMLParser
@@ -79,5 +80,5 @@ jobs:
               pass
 
           Parser().feed(Path('index.html').read_text(encoding='utf-8'))
-          print('PASS - REDOGIT schema, public status, homepage, and public/private boundary')
+          print('PASS - REDOGIT schema, public status, homepage, CLI, and public/private boundary')
           PY
