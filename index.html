@@ -52,7 +52,7 @@
     .section-intro { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px 30px; margin-bottom: 27px; }
     h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); letter-spacing: -.045em; line-height: 1.2; margin: 0; }
     .section-intro p { color: var(--muted); margin: 0; }
-    .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
     .project { display: flex; flex-direction: column; padding: 25px; border: 1px solid var(--line); border-radius: 13px; background: #fbfaf6; }
     .project-type { margin: 0 0 30px; color: var(--muted); font-family: ui-monospace, "Cascadia Code", monospace; font-size: .8rem; }
     h3 { font-size: 1.24rem; margin: 0 0 12px; letter-spacing: -.025em; overflow-wrap: anywhere; }
@@ -124,22 +124,28 @@
       <div class="hero-art" aria-hidden="true"><div class="code-tile">&lt;/&gt;</div><span class="dot"></span><span class="dot small"></span></div>
     </section>
     <section class="projects" id="projects" aria-labelledby="projects-title">
-      <div class="section-intro"><h2 id="projects-title">Code and experiments</h2><p>Three places to start exploring.</p></div>
+      <div class="section-intro"><h2 id="projects-title">Code and experiments</h2><p>Four places to start exploring.</p></div>
       <div class="project-grid">
+        <article class="project" aria-labelledby="conscience-title">
+          <p class="project-type">01 / NEW REPOSITORY</p>
+          <h3 id="conscience-title">Conscience64</h3>
+          <p>A new repository for BlackHole Conscience64 LLM.</p>
+          <a href="https://github.com/redogit/conscience64">Explore Conscience64 <span aria-hidden="true">↗</span></a>
+        </article>
         <article class="project" aria-labelledby="brick-title">
-          <p class="project-type">01 / GAME</p>
+          <p class="project-type">02 / GAME</p>
           <h3 id="brick-title">MauiBrickBreak</h3>
           <p>A brick-breaker game built with .NET MAUI and C#.</p>
           <a href="https://github.com/redogit/MauiBrickBreak">Explore MauiBrickBreak <span aria-hidden="true">↗</span></a>
         </article>
         <article class="project" aria-labelledby="network-title">
-          <p class="project-type">02 / EXPERIMENT</p>
+          <p class="project-type">03 / EXPERIMENT</p>
           <h3 id="network-title">FirstNeuralNetwork</h3>
           <p>A C# neural-network project. Open the repository to explore its implementation.</p>
           <a href="https://github.com/redogit/FirstNeuralNetwork">Explore FirstNeuralNetwork <span aria-hidden="true">↗</span></a>
         </article>
         <article class="project" aria-labelledby="orbit-title">
-          <p class="project-type">03 / FORK</p>
+          <p class="project-type">04 / FORK</p>
           <h3 id="orbit-title">Orbit Engine</h3>
           <p>My fork of <a href="https://github.com/bijington/orbit">bijington/orbit</a>, a game engine and sample games built on .NET MAUI Graphics.</p>
           <a href="https://github.com/redogit/orbit">Explore the Orbit fork <span aria-hidden="true">↗</span></a>

@@ -6,6 +6,7 @@ Welcome to my corner of GitHub. My public repositories explore C#, .NET MAUI gam
 
 ### Code and experiments
 
+- **[Conscience64](https://github.com/redogit/conscience64)** — A new repository for BlackHole Conscience64 LLM.
 - **[MauiBrickBreak](https://github.com/redogit/MauiBrickBreak)** — A brick-breaker game built with .NET MAUI and C#.
 - **[FirstNeuralNetwork](https://github.com/redogit/FirstNeuralNetwork)** — A C# neural-network project.
 - **[Orbit Engine](https://github.com/redogit/orbit)** — My fork of [bijington/orbit](https://github.com/bijington/orbit), a game engine and sample games built on .NET MAUI Graphics.
