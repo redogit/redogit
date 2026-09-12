@@ -1,0 +1,93 @@
+name: Verify REDOGIT contract
+
+on:
+  workflow_call:
+    inputs:
+      dotnet-version:
+        description: Optional .NET SDK version required by the current successor.
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout caller repository
+        uses: actions/checkout@v7
+
+      - name: Validate REDOGIT contract
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('redogit.json')
+          contract = json.loads(path.read_text(encoding='utf-8'))
+
+          assert contract.get('schema') == 'redogit/v1', 'schema must be redogit/v1'
+          assert isinstance(contract.get('repository'), str) and contract['repository'], 'repository is required'
+
+          current = contract.get('current')
+          assert isinstance(current, dict), 'current object is required'
+          assert isinstance(current.get('id'), str) and current['id'], 'current.id is required'
+          assert current.get('status') in {
+              'current',
+              'current-with-external-blocker',
+              'provenance-boundary',
+          }, 'unsupported current.status'
+
+          current_path = current.get('path')
+          if current_path not in (None, '.'):
+              assert Path(current_path).exists(), f'current.path does not exist: {current_path}'
+
+          history = contract.get('history_policy')
+          assert history == {
+              'preserve_predecessors': True,
+              'preserve_failures': True,
+              'rewrite_history': False,
+          }, 'history policy violates REDOGIT invariants'
+
+          boundary = contract.get('boundary')
+          assert isinstance(boundary, dict), 'boundary is required'
+          assert isinstance(boundary.get('owns'), list), 'boundary.owns must be a list'
+          assert isinstance(boundary.get('does_not_own'), list), 'boundary.does_not_own must be a list'
+
+          predecessors = contract.get('predecessors', [])
+          assert isinstance(predecessors, list), 'predecessors must be a list'
+          for predecessor in predecessors:
+              assert predecessor.get('retained') is True, 'every declared predecessor must be retained'
+
+          print(f"PASS contract {contract['repository']} -> {current['id']} ({current['status']})")
+          PY
+
+      - name: Set up .NET
+        if: ${{ inputs.dotnet-version != '' }}
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: ${{ inputs.dotnet-version }}
+
+      - name: Execute declared build and verification
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          import shlex
+          import subprocess
+
+          contract = json.loads(Path('redogit.json').read_text(encoding='utf-8'))
+          current = contract['current']
+
+          for phase in ('build', 'verify'):
+              command = current.get(phase)
+              if not command:
+                  print(f'SKIP {phase}: no command declared')
+                  continue
+              argv = shlex.split(command)
+              print(f"RUN {phase}: {command}", flush=True)
+              subprocess.run(argv, check=True)
+              print(f'PASS {phase}')
+          PY
