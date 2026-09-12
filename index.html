@@ -7,17 +7,17 @@
   <title>redogit · redo it better</title>
   <style>
     :root{color-scheme:light;--paper:#f6f4ed;--ink:#19382e;--muted:#526259;--accent:#a83b28;--line:#c4cbc0;--card:#fbfaf6;--white:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.65}a{color:inherit;text-underline-offset:.2em}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}.skip{position:absolute;left:12px;top:12px;padding:10px 14px;background:var(--white);transform:translateY(-180%);z-index:10}.skip:focus{transform:none}header,footer{border-color:var(--line);border-style:solid;border-width:0 0 1px;padding:20px 0}.bar{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.brand{font-weight:850;font-size:1.3rem;text-decoration:none;letter-spacing:-.04em}nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}.hero{padding:88px 0 70px;max-width:850px}.eyebrow{margin:0 0 18px;color:var(--accent);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}h1{font-size:clamp(3.2rem,8vw,6.6rem);line-height:.95;letter-spacing:-.075em;margin:0 0 28px}.lede{font-size:clamp(1.15rem,2.5vw,1.45rem);max-width:720px;color:var(--muted);margin:0}.rule{margin:38px 0 0;padding:24px;border-left:5px solid var(--accent);background:var(--card);font-size:1.08rem}.rule strong{color:var(--ink)}section{padding:54px 0;border-top:1px solid var(--line)}h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.04em;margin:0 0 14px}.section-note{color:var(--muted);margin:0 0 28px}.loop{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:28px 0 0;counter-reset:redo}.loop li{counter-increment:redo;padding:20px;border:1px solid var(--line);background:var(--card);border-radius:10px}.loop li::before{content:counter(redo,decimal-leading-zero);display:block;font:700 .78rem ui-monospace,monospace;color:var(--accent);margin-bottom:16px}.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.project{padding:24px;border:1px solid var(--line);border-radius:12px;background:var(--card);display:flex;flex-direction:column}.project small{font:700 .75rem ui-monospace,monospace;color:var(--accent);letter-spacing:.08em}.project h3{font-size:1.3rem;margin:14px 0 8px}.project p{color:var(--muted);margin:0 0 20px}.project a{margin-top:auto;font-weight:700}.free{background:var(--ink);color:var(--paper);border-radius:14px;padding:34px;margin:54px 0}.free p{max-width:760px;margin:10px 0 0;color:#d5dfd9}footer{border-width:1px 0 0;color:var(--muted);font-size:.9rem}@media(max-width:760px){.loop,.projects{grid-template-columns:1fr 1fr}.hero{padding:58px 0}}@media(max-width:520px){.loop,.projects{grid-template-columns:1fr}nav ul{gap:14px}.wrap{width:min(100% - 28px,1080px)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.65}a{color:inherit;text-underline-offset:.2em}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}.skip{position:absolute;left:12px;top:12px;padding:10px 14px;background:var(--white);transform:translateY(-180%);z-index:10}.skip:focus{transform:none}header,footer{border-color:var(--line);border-style:solid;border-width:0 0 1px;padding:20px 0}.bar{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.brand{font-weight:850;font-size:1.3rem;text-decoration:none;letter-spacing:-.04em}nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}.hero{padding:88px 0 70px;max-width:850px}.eyebrow{margin:0 0 18px;color:var(--accent);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}h1{font-size:clamp(3.2rem,8vw,6.6rem);line-height:.95;letter-spacing:-.075em;margin:0 0 28px}.lede{font-size:clamp(1.15rem,2.5vw,1.45rem);max-width:720px;color:var(--muted);margin:0}.rule{margin:38px 0 0;padding:24px;border-left:5px solid var(--accent);background:var(--card);font-size:1.08rem}.rule strong{color:var(--ink)}section{padding:54px 0;border-top:1px solid var(--line)}h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.04em;margin:0 0 14px}.section-note{color:var(--muted);margin:0 0 28px}.loop{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:28px 0 0;counter-reset:redo}.loop li{counter-increment:redo;padding:20px;border:1px solid var(--line);background:var(--card);border-radius:10px}.loop li::before{content:counter(redo,decimal-leading-zero);display:block;font:700 .78rem ui-monospace,monospace;color:var(--accent);margin-bottom:16px}.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.project{padding:24px;border:1px solid var(--line);border-radius:12px;background:var(--card);display:flex;flex-direction:column}.project small{font:700 .75rem ui-monospace,monospace;color:var(--accent);letter-spacing:.08em}.project h3{font-size:1.3rem;margin:14px 0 8px}.project p{color:var(--muted);margin:0 0 20px}.project a{margin-top:auto;font-weight:700}.contract{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}.contract article{padding:24px;border:1px solid var(--line);background:var(--card);border-radius:10px}.contract h3{margin-top:0}.contract code{overflow-wrap:anywhere}.free{background:var(--ink);color:var(--paper);border-radius:14px;padding:34px;margin:54px 0}.free p{max-width:760px;margin:10px 0 0;color:#d5dfd9}footer{border-width:1px 0 0;color:var(--muted);font-size:.9rem}@media(max-width:760px){.loop,.projects,.contract{grid-template-columns:1fr 1fr}.hero{padding:58px 0}}@media(max-width:520px){.loop,.projects,.contract{grid-template-columns:1fr}nav ul{gap:14px}.wrap{width:min(100% - 28px,1080px)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header><div class="wrap bar"><a class="brand" href="#main">redogit</a><nav aria-label="Main"><ul><li><a href="#rule">Rule</a></li><li><a href="#projects">Projects</a></li><li><a href="#free-use">Free Use</a></li></ul></nav></div></header>
+<header><div class="wrap bar"><a class="brand" href="#main">redogit</a><nav aria-label="Main"><ul><li><a href="#rule">Rule</a></li><li><a href="#contract">Contract</a></li><li><a href="#projects">Projects</a></li><li><a href="#free-use">Free Use</a></li></ul></nav></div></header>
 <main id="main" class="wrap" tabindex="-1">
   <div class="hero">
     <p class="eyebrow">redo · verify · retain</p>
     <h1>Do it.<br>Redo it better.</h1>
-    <p class="lede">I use Git the way its history wants to be used: keep what actually happened, find the difference that matters, build a smaller successor, check it, and keep going.</p>
+    <p class="lede">Keep what actually happened, find the difference that matters, build a smaller successor, check it, and keep going.</p>
     <p class="rule"><strong>REDOGIT:</strong> a redo is not a rewritten past. It is a verified successor with provenance.</p>
   </div>
 
@@ -26,21 +26,30 @@
     <p class="section-note">Enough structure to improve a project without carrying every old assumption forward.</p>
     <ol class="loop">
       <li><strong>Load</strong><br>Start from the actual code, artifact, idea, or failure.</li>
-      <li><strong>Bound</strong><br>Decide what the project is responsible for and what it is not.</li>
-      <li><strong>Redo</strong><br>Change the smallest consequential thing rather than rebuilding accidental complexity.</li>
+      <li><strong>Bound</strong><br>Decide what the project owns and what it does not.</li>
+      <li><strong>Redo</strong><br>Change the smallest consequential thing instead of rebuilding accidental complexity.</li>
       <li><strong>Check</strong><br>Make the result observable, retain the lineage, then continue.</li>
     </ol>
     <p><a href="REDOGIT.md">Read the full REDOGIT rule →</a></p>
+  </section>
+
+  <section id="contract" aria-labelledby="contract-title">
+    <h2 id="contract-title">The machine contract</h2>
+    <p class="section-note">Humans and tools should not have to guess which successor is current.</p>
+    <div class="contract">
+      <article><h3><code>redogit.json</code></h3><p>Each repository can declare its current successor, build and verification commands, retained predecessors, and project boundary.</p><a href="redogit.json">Open this repository's contract →</a></article>
+      <article><h3><code>REDOGIT.schema.json</code></h3><p>The shared JSON Schema fixes the minimum vocabulary: current state, history policy, predecessor retention, and ownership boundary.</p><a href="REDOGIT.schema.json">Open the shared schema →</a></article>
+    </div>
   </section>
 
   <section id="projects" aria-labelledby="projects-title">
     <h2 id="projects-title">Current public projects</h2>
     <p class="section-note">Each project keeps its predecessor while making the current successor explicit.</p>
     <div class="projects">
-      <article class="project"><small>01 · RESEARCH</small><h3>Conscience64</h3><p>Static research space and Cross-Carrier / Float64 work. The current redo favors compact source, manifests, regeneration, and executable integrity checks over incomplete archive transport.</p><a href="https://github.com/redogit/conscience64">Open Conscience64 →</a></article>
-      <article class="project"><small>02 · GAME CORE</small><h3>MauiBrickBreak</h3><p>The .NET 6 MAUI/Orbit predecessor remains intact. A new .NET 10 core isolates ball, paddle, block, and collision behavior and checks those rules without a GUI.</p><a href="https://github.com/redogit/MauiBrickBreak">Open MauiBrickBreak →</a></article>
-      <article class="project"><small>03 · NEURAL EXPERIMENT</small><h3>FirstNeuralNetwork</h3><p>The original C# experiment remains intact. Its current .NET 10 successor uses deterministic sequential training and an executable OR-classification check.</p><a href="https://github.com/redogit/FirstNeuralNetwork">Open FirstNeuralNetwork →</a></article>
-      <article class="project"><small>04 · UPSTREAM FORK</small><h3>Orbit Engine</h3><p>An upstream-derived fork of bijington/orbit. Local work preserves upstream attribution and stays separate from the unrelated Orbit Lab research lineage.</p><a href="https://github.com/redogit/orbit">Open the Orbit fork →</a></article>
+      <article class="project"><small>01 · RESEARCH</small><h3>Conscience64</h3><p>Privacy-safe static research space and Cross-Carrier / Float64 work. Compact source, provenance, manifests, and a runner-independent REDOGIT self-check remain current while its GitHub Actions scheduling blocker is recorded rather than hidden.</p><a href="https://github.com/redogit/conscience64">Open Conscience64 →</a></article>
+      <article class="project"><small>02 · GAME CORE · V2</small><h3>MauiBrickBreak</h3><p>The .NET 6 MAUI/Orbit predecessor remains intact. Current v2 separates a reusable .NET 10 game core from its verifier and exposes wall, paddle, block, and ball-loss consequences as observable events.</p><a href="https://github.com/redogit/MauiBrickBreak">Open MauiBrickBreak →</a></article>
+      <article class="project"><small>03 · NEURAL CORE · V2</small><h3>FirstNeuralNetwork</h3><p>The original C# experiment remains intact. Current v2 separates a reusable deterministic .NET 10 logistic-neuron library from its OR-classification verifier.</p><a href="https://github.com/redogit/FirstNeuralNetwork">Open FirstNeuralNetwork →</a></article>
+      <article class="project"><small>04 · UPSTREAM FORK</small><h3>Orbit Engine</h3><p>An upstream-derived fork of bijington/orbit. Its REDOGIT contract is a provenance boundary: local deltas stay local, upstream authorship stays upstream, and Orbit Lab remains a separate research lineage.</p><a href="https://github.com/redogit/orbit">Open the Orbit fork →</a></article>
     </div>
   </section>
 
@@ -49,6 +58,6 @@
     <p>The original text and code of this homepage are free to use, copy, modify, and share, including commercially. Attribution is welcome but not required. Linked projects and third-party material keep their own licensing terms.</p>
   </section>
 </main>
-<footer><div class="wrap bar"><span>redogit · preserve history, improve the successor.</span><a href="https://github.com/redogit?tab=repositories">Browse repositories →</a></div></footer>
+<footer><div class="wrap bar"><span>redogit · preserve history, improve the successor.</span><span><a href="redogit.json">Contract</a> · <a href="https://github.com/redogit?tab=repositories">Repositories</a></span></div></footer>
 </body>
 </html>
