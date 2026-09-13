@@ -1,5 +1,31 @@
 # redogit
 
+## About me
+
+I’m a data specialist, reverse engineer, and generalist builder. I like taking complicated things apart, finding the distinction that changes the result, and turning what survives into something people can actually use.
+
+I work across code, language, knowledge organization, accessibility, and experimental research. Useful work for people comes first—not complexity for its own sake. Curiosity, care, and the freedom to question belong alongside rigor.
+
+I’m still learning. Better evidence can change my mind, a failed test can change a design, and an old description of what I know is not a permanent ceiling.
+
+## What I am exploring now
+
+I’m developing a general model of how people engage with knowledge: how questions form, which materials become relevant, how working sets are assembled, and what changes through collaboration, action, and learning. It is not just a model of me, a personality profile, or a complete theory of the human mind.
+
+The aim is to support different people, languages, cultures, purposes, and access needs without assuming one universal learning path. The person, the record about them, the source material, the assisting system, and the observed outcome remain distinct.
+
+### Human–Knowledge Working-Set Lab
+
+The Human–Knowledge Working-Set Lab is an offline experimental prototype developed with AI assistance. It makes questions, source views, permissions, context loss, and changing answers inspectable. Duplicate sources do not become independent evidence, and a changed question can make an earlier answer stale.
+
+Its finite software checks apply only to the declared task models. They do not establish human understanding, endorsement, real-world safety, or benefit. Those outcomes need their own evidence.
+
+## How I work
+
+Start with the human purpose and question. Preserve what changes the answer. Import only what the task needs and is permitted to use. Try a bounded change, look for counterexamples, and keep the failures and corrections.
+
+The working set serves the person—not the other way around. Human rights, privacy, agency, and accessibility are not points to trade away for a faster benchmark. System obligations remain separate from what a person chooses to do.
+
 ## Do it. Inspect it. Redo it better.
 
 `redogit` is my public working rule: preserve what actually happened, keep the useful part, rebuild the smallest thing that matters, verify the successor, and keep going.
