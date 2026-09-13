@@ -8,7 +8,7 @@ I work across code, language, knowledge organization, accessibility, and experim
 
 I’m still learning. Better evidence can change my mind, a failed test can change a design, and an old description of what I know is not a permanent ceiling.
 
-The portfolio spans research and knowledge tools, person-directed planning, cooperation experiments, game behavior, neural code, and shared verification machinery. The directory below accounts for all eight repositories without treating every prototype or historical result as a finished product.
+The portfolio spans research and knowledge tools, person-directed planning, cooperation experiments, game behavior, neural code, and shared verification machinery. Recent work adds bounded SPrime candidate searches, exact 1,024-byte transport experiments, and browser experiences that make research notation inspectable and speakable. The directory below accounts for all eight repositories without treating every prototype or historical result as a finished product.
 
 ## What I am exploring now
 
@@ -46,7 +46,15 @@ A static research space with the I / R / P / O interface, source-aware search, g
 
 Includes Orbit Shelf, Word Weave, Pattern Garden, Small Steps, and Source Compare; seven linked research branches; recovery-carrier records; and Cross-Carrier / Float64 checkpoints, including the compact v2.2 surface and SAT64/MCR lineage.
 
+Coordinate Space Workbench encodes, imports and recovers exact UTF-8 through ordered float64 carriers and metadata, with original-file intake, strict JSON imports and 16 draft interface languages. It now includes optional Speak/Read controls. The codec runs locally; speech recognition depends on browser support and may use browser-provided remote services, so voice input is not guaranteed offline.
+
+Computational Chorus presents exact notation, speakable wording and alliterative mnemonics alongside explicit claim boundaries and an original research song. A mnemonic is not proof of equivalence; P versus NP and the general Hodge conjecture remain open.
+
+GitHub records successful Pages source synchronization and deployment for commit b6da9fcc8e56019b27656f7e244a8b1f763ed15c. This is deployment evidence, not a fresh end-to-end voice test, translation review, or screen-reader/accessibility certification.
+
 Source hashes establish byte identity, not truth or independent evidence. Research records retain failures, claim limits, and unresolved work.
+
+[Coordinate Space](https://redogit.github.io/conscience64/coordinate-space/) · [Computational Chorus](https://redogit.github.io/conscience64/play/computational-chorus/) · [Recorded Pages deployment](https://github.com/redogit/conscience64/actions/runs/34786561921)
 
 [Research site](https://redogit.github.io/conscience64/) · [Research portfolio](https://github.com/redogit/conscience64/tree/main/research/projects) · [Checkpoint index](https://github.com/redogit/conscience64/blob/main/research/cross-carrier/2026-09-12/PACKAGE_INDEX.md)
 
@@ -62,11 +70,19 @@ English-language prototype. Participant and assistive-technology testing remain 
 
 ### 3. [Other Projects](https://github.com/redogit/Other-Projects-)
 
-The multi-project home currently contains ChatGPT and Conscience: runnable Python symmetry experiments, finite-table checks, two reviewable Conscience64 API patches, pinned source locks, claim and provenance records, and a local sandbox builder.
+The multi-project home preserves ChatGPT and Conscience: runnable Python symmetry experiments, finite-table checks, two reviewable Conscience64 API patches, pinned source locks, claim and provenance records, and a local sandbox builder.
 
 The sandbox is a research candidate, not a deployed change to Conscience64 and not a generative chat service. Authorship, navigation, human direction, and evidence remain separate.
 
-The root README also names the Human Expression Archive, 1,024-byte section carriers, and bounded learning-compression tools as an intended import. Those are planned work, not additional implemented applications in the inspected tree.
+Published implementations now include the Human Expression Archive (a bounded 91-record accession and offline viewer), S1024 Compression Lab, Context Discovery, and SPrime Search. These are subprojects inside this repository, not additional repositories.
+
+S1024 preserves exact 1,024-byte cuts and UTF-8 boundary states. Its SP1024-1 raw transport uses 133 finite float64 carriers per full section before metadata: storage expansion, not arbitrary-data compression. Frozen-pattern compression results are synthetic and task-relative.
+
+SPrime counts expressions in a declared NAND tree grammar through a 1,024-byte capacity (longest expression: 1,023 bytes). This is an exact symbolic census, not individual execution of every counted program. The separate compact D1 pass reports an executed census of 412,909,356 words through eight bytes; its language, decoder dependencies and unresolved outputs remain distinct.
+
+These are bounded software and research records, not a universal idea detector, historical novelty claim, or theory of human cognition. Repository publication does not establish Pages deployment or independent replication. Preservation is not endorsement; source-specific rights and cultural protocols remain attached.
+
+[Human Expression Archive](https://github.com/redogit/Other-Projects-/tree/main/Human%20Expression%20Archive) · [S1024 Compression Lab](https://github.com/redogit/Other-Projects-/tree/main/S1024%20Compression%20Lab) · [Context Discovery](https://github.com/redogit/Other-Projects-/tree/main/Context%20Discovery) · [SPrime Search](https://github.com/redogit/Other-Projects-/tree/main/SPrime%20Search) · [Compact D1 pass](https://github.com/redogit/Other-Projects-/tree/main/SPrime%20Search/compact)
 
 [ChatGPT and Conscience](https://github.com/redogit/Other-Projects-/tree/main/ChatGPT%20and%20Conscience) · [Cooperation guide](https://github.com/redogit/Other-Projects-/blob/main/ChatGPT%20and%20Conscience/docs/COOPERATION.md)
 
@@ -130,7 +146,7 @@ The Human–Knowledge Working-Set Lab described above remains an experimental pr
 
 ## Try the free web tools
 
-Five applications live inside Conscience64:
+The original five-tool playground remains inside Conscience64:
 
 - **[Orbit Shelf](https://redogit.github.io/conscience64/play/orbit/)** — Collect and search notes with source links.
 - **[Word Weave](https://redogit.github.io/conscience64/play/weave/)** — Rearrange writing while preserving the original.
@@ -139,6 +155,8 @@ Five applications live inside Conscience64:
 - **[Source Compare](https://redogit.github.io/conscience64/play/compare/)** — Inspect exact changes between an original text and a revision.
 
 English, Spanish, French, and Arabic interfaces; Unicode writing; optional local saving; no account. [Open the project hub](https://redogit.github.io/conscience64/play/) · [Code, provenance, and MIT license scoped to the playground](https://github.com/redogit/conscience64/tree/main/play).
+
+Additional browser experiences include [Coordinate Space](https://redogit.github.io/conscience64/coordinate-space/) and [Computational Chorus](https://redogit.github.io/conscience64/play/computational-chorus/). Their language, voice, licensing and verification scopes are separate from the original five-tool catalog; none is an additional repository.
 
 ## Use the REDOGIT tools locally
 
