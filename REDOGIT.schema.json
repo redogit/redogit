@@ -3,7 +3,7 @@
   "$id": "https://raw.githubusercontent.com/redogit/redogit/main/REDOGIT.schema.json",
   "title": "REDOGIT repository contract",
   "type": "object",
-  "required": ["schema", "repository", "current", "history_policy", "boundary"],
+  "required": ["schema", "repository", "current", "history_policy", "research_policy", "boundary"],
   "properties": {
     "schema": { "const": "redogit/v1" },
     "repository": { "type": "string", "minLength": 1 },
@@ -64,13 +64,64 @@
     },
     "history_policy": {
       "type": "object",
-      "required": ["preserve_predecessors", "preserve_failures", "rewrite_history"],
+      "required": [
+        "preserve_predecessors",
+        "preserve_failures",
+        "preserve_unresolved_remainder",
+        "preserve_source_native_identity",
+        "rewrite_history"
+      ],
       "properties": {
         "preserve_predecessors": { "const": true },
         "preserve_failures": { "const": true },
+        "preserve_unresolved_remainder": { "const": true },
+        "preserve_source_native_identity": { "const": true },
         "rewrite_history": { "const": false }
       },
       "additionalProperties": false
+    },
+    "research_policy": {
+      "type": "object",
+      "required": [
+        "surface",
+        "checks",
+        "evidence_classes",
+        "claim_policy",
+        "selection_policy",
+        "promotion",
+        "knowledge_decay",
+        "historical_checkpoint_policy",
+        "required_distinctions"
+      ],
+      "properties": {
+        "surface": { "const": "I/R/P/O" },
+        "checks": { "const": ["assumption", "test", "unknown"] },
+        "evidence_classes": {
+          "const": [
+            "executed-and-verified",
+            "externally-validated",
+            "formal-consequence",
+            "hypothesis-or-open-question"
+          ]
+        },
+        "claim_policy": { "type": "string", "minLength": 1 },
+        "selection_policy": { "type": "string", "minLength": 1 },
+        "promotion": { "type": "string", "minLength": 1 },
+        "knowledge_decay": { "type": "string", "minLength": 1 },
+        "historical_checkpoint_policy": { "type": "string", "minLength": 1 },
+        "required_distinctions": {
+          "type": "array",
+          "minItems": 20,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "domain_distinctions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": true
     },
     "boundary": {
       "type": "object",
