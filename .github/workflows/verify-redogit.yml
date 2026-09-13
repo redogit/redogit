@@ -25,11 +25,55 @@ jobs:
           import json
           from pathlib import Path
 
+          EXPECTED_HISTORY = {
+              'preserve_predecessors': True,
+              'preserve_failures': True,
+              'preserve_unresolved_remainder': True,
+              'preserve_source_native_identity': True,
+              'rewrite_history': False,
+          }
+          EXPECTED_CHECKS = ['assumption', 'test', 'unknown']
+          EXPECTED_EVIDENCE_CLASSES = [
+              'executed-and-verified',
+              'externally-validated',
+              'formal-consequence',
+              'hypothesis-or-open-question',
+          ]
+          REQUIRED_DISTINCTIONS = {
+              'UNKNOWN != ABSENT',
+              'UNASSIGNED != ABSENT',
+              'UNSELECTED != FALSE',
+              'INDEX_MISS != ABSENCE',
+              'RELATED != SUPPORTS',
+              'SEMANTIC_SIMILARITY != IDENTITY',
+              'SOURCE != RECONSTRUCTION',
+              'BYTE_IDENTITY != SEMANTIC_TRUTH',
+              'CURRENT_NAVIGATION != HISTORICAL_SOURCE',
+              'OBSERVATION != INTERPRETATION',
+              'VIEWPOINT_CHANGE != TASK_CHANGE',
+              'SELECTION != GLOBAL_OPTIMALITY',
+              'FINITE_VERIFICATION != UNIVERSALITY',
+              'LOSS_ACKNOWLEDGED != LOSS_CONCEALED',
+              'EVALUATION_COMPLETE != PROMOTION_APPROVED',
+              'PERSON != RECORDED_MODEL',
+              'USER_GOAL != SYSTEM_GOAL',
+              'PREDECESSOR != SUCCESSOR',
+              'INTERNAL_CONSISTENCY != EXTERNAL_VALIDATION',
+              'CLAIM != EVIDENCE',
+          }
+
           def nonempty(value):
               return isinstance(value, str) and len(value) > 0
 
           def optional_nonempty(value, field):
               assert value is None or nonempty(value), f'{field} must be null or a non-empty string'
+
+          def string_list(value, field, unique=False):
+              assert isinstance(value, list), f'{field} must be a list'
+              assert all(nonempty(item) for item in value), f'{field} entries must be non-empty strings'
+              if unique:
+                  assert len(set(value)) == len(value), f'{field} entries must be unique'
+              return value
 
           path = Path('redogit.json')
           contract = json.loads(path.read_text(encoding='utf-8'))
@@ -62,19 +106,35 @@ jobs:
           if status == 'current-with-external-blocker':
               assert nonempty(blocker), 'current-with-external-blocker requires current.external_blocker'
 
-          history = contract.get('history_policy')
-          assert history == {
-              'preserve_predecessors': True,
-              'preserve_failures': True,
-              'rewrite_history': False,
-          }, 'history policy violates REDOGIT invariants'
+          assert contract.get('history_policy') == EXPECTED_HISTORY, 'history policy violates REDOGIT invariants'
+
+          research = contract.get('research_policy')
+          assert isinstance(research, dict), 'research_policy object is required'
+          assert research.get('surface') == 'I/R/P/O', 'research_policy.surface must be I/R/P/O'
+          assert research.get('checks') == EXPECTED_CHECKS, 'research_policy.checks must be assumption/test/unknown'
+          assert research.get('evidence_classes') == EXPECTED_EVIDENCE_CLASSES, 'research_policy.evidence_classes must preserve the four evidence classes'
+          for field in (
+              'claim_policy',
+              'selection_policy',
+              'promotion',
+              'knowledge_decay',
+              'historical_checkpoint_policy',
+          ):
+              assert nonempty(research.get(field)), f'research_policy.{field} must be a non-empty string'
+
+          distinctions = string_list(
+              research.get('required_distinctions'),
+              'research_policy.required_distinctions',
+              unique=True,
+          )
+          missing = sorted(REQUIRED_DISTINCTIONS.difference(distinctions))
+          assert not missing, 'research_policy is missing required distinctions: ' + ', '.join(missing)
+          string_list(research.get('domain_distinctions', []), 'research_policy.domain_distinctions', unique=True)
 
           boundary = contract.get('boundary')
           assert isinstance(boundary, dict), 'boundary is required'
           for field in ('owns', 'does_not_own'):
-              values = boundary.get(field)
-              assert isinstance(values, list), f'boundary.{field} must be a list'
-              assert all(nonempty(value) for value in values), f'boundary.{field} entries must be non-empty strings'
+              string_list(boundary.get(field), f'boundary.{field}')
 
           predecessors = contract.get('predecessors', [])
           assert isinstance(predecessors, list), 'predecessors must be a list'
@@ -85,6 +145,7 @@ jobs:
               assert predecessor.get('retained') is True, 'every declared predecessor must be retained'
 
           print(f"PASS contract {contract['repository']} -> {current['id']} ({status})")
+          print(f"PASS research policy: {len(distinctions)} required distinctions")
           PY
 
       - name: Set up .NET
