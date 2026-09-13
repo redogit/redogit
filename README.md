@@ -26,6 +26,16 @@ python tools/redogit.py public-status .
 
 GitHub repositories can use the shared reusable workflow `.github/workflows/verify-redogit.yml` where repository policy permits it. Current shared-workflow callers pin a tested commit rather than following a moving branch implicitly.
 
+## Try the free web tools
+
+Three new projects are ready to use in your browser:
+
+- **[Orbit Shelf](https://redogit.github.io/conscience64/play/orbit/)** — Collect and search notes with source links.
+- **[Word Weave](https://redogit.github.io/conscience64/play/weave/)** — Rearrange writing while preserving the original.
+- **[Pattern Garden](https://redogit.github.io/conscience64/play/garden/)** — Make geometric art with keyboard controls and SVG/text exports.
+
+English, Spanish, French, and Arabic interfaces; Unicode writing; optional local saving; no account. [Open the project hub](https://redogit.github.io/conscience64/play/) · [Code, provenance, and MIT license](https://github.com/redogit/conscience64/tree/main/play).
+
 ## Current public projects
 
 - **[Conscience64](https://github.com/redogit/conscience64)** — Privacy-safe static research space and Cross-Carrier / Float64 work. Its compact committed v2.2 surface is now green in GitHub-hosted CI: the workflow materializes the exact public commit with Git, runs the REDOGIT self-check, and verifies byte counts and SHA-256 identities from a repository-surface manifest. The original full-package manifest remains separately preserved instead of being rewritten to match the compact repository. Earlier external Action/reusable-workflow startup failures remain historical evidence rather than a current blocker.
