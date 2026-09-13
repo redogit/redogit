@@ -1,37 +1,54 @@
 {
   "schema": "redogit/public-status/v1",
-  "snapshot_date": "2026-09-12",
+  "snapshot_date": "2026-09-13",
   "scope": "public repositories only",
   "authority": "Each repository's own redogit.json remains authoritative for its current contract. This file is a public evidence snapshot and intentionally contains no private repository identities.",
   "public_contracts_green": true,
   "reusable_verifier": {
-    "tested_commit": "dc2575960b1ac2fbe4b537055be0673cc8146757",
-    "profile_test_run": 34720119756,
+    "tested_commit": "77c355fc1d62d7aab6d8b30dfe8e96593c7cba22",
+    "profile_test_run": 34769564221,
     "conclusion": "success",
-    "invariants": ["retained predecessors are retained", "declared strings are nonempty", "external-blocker status carries a blocker explanation"]
+    "invariants": [
+      "predecessors failures unresolved remainder and source-native identity are retained",
+      "I/R/P/O research surface is explicit",
+      "assumption test and unknown are separate checks",
+      "four evidence classes remain distinct",
+      "claims stop at carried evidence",
+      "selection is bounded and does not imply global optimality",
+      "Knowledge Decay remains active when it can alter a claim"
+    ]
   },
   "repositories": [
     {
       "repository": "redogit/redogit",
-      "role": "REDOGIT profile, schema, local CLI, and reusable verifier",
+      "role": "REDOGIT profile, schema, local CLI, reusable verifier, and public status",
       "contract_status": "current",
+      "current_id": "redogit-profile-rule-v2",
       "verification": {
         "workflow": "REDOGIT profile",
-        "run": 34720119756,
+        "run": 34769564221,
         "conclusion": "success",
-        "checks": ["contract", "schema", "public status", "homepage", "local CLI"]
+        "checks": ["learned REDOGIT contract", "schema", "public status", "homepage", "local CLI"]
       }
     },
     {
       "repository": "redogit/conscience64",
-      "role": "privacy-safe static research and Cross-Carrier / Float64 surface",
+      "role": "privacy-safe static research, project registry, and Cross-Carrier / Float64 surface",
       "contract_status": "current",
+      "current_id": "conscience64-static-research-main",
       "verification": {
         "workflow": "REDOGIT local verification",
-        "run": 34719913887,
+        "run": 34769989938,
         "conclusion": "success",
         "transport": "exact public GITHUB_SHA materialized with Git; no external Action dependency",
-        "checks": ["REDOGIT self-check", "repository-surface byte counts", "repository-surface SHA-256 hashes"]
+        "checks": [
+          "learned REDOGIT contract",
+          "research-project registry",
+          "bounded SQL result invariants",
+          "compact Max-Cut certificate",
+          "repository-surface byte counts",
+          "repository-surface SHA-256 hashes"
+        ]
       },
       "manifest_distinction": {
         "full_generated_package": "research/cross-carrier/2026-09-12/v2.2/manifest.json",
@@ -40,15 +57,15 @@
     },
     {
       "repository": "redogit/MauiBrickBreak",
-      "role": "current reusable game core successor",
+      "role": "current reusable game-core successor",
       "contract_status": "current",
       "current_id": "redogit-2026-v2",
       "verification": {
         "workflow": "REDOGIT successor",
-        "run": 34720160081,
+        "run": 34769630091,
         "conclusion": "success",
-        "verifier_commit": "dc2575960b1ac2fbe4b537055be0673cc8146757",
-        "checks": ["REDOGIT contract", "REDOGIT.slnx Release build", "v2 self-check"]
+        "verifier_commit": "77c355fc1d62d7aab6d8b30dfe8e96593c7cba22",
+        "checks": ["learned REDOGIT contract", "REDOGIT.slnx Release build", "v2 self-check"]
       }
     },
     {
@@ -58,20 +75,21 @@
       "current_id": "redogit-2026-v2",
       "verification": {
         "workflow": "REDOGIT successor",
-        "run": 34720166511,
+        "run": 34769652111,
         "conclusion": "success",
-        "verifier_commit": "dc2575960b1ac2fbe4b537055be0673cc8146757",
-        "checks": ["REDOGIT contract", "REDOGIT.slnx Release build", "v2 self-check"]
+        "verifier_commit": "77c355fc1d62d7aab6d8b30dfe8e96593c7cba22",
+        "checks": ["learned REDOGIT contract", "REDOGIT.slnx Release build", "v2 self-check"]
       }
     },
     {
       "repository": "redogit/orbit",
-      "role": "upstream-derived Orbit Engine fork",
+      "role": "upstream-derived Orbit Engine fork with an explicit provenance boundary",
       "contract_status": "provenance-boundary",
       "verification": {
         "provenance_contract": {
-          "run": 34719292772,
-          "conclusion": "success"
+          "run": 34769695994,
+          "conclusion": "success",
+          "verifier_commit": "77c355fc1d62d7aab6d8b30dfe8e96593c7cba22"
         },
         "verified_predecessor_baseline": {
           "windows_run": 34719088760,
@@ -82,6 +100,52 @@
         }
       },
       "boundary": "Upstream authorship remains upstream; local repair deltas remain local; unrelated Orbit Lab research remains outside this repository."
+    },
+    {
+      "repository": "redogit/Dream-To-Action",
+      "role": "person-directed local-first planning prototype with a preserved original release",
+      "contract_status": "current",
+      "current_id": "dream-to-action-repository-current",
+      "verification": {
+        "workflow": "Verify Dream to Action",
+        "run": 34769802787,
+        "conclusion": "success",
+        "checks": [
+          "learned REDOGIT contract",
+          "preserved release hashes",
+          "canonical reproducible rebuild",
+          "root entry-point identity",
+          "inline security-policy hashes",
+          "JavaScript syntax"
+        ]
+      }
+    },
+    {
+      "repository": "redogit/Other-Projects-",
+      "role": "implementation carrier for Human Expression Archive, S1024 Compression Lab, and preserved cooperation-lab lineage",
+      "contract_status": "current",
+      "current_id": "other-projects-research-carrier-v1",
+      "verification": {
+        "workflow": "REDOGIT Other Projects",
+        "run": 34770140762,
+        "conclusion": "success",
+        "checks": [
+          "learned REDOGIT contract",
+          "historical publication non-claims retained",
+          "project-routing boundaries",
+          "Human Expression Archive build and tests",
+          "S1024 tests",
+          "deterministic S1024 demo"
+        ]
+      },
+      "failure_lineage": {
+        "run_1": 34769959244,
+        "run_1_result": "failure from phrase-exact routing check",
+        "run_2": 34770067833,
+        "run_2_result": "failure from Unicode punctuation representation mismatch",
+        "repair": "normalize presentation punctuation before semantic boundary checks",
+        "lesson": "BYTE_IDENTITY != SEMANTIC_TRUTH"
+      }
     }
   ]
 }
