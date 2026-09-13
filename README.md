@@ -28,11 +28,14 @@ GitHub repositories can use the shared reusable workflow `.github/workflows/veri
 
 ## Try the free web tools
 
-Three new projects are ready to use in your browser:
+Five projects are ready to use in your browser:
 
 - **[Orbit Shelf](https://redogit.github.io/conscience64/play/orbit/)** — Collect and search notes with source links.
 - **[Word Weave](https://redogit.github.io/conscience64/play/weave/)** — Rearrange writing while preserving the original.
 - **[Pattern Garden](https://redogit.github.io/conscience64/play/garden/)** — Make geometric art with keyboard controls and SVG/text exports.
+
+- **[Small Steps](https://redogit.github.io/conscience64/play/steps/)** — Plan a next step and keep dated checkpoints.
+- **[Source Compare](https://redogit.github.io/conscience64/play/compare/)** — Inspect exact changes between an original text and a revision.
 
 English, Spanish, French, and Arabic interfaces; Unicode writing; optional local saving; no account. [Open the project hub](https://redogit.github.io/conscience64/play/) · [Code, provenance, and MIT license](https://github.com/redogit/conscience64/tree/main/play).
 
