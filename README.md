@@ -8,6 +8,8 @@ I work across code, language, knowledge organization, accessibility, and experim
 
 I’m still learning. Better evidence can change my mind, a failed test can change a design, and an old description of what I know is not a permanent ceiling.
 
+The portfolio spans research and knowledge tools, person-directed planning, cooperation experiments, game behavior, neural code, and shared verification machinery. The directory below accounts for all eight repositories without treating every prototype or historical result as a finished product.
+
 ## What I am exploring now
 
 I’m developing a general model of how people engage with knowledge: how questions form, which materials become relevant, how working sets are assembled, and what changes through collaboration, action, and learning. It is not just a model of me, a personality profile, or a complete theory of the human mind.
@@ -34,7 +36,111 @@ Git history stays history. A redo is a successor, not a rewritten past.
 
 See **[REDOGIT.md](REDOGIT.md)** for the rule. Repositories can expose their current successor through a machine-readable **`redogit.json`** contract defined by **[REDOGIT.schema.json](REDOGIT.schema.json)**.
 
-## Use it locally
+## All eight repositories
+
+Eight repositories accounted for: seven public projects and one private repository. Reviewed September 13, 2026. Public descriptions follow the inspected default-branch documentation; this update does not rerun every project or verify every deployment.
+
+### 1. [Conscience64](https://github.com/redogit/conscience64)
+
+A static research space with the I / R / P / O interface, source-aware search, graph traversal, and the browser-side Conscience64API.
+
+Includes Orbit Shelf, Word Weave, Pattern Garden, Small Steps, and Source Compare; seven linked research branches; recovery-carrier records; and Cross-Carrier / Float64 checkpoints, including the compact v2.2 surface and SAT64/MCR lineage.
+
+Source hashes establish byte identity, not truth or independent evidence. Research records retain failures, claim limits, and unresolved work.
+
+[Research site](https://redogit.github.io/conscience64/) · [Research portfolio](https://github.com/redogit/conscience64/tree/main/research/projects) · [Checkpoint index](https://github.com/redogit/conscience64/blob/main/research/cross-carrier/2026-09-12/PACKAGE_INDEX.md)
+
+### 2. [Dream to Action](https://github.com/redogit/Dream-To-Action)
+
+A local-first prototype: one chosen goal, one real barrier, one usable next step, and an honest review. It distinguishes individual effort from support or institutional change without ranking people or promising outcomes.
+
+Includes the standalone app, preserved prototype source and test records, a fictional example, founding conversation, provenance, and a proposed pilot. Open index.html after downloading; export before closing because entries live in page memory.
+
+English-language prototype. Participant and assistive-technology testing remain necessary. Its proposed pilot has not started, and a project-specific license remains a maintainer decision.
+
+[Application source](https://github.com/redogit/Dream-To-Action/blob/main/index.html) · [Prototype and pilot](https://github.com/redogit/Dream-To-Action/tree/main/prototype)
+
+### 3. [Other Projects](https://github.com/redogit/Other-Projects-)
+
+The multi-project home currently contains ChatGPT and Conscience: runnable Python symmetry experiments, finite-table checks, two reviewable Conscience64 API patches, pinned source locks, claim and provenance records, and a local sandbox builder.
+
+The sandbox is a research candidate, not a deployed change to Conscience64 and not a generative chat service. Authorship, navigation, human direction, and evidence remain separate.
+
+The root README also names the Human Expression Archive, 1,024-byte section carriers, and bounded learning-compression tools as an intended import. Those are planned work, not additional implemented applications in the inspected tree.
+
+[ChatGPT and Conscience](https://github.com/redogit/Other-Projects-/tree/main/ChatGPT%20and%20Conscience) · [Cooperation guide](https://github.com/redogit/Other-Projects-/blob/main/ChatGPT%20and%20Conscience/docs/COOPERATION.md)
+
+### 4. [MauiBrickBreak](https://github.com/redogit/MauiBrickBreak)
+
+The v2 successor separates reusable game state, geometry, collisions, and observable events from an executable behavior verifier. Its checks cover wall reflection, paddle reflection, block depletion, and BallLost.
+
+REDOGIT.slnx is the current build entry point. The original .NET 6 MAUI/Orbit application, assets, controls, and first framework-independent successor remain as predecessors.
+
+This is a reusable game core and preserved application history, not a newly published browser game.
+
+[Current v2 source](https://github.com/redogit/MauiBrickBreak/tree/master/successors/redogit-2026-v2)
+
+### 5. [FirstNeuralNetwork](https://github.com/redogit/FirstNeuralNetwork)
+
+The v2 successor separates a deterministic logistic-neuron training API from a verifier for the four OR truth-table cases. REDOGIT.slnx is the build entry point.
+
+The original C# neural-network experiment and first REDOGIT successor remain intact. A separate Adaptive Connectivity Diagnostic Network C++20 experiment is preserved under successors with an identified archive transport.
+
+A passing OR verifier is a bounded software result, not evidence of general intelligence.
+
+[Current v2 source](https://github.com/redogit/FirstNeuralNetwork/tree/master/successors/redogit-2026-v2) · [Other preserved successors](https://github.com/redogit/FirstNeuralNetwork/blob/master/successors/README.md)
+
+### 6. [Orbit Engine](https://github.com/redogit/orbit)
+
+My upstream-derived fork of bijington/orbit, built around .NET MAUI Graphics. The engine provides game scenes, game objects, scene management, and an update/render loop; the repository also retains its games directory.
+
+The local REDOGIT contract keeps the inherited implementation and local repair history attributable. Upstream authorship remains upstream.
+
+Orbit Engine is not the separate Orbit Library / Orbit Lab research project.
+
+[Engine source](https://github.com/redogit/orbit/tree/main/engine) · [Game examples](https://github.com/redogit/orbit/tree/main/games) · [Upstream Orbit](https://github.com/bijington/orbit)
+
+### 7. [redogit](https://github.com/redogit/redogit)
+
+This profile repository contains the About Me README, standalone homepage, REDOGIT rule, machine-readable contract and schema, Python inspection CLI, and public verification snapshot.
+
+It also carries the shared verification workflow. The rule is to retain the predecessor, declare the successor, inspect the difference, and record the check without rewriting history.
+
+The repository directory is a dated inventory, not a live CI dashboard. The public verification snapshot keeps its own evidence scope and does not expose private repository identities.
+
+[REDOGIT rule](REDOGIT.md) · [Machine contract](redogit.json) · [Recorded public status](PUBLIC_STATUS.json)
+
+### 8. Private repository
+
+One repository remains private. It is counted here without publishing its name, URL, code, internal documents, or verification details. This directory does not change repository visibility or access.
+
+## Inside the research portfolio
+
+These seven research branches live within Conscience64; they are not seven additional GitHub repositories. Each record retains highlights, failures, and unresolved work.
+
+- **[Cross-Carrier Wave](https://github.com/redogit/conscience64/blob/main/research/projects/cross-carrier-wave.md)** — Transforms, preserved obligations, and loss/remainder accounting.
+- **[Orbit Library](https://github.com/redogit/conscience64/blob/main/research/projects/orbit-library.md)** — Knowledge organization, bounded active context, and recoverable history.
+- **[Tiny Babel / TBCL](https://github.com/redogit/conscience64/blob/main/research/projects/tiny-babel-tbcl.md)** — Executable context-language work and bounded finite verification.
+- **[Operator Moonshot](https://github.com/redogit/conscience64/blob/main/research/projects/operator-moonshot.md)** — Research methods, operator experiments, failures, and explicit claim ceilings.
+- **[Model Experiments](https://github.com/redogit/conscience64/blob/main/research/projects/model-experiments.md)** — Reusable mechanisms, regressions, and negative evidence.
+- **[Geometry / 4D / Codecs](https://github.com/redogit/conscience64/blob/main/research/projects/geometry-codecs.md)** — Representations, round trips, integrity, and observer limits.
+- **[Historical Recovery](https://github.com/redogit/conscience64/blob/main/research/projects/historical-recovery.md)** — Source identities, missing context, and unresolved reconstruction.
+
+The Human–Knowledge Working-Set Lab described above remains an experimental prototype; this directory update does not publish its local package into another repository.
+
+## Try the free web tools
+
+Five applications live inside Conscience64:
+
+- **[Orbit Shelf](https://redogit.github.io/conscience64/play/orbit/)** — Collect and search notes with source links.
+- **[Word Weave](https://redogit.github.io/conscience64/play/weave/)** — Rearrange writing while preserving the original.
+- **[Pattern Garden](https://redogit.github.io/conscience64/play/garden/)** — Make geometric art with keyboard controls and SVG/text exports.
+- **[Small Steps](https://redogit.github.io/conscience64/play/steps/)** — Plan a next step and keep dated checkpoints.
+- **[Source Compare](https://redogit.github.io/conscience64/play/compare/)** — Inspect exact changes between an original text and a revision.
+
+English, Spanish, French, and Arabic interfaces; Unicode writing; optional local saving; no account. [Open the project hub](https://redogit.github.io/conscience64/play/) · [Code, provenance, and MIT license scoped to the playground](https://github.com/redogit/conscience64/tree/main/play).
+
+## Use the REDOGIT tools locally
 
 From a clone of this profile repository, the small Python CLI can inspect a local REDOGIT repository or the public account snapshot:
 
@@ -50,33 +156,13 @@ python tools/redogit.py public-status .
 - `run` validates the contract and then executes its declared build and verification commands.
 - `public-status` reads the gated [`PUBLIC_STATUS.json`](PUBLIC_STATUS.json) snapshot. It does not enumerate GitHub and contains no private repository identities.
 
-GitHub repositories can use the shared reusable workflow `.github/workflows/verify-redogit.yml` where repository policy permits it. Current shared-workflow callers pin a tested commit rather than following a moving branch implicitly.
-
-## Try the free web tools
-
-Five projects are ready to use in your browser:
-
-- **[Orbit Shelf](https://redogit.github.io/conscience64/play/orbit/)** — Collect and search notes with source links.
-- **[Word Weave](https://redogit.github.io/conscience64/play/weave/)** — Rearrange writing while preserving the original.
-- **[Pattern Garden](https://redogit.github.io/conscience64/play/garden/)** — Make geometric art with keyboard controls and SVG/text exports.
-
-- **[Small Steps](https://redogit.github.io/conscience64/play/steps/)** — Plan a next step and keep dated checkpoints.
-- **[Source Compare](https://redogit.github.io/conscience64/play/compare/)** — Inspect exact changes between an original text and a revision.
-
-English, Spanish, French, and Arabic interfaces; Unicode writing; optional local saving; no account. [Open the project hub](https://redogit.github.io/conscience64/play/) · [Code, provenance, and MIT license](https://github.com/redogit/conscience64/tree/main/play).
-
-## Current public projects
-
-- **[Conscience64](https://github.com/redogit/conscience64)** — Privacy-safe static research space and Cross-Carrier / Float64 work. Its compact committed v2.2 surface is now green in GitHub-hosted CI: the workflow materializes the exact public commit with Git, runs the REDOGIT self-check, and verifies byte counts and SHA-256 identities from a repository-surface manifest. The original full-package manifest remains separately preserved instead of being rewritten to match the compact repository. Earlier external Action/reusable-workflow startup failures remain historical evidence rather than a current blocker.
-- **[MauiBrickBreak](https://github.com/redogit/MauiBrickBreak)** — The .NET 6 MAUI/Orbit game remains as history. Current v2 is a reusable .NET 10 game core plus a separate verifier for wall, paddle, block, and ball-loss consequences. Its root solution and pinned shared REDOGIT gate are green.
-- **[FirstNeuralNetwork](https://github.com/redogit/FirstNeuralNetwork)** — The original C# experiment remains as history. Current v2 is a reusable deterministic .NET 10 logistic-neuron library plus a separate OR-classification verifier. Its root solution and pinned shared REDOGIT gate are green; earlier ACDN successor work remains preserved too.
-- **[Orbit Engine](https://github.com/redogit/orbit)** — My upstream-derived fork of [bijington/orbit](https://github.com/bijington/orbit). Its REDOGIT provenance contract is green and keeps upstream authorship separate. The inherited .NET 6 MAUI predecessor baseline is reconstructed and verified on both Windows and macOS: SDK 6.0.428, surviving MAUI 6.0.553 manifests, MAUI Graphics 6.0.501, Android API 31, JDK 11 for the inherited build, full multi-target engine build, tests, and pack all pass. The repair remains an explicit local delta rather than a rewrite of upstream history.
+GitHub repositories can use the shared reusable workflow `.github/workflows/verify-redogit.yml` where repository policy permits it. Shared-workflow callers can pin a tested commit rather than follow a moving branch implicitly.
 
 ## The current pattern
 
 `actual predecessor → bounded difference → candidate successor → declared check → PASS → current successor → retained lineage → next bounded difference`
 
-The declaration of “what is current” is part of verification too. Current code successors either invoke the pinned shared workflow or, where an external Action path is unavailable, execute the same invariant through a repository-local verifiable transport.
+The declaration of “what is current” is part of verification too. A repository listing is not a fresh build result; consult each project's recorded checks and unresolved limits.
 
 ## Free Use!
 
