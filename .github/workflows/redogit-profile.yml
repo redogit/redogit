@@ -62,6 +62,8 @@ jobs:
               'redogit/MauiBrickBreak',
               'redogit/FirstNeuralNetwork',
               'redogit/orbit',
+              'redogit/Dream-To-Action',
+              'redogit/Other-Projects-',
           }
           entries = {entry['repository']: entry for entry in status['repositories']}
           assert set(entries) == expected_public
