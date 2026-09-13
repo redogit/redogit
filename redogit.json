@@ -3,22 +3,80 @@
   "schema": "redogit/v1",
   "repository": "redogit/redogit",
   "current": {
-    "id": "redogit-profile-rule-v1",
+    "id": "redogit-profile-rule-v2",
     "status": "current",
     "path": ".",
     "build": null,
     "verify": null
   },
   "predecessors": [
-    { "id": "about-me-profile", "path": null, "retained": true }
+    { "id": "about-me-profile", "path": null, "retained": true },
+    { "id": "redogit-profile-rule-v1", "path": null, "retained": true }
   ],
   "history_policy": {
     "preserve_predecessors": true,
     "preserve_failures": true,
+    "preserve_unresolved_remainder": true,
+    "preserve_source_native_identity": true,
     "rewrite_history": false
   },
+  "research_policy": {
+    "surface": "I/R/P/O",
+    "checks": ["assumption", "test", "unknown"],
+    "evidence_classes": [
+      "executed-and-verified",
+      "externally-validated",
+      "formal-consequence",
+      "hypothesis-or-open-question"
+    ],
+    "claim_policy": "Claims stop at the strongest evidence actually carried by this repository; negative evidence and unresolved remainder are retained.",
+    "selection_policy": "Selection is bounded, task-local, and minimal-necessity; unselected possibilities are not treated as false and selection does not imply global optimality.",
+    "promotion": "evidence-gated and forward-only",
+    "knowledge_decay": "Treat evidence age, accessibility, dependency drift, and changed external facts as active inputs when they can alter the current claim.",
+    "historical_checkpoint_policy": "Do not rewrite verified predecessors merely to conform to newer lessons.",
+    "required_distinctions": [
+      "UNKNOWN != ABSENT",
+      "UNASSIGNED != ABSENT",
+      "UNSELECTED != FALSE",
+      "INDEX_MISS != ABSENCE",
+      "RELATED != SUPPORTS",
+      "SEMANTIC_SIMILARITY != IDENTITY",
+      "SOURCE != RECONSTRUCTION",
+      "BYTE_IDENTITY != SEMANTIC_TRUTH",
+      "CURRENT_NAVIGATION != HISTORICAL_SOURCE",
+      "OBSERVATION != INTERPRETATION",
+      "VIEWPOINT_CHANGE != TASK_CHANGE",
+      "SELECTION != GLOBAL_OPTIMALITY",
+      "FINITE_VERIFICATION != UNIVERSALITY",
+      "LOSS_ACKNOWLEDGED != LOSS_CONCEALED",
+      "EVALUATION_COMPLETE != PROMOTION_APPROVED",
+      "PERSON != RECORDED_MODEL",
+      "USER_GOAL != SYSTEM_GOAL",
+      "PREDECESSOR != SUCCESSOR",
+      "INTERNAL_CONSISTENCY != EXTERNAL_VALIDATION",
+      "CLAIM != EVIDENCE"
+    ],
+    "domain_distinctions": [
+      "SCHEMA_VALID != REPOSITORY_VERIFIED",
+      "PUBLIC_STATUS != PRIVATE_INVENTORY",
+      "PROFILE_INDEX != PROJECT_AUTHORITY"
+    ]
+  },
   "boundary": {
-    "owns": ["account-level REDOGIT rule", "profile README", "profile homepage", "REDOGIT contract schema"],
-    "does_not_own": ["linked project internals", "third-party project licensing", "upstream fork authorship"]
+    "owns": [
+      "account-level REDOGIT rule",
+      "profile README",
+      "profile homepage",
+      "REDOGIT contract schema",
+      "shared research-policy validation",
+      "public repository status snapshot"
+    ],
+    "does_not_own": [
+      "linked project internals",
+      "third-party project licensing",
+      "upstream fork authorship",
+      "private repository identities in public status",
+      "claims beyond repository-local evidence"
+    ]
   }
 }
