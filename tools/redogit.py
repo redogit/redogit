@@ -27,7 +27,40 @@ ALLOWED_STATUSES = {
 EXPECTED_HISTORY_POLICY = {
     "preserve_predecessors": True,
     "preserve_failures": True,
+    "preserve_unresolved_remainder": True,
+    "preserve_source_native_identity": True,
     "rewrite_history": False,
+}
+
+EXPECTED_CHECKS = ["assumption", "test", "unknown"]
+EXPECTED_EVIDENCE_CLASSES = [
+    "executed-and-verified",
+    "externally-validated",
+    "formal-consequence",
+    "hypothesis-or-open-question",
+]
+
+REQUIRED_RESEARCH_DISTINCTIONS = {
+    "UNKNOWN != ABSENT",
+    "UNASSIGNED != ABSENT",
+    "UNSELECTED != FALSE",
+    "INDEX_MISS != ABSENCE",
+    "RELATED != SUPPORTS",
+    "SEMANTIC_SIMILARITY != IDENTITY",
+    "SOURCE != RECONSTRUCTION",
+    "BYTE_IDENTITY != SEMANTIC_TRUTH",
+    "CURRENT_NAVIGATION != HISTORICAL_SOURCE",
+    "OBSERVATION != INTERPRETATION",
+    "VIEWPOINT_CHANGE != TASK_CHANGE",
+    "SELECTION != GLOBAL_OPTIMALITY",
+    "FINITE_VERIFICATION != UNIVERSALITY",
+    "LOSS_ACKNOWLEDGED != LOSS_CONCEALED",
+    "EVALUATION_COMPLETE != PROMOTION_APPROVED",
+    "PERSON != RECORDED_MODEL",
+    "USER_GOAL != SYSTEM_GOAL",
+    "PREDECESSOR != SUCCESSOR",
+    "INTERNAL_CONSISTENCY != EXTERNAL_VALIDATION",
+    "CLAIM != EVIDENCE",
 }
 
 
@@ -55,6 +88,52 @@ def load_contract(root: Path) -> dict[str, Any]:
 def validate_optional_nonempty_string(value: object, field: str) -> None:
     if value is not None and not is_nonempty_string(value):
         raise ValueError(f"{field} must be null or a non-empty string")
+
+
+def validate_string_list(value: object, field: str, *, unique: bool = False) -> list[str]:
+    if not isinstance(value, list):
+        raise ValueError(f"{field} must be a list")
+    if any(not is_nonempty_string(item) for item in value):
+        raise ValueError(f"{field} entries must be non-empty strings")
+    result = list(value)
+    if unique and len(set(result)) != len(result):
+        raise ValueError(f"{field} entries must be unique")
+    return result
+
+
+def validate_research_policy(contract: dict[str, Any]) -> None:
+    research = contract.get("research_policy")
+    if not isinstance(research, dict):
+        raise ValueError("research_policy object is required")
+
+    if research.get("surface") != "I/R/P/O":
+        raise ValueError("research_policy.surface must be I/R/P/O")
+    if research.get("checks") != EXPECTED_CHECKS:
+        raise ValueError("research_policy.checks must be assumption/test/unknown")
+    if research.get("evidence_classes") != EXPECTED_EVIDENCE_CLASSES:
+        raise ValueError("research_policy.evidence_classes must preserve the four evidence classes")
+
+    for field in (
+        "claim_policy",
+        "selection_policy",
+        "promotion",
+        "knowledge_decay",
+        "historical_checkpoint_policy",
+    ):
+        if not is_nonempty_string(research.get(field)):
+            raise ValueError(f"research_policy.{field} must be a non-empty string")
+
+    distinctions = validate_string_list(
+        research.get("required_distinctions"),
+        "research_policy.required_distinctions",
+        unique=True,
+    )
+    missing = sorted(REQUIRED_RESEARCH_DISTINCTIONS.difference(distinctions))
+    if missing:
+        raise ValueError("research_policy is missing required distinctions: " + ", ".join(missing))
+
+    domain = research.get("domain_distinctions", [])
+    validate_string_list(domain, "research_policy.domain_distinctions", unique=True)
 
 
 def validate_contract(root: Path, contract: dict[str, Any]) -> None:
@@ -92,15 +171,13 @@ def validate_contract(root: Path, contract: dict[str, Any]) -> None:
     if contract.get("history_policy") != EXPECTED_HISTORY_POLICY:
         raise ValueError("history_policy violates REDOGIT invariants")
 
+    validate_research_policy(contract)
+
     boundary = contract.get("boundary")
     if not isinstance(boundary, dict):
         raise ValueError("boundary object is required")
     for field in ("owns", "does_not_own"):
-        values = boundary.get(field)
-        if not isinstance(values, list):
-            raise ValueError(f"boundary.{field} must be a list")
-        if any(not is_nonempty_string(value) for value in values):
-            raise ValueError(f"boundary.{field} entries must be non-empty strings")
+        validate_string_list(boundary.get(field), f"boundary.{field}")
 
     predecessors = contract.get("predecessors", [])
     if not isinstance(predecessors, list):
@@ -129,6 +206,11 @@ def print_status(contract: dict[str, Any]) -> None:
     print(f"retained predecessors: {len(predecessors)}")
     for predecessor in predecessors:
         print(f"  - {predecessor['id']}")
+
+    research = contract["research_policy"]
+    print(f"research surface: {research['surface']}")
+    print(f"required distinctions: {len(research['required_distinctions'])}")
+    print(f"domain distinctions:   {len(research.get('domain_distinctions', []))}")
 
     print("owns:")
     for item in contract["boundary"]["owns"]:
