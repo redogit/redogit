@@ -235,3 +235,7 @@ The original text and code of this homepage are free to use, copy, modify, and s
 ---
 
 [Standalone homepage](index.html) · [Public verification status](PUBLIC_STATUS.json) · [REDOGIT contract](redogit.json) · [REDOGIT schema](REDOGIT.schema.json) · [Publishing instructions](PUBLISHING.md) · [Browse repositories](https://github.com/redogit?tab=repositories)
+
+## Version history and restore
+
+[History & restore](https://redogit.github.io/conscience64/history/) links the current application facets and public repository histories. Six saved-document adapters support local checkpoints, export/import, and restore with a before-restore backup. Other facets retain source history and native export/import where provided. Source restoration creates a verified successor under REDOGIT; it does not rewrite history or restore unsaved runtime state.
