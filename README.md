@@ -2,240 +2,135 @@
 
 ## About me
 
-I’m a data specialist, reverse engineer, and generalist builder. I like taking complicated things apart, finding the distinction that changes the result, and turning what survives into something people can actually use.
+I’m a data specialist, reverse engineer, and generalist builder. I take complicated systems apart, look for the distinction that actually changes the result, and try to turn what survives into something people can inspect, reuse, and improve.
 
-I work across code, language, knowledge organization, accessibility, and experimental research. Useful work for people comes first—not complexity for its own sake. Curiosity, care, and the freedom to question belong alongside rigor.
+My work crosses software, language, knowledge organization, accessibility, games, mathematics, and experimental research. The common thread is human-directed problem solving: preserve context, make assumptions visible, keep provenance, test bounded changes, and do not confuse a useful representation with proof.
 
-I’m still learning. Better evidence can change my mind, a failed test can change a design, and an old description of what I know is not a permanent ceiling.
+I expect my working model to change. Better evidence can change my mind; negative results can change the design; an interpretation error becomes part of the record rather than something to hide.
 
-The portfolio spans research and knowledge tools, person-directed planning, cooperation experiments, game behavior, neural code, and shared verification machinery. Recent work adds bounded SPrime candidate searches, exact 1,024-byte transport experiments, and browser experiences that make research notation inspectable and speakable. The directory below accounts for all eight repositories without treating every prototype or historical result as a finished product.
+## Current work — September 14, 2026
 
-## Today’s work — September 13, 2026
+### Conscience64 spatial interface
 
-This is my September 13, 2026 working-day update, continued into September 14 UTC. I worked with assisting systems on tools, research, questions and corrections. REDOGIT remains the protocol: preserve what happened, inspect the difference, verify the successor and keep going. Working with other people to solve problems is why I use it.
+Conscience64 is being unified around a **2.5D / 3D visual grammar**. The main Space Lens now has a capability-adaptive graphics path that prefers **WebGPU**, falls back through **WebGL2 / WebGL**, and retains the existing Canvas2D/evidence surface when GPU APIs are unavailable. The Compass brings the major public and operational surfaces into one spatial navigation layer.
 
-### Research space and access
+The same depth hierarchy is being carried through Play, Research Analytics, Coordinate Space, and Research Records. Reduced-motion and forced-colors fallbacks remain part of the interface contract. Visual depth is navigation and presentation—not scientific evidence.
 
-Repaired the Conscience64 research surface and extended source-aware navigation, Coordinate Space, voice controls and Computational Chorus. The existing records distinguish byte integrity, browser behavior and deployment from accessibility certification. **Status: implemented / recorded checks.** [Source](https://github.com/redogit/conscience64)
+[Conscience64](https://github.com/redogit/conscience64) · [Research site](https://redogit.github.io/conscience64/)
 
-### People and practical use
+### Fuzzball Hidden Game — Alpha 0.1
 
-Carried forward accessible-use goals, the general human–knowledge working-set model, and Dream to Action: a chosen goal, a real barrier, a next step and an honest review. Participant benefit and assistive-technology validation remain open. **Status: prototype / human validation open.** [Source](https://github.com/redogit/Dream-To-Action)
+The new **Fuzzball Hidden Game** is now a verified merged alpha inside Conscience64. The alpha has a deterministic floating-world seed, a triangular explorer, 22 ambient Fuzzballs, and 16 humanoid creatures across four families: Mosswalker, Glasskin, Emberkin, and Duskseer. Humanoids have bounded deterministic wandering and proximity reactions.
 
-### Cooperation and context
+The game remains intentionally **unlisted** from the public Play catalog and declares `noindex,nofollow`. Unlisted is a distribution choice, not a security boundary.
 
-Developed the ChatGPT and Conscience cooperation work and added contextual questions to the internal workspace: purpose, prior knowledge and sources, audience, desired output and what must be preserved. Conscience64 has a read-only browser API, not a permanent autonomous session. **Status: implemented / bounded cooperation.** [Source](https://github.com/redogit/Other-Projects-/tree/main/ChatGPT%20and%20Conscience)
+Most importantly:
 
-### Search and internal interaction
+`HISTORICAL_FUZZBALL_CARRIER != NEW_FUZZBALL_HIDDEN_GAME`
 
-Added 65 enabled search services, 248 country/territory profiles excluding Russia, an isolated headless XY workspace and a geometric 4D-to-3D black-hole view. Local tests passed; public browser access still encountered a proxy certificate failure. **Status: merged / network limit retained.** [Source](https://github.com/redogit/conscience64/pull/1)
+The older Fuzzball research carrier is still an unresolved historical recovery problem. Similarity, naming, or new implementation does not establish historical identity.
 
-### Cross-carrier reconstruction
+### Research Analytics
 
-Preserved the 39-packet TBCL → relation index → Orbit → ECS run, exact reconstruction and tampering controls. Inventoried all 736 update-bundle members. The stricter corroboration candidate retains its 11 legacy failures and is not promoted. **Status: executed records / adverse results retained.** [Source](https://github.com/redogit/conscience64/tree/main/research/cross-carrier/2026-09-13/internal-update)
+Research Analytics now has a live-ingestion architecture rather than only a demonstration stream: append-only event handling, SSE delivery, explicit event classes, an LLVM event bridge, and CI checks around the event contract.
 
-### Human expression and 1,024-byte carriers
+The analytics model keeps these states distinct:
 
-Published the bounded Human Expression Archive and S1024 Compression Lab, preserving source rights, context and UTF-8 boundaries. The accession is not all human expression, and raw finite-float transport expands storage rather than compressing arbitrary data. **Status: published bounded tools.** [Source](https://github.com/redogit/Other-Projects-)
+`OBSERVATION → TESTED → VERIFIED → CONTRADICTION → REVISED → PROMOTED / REOPENED`
 
-### SPrime and decision context
+Promotion is never automatic. An analytics event can record evidence; the dashboard itself does not validate the scientific claim represented by that event.
 
-Extended exact program counts, the compact reuse/context pass and finite diagnostic question planning. Declared grammar counts, individually executed cases and theories about human ideas remain different claims. **Status: bounded research.** [Source](https://github.com/redogit/Other-Projects-/tree/main/SPrime%20Search)
+### Research method
 
-### Blank pages and Hodge research
+The working method has become deliberately cyclical:
 
-Added Blank Page Lab and exact rational Hodge Span Lab. The blank-page route to OLU_Surface and OLU_Context remains a recovery question. Span tests inspect supplied vectors; they do not prove algebraicity or settle the Hodge conjecture. **Status: implemented aids / geometric obligations open.** [Source](https://github.com/redogit/Other-Projects-/tree/main/Hodge%20Span%20Lab)
+`working model → outward exploration → independent evidence/testing → return → reconcile → second-pass verification → revised working model`
 
-### Music, play and shared exploration
+I try to preserve at least these distinctions:
 
-Expanded the public playground with Computational Chorus and Musilanguage listening/word experiences. A cooperative world and Fuzzball exploration were requested; those requests are not presented here as a completed MMORPG or solved physics. **Status: public source / further ideas proposed.** [Source](https://github.com/redogit/conscience64/tree/main/play)
+```text
+USER_INPUT != ASSISTANT_SYNTHESIS
+REQUESTED != IMPLEMENTED
+IMPLEMENTED != VERIFIED
+OBSERVATION != INTERPRETATION
+REPETITION != VERIFICATION
+RETRIEVED != INDEPENDENT_EVIDENCE
+BYTE_IDENTITY != SEMANTIC_TRUTH
+SOFTWARE_VERIFICATION != SCIENTIFIC_VALIDATION
+```
 
-### Next investigation
+Negative results, interpretation mistakes, changed boundaries, contradictions, and unresolved questions remain first-class records. I also use a two-pass update habit: make the change, then come back through it looking specifically for omissions, confounds, stale links, provenance errors, and overclaims.
 
-Proposed combining our equilibrium-network work, periodic input or a beat, time-crystal exploration and Hodge research in one cooperating investigation. No executed equilibrium-network experiment, physical time crystal, or proved mathematical bridge is claimed by this update. **Status: proposed / not yet verified.** [Source](https://github.com/redogit/conscience64/blob/main/research/hodge/CONSCIENCE64_COOPERATION.md)
+## What I am exploring
 
-This account covers the public project records reviewed for this update and the work completed in this conversation. It is not an exhaustive transcript or a claim that every repository was rebuilt today. Knowledge Decay, unresolved references, failed checks, authorship and project-specific boundaries remain active.
+Current work includes Cross-Carrier reconstruction, Coordinate Space / Float64 transport, Tiny Babel / TBCL, Orbit-style knowledge organization, SPrime finite searches, Hodge-conjecture research aids, P-versus-NP-related computational experiments, human–knowledge working-set models, accessibility-oriented tooling, cooperative systems, games, and research infrastructure.
 
-## What I am exploring now
+The Hodge conjecture and P versus NP remain open. A successful program run, transport round trip, visual analogy, finite search, or deployed web application does not change those mathematical claim ceilings.
 
-I’m developing a general model of how people engage with knowledge: how questions form, which materials become relevant, how working sets are assembled, and what changes through collaboration, action, and learning. It is not just a model of me, a personality profile, or a complete theory of the human mind.
+## REDOGIT
 
-The aim is to support different people, languages, cultures, purposes, and access needs without assuming one universal learning path. The person, the record about them, the source material, the assisting system, and the observed outcome remain distinct.
+**Do it. Inspect it. Redo it better.**
 
-### Human–Knowledge Working-Set Lab
+REDOGIT is my public working rule:
 
-The Human–Knowledge Working-Set Lab is an offline experimental prototype developed with AI assistance. It makes questions, source views, permissions, context loss, and changing answers inspectable. Duplicate sources do not become independent evidence, and a changed question can make an earlier answer stale.
+1. start from the actual artifact, code, idea, or failure;
+2. preserve the predecessor and provenance;
+3. bound the change;
+4. build the smallest useful successor;
+5. verify what can actually be verified;
+6. retain failures and unresolved state;
+7. continue from the successor without rewriting history.
 
-Its finite software checks apply only to the declared task models. They do not establish human understanding, endorsement, real-world safety, or benefit. Those outcomes need their own evidence.
-
-## How I work
-
-Start with the human purpose and question. Preserve what changes the answer. Import only what the task needs and is permitted to use. Try a bounded change, look for counterexamples, and keep the failures and corrections.
-
-The working set serves the person—not the other way around. Human rights, privacy, agency, and accessibility are not points to trade away for a faster benchmark. System obligations remain separate from what a person chooses to do.
-
-## Do it. Inspect it. Redo it better.
-
-`redogit` is my public working rule: preserve what actually happened, keep the useful part, rebuild the smallest thing that matters, verify the successor, and keep going.
-
-Git history stays history. A redo is a successor, not a rewritten past.
-
-See **[REDOGIT.md](REDOGIT.md)** for the rule. Repositories can expose their current successor through a machine-readable **`redogit.json`** contract defined by **[REDOGIT.schema.json](REDOGIT.schema.json)**.
+See [REDOGIT.md](REDOGIT.md) and the machine-readable [redogit.json](redogit.json).
 
 ## All eight repositories
 
-Eight repositories accounted for: seven public projects and one private repository. Reviewed September 13, 2026. Public descriptions follow the inspected default-branch documentation; this update does not rerun every project or verify every deployment.
+The account-level count remains **eight repositories: seven public and one private placeholder**. New Conscience64 games, research records, analytics surfaces, and browser tools are subprojects inside an existing repository; they do not silently become new repositories.
 
 ### 1. [Conscience64](https://github.com/redogit/conscience64)
 
-A static research space with the I / R / P / O interface, source-aware search, graph traversal, and the browser-side Conscience64API.
+Research environment and browser interface containing Space Lens / Compass4D, Coordinate Space, Research Analytics, research records, history/restore surfaces, public Play applications, Explorer/MMO work, Computational Chorus, Musilanguage, and the unlisted Fuzzball Hidden Alpha.
 
-Includes Orbit Shelf, Word Weave, Pattern Garden, Small Steps, and Source Compare; seven linked research branches; recovery-carrier records; and Cross-Carrier / Float64 checkpoints, including the compact v2.2 surface and SAT64/MCR lineage.
-
-Coordinate Space Workbench encodes, imports and recovers exact UTF-8 through ordered float64 carriers and metadata, with original-file intake, strict JSON imports and 16 draft interface languages. It now includes optional Speak/Read controls. The codec runs locally; speech recognition depends on browser support and may use browser-provided remote services, so voice input is not guaranteed offline.
-
-Computational Chorus presents exact notation, speakable wording and alliterative mnemonics alongside explicit claim boundaries and an original research song. A mnemonic is not proof of equivalence; P versus NP and the general Hodge conjecture remain open.
-
-GitHub records successful Pages source synchronization and deployment for commit b6da9fcc8e56019b27656f7e244a8b1f763ed15c. This is deployment evidence, not a fresh end-to-end voice test, translation review, or screen-reader/accessibility certification.
-
-Source hashes establish byte identity, not truth or independent evidence. Research records retain failures, claim limits, and unresolved work.
-
-[Coordinate Space](https://redogit.github.io/conscience64/coordinate-space/) · [Computational Chorus](https://redogit.github.io/conscience64/play/computational-chorus/) · [Recorded Pages deployment](https://github.com/redogit/conscience64/actions/runs/34786561921)
-
-[Research site](https://redogit.github.io/conscience64/) · [Research portfolio](https://github.com/redogit/conscience64/tree/main/research/projects) · [Checkpoint index](https://github.com/redogit/conscience64/blob/main/research/cross-carrier/2026-09-12/PACKAGE_INDEX.md)
+The repository preserves explicit boundaries between source integrity, software behavior, interpretation, and independent evidence.
 
 ### 2. [Dream to Action](https://github.com/redogit/Dream-To-Action)
 
-A local-first prototype: one chosen goal, one real barrier, one usable next step, and an honest review. It distinguishes individual effort from support or institutional change without ranking people or promising outcomes.
-
-Includes the standalone app, preserved prototype source and test records, a fictional example, founding conversation, provenance, and a proposed pilot. Open index.html after downloading; export before closing because entries live in page memory.
-
-English-language prototype. Participant and assistive-technology testing remain necessary. Its proposed pilot has not started, and a project-specific license remains a maintainer decision.
-
-[Application source](https://github.com/redogit/Dream-To-Action/blob/main/index.html) · [Prototype and pilot](https://github.com/redogit/Dream-To-Action/tree/main/prototype)
+A local-first human-directed planning prototype built around a chosen goal, a real barrier, a next action, and an honest review. Human benefit and assistive-technology validation remain separate from software checks.
 
 ### 3. [Other Projects](https://github.com/redogit/Other-Projects-)
 
-The multi-project home preserves ChatGPT and Conscience: runnable Python symmetry experiments, finite-table checks, two reviewable Conscience64 API patches, pinned source locks, claim and provenance records, and a local sandbox builder.
-
-The sandbox is a research candidate, not a deployed change to Conscience64 and not a generative chat service. Authorship, navigation, human direction, and evidence remain separate.
-
-Published implementations now include the Human Expression Archive (a bounded 91-record accession and offline viewer), S1024 Compression Lab, Context Discovery, and SPrime Search. These are subprojects inside this repository, not additional repositories.
-
-S1024 preserves exact 1,024-byte cuts and UTF-8 boundary states. Its SP1024-1 raw transport uses 133 finite float64 carriers per full section before metadata: storage expansion, not arbitrary-data compression. Frozen-pattern compression results are synthetic and task-relative.
-
-SPrime counts expressions in a declared NAND tree grammar through a 1,024-byte capacity (longest expression: 1,023 bytes). This is an exact symbolic census, not individual execution of every counted program. The separate compact D1 pass reports an executed census of 412,909,356 words through eight bytes; its language, decoder dependencies and unresolved outputs remain distinct.
-
-These are bounded software and research records, not a universal idea detector, historical novelty claim, or theory of human cognition. Repository publication does not establish Pages deployment or independent replication. Preservation is not endorsement; source-specific rights and cultural protocols remain attached.
-
-[Human Expression Archive](https://github.com/redogit/Other-Projects-/tree/main/Human%20Expression%20Archive) · [S1024 Compression Lab](https://github.com/redogit/Other-Projects-/tree/main/S1024%20Compression%20Lab) · [Context Discovery](https://github.com/redogit/Other-Projects-/tree/main/Context%20Discovery) · [SPrime Search](https://github.com/redogit/Other-Projects-/tree/main/SPrime%20Search) · [Compact D1 pass](https://github.com/redogit/Other-Projects-/tree/main/SPrime%20Search/compact)
-
-[ChatGPT and Conscience](https://github.com/redogit/Other-Projects-/tree/main/ChatGPT%20and%20Conscience) · [Cooperation guide](https://github.com/redogit/Other-Projects-/blob/main/ChatGPT%20and%20Conscience/docs/COOPERATION.md)
+Multi-project home for ChatGPT/Conscience cooperation, the Human Expression Archive, S1024 Compression Lab, Context Discovery, SPrime Search, Hodge research aids, and other bounded experiments. Subprojects are not counted as additional repositories.
 
 ### 4. [MauiBrickBreak](https://github.com/redogit/MauiBrickBreak)
 
-The v2 successor separates reusable game state, geometry, collisions, and observable events from an executable behavior verifier. Its checks cover wall reflection, paddle reflection, block depletion, and BallLost.
-
-REDOGIT.slnx is the current build entry point. The original .NET 6 MAUI/Orbit application, assets, controls, and first framework-independent successor remain as predecessors.
-
-This is a reusable game core and preserved application history, not a newly published browser game.
-
-[Current v2 source](https://github.com/redogit/MauiBrickBreak/tree/master/successors/redogit-2026-v2)
+Preserved .NET/MAUI game lineage with reusable game-state, geometry, collision, and behavior-verification successors.
 
 ### 5. [FirstNeuralNetwork](https://github.com/redogit/FirstNeuralNetwork)
 
-The v2 successor separates a deterministic logistic-neuron training API from a verifier for the four OR truth-table cases. REDOGIT.slnx is the build entry point.
-
-The original C# neural-network experiment and first REDOGIT successor remain intact. A separate Adaptive Connectivity Diagnostic Network C++20 experiment is preserved under successors with an identified archive transport.
-
-A passing OR verifier is a bounded software result, not evidence of general intelligence.
-
-[Current v2 source](https://github.com/redogit/FirstNeuralNetwork/tree/master/successors/redogit-2026-v2) · [Other preserved successors](https://github.com/redogit/FirstNeuralNetwork/blob/master/successors/README.md)
+Preserved neural-network experiments and bounded deterministic successors. Passing finite truth-table tests are software results, not claims of general intelligence.
 
 ### 6. [Orbit Engine](https://github.com/redogit/orbit)
 
-My upstream-derived fork of bijington/orbit, built around .NET MAUI Graphics. The engine provides game scenes, game objects, scene management, and an update/render loop; the repository also retains its games directory.
-
-The local REDOGIT contract keeps the inherited implementation and local repair history attributable. Upstream authorship remains upstream.
-
-Orbit Engine is not the separate Orbit Library / Orbit Lab research project.
-
-[Engine source](https://github.com/redogit/orbit/tree/main/engine) · [Game examples](https://github.com/redogit/orbit/tree/main/games) · [Upstream Orbit](https://github.com/bijington/orbit)
+An upstream-derived .NET MAUI Graphics engine fork with retained attribution and local REDOGIT repair history. This is distinct from the Orbit Library / knowledge-organization research line.
 
 ### 7. [redogit](https://github.com/redogit/redogit)
 
-This profile repository contains the About Me README, standalone homepage, REDOGIT rule, machine-readable contract and schema, Python inspection CLI, and public verification snapshot.
-
-It also carries the shared verification workflow. The rule is to retain the predecessor, declare the successor, inspect the difference, and record the check without rewriting history.
-
-The repository directory is a dated inventory, not a live CI dashboard. The public verification snapshot keeps its own evidence scope and does not expose private repository identities.
-
-[REDOGIT rule](REDOGIT.md) · [Machine contract](redogit.json) · [Recorded public status](PUBLIC_STATUS.json)
+This profile, the REDOGIT rule and schema, repository accounting, verification helpers, and dated forward-only profile updates.
 
 ### 8. Private repository
 
-One repository remains private. It is counted here without publishing its name, URL, code, internal documents, or verification details. This directory does not change repository visibility or access.
+One repository remains private. It is counted without publishing its identity, URL, code, documents, or internal verification details.
 
-## Inside the research portfolio
+## Current Conscience64 research records
 
-These seven research branches live within Conscience64; they are not seven additional GitHub repositories. Each record retains highlights, failures, and unresolved work.
+The preserved browser/API registry remains historically bounded while newer records are added forward-only. Current human-readable records include Cross-Carrier Wave, Orbit Library, Tiny Babel / TBCL, Operator Moonshot, Model Experiments, Geometry / 4D / Codecs, Historical Recovery, Hodge Conjecture Research Spine, and Research Analytics.
 
-- **[Cross-Carrier Wave](https://github.com/redogit/conscience64/blob/main/research/projects/cross-carrier-wave.md)** — Transforms, preserved obligations, and loss/remainder accounting.
-- **[Orbit Library](https://github.com/redogit/conscience64/blob/main/research/projects/orbit-library.md)** — Knowledge organization, bounded active context, and recoverable history.
-- **[Tiny Babel / TBCL](https://github.com/redogit/conscience64/blob/main/research/projects/tiny-babel-tbcl.md)** — Executable context-language work and bounded finite verification.
-- **[Operator Moonshot](https://github.com/redogit/conscience64/blob/main/research/projects/operator-moonshot.md)** — Research methods, operator experiments, failures, and explicit claim ceilings.
-- **[Model Experiments](https://github.com/redogit/conscience64/blob/main/research/projects/model-experiments.md)** — Reusable mechanisms, regressions, and negative evidence.
-- **[Geometry / 4D / Codecs](https://github.com/redogit/conscience64/blob/main/research/projects/geometry-codecs.md)** — Representations, round trips, integrity, and observer limits.
-- **[Historical Recovery](https://github.com/redogit/conscience64/blob/main/research/projects/historical-recovery.md)** — Source identities, missing context, and unresolved reconstruction.
+[Research records](https://github.com/redogit/conscience64/tree/main/research/projects) · [Research Analytics](https://redogit.github.io/conscience64/analytics/) · [Coordinate Space](https://redogit.github.io/conscience64/coordinate-space/) · [Play](https://redogit.github.io/conscience64/play/) · [History](https://redogit.github.io/conscience64/history/)
 
-The Human–Knowledge Working-Set Lab described above remains an experimental prototype; this directory update does not publish its local package into another repository.
+## Free use
 
-## Try the free web tools
-
-The original five-tool playground remains inside Conscience64:
-
-- **[Orbit Shelf](https://redogit.github.io/conscience64/play/orbit/)** — Collect and search notes with source links.
-- **[Word Weave](https://redogit.github.io/conscience64/play/weave/)** — Rearrange writing while preserving the original.
-- **[Pattern Garden](https://redogit.github.io/conscience64/play/garden/)** — Make geometric art with keyboard controls and SVG/text exports.
-- **[Small Steps](https://redogit.github.io/conscience64/play/steps/)** — Plan a next step and keep dated checkpoints.
-- **[Source Compare](https://redogit.github.io/conscience64/play/compare/)** — Inspect exact changes between an original text and a revision.
-
-English, Spanish, French, and Arabic interfaces; Unicode writing; optional local saving; no account. [Open the project hub](https://redogit.github.io/conscience64/play/) · [Code, provenance, and MIT license scoped to the playground](https://github.com/redogit/conscience64/tree/main/play).
-
-Additional browser experiences include [Coordinate Space](https://redogit.github.io/conscience64/coordinate-space/) and [Computational Chorus](https://redogit.github.io/conscience64/play/computational-chorus/). Their language, voice, licensing and verification scopes are separate from the original five-tool catalog; none is an additional repository.
-
-## Use the REDOGIT tools locally
-
-From a clone of this profile repository, the small Python CLI can inspect a local REDOGIT repository or the public account snapshot:
-
-```bash
-python tools/redogit.py status /path/to/repository
-python tools/redogit.py check /path/to/repository
-python tools/redogit.py run /path/to/repository
-python tools/redogit.py public-status .
-```
-
-- `status` reads the current successor, retained predecessors, boundary, and any recorded blocker.
-- `check` validates the REDOGIT invariants without executing project code.
-- `run` validates the contract and then executes its declared build and verification commands.
-- `public-status` reads the gated [`PUBLIC_STATUS.json`](PUBLIC_STATUS.json) snapshot. It does not enumerate GitHub and contains no private repository identities.
-
-GitHub repositories can use the shared reusable workflow `.github/workflows/verify-redogit.yml` where repository policy permits it. Shared-workflow callers can pin a tested commit rather than follow a moving branch implicitly.
-
-## The current pattern
-
-`actual predecessor → bounded difference → candidate successor → declared check → PASS → current successor → retained lineage → next bounded difference`
-
-The declaration of “what is current” is part of verification too. A repository listing is not a fresh build result; consult each project's recorded checks and unresolved limits.
-
-## Free Use!
-
-The original text and code of this homepage are free to use, copy, modify, and share, including for commercial purposes. Attribution is welcome, but not required. Linked projects and third-party material keep their own licensing terms.
+Original text and code in this profile repository may be reused according to the repository’s stated terms. Linked projects and third-party material retain their own licenses, attribution, provenance, and source-specific restrictions.
 
 ---
 
-[Standalone homepage](index.html) · [Public verification status](PUBLIC_STATUS.json) · [REDOGIT contract](redogit.json) · [REDOGIT schema](REDOGIT.schema.json) · [Publishing instructions](PUBLISHING.md) · [Browse repositories](https://github.com/redogit?tab=repositories)
-
-## Version history and restore
-
-[History & restore](https://redogit.github.io/conscience64/history/) links the current application facets and public repository histories. Six saved-document adapters support local checkpoints, export/import, and restore with a before-restore backup. Other facets retain source history and native export/import where provided. Source restoration creates a verified successor under REDOGIT; it does not rewrite history or restore unsaved runtime state.
+Latest forward-only context: [September 14 Fuzzball Alpha and analytics update](CURRENT_UPDATE_2026-09-14_FUZZBALL_ALPHA.md) · [Earlier September 14 update](CURRENT_UPDATE_2026-09-14.md) · [Standalone homepage](index.html)
