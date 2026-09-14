@@ -1,13 +1,19 @@
 {
   "schema": "redogit/public-status/v1",
-  "snapshot_date": "2026-09-13",
+  "snapshot_date": "2026-09-14",
   "scope": "public repositories only",
   "authority": "Each repository's own redogit.json remains authoritative for its current contract. This file is a public evidence snapshot and intentionally contains no private repository identities.",
+  "snapshot_boundary": "This snapshot combines the latest observed broad REDOGIT contract checks with newer additive/current-head checks where available. A green additive workflow does not silently expand the scope of an older broad contract check, and this snapshot is not evidence that every code path in every repository ran on this date.",
+  "repository_accounting": {
+    "total": 8,
+    "public": 7,
+    "private": 1,
+    "private_identity_published": false
+  },
   "public_contracts_green": true,
   "reusable_verifier": {
     "tested_commit": "77c355fc1d62d7aab6d8b30dfe8e96593c7cba22",
-    "profile_test_run": 34769564221,
-    "conclusion": "success",
+    "note": "This remains the pinned reusable verifier revision used by the successor-contract workflows listed below; newer project-local additive checks are recorded separately.",
     "invariants": [
       "predecessors failures unresolved remainder and source-native identity are retained",
       "I/R/P/O research surface is explicit",
@@ -26,29 +32,46 @@
       "current_id": "redogit-profile-rule-v2",
       "verification": {
         "workflow": "REDOGIT profile",
-        "run": 34769564221,
+        "run": 34812619758,
+        "verified_head": "440042674963202fea2750d8124b73783e9f92f5",
         "conclusion": "success",
-        "checks": ["learned REDOGIT contract", "schema", "public status", "homepage", "local CLI"]
+        "checks": ["learned REDOGIT contract", "schema", "public status", "homepage", "local CLI"],
+        "boundary": "This run is the verified predecessor used to prepare the present forward-only snapshot; the snapshot update itself receives a separate CI run before merge."
       }
     },
     {
       "repository": "redogit/conscience64",
-      "role": "privacy-safe static research, project registry, and Cross-Carrier / Float64 surface",
+      "role": "privacy-safe static research, project registry, Cross-Carrier / Float64 surface, and public research/play interfaces",
       "contract_status": "current",
       "current_id": "conscience64-static-research-main",
       "verification": {
-        "workflow": "REDOGIT local verification",
-        "run": 34769989938,
-        "conclusion": "success",
-        "transport": "exact public GITHUB_SHA materialized with Git; no external Action dependency",
-        "checks": [
-          "learned REDOGIT contract",
-          "research-project registry",
-          "bounded SQL result invariants",
-          "compact Max-Cut certificate",
-          "repository-surface byte counts",
-          "repository-surface SHA-256 hashes"
-        ]
+        "last_broad_contract": {
+          "workflow": "REDOGIT local verification",
+          "run": 34769989938,
+          "conclusion": "success",
+          "checks": [
+            "learned REDOGIT contract",
+            "research-project registry",
+            "bounded SQL result invariants",
+            "compact Max-Cut certificate",
+            "repository-surface byte counts",
+            "repository-surface SHA-256 hashes"
+          ]
+        },
+        "current_head_publication": {
+          "head": "53c2d073de9da742f50d95d93b5db6215ff032e9",
+          "workflow": "Sync Conscience64 Pages source",
+          "run": 34843630443,
+          "conclusion": "success",
+          "scope": "full existing Pages publication gate for the current main revision"
+        },
+        "recent_hodge_additive_check": {
+          "merge_head": "8951cc46d746ab60deb5ac0fa02b0e9072b23c5e",
+          "workflow": "Hodge Decision Field",
+          "run": 34840020883,
+          "conclusion": "success",
+          "scope": "finite Hodge decision-field recomputation, semantic checkpoint comparison, and evidence-firewall checks only"
+        }
       },
       "manifest_distinction": {
         "full_generated_package": "research/cross-carrier/2026-09-12/v2.2/manifest.json",
@@ -63,6 +86,7 @@
       "verification": {
         "workflow": "REDOGIT successor",
         "run": 34769630091,
+        "verified_head": "df6ec8c7fbb05c5cf6c3229c3e2229e3d47e28ed",
         "conclusion": "success",
         "verifier_commit": "77c355fc1d62d7aab6d8b30dfe8e96593c7cba22",
         "checks": ["learned REDOGIT contract", "REDOGIT.slnx Release build", "v2 self-check"]
@@ -76,6 +100,7 @@
       "verification": {
         "workflow": "REDOGIT successor",
         "run": 34769652111,
+        "verified_head": "6f28f2a9c114a46fbd47000b4685876ad7f085fd",
         "conclusion": "success",
         "verifier_commit": "77c355fc1d62d7aab6d8b30dfe8e96593c7cba22",
         "checks": ["learned REDOGIT contract", "REDOGIT.slnx Release build", "v2 self-check"]
@@ -88,6 +113,7 @@
       "verification": {
         "provenance_contract": {
           "run": 34769695994,
+          "verified_head": "d6d3255e6f5688fd5b13ce9e181b107a50ba8b7a",
           "conclusion": "success",
           "verifier_commit": "77c355fc1d62d7aab6d8b30dfe8e96593c7cba22"
         },
@@ -109,6 +135,7 @@
       "verification": {
         "workflow": "Verify Dream to Action",
         "run": 34769802787,
+        "verified_head": "0eb8a1f8ae5a0e8934f47f1c84b7de0b006ee22c",
         "conclusion": "success",
         "checks": [
           "learned REDOGIT contract",
@@ -122,21 +149,44 @@
     },
     {
       "repository": "redogit/Other-Projects-",
-      "role": "implementation carrier for Human Expression Archive, S1024 Compression Lab, and preserved cooperation-lab lineage",
+      "role": "implementation carrier for Human Expression Archive, S1024 Compression Lab, cooperation-lab lineage, operator/decision-field work, and other bounded experiments",
       "contract_status": "current",
       "current_id": "other-projects-research-carrier-v1",
       "verification": {
-        "workflow": "REDOGIT Other Projects",
-        "run": 34770140762,
-        "conclusion": "success",
-        "checks": [
-          "learned REDOGIT contract",
-          "historical publication non-claims retained",
-          "project-routing boundaries",
-          "Human Expression Archive build and tests",
-          "S1024 tests",
-          "deterministic S1024 demo"
-        ]
+        "last_broad_contract": {
+          "workflow": "REDOGIT Other Projects",
+          "run": 34770140762,
+          "conclusion": "success",
+          "checks": [
+            "learned REDOGIT contract",
+            "historical publication non-claims retained",
+            "project-routing boundaries",
+            "Human Expression Archive build and tests",
+            "S1024 tests",
+            "deterministic S1024 demo"
+          ]
+        },
+        "current_head_sprime_check": {
+          "head": "215e7054ba0a6e1f07905bb09a61ea9e0034e9a3",
+          "workflow": "SPrime Decision Field",
+          "run": 34840215466,
+          "conclusion": "success",
+          "scope": "bounded decision-field audits, curated-evidence relationships, and byte-stable hardening outputs"
+        },
+        "recent_operator_check": {
+          "merge_head": "5d2d6dbc088252d4b9c5944c9e4acb903565da98",
+          "workflow": "Decision Field Operator Lab",
+          "run": 34839775686,
+          "conclusion": "success",
+          "scope": "operator lab and coordinated R3 skill/agent registry checks"
+        },
+        "recent_pnp_publication_check": {
+          "merge_head": "82f8df22f9af7dccf2bfd2223a470068c92f196a",
+          "workflow": "Verify and publish P-vs-NP decision-field checkpoint",
+          "run": 34829937956,
+          "conclusion": "success",
+          "scope": "bounded discriminator checkpoint verification and exact-revision gh-pages source publication"
+        }
       },
       "failure_lineage": {
         "run_1": 34769959244,
