@@ -45,6 +45,7 @@
       "contract_status": "current",
       "current_id": "conscience64-static-research-main",
       "verification": {
+        "conclusion": "success",
         "last_broad_contract": {
           "workflow": "REDOGIT local verification",
           "run": 34769989938,
@@ -153,6 +154,7 @@
       "contract_status": "current",
       "current_id": "other-projects-research-carrier-v1",
       "verification": {
+        "conclusion": "success",
         "last_broad_contract": {
           "workflow": "REDOGIT Other Projects",
           "run": 34770140762,
