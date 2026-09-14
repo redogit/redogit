@@ -3,7 +3,7 @@
   "snapshot_date": "2026-09-14",
   "scope": "public repositories only",
   "authority": "Each repository's own redogit.json remains authoritative for its current contract. This file is a public evidence snapshot and intentionally contains no private repository identities.",
-  "snapshot_boundary": "This snapshot combines the latest observed broad REDOGIT contract checks with newer additive/current-head checks where available. A green additive workflow does not silently expand the scope of an older broad contract check, and this snapshot is not evidence that every code path in every repository ran on this date.",
+  "snapshot_boundary": "This snapshot combines the latest observed broad REDOGIT contract checks with newer additive checks where available. Recorded head fields are evidence anchors observed for this snapshot, not live pointers to a repository's current head. Repository heads may advance after this snapshot. A green additive workflow does not silently expand the scope of an older broad contract check, and this snapshot is not evidence that every code path in every repository ran on this date.",
   "repository_accounting": {
     "total": 8,
     "public": 7,
@@ -32,11 +32,11 @@
       "current_id": "redogit-profile-rule-v2",
       "verification": {
         "workflow": "REDOGIT profile",
-        "run": 34812619758,
-        "verified_head": "440042674963202fea2750d8124b73783e9f92f5",
+        "run": 34844049826,
+        "verified_head": "d6108d3696e5fcb8598ee93bb32cf47d55a16960",
         "conclusion": "success",
         "checks": ["learned REDOGIT contract", "schema", "public status", "homepage", "local CLI"],
-        "boundary": "This run is the verified predecessor used to prepare the present forward-only snapshot; the snapshot update itself receives a separate CI run before merge."
+        "boundary": "This is the latest recorded profile verification before this forward-only snapshot-semantics edit; the edit itself receives a separate CI run before merge."
       }
     },
     {
@@ -59,12 +59,12 @@
             "repository-surface SHA-256 hashes"
           ]
         },
-        "current_head_publication": {
+        "recorded_head_publication": {
           "head": "53c2d073de9da742f50d95d93b5db6215ff032e9",
           "workflow": "Sync Conscience64 Pages source",
           "run": 34843630443,
           "conclusion": "success",
-          "scope": "full existing Pages publication gate for the current main revision"
+          "scope": "full existing Pages publication gate for the recorded main revision"
         },
         "recent_hodge_additive_check": {
           "merge_head": "8951cc46d746ab60deb5ac0fa02b0e9072b23c5e",
@@ -168,12 +168,12 @@
             "deterministic S1024 demo"
           ]
         },
-        "current_head_sprime_check": {
-          "head": "215e7054ba0a6e1f07905bb09a61ea9e0034e9a3",
+        "recorded_sprime_check": {
+          "head": "805206d8cc34ea7035734a7f3cc845c8b38525ea",
           "workflow": "SPrime Decision Field",
-          "run": 34840215466,
+          "run": 34850193444,
           "conclusion": "success",
-          "scope": "bounded decision-field audits, curated-evidence relationships, and byte-stable hardening outputs"
+          "scope": "bounded decision-field audits and evidence checks plus double-runs of Pass 07 schedule semantics, Pass 08 partial-observation semantics, Pass 09 observation-lattice semantics, and Pass 10 continuation quotients"
         },
         "recent_operator_check": {
           "merge_head": "5d2d6dbc088252d4b9c5944c9e4acb903565da98",
