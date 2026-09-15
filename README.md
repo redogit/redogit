@@ -24,6 +24,16 @@ My work crosses software, language, knowledge organization, accessibility, games
 
 I expect my working model to change. Better evidence can change my mind; negative results can change the design; an interpretation error becomes part of the record rather than something to hide.
 
+## Explore the history — 10 doors
+
+The history is intentionally **federated rather than centralized**. The [10-step History Playground](history-playground.html) gives people ten optional doors into the theories, formal results, experiments, tools, games, apps, education, accessibility, philosophy, ethics, coding, failures, and recovered history.
+
+Each door follows:
+
+`FIND → TRY → LEARN → TEACH → LEAVE A TRAIL`
+
+Finishing all ten is not a mastery badge or a completeness claim. It means you explored ten slices and can explain what you found. Start with the [full check-in guide](HISTORY_PLAYGROUND_10_STEP_CHECKIN.md), the [federated work index](FEDERATED_WORK_INDEX.md), or the [machine-readable quest manifest](history-playground.json).
+
 ## Current work — September 14, 2026
 
 ### Conscience64 spatial interface
@@ -149,4 +159,4 @@ Original text and code in this profile repository may be reused according to the
 
 ---
 
-Latest forward-only context: [September 14 Fuzzball Alpha and analytics update](CURRENT_UPDATE_2026-09-14_FUZZBALL_ALPHA.md) · [Earlier September 14 update](CURRENT_UPDATE_2026-09-14.md) · [Standalone homepage](index.html)
+Current navigation: [Federated Work Index](FEDERATED_WORK_INDEX.md) · [10-Step History Playground](history-playground.html) · [Detailed check-in guide](HISTORY_PLAYGROUND_10_STEP_CHECKIN.md) · [Body-of-work recovery snapshot](BODY_OF_WORK.md) · [Standalone homepage](index.html)
