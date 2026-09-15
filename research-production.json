@@ -1,0 +1,94 @@
+{
+  "schema": "redogit/research-production-federation/v1",
+  "date": "2026-09-14",
+  "authority": "NAVIGATION_AND_COORDINATION_ONLY",
+  "principles": [
+    "RESEARCH_RESULT != PRODUCT_FEATURE",
+    "PRODUCT_SUCCESS != SCIENTIFIC_VALIDATION",
+    "PROTOTYPE != DEPLOYMENT",
+    "DEPLOYMENT != HUMAN_BENEFIT",
+    "PLAY != EVIDENCE",
+    "TEACHING != AUTHORITY_TRANSFER",
+    "INDEX != AUTHORITY",
+    "RELATION != MERGE",
+    "ASSISTANCE != OWNERSHIP"
+  ],
+  "lanes": ["research", "production", "play", "teach", "history"],
+  "researchLoop": ["question", "boundary", "claim", "test", "observation", "counterprobe", "evidence-state", "remainder", "next-question"],
+  "productionLoop": ["need", "user-context", "minimum-useful-build", "verify", "accessibility-safety-cost", "release-candidate", "ship-or-use", "feedback", "repair-remove-revise"],
+  "bridgeRelations": [
+    "INSPIRES_INTERFACE",
+    "PROVIDES_VERIFIED_OPERATOR",
+    "SUPPLIES_TEST_METHOD",
+    "PROVIDES_COUNTEREXAMPLE",
+    "PROVIDES_DATA_FORMAT",
+    "PROVIDES_RECOVERY_PATTERN",
+    "PROVIDES_GAME_MECHANIC",
+    "TEACHING_EXAMPLE_ONLY",
+    "HISTORY_ONLY"
+  ],
+  "currentChatResearch": [
+    {
+      "id": "epistemology-praxeology-adaptive-organization",
+      "status": "PHILOSOPHY_AND_OPEN_RESEARCH",
+      "question": "What additional structure distinguishes a static epistemic state from an acting adaptive agent?",
+      "productionCandidates": ["decision-field visualizer", "state-action-feedback simulator", "agent-society sandbox", "lineage-reorganization explorer"],
+      "claimCeiling": "No universal law of mind, life, society, or civilization."
+    },
+    {
+      "id": "higher-organization",
+      "status": "WORKING_STRUCTURAL_LENS",
+      "statement": "higher organization = differentiation + relation + coordination",
+      "researchQuestions": ["When does differentiation improve collective capability?", "When does coordination become homogenization?", "What costs or authority failures appear under centralization?"],
+      "productionCandidates": ["federated project UI", "detachable typed bridges", "local evidence and authority badges", "split-integration controls"]
+    },
+    {
+      "id": "cell-to-technical-we",
+      "status": "COMPARATIVE_SYSTEMS_HYPOTHESIS_GENERATOR",
+      "sequence": ["cell", "organism", "animal-environment", "social-group", "culture", "technical-extension", "distributed-human-machine-cognition", "institutions-civilization", "meta-coordination", "collective-self-modeling"],
+      "boundary": "structural analogy != literal identity",
+      "productionCandidates": ["comparative systems simulator", "scale-selectable map", "same-pattern-different-carrier teaching mode"]
+    },
+    {
+      "id": "meta-coordination-self-modeling",
+      "status": "OPEN_RESEARCH",
+      "loop": ["system", "self-model", "action", "changed-system", "updated-self-model"],
+      "productionCandidates": ["evidence-aware dashboards", "reversible configuration history", "observation-interpretation-decision-revision UI", "authority visualization"]
+    },
+    {
+      "id": "no-center-federated-agency",
+      "status": "WORKING_DESIGN_AND_RESEARCH_PRINCIPLE",
+      "researchQuestions": ["When does federation preserve local competence better than centralization?", "What is the coordination overhead?", "How much reconstruction burden does schema normalization create?"],
+      "productionCandidates": ["Federated Work Index", "History Playground", "typed removable links", "project-local status and claim labels"]
+    }
+  ],
+  "doors": [
+    {"door":1,"id":"human-direction","research":["agency","values","praxeology","human constraints"],"production":["Small Steps","Dream to Action"],"playTeach":["choose-your-own-question exercises"]},
+    {"door":2,"id":"provenance","research":["identity","chronology","recovery","authority transfer"],"production":["Source Compare","History & Restore","REDOGIT/Airlock patterns"],"playTeach":["before/after detective game"]},
+    {"door":3,"id":"language-knowledge","research":["carrier semantics","compression","retrieval","Knowledge Decay"],"production":["Orbit Shelf","Word Weave","Computational Chorus"],"playTeach":["remix and explain-back"]},
+    {"door":4,"id":"geometry-carriers","research":["4D observers","transforms","Float64/UTF-8","invariants"],"production":["Coordinate Space","Pattern Garden"],"playTeach":["transform puzzles"]},
+    {"door":5,"id":"build-repair","research":["compiler","search","optimizer","mutation validity"],"production":["MauiBrickBreak successor","FirstNeuralNetwork successor","LLVM/MLIR/WASM tools"],"playTeach":["break-it-to-learn-it challenges"]},
+    {"door":6,"id":"mind-models","research":["Operational Closure","SHADOW","PulseNet/SPDM","agent society"],"production":["bounded agent/society infrastructure","model test harnesses"],"playTeach":["lesion and counterprobe sandbox"]},
+    {"door":7,"id":"mathematics","research":["R3","Hodge","P vs NP","SAT","SEARCH/CERTIFY"],"production":["proof/research aids","exact verifiers"],"playTeach":["proof-vs-overclaim exercises"]},
+    {"door":8,"id":"science-physical","research":["GR-quantum distinctions","confounds","water engineering"],"production":["physical-design briefs","measurement tools"],"playTeach":["confound/control challenges"]},
+    {"door":9,"id":"accessibility-education","research":["CPACC/UDL","E1/E2/E3","human learning evidence"],"production":["accessible documents","JAWS/Excel tooling","learner-first interfaces"],"playTeach":["teach-back and multi-representation modes"]},
+    {"door":10,"id":"worlds-art","research":["creative systems as generators not evidence"],"production":["MMO","Explorer World","Fuzzball","Red Wilds","Computational Chorus","archives"],"playTeach":["pure play plus optional learning hooks"]}
+  ],
+  "productionStates": ["IDEA","DESIGN","PROTOTYPE","LOCAL_WORKING","SOFTWARE_VERIFIED","ACCESSIBILITY_CHECKED","SECURITY_REVIEWED","BETA","PRODUCTION_CANDIDATE","PRODUCTION","RETIRED","SUPERSEDED","UNRESOLVED"],
+  "researchStates": ["PHILOSOPHY","HYPOTHESIS","DESIGNED_NOT_RUN","INVALID_RUN","NEGATIVE_RESULT","TESTED_BOUNDED","EXHAUSTIVE_FINITE","FORMAL_PROOF_WITHIN_ASSUMPTIONS","INDEPENDENT_REPLICATION","OPEN","UNRESOLVED"],
+  "existingProductionSurfaces": [
+    "Orbit Shelf","Word Weave","Pattern Garden","Small Steps","Source Compare","Computational Chorus","Explorer World","Conscience64 MMO RPG","Dream to Action","Coordinate Space","Research Analytics public/static view"
+  ],
+  "priorities": [
+    "research switchboard",
+    "production switchboard",
+    "optional teach-back surfaces",
+    "accessibility pass",
+    "version and restore pass",
+    "negative-result gallery",
+    "fun lane",
+    "typed removable research-to-product bridges",
+    "product-to-research firewall",
+    "split views before centralizing projects"
+  ]
+}
