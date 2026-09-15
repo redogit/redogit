@@ -16,8 +16,8 @@
   ],
   "sourceRevisions": {
     "redogit/redogit": "92797213b2b8892e4e67c512bc53e98e7f2e141b",
-    "redogit/conscience64": "927a692a03783d1524feeb69d64e9e2ca58c781e",
-    "redogit/Other-Projects-": "a61fc8b610f18d6056778d549a680144a6579c29"
+    "redogit/conscience64": "01a0d087540231a6b2015a7434af05c9d9ea3292",
+    "redogit/Other-Projects-": "932a7568b1b808e7e1db42063b4d1d55e1d7be79"
   },
   "active": [
     {"id":"c64-cross-carrier-wave","repo":"redogit/conscience64","path":"research/projects/cross-carrier-wave.md","state":"ACTIVE_RESEARCH","role":"architecture / bounded research","relation":"RESEARCH_PEER","claimBoundary":"not a universal theory of knowledge or semantics"},
@@ -36,7 +36,6 @@
     {"id":"c64-small-steps","repo":"redogit/conscience64","path":"play/steps/","state":"ACTIVE_PUBLIC_TOOL","role":"local next-step planning","relation":"PRODUCTION_AND_TEACHING","publicUrl":"https://redogit.github.io/conscience64/play/steps/","claimBoundary":"does not score people or predict well-being"},
     {"id":"c64-source-compare","repo":"redogit/conscience64","path":"play/compare/","state":"ACTIVE_PUBLIC_TOOL","role":"exact text comparison","relation":"PROVENANCE_AND_TEACHING","publicUrl":"https://redogit.github.io/conscience64/play/compare/","claimBoundary":"line equality/difference does not establish semantic truth"},
     {"id":"c64-internal-search-space","repo":"redogit/conscience64","path":"research/cross-carrier/2026-09-13/internal-update/","state":"ACTIVE_LOCAL_WORKSPACE","role":"metadata/search and geometric workspace","relation":"LOCAL_RESEARCH_TOOL","claimBoundary":"external-page activation is not enabled; network/certificate behavior is environment-dependent"},
-
     {"id":"op-human-expression-archive","repo":"redogit/Other-Projects-","path":"Human Expression Archive/","state":"CURRENT_BOUNDED_PUBLICATION","role":"source-and-data archive","relation":"CULTURE_AND_HISTORY","claimBoundary":"bounded accession, not all human expression; preservation is not endorsement or blanket training permission"},
     {"id":"op-s1024","repo":"redogit/Other-Projects-","path":"S1024 Compression Lab/","state":"ACTIVE_LOCAL_TOOL","role":"1024-byte UTF-8/carrier/repair lab","relation":"CARRIER_AND_ENGINEERING","claimBoundary":"transport expansion/finite syntax results are not arbitrary compression or semantic truth"},
     {"id":"op-context-discovery","repo":"redogit/Other-Projects-","path":"Context Discovery/","state":"EXECUTED_BOUNDED_RESEARCH","role":"finite diagnostic planner + software context probes","relation":"RESEARCH_PEER","claimBoundary":"not a universal cultural-meaning or idea-formation detector"},
