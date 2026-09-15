@@ -48,6 +48,14 @@ The two main loops are deliberately different:
 
 A research result may inspire a product without becoming a product claim. A successful app, game, or public release does not scientifically validate the theory that inspired it. The [full federation guide](RESEARCH_PRODUCTION_FEDERATION.md) and [machine-readable federation](research-production.json) carry the current chat’s adaptive-organization, technical-we, meta-coordination, self-modeling, and no-center ideas alongside the existing projects.
 
+## Active federation
+
+The [Active Federation](active-federation.html) is the narrower **current/runnable/deployed** slice. It connects active Conscience64 and Other-Projects work while routing status back to the owning repositories instead of making this profile the authority.
+
+`ACTIVE != UNIVERSALLY_VALID` · `CONNECTED != MERGED` · `OPEN_PR != ACTIVE_MAIN`
+
+See the [activation notes](ACTIVE_FEDERATION.md) and [machine-readable active registry](active-federation.json). Conscience64 and Other-Projects also keep their own bridge-local active registries.
+
 ## Current work — September 14, 2026
 
 ### Conscience64 spatial interface
@@ -173,4 +181,4 @@ Original text and code in this profile repository may be reused according to the
 
 ---
 
-Current navigation: [Research + Production](research-production.html) · [Federated Work Index](FEDERATED_WORK_INDEX.md) · [10-Step History Playground](history-playground.html) · [Detailed check-in guide](HISTORY_PLAYGROUND_10_STEP_CHECKIN.md) · [Body-of-work recovery snapshot](BODY_OF_WORK.md) · [Standalone homepage](index.html)
+Current navigation: [Active Federation](active-federation.html) · [Research + Production](research-production.html) · [Federated Work Index](FEDERATED_WORK_INDEX.md) · [10-Step History Playground](history-playground.html) · [Detailed check-in guide](HISTORY_PLAYGROUND_10_STEP_CHECKIN.md) · [Body-of-work recovery snapshot](BODY_OF_WORK.md) · [Standalone homepage](index.html)
