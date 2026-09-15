@@ -1,0 +1,35 @@
+{
+  "schema": "redogit/conversation-goal-topology/v1",
+  "date": "2026-09-15",
+  "authority": "COORDINATION_ONLY",
+  "principles": [
+    "GOAL != PROJECT",
+    "RELATION != MERGE",
+    "DEPENDENCY != AUTHORITY_TRANSFER",
+    "PRODUCT_SUCCESS != SCIENTIFIC_VALIDATION",
+    "PLAY != EVIDENCE",
+    "REPETITION != INDEPENDENT_EVIDENCE"
+  ],
+  "goals": [
+    {"id":"active-federation","owner":"redogit/redogit","state":"DEPLOYED_MAINTENANCE","next":"update only on owner-local status change"},
+    {"id":"s1-experiment-0","owner":"redogit/Other-Projects-","state":"DESIGN_AND_IMPLEMENTATION_PLAN_REVIEW","pr":36,"issue":37,"next":"review implementation plan then TDD implementation"},
+    {"id":"s1-operator-kernel","owner":"redogit/Other-Projects-","state":"DESIGNED_NOT_IMPLEMENTED","issue":38,"next":"exact comparison schema and property tests"},
+    {"id":"s1-experience-graph","owner":"redogit/Other-Projects-","state":"DESIGNED_NOT_IMPLEMENTED","issue":39,"next":"local record schema, replay, reframe, graph classification"},
+    {"id":"observer-program","owner":"redogit/Other-Projects-","state":"BASELINE_HUMAN_PLAY_ONLY","issue":41,"next":"defer projection/slice/metric/topology/sound observers until Experiment 0 evidence"},
+    {"id":"dimensional-ladder","owner":"redogit/Other-Projects-","state":"OPEN_RESEARCH_PARALLEL","issue":40,"next":"bounded examples/counterexamples for adjacent-dimensional relations"},
+    {"id":"image-deformation-surface","owner":"redogit/Other-Projects-","state":"BLOCKED_BY_S1_BASELINE","issue":42,"next":"image-as-surface reframe adapter after Experiment 0"},
+    {"id":"hodge-candidate-bridge","owner":"redogit/Other-Projects- + redogit/conscience64","state":"BLOCKED_RESEARCH_ONLY","issue":43,"next":"one candidate-generation experiment after bounded S1 evidence","boundary":"real 4D != complex dimension 4; no proof transfer"},
+    {"id":"conscience64-observer-bridge","owner":"redogit/conscience64","state":"DEFERRED_UNTIL_BOUNDED_VERIFICATION","issue":94,"next":"navigation/observation-only bridge after Experiment 0 verification"},
+    {"id":"play-teaching-accessibility","owner":"each user-facing implementation","state":"ACTIVE_REQUIREMENT","issue":45,"issueRepo":"redogit/Other-Projects-","next":"include in every acceptance gate"},
+    {"id":"s1-suggest","owner":"redogit/Other-Projects-","state":"INACTIVE_BY_DESIGN","issue":44,"next":"train only after stable inspectable experience graph and verified baseline exist"}
+  ],
+  "requirements": [
+    {"goal":"s1-experiment-0","requires":["s1-operator-kernel","s1-experience-graph","play-teaching-accessibility"]},
+    {"goal":"observer-program","requires":["s1-experiment-0"]},
+    {"goal":"image-deformation-surface","requires":["s1-experiment-0"]},
+    {"goal":"conscience64-observer-bridge","requires":["s1-experiment-0"]},
+    {"goal":"hodge-candidate-bridge","requires":["s1-experiment-0"]},
+    {"goal":"s1-suggest","requires":["s1-experiment-0","s1-experience-graph"]}
+  ],
+  "parallel": ["active-federation","dimensional-ladder"]
+}
