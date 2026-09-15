@@ -1,0 +1,62 @@
+{
+  "schema": "redogit/active-federation/v1",
+  "checkedAt": "2026-09-15",
+  "authority": "NAVIGATION_ONLY",
+  "activationRule": "Connect only current runnable, deployed, explicitly active research, or current infrastructure on inspected default branches. Review-only, preserved-only, unlisted-distribution, and unresolved historical lines are not promoted to public active navigation.",
+  "boundaries": [
+    "ACTIVE != UNIVERSALLY_VALID",
+    "CURRENT != AUTHORITATIVE_OUTSIDE_OWN_PROJECT",
+    "CONNECTED != MERGED",
+    "RELATION != EVIDENCE_TRANSFER",
+    "RUNNABLE != PRODUCTION_READY",
+    "PRODUCT_SUCCESS != SCIENTIFIC_VALIDATION",
+    "PLAY != EVIDENCE",
+    "UNLISTED_ACTIVE != PUBLICLY_LISTED",
+    "OPEN_PR != ACTIVE_MAIN"
+  ],
+  "sourceRevisions": {
+    "redogit/redogit": "92797213b2b8892e4e67c512bc53e98e7f2e141b",
+    "redogit/conscience64": "927a692a03783d1524feeb69d64e9e2ca58c781e",
+    "redogit/Other-Projects-": "a61fc8b610f18d6056778d549a680144a6579c29"
+  },
+  "active": [
+    {"id":"c64-cross-carrier-wave","repo":"redogit/conscience64","path":"research/projects/cross-carrier-wave.md","state":"ACTIVE_RESEARCH","role":"architecture / bounded research","relation":"RESEARCH_PEER","claimBoundary":"not a universal theory of knowledge or semantics"},
+    {"id":"c64-orbit-library","repo":"redogit/conscience64","path":"research/projects/orbit-library.md","state":"ACTIVE_INFRASTRUCTURE","role":"knowledge and recovery infrastructure","relation":"RECOVERY_AND_NAVIGATION","claimBoundary":"navigation/recovery is not exhaustive historical identity or evidence authority"},
+    {"id":"c64-operator-moonshot","repo":"redogit/conscience64","path":"research/projects/operator-moonshot.md","state":"CURRENT_RESEARCH_LAB","role":"bounded operator/calibration research","relation":"RESEARCH_PEER","claimBoundary":"calibration results do not transfer to open-problem solutions"},
+    {"id":"c64-hodge","repo":"redogit/conscience64","path":"research/projects/hodge-conjecture.md","state":"ACTIVE_OPEN_RESEARCH","role":"Hodge research spine","relation":"OPEN_MATH_RESEARCH","claimBoundary":"Hodge conjecture remains open beyond explicitly established bounded results"},
+    {"id":"c64-research-analytics","repo":"redogit/conscience64","path":"analytics/","state":"DEPLOYED_BOUNDED_INFRASTRUCTURE","role":"research event transport/view","relation":"EVIDENCE_INFRASTRUCTURE","publicUrl":"https://redogit.github.io/conscience64/analytics/","claimBoundary":"well-formed events do not validate their scientific claims"},
+    {"id":"c64-historical-recovery","repo":"redogit/conscience64","path":"research/projects/historical-recovery.md","state":"ACTIVE_RESEARCH","role":"source-native archaeology","relation":"RECOVERY_AND_HISTORY","claimBoundary":"reconstruction is not source; UNKNOWN is not ABSENT"},
+    {"id":"c64-mmo-world-beta","repo":"redogit/conscience64","path":"play/mmo-world/","state":"ACTIVE_PLAYABLE_BETA","role":"browser game / local data-only extensions","relation":"PLAY_AND_PRODUCTION","publicUrl":"https://redogit.github.io/conscience64/play/mmo-world/","claimBoundary":"playable shard is not server-authoritative MMO"},
+    {"id":"c64-explorer-world","repo":"redogit/conscience64","path":"play/explorer-world/","state":"ACTIVE_PUBLIC_GAME","role":"single-player browser shard","relation":"PLAY_AND_PRODUCTION","publicUrl":"https://redogit.github.io/conscience64/play/explorer-world/","claimBoundary":"game events and references are not scientific evidence"},
+    {"id":"c64-coordinate-space","repo":"redogit/conscience64","path":"coordinate-space/","state":"ACTIVE_PUBLIC_TOOL","role":"coordinate/carrier exploration","relation":"PRODUCTION_AND_TEACHING","publicUrl":"https://redogit.github.io/conscience64/coordinate-space/","claimBoundary":"representation correctness is not physical truth"},
+    {"id":"c64-computational-chorus","repo":"redogit/conscience64","path":"play/computational-chorus/","state":"ACTIVE_PUBLIC_TOOL","role":"mnemonic/musical projection","relation":"PLAY_AND_TEACHING","publicUrl":"https://redogit.github.io/conscience64/play/computational-chorus/","claimBoundary":"mnemonic or sonification does not create proof"},
+    {"id":"c64-orbit-shelf","repo":"redogit/conscience64","path":"play/orbit/","state":"ACTIVE_PUBLIC_TOOL","role":"source-linked notes","relation":"PRODUCTION_AND_TEACHING","publicUrl":"https://redogit.github.io/conscience64/play/orbit/"},
+    {"id":"c64-word-weave","repo":"redogit/conscience64","path":"play/weave/","state":"ACTIVE_PUBLIC_TOOL","role":"source-preserving writing remix","relation":"PLAY_AND_TEACHING","publicUrl":"https://redogit.github.io/conscience64/play/weave/"},
+    {"id":"c64-pattern-garden","repo":"redogit/conscience64","path":"play/garden/","state":"ACTIVE_PUBLIC_TOOL","role":"geometry/pattern playground","relation":"PLAY_AND_TEACHING","publicUrl":"https://redogit.github.io/conscience64/play/garden/"},
+    {"id":"c64-small-steps","repo":"redogit/conscience64","path":"play/steps/","state":"ACTIVE_PUBLIC_TOOL","role":"local next-step planning","relation":"PRODUCTION_AND_TEACHING","publicUrl":"https://redogit.github.io/conscience64/play/steps/","claimBoundary":"does not score people or predict well-being"},
+    {"id":"c64-source-compare","repo":"redogit/conscience64","path":"play/compare/","state":"ACTIVE_PUBLIC_TOOL","role":"exact text comparison","relation":"PROVENANCE_AND_TEACHING","publicUrl":"https://redogit.github.io/conscience64/play/compare/","claimBoundary":"line equality/difference does not establish semantic truth"},
+    {"id":"c64-internal-search-space","repo":"redogit/conscience64","path":"research/cross-carrier/2026-09-13/internal-update/","state":"ACTIVE_LOCAL_WORKSPACE","role":"metadata/search and geometric workspace","relation":"LOCAL_RESEARCH_TOOL","claimBoundary":"external-page activation is not enabled; network/certificate behavior is environment-dependent"},
+
+    {"id":"op-human-expression-archive","repo":"redogit/Other-Projects-","path":"Human Expression Archive/","state":"CURRENT_BOUNDED_PUBLICATION","role":"source-and-data archive","relation":"CULTURE_AND_HISTORY","claimBoundary":"bounded accession, not all human expression; preservation is not endorsement or blanket training permission"},
+    {"id":"op-s1024","repo":"redogit/Other-Projects-","path":"S1024 Compression Lab/","state":"ACTIVE_LOCAL_TOOL","role":"1024-byte UTF-8/carrier/repair lab","relation":"CARRIER_AND_ENGINEERING","claimBoundary":"transport expansion/finite syntax results are not arbitrary compression or semantic truth"},
+    {"id":"op-context-discovery","repo":"redogit/Other-Projects-","path":"Context Discovery/","state":"EXECUTED_BOUNDED_RESEARCH","role":"finite diagnostic planner + software context probes","relation":"RESEARCH_PEER","claimBoundary":"not a universal cultural-meaning or idea-formation detector"},
+    {"id":"op-sprime-search","repo":"redogit/Other-Projects-","path":"SPrime Search/","state":"ACTIVE_BOUNDED_RESEARCH_TOOL","role":"exact finite candidate census / witness indexing","relation":"RESEARCH_AND_TOOL","claimBoundary":"does not identify arbitrary human ideas or define S-prime universally"},
+    {"id":"op-blank-page-lab","repo":"redogit/Other-Projects-","path":"Blank Page Lab/","state":"ACTIVE_LOCAL_RESEARCH_AID","role":"marks/observer/context distinctions","relation":"RESEARCH_AND_TEACHING","claimBoundary":"historical routes remain unresolved where source sequence is missing"},
+    {"id":"op-hodge-span-lab","repo":"redogit/Other-Projects-","path":"Hodge Span Lab/","state":"ACTIVE_LOCAL_RESEARCH_AID","role":"exact rational span/separating-covector tool","relation":"SUPPORTS_HODGE_TEST_DESIGN","claimBoundary":"software span calculations do not authenticate Hodge classes or settle the conjecture"},
+    {"id":"op-knowledge-garden","repo":"redogit/Other-Projects-","path":"knowledge-garden/","state":"ACTIVE_LOCAL_NAVIGATION_TOOL","role":"typed project browser + read-only local API","relation":"FEDERATED_NAVIGATION","claimBoundary":"catalog relations do not transfer evidence or start listed systems"},
+    {"id":"op-decision-field-operator-lab","repo":"redogit/Other-Projects-","path":"Decision Field Operator Lab/","state":"ACTIVE_EXACT_CALIBRATION_LAB","role":"finite Boolean/operator/4D Compass builder audit","relation":"PROVIDES_VERIFIED_FINITE_OPERATORS","claimBoundary":"XOR is not a universal balance law; finite enumeration is not universal decision theory"},
+    {"id":"op-p-vs-np-repair-lab","repo":"redogit/Other-Projects-","path":"P versus NP Repair Lab/","state":"ACTIVE_OPEN_RESEARCH_LAB","role":"exact repair, semantic mutations, construction-cost research","relation":"OPEN_MATH_RESEARCH","claimBoundary":"P versus NP remains open; restricted polynomial repairs do not generalize to arbitrary CNF"},
+    {"id":"op-decision-field-mmorpg","repo":"redogit/Other-Projects-","path":"Decision Field MMORPG/","state":"ACTIVE_LOCAL_GAME_PROTOTYPE","role":"decision-field browser MMORPG-style lab","relation":"PLAY_AND_RESEARCH_GENERATOR","claimBoundary":"client-side prototype is not an authoritative MMO; game observations do not become physical truth"},
+    {"id":"op-chatgpt-conscience","repo":"redogit/Other-Projects-","path":"ChatGPT and Conscience/","state":"ACTIVE_LOCAL_COOPERATION_LAB","role":"bounded cooperation/sandbox/reproduction lab","relation":"COOPERATION_AND_PROVENANCE","claimBoundary":"candidate sandbox is not deployed Conscience64 and imported benchmark history is not independent replication"}
+  ],
+  "notPromoted": [
+    {"id":"c64-tiny-babel-tbcl","reason":"preserved verified finite result + runtime lineage; not relabeled active"},
+    {"id":"c64-geometry-codecs","reason":"preserved technical lineage; not relabeled active"},
+    {"id":"c64-fuzzball-hidden-alpha","reason":"active but intentionally unlisted distribution; federation must not defeat the unlisted choice"},
+    {"id":"op-pnp-mlir-pr34","reason":"draft PR #34; review-only, not active main"},
+    {"id":"op-pnp-mlir-design-pr33","reason":"open design PR #33; not active main implementation"},
+    {"id":"op-fast-bom-pr26","reason":"draft PR #26; bounded evidence exists on branch but not active main"},
+    {"id":"op-science-hub-pr25","reason":"design-only draft PR #25; implementation explicitly gated"},
+    {"id":"op-publication-handoff-pr23","reason":"open workflow repair PR #23; not active main"}
+  ]
+}
