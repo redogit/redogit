@@ -28,6 +28,7 @@ REPETITION != INDEPENDENT_EVIDENCE
 **State:** DESIGN + IMPLEMENTATION PLAN REVIEW.  
 **Goal:** build a local, playful browser lab around one-degree 4D transformations and visible 3D reference-surface deformation.  
 **Core:** 4D-oriented object; `xw`, `yw`, `zw` 1° moves; smooth S3-like synthetic reference surface; tesseract-boundary reference; synchronized comparison.  
+**Requires for baseline:** exact mirror/comparison kernel (#38), experience graph/replay/reframe (#39), and play/accessibility acceptance (#45).  
 **Next:** review implementation plan, then TDD implementation.  
 **Boundary:** synthetic observer/reference deformation is not a physical-spacetime claim.
 
@@ -69,7 +70,7 @@ REPETITION != INDEPENDENT_EVIDENCE
 
 **Owner:** `redogit/Other-Projects-` research line.  
 **Tracker:** Other-Projects issue #40.  
-**State:** OPEN RESEARCH.  
+**State:** OPEN RESEARCH / CAN ADVANCE IN PARALLEL.  
 **Question:** characterize explicit relations among adjacent dimensions using embedding, boundary, slicing, projection, and controlled transformations: `0 <-> 1 <-> 2 <-> 3 <-> 4`.  
 **Negative edge:** treat dimension `-1` only in its established formal role (e.g. empty-space conventions) unless a stronger framework is explicitly defined.  
 **Next:** build a bounded examples-and-counterexamples note and executable finite fixtures where appropriate.  
@@ -118,7 +119,7 @@ REPETITION != INDEPENDENT_EVIDENCE
 **Tracker:** Other-Projects issue #44.  
 **State:** INACTIVE BY DESIGN.  
 **Goal:** after a sufficient body of preserved local experiences exists, derive `S'1_Suggest` to propose playful next moves.  
-**Dependency:** Goal 4 must be stable and inspectable first.  
+**Dependency:** Goal 4 must be stable and inspectable first, and the baseline must be verified.  
 **Boundary:** the suggestion model never mutates `S'1_Mirror` and never becomes authority over the source experience graph.
 
 ## Dependency graph
@@ -126,17 +127,20 @@ REPETITION != INDEPENDENT_EVIDENCE
 ```text
 Active federation (maintenance)
 
+Dimensional ladder research (#40)  [independent / parallel]
+
 S'1 design + plan (PR #36)
-  -> Experiment 0 implementation (#37)
-      -> exact mirror/comparison kernel (#38)
-      -> experience graph + replay/reframe (#39)
-      -> baseline play/accessibility verification (#45)
-          -> observer extensions (#41)
-          -> image deformation adapter (#42)
-          -> dimensional-ladder cross-checks (#40)
-          -> Conscience64 observer bridge (conscience64 #94)
-          -> Hodge candidate bridge (#43)
-          -> future S'1_Suggest training (#44)
+  -> exact mirror/comparison kernel (#38)
+  -> experience graph + replay/reframe (#39)
+  -> play/accessibility acceptance (#45)
+       \         |         /
+        \        |        /
+         -> Experiment 0 verified baseline (#37)
+              -> observer extensions (#41)
+              -> image deformation adapter (#42)
+              -> Conscience64 observer bridge (conscience64 #94)
+              -> Hodge candidate bridge (#43)
+              -> future S'1_Suggest training (#44, also requires #39)
 ```
 
 ## Priority rule
