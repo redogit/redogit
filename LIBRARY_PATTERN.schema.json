@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/redogit/redogit/main/LIBRARY_PATTERN.schema.json",
+  "title": "REDOGIT Library Pattern Binding",
+  "type": "object",
+  "required": [
+    "schema",
+    "repository",
+    "role",
+    "status",
+    "synced_at",
+    "canonical_method",
+    "records",
+    "invariants",
+    "relation_policy",
+    "admission_policy",
+    "authority_policy",
+    "recovery_policy"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema": { "const": "redogit/library-pattern/v1" },
+    "repository": { "type": "string", "minLength": 1 },
+    "role": { "type": "string", "minLength": 1 },
+    "status": {
+      "enum": ["active-method-overlay", "navigation-only", "provenance-boundary"]
+    },
+    "synced_at": { "const": "2026-09-16" },
+    "canonical_method": { "type": "string", "minLength": 1 },
+    "records": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "identity",
+          "source_identity",
+          "provenance",
+          "chronology",
+          "current_authority",
+          "observer_or_task",
+          "relation_type",
+          "evidence_status",
+          "claim_ceiling",
+          "transform_history",
+          "failures_nulls_invalids",
+          "improvement_coordinates",
+          "access_privacy_rights",
+          "unresolved_remainder",
+          "recovery_handle"
+        ]
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "minItems": 8,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "relation_policy": { "type": "string", "minLength": 1 },
+    "admission_policy": { "type": "string", "minLength": 1 },
+    "authority_policy": { "type": "string", "minLength": 1 },
+    "recovery_policy": { "type": "string", "minLength": 1 },
+    "local_counterpart": { "type": ["string", "null"] },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}
