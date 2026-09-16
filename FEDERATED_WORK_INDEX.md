@@ -125,7 +125,7 @@ These are neighborhoods, not departments. A branch may belong to more than one n
 - Tiny Babel
 - TBCL — Context Language Lab
 - CSOL
-- GSFL — Generalized Semantic Fitting Language; bounded semantic rotation/fitting with `FIT != TRUTH`
+- GSFL v0.1 — Human–Machine Cooperation Profile; human understanding, bounded machine-learning claims, partner/tool provenance, semantic fitting, corollaries/confounds, and proverbial fixtures with `FIT != TRUTH`
 - Language Structure Workbench
 - Musilanguage / necessity-first
 - Library of Babel reconstruction
@@ -308,7 +308,7 @@ The same artifact may be visible from several lanes without those lanes becoming
 - [`BODY_OF_WORK.md`](BODY_OF_WORK.md) — first broad recovery snapshot; useful as a catalog, not authority.
 - [`README.md`](README.md) — concise public About Me and current entry point.
 - [`REDOGIT.md`](REDOGIT.md) — successor / provenance working rule.
-- [`GSFL_ACTIVE_2026-09-16.md`](GSFL_ACTIVE_2026-09-16.md) — current GSFL active-state lineage and evidence boundaries; its proposed-state predecessor remains preserved.
+- [`GSFL_V0_1_ACTIVE_2026-09-16.md`](GSFL_V0_1_ACTIVE_2026-09-16.md) — current GSFL v0.1 human–machine cooperation lineage; the v0 proposed/active predecessors remain preserved.
 - [Conscience64](https://github.com/redogit/conscience64) — large active research/software surface.
 - [Other Projects](https://github.com/redogit/Other-Projects-) — many independent bounded research projects.
 - [Dream to Action](https://github.com/redogit/Dream-To-Action) — person-directed practical application.
