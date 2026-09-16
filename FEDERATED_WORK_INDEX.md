@@ -125,7 +125,7 @@ These are neighborhoods, not departments. A branch may belong to more than one n
 - Tiny Babel
 - TBCL — Context Language Lab
 - CSOL
-- GSFL v0.1 — Human–Machine Cooperation Profile; human understanding, bounded machine-learning claims, partner/tool provenance, semantic fitting, corollaries/confounds, and proverbial fixtures with `FIT != TRUTH`
+- GSFL v0.1 — **`COMPLETE_BOUNDED_V0_1`** Human–Machine Cooperation Profile; human understanding, bounded machine-learning claims, partner/tool provenance, semantic fitting, corollaries/confounds, and proverbial fixtures with `FIT != TRUTH`. Complete refers to the declared v0.1 implementation/audit/publication/recovery baseline, not universal completion.
 - Language Structure Workbench
 - Musilanguage / necessity-first
 - Library of Babel reconstruction
@@ -236,6 +236,7 @@ Each branch determines its own current state using evidence-appropriate labels s
 - `TESTED`
 - `INDEPENDENTLY_RECONSTRUCTED`
 - `IMPLEMENTED`
+- `COMPLETE_BOUNDED_BASELINE`
 - `DESIGNED_NOT_RUN`
 - `NEGATIVE_RESULT`
 - `REFUTED_AS_STANDALONE`
@@ -246,7 +247,7 @@ Each branch determines its own current state using evidence-appropriate labels s
 - `OPEN`
 - `UNRESOLVED`
 
-No global score is required.
+No global score is required. `COMPLETE_BOUNDED_BASELINE` closes a declared local scope; it is not a claim of universal completion and does not prevent successors.
 
 ---
 
@@ -308,7 +309,8 @@ The same artifact may be visible from several lanes without those lanes becoming
 - [`BODY_OF_WORK.md`](BODY_OF_WORK.md) — first broad recovery snapshot; useful as a catalog, not authority.
 - [`README.md`](README.md) — concise public About Me and current entry point.
 - [`REDOGIT.md`](REDOGIT.md) — successor / provenance working rule.
-- [`GSFL_V0_1_ACTIVE_2026-09-16.md`](GSFL_V0_1_ACTIVE_2026-09-16.md) — current GSFL v0.1 human–machine cooperation lineage; the v0 proposed/active predecessors remain preserved.
+- [`GSFL_V0_1_COMPLETE_2026-09-16.md`](GSFL_V0_1_COMPLETE_2026-09-16.md) — canonical complete-bounded GSFL v0.1 lifecycle record; the proposed/active predecessors remain preserved.
+- [`GSFL_V0_1_ACTIVE_2026-09-16.md`](GSFL_V0_1_ACTIVE_2026-09-16.md) — preserved active-state predecessor for GSFL v0.1.
 - [Conscience64](https://github.com/redogit/conscience64) — large active research/software surface.
 - [Other Projects](https://github.com/redogit/Other-Projects-) — many independent bounded research projects.
 - [Dream to Action](https://github.com/redogit/Dream-To-Action) — person-directed practical application.
