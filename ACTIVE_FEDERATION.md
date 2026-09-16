@@ -1,6 +1,6 @@
 # Active Federation — current connected work
 
-**Checked:** September 15, 2026  
+**Checked:** September 16, 2026  
 **Authority:** navigation only  
 **Machine-readable registry:** [`active-federation.json`](active-federation.json)
 
@@ -118,6 +118,16 @@ The following were inspected as open PRs and intentionally **not** promoted:
 - PR #23 — P-vs-NP publication handoff repair: open workflow repair.
 
 When one lands on `main`, it can be reconsidered from its new default-branch evidence rather than inheriting active status from this snapshot.
+
+---
+
+# Library-pattern federation binding
+
+The connected repository set now carries the dated `LIBRARY_PATTERN_2026-09-16.json` method/navigation sidecar. The shared schema and human-readable checkpoint live in this repository as `LIBRARY_PATTERN.schema.json` and `LIBRARY_PATTERN_FEDERATION_2026-09-16.md`.
+
+This binding federates recoverable organization patterns — identity, provenance, chronology, current authority, typed relations, evidence status, claim ceiling, transform history, failures/remainder, access/privacy/rights, and recovery handles — without merging evidence or authority. Private Library contents and paths are not exported.
+
+`FEDERATED_PATTERN != FEDERATED_AUTHORITY`
 
 ---
 
