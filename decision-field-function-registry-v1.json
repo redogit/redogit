@@ -1,0 +1,35 @@
+{
+  "schema": "redogit/decision-field-function-registry/v1",
+  "date": "2026-09-17",
+  "functions": [
+    {"name":"Observe","kind":"read","signature":"DF -> Observation","obligation":"must not silently mutate canonical field state"},
+    {"name":"Distinguish","kind":"derive","signature":"(DF, Observation) -> DF","obligation":"promote only task-consequential distinctions"},
+    {"name":"Relate","kind":"derive","signature":"DF -> DF","obligation":"relation type and evidence basis must be explicit"},
+    {"name":"Filter","kind":"transform","signature":"DF -> DF","obligation":"removed possibilities must be provably irrelevant/impossible for the declared goal"},
+    {"name":"Select","kind":"action","signature":"DF -> Candidate","obligation":"selection rule/cost/authority must be declared"},
+    {"name":"Transform","kind":"transform","signature":"DF -> DF","obligation":"preserve declared invariants or record exact loss"},
+    {"name":"Project","kind":"transform","signature":"DF -> DF","obligation":"record eliminated coordinates and induced relations"},
+    {"name":"Branch","kind":"transform","signature":"DF -> [DF]","obligation":"children must cover the parent obligation exactly"},
+    {"name":"Compose","kind":"meta","signature":"[Function] -> Function","obligation":"composition inherits all preconditions/preservation obligations"},
+    {"name":"Verify","kind":"certificate","signature":"DF -> Certificate","obligation":"verifier must be independent of heuristic steering where practical"},
+    {"name":"Repair","kind":"transform","signature":"DF -> DF","obligation":"repair must be exact/evidence-qualified and trigger global re-normalization"},
+    {"name":"Learn","kind":"derive","signature":"([DF], [Certificate]) -> DF","obligation":"learn only consequences valid in the parent field"},
+    {"name":"Reconstruct","kind":"lift","signature":"ReducedResult -> SourceResult","obligation":"destructive reductions require a reconstruction/lift map"},
+    {"name":"Terminate","kind":"result","signature":"DF -> Result","obligation":"result must satisfy goal or carry a certified impossibility/unresolved disposition"}
+  ],
+  "scheduler_priority": [
+    "terminal_certificate",
+    "irreversible_exact_fact",
+    "exact_factorization",
+    "certified_rank_or_nullity_contraction",
+    "kernel_or_width_reduction",
+    "heuristic_steering_gain_per_cost"
+  ],
+  "global_boundaries": [
+    "SHARED_STRUCTURE != SHARED_MECHANISM",
+    "ANALOGY != EVIDENCE_TRANSFER",
+    "HEURISTIC != CERTIFICATE",
+    "ROTATION != MUTATION",
+    "FIT != TRUTH"
+  ]
+}
