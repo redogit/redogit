@@ -1,0 +1,184 @@
+{
+  "schema": "redogit/decision-field-federation/v1",
+  "date": "2026-09-17",
+  "authority": "NAVIGATION_AND_METHOD_ONLY",
+  "core": {
+    "spec": "DECISION_FIELD_CORE_2026-09-17.md",
+    "synthesis": "DECISION_FIELD_THREAD_SYNTHESIS_2026-09-17.md",
+    "tuple": ["X", "O", "D", "R", "F", "E", "G", "U"],
+    "meaning": {
+      "X": "possibilities_or_conditions",
+      "O": "observer_task_obligation_or_goal_context",
+      "D": "consequential_distinctions",
+      "R": "typed_relations",
+      "F": "admitted_functions_or_operators",
+      "E": "evidence_provenance_uncertainty_claim_ceiling",
+      "G": "desired_bounded_result",
+      "U": "unresolved_remainder"
+    }
+  },
+  "global_boundaries": [
+    "INDEX != AUTHORITY",
+    "CONNECTED != MERGED",
+    "RELATION != EVIDENCE_TRANSFER",
+    "SHARED_STRUCTURE != SHARED_MECHANISM",
+    "FINITE_VERIFICATION != UNIVERSALITY",
+    "FIT != TRUTH",
+    "REPRESENTATION_CORRECTNESS != PHYSICAL_TRUTH"
+  ],
+  "projects": [
+    {
+      "id": "p-vs-np-repair-lab",
+      "repo": "redogit/Other-Projects-",
+      "path": "P versus NP Repair Lab/",
+      "relation": "METHOD_TRANSFER_AND_OPEN_MATH_SPECIALIZATION",
+      "field": {
+        "X": "exact SAT/graph/cohort residual states",
+        "O": "correct decision/search/certification obligation",
+        "D": "consequential solver distinctions",
+        "R": "clauses exclusions implications cover LP frame factor algebra relations",
+        "F": "simplify branch project resolve repair LP frame SAT SQL MPCA verify",
+        "E": "proof ledger finite evidence counterexamples cost and claim ceiling",
+        "G": "SAT/UNSAT or exact DEAN result",
+        "U": "unresolved hard core"
+      },
+      "claim_ceiling": "P_VS_NP_OPEN"
+    },
+    {
+      "id": "decision-field-operator-lab",
+      "repo": "redogit/Other-Projects-",
+      "path": "Decision Field Operator Lab/",
+      "relation": "REFERENCE_IMPLEMENTATION",
+      "field": {
+        "X": "finite operator-state calibration spaces",
+        "O": "declared finite target behavior",
+        "D": "behaviorally consequential distinctions",
+        "R": "composition symmetry support cost relations",
+        "F": "enumerate compose group normalize verify",
+        "E": "exact finite census and bounded tests",
+        "G": "declared bounded witness/census",
+        "U": "unrepresented/open generalization"
+      },
+      "claim_ceiling": "FINITE_OPERATOR_RESULTS_ONLY"
+    },
+    {
+      "id": "gsfl",
+      "repo": "redogit/Other-Projects-",
+      "path": "Generalized Semantic Fitting Language/",
+      "relation": "SEMANTIC_ROTATION_SPECIALIZATION",
+      "field": {
+        "X": "candidate representations",
+        "O": "human task/context and declared invariants",
+        "D": "consequential semantic distinctions",
+        "R": "source meaning representation fit reconstruction relations",
+        "F": "semantic rotations fitters reconstruction checks",
+        "E": "provenance audit bounded fit evidence",
+        "G": "usable admitted human surface",
+        "U": "semantic loss mutation decay unknowns"
+      },
+      "claim_ceiling": "COMPLETE_BOUNDED_V0_1_NOT_UNIVERSAL"
+    },
+    {
+      "id": "orbit-library",
+      "repo": "redogit/conscience64",
+      "path": "research/projects/orbit-library.md",
+      "relation": "PROVENANCE_RECOVERY_SPECIALIZATION",
+      "field": {
+        "X": "recoverable knowledge/carrier states",
+        "O": "current retrieval/reconstruction obligation",
+        "D": "source/provenance/consequence distinctions",
+        "R": "identity chronology lineage recovery relations",
+        "F": "retrieve compare transport reconstruct admit",
+        "E": "source authority chronology unknown/absent separation",
+        "G": "task-local reconstructibility",
+        "U": "missing relations unknown cold/unrecovered state"
+      },
+      "claim_ceiling": "KNOWLEDGE_RECOVERY_INFRASTRUCTURE"
+    },
+    {
+      "id": "cross-carrier-wave",
+      "repo": "redogit/conscience64",
+      "path": "research/projects/cross-carrier-wave.md",
+      "relation": "TRANSFORM_SPECIALIZATION",
+      "field": {
+        "X": "source/target carrier representations",
+        "O": "transport obligation",
+        "D": "distinctions that must survive transport",
+        "R": "source-target transform and reconstruction relations",
+        "F": "encode decode project rotate reconstruct compare",
+        "E": "provenance loss/remainder and integrity evidence",
+        "G": "faithful task-local transported result",
+        "U": "loss unresolved mapping unavailable reconstruction"
+      },
+      "claim_ceiling": "BOUNDED_TRANSFORM_RESEARCH"
+    },
+    {
+      "id": "r3",
+      "repo": "redogit/conscience64",
+      "path": "research/methods/r3",
+      "relation": "RECURSIVE_RESEARCH_METHOD",
+      "field": {
+        "X": "candidate models/knowledge objects/experiments",
+        "O": "research obligation and evidence threshold",
+        "D": "tested consequential distinctions",
+        "R": "part representation causal provenance relations",
+        "F": "decompose vary test counterexample repair promote recurse",
+        "E": "proof finite verification negative evidence unresolved remainder",
+        "G": "evidence-qualified promoted result",
+        "U": "failed unsupported untested unresolved remainder"
+      },
+      "claim_ceiling": "METHOD_NOT_DOMAIN_TRUTH"
+    },
+    {
+      "id": "hodge",
+      "repo": "redogit/conscience64",
+      "path": "research/projects/hodge-conjecture.md",
+      "relation": "METHOD_ONLY_OPEN_MATH_DOMAIN",
+      "field": {
+        "X": "declared varieties cycles cohomology/Hodge candidate states",
+        "O": "Hodge-specific proof obligation",
+        "D": "mathematically consequential distinctions",
+        "R": "cycle-class intersection symmetry rationality provenance relations",
+        "F": "exact rank sector deficit construct counterprobe verify",
+        "E": "mathematical sources exact computation proof admission",
+        "G": "proved local/family statement or bounded negative result",
+        "U": "open Hodge obligation and remaining geometry"
+      },
+      "claim_ceiling": "HODGE_OPEN"
+    },
+    {
+      "id": "dream-to-action",
+      "repo": "redogit/Dream-To-Action",
+      "path": "/",
+      "relation": "HUMAN_PLANNING_SPECIALIZATION",
+      "field": {
+        "X": "user-declared actions/conditions",
+        "O": "person-chosen goal",
+        "D": "barriers/support/consent/resource distinctions",
+        "R": "dependency support ownership observation relations",
+        "F": "record inspect choose act observe revise export",
+        "E": "self-report provenance and explicit unverified status",
+        "G": "user-declared next bounded result",
+        "U": "unconfirmed support unresolved observations real-world unknowns"
+      },
+      "claim_ceiling": "PROTOTYPE_NOT_OUTCOME_GUARANTEE"
+    },
+    {
+      "id": "quantum-measurement-structural-analogy",
+      "repo": "redogit/redogit",
+      "path": "DECISION_FIELD_CORE_2026-09-17.md",
+      "relation": "STRUCTURAL_ANALOGY_ONLY",
+      "field": {
+        "X": "quantum state plus measurement context",
+        "O": "specified physical measurement/evolution context",
+        "D": "physically distinguishable outcome structure",
+        "R": "quantum operator/tensor/nonseparable relations",
+        "F": "physically allowed evolution and measurement instrument",
+        "E": "quantum experimental/theoretical evidence external to this federation",
+        "G": "observed outcome and conditioned post-measurement state",
+        "U": "outcome uncertainty / interpretation questions outside the structural analogy"
+      },
+      "claim_ceiling": "NO_NEW_QUANTUM_PHYSICS_CLAIM"
+    }
+  ]
+}
