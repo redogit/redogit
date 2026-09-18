@@ -1,5 +1,8 @@
 # Active Federation — current connected work
 
+> **Public projection status — 2026-09-18:** Conscience64 GitHub Pages is intentionally held at a minimal privacy surface pending explicit owner approval of an exact reviewed revision. Project/research state is independent of public availability. Public URLs are projections, not canonical authority.
+
+
 **Checked:** September 16, 2026  
 **Authority:** navigation only  
 **Machine-readable registry:** [`active-federation.json`](active-federation.json)
@@ -61,16 +64,16 @@ Those states remain visible without being relabeled.
 
 ## Public production / play / teaching
 
-- [MMO World Beta](https://redogit.github.io/conscience64/play/mmo-world/) — playable beta; not server-authoritative MMO.
-- [Explorer World](https://redogit.github.io/conscience64/play/explorer-world/) — active public single-player shard.
-- [Coordinate Space](https://redogit.github.io/conscience64/coordinate-space/) — active carrier/coordinate exploration surface.
-- [Research Analytics](https://redogit.github.io/conscience64/analytics/) — active public bounded research view.
-- [Computational Chorus](https://redogit.github.io/conscience64/play/computational-chorus/) — mnemonic/musical exploration; not proof.
-- [Orbit Shelf](https://redogit.github.io/conscience64/play/orbit/) — source-linked notes.
-- [Word Weave](https://redogit.github.io/conscience64/play/weave/) — source-preserving writing remix.
-- [Pattern Garden](https://redogit.github.io/conscience64/play/garden/) — geometric play/teaching surface.
-- [Small Steps](https://redogit.github.io/conscience64/play/steps/) — local next-action planning; does not score people.
-- [Source Compare](https://redogit.github.io/conscience64/play/compare/) — exact text-difference utility; line comparison is not semantic truth.
+- [MMO World Beta](https://redogit.github.io/conscience64/) — playable beta; not server-authoritative MMO.
+- [Explorer World](https://redogit.github.io/conscience64/) — active public single-player shard.
+- [Coordinate Space](https://redogit.github.io/conscience64/) — active carrier/coordinate exploration surface.
+- [Research Analytics](https://redogit.github.io/conscience64/) — active public bounded research view.
+- [Computational Chorus](https://redogit.github.io/conscience64/) — mnemonic/musical exploration; not proof.
+- [Orbit Shelf](https://redogit.github.io/conscience64/) — source-linked notes.
+- [Word Weave](https://redogit.github.io/conscience64/) — source-preserving writing remix.
+- [Pattern Garden](https://redogit.github.io/conscience64/) — geometric play/teaching surface.
+- [Small Steps](https://redogit.github.io/conscience64/) — local next-action planning; does not score people.
+- [Source Compare](https://redogit.github.io/conscience64/) — exact text-difference utility; line comparison is not semantic truth.
 
 ## Intentionally not promoted
 
