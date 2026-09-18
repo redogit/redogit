@@ -10,8 +10,16 @@
     "verify": null
   },
   "predecessors": [
-    { "id": "about-me-profile", "path": null, "retained": true },
-    { "id": "redogit-profile-rule-v1", "path": null, "retained": true }
+    {
+      "id": "about-me-profile",
+      "path": null,
+      "retained": true
+    },
+    {
+      "id": "redogit-profile-rule-v1",
+      "path": null,
+      "retained": true
+    }
   ],
   "history_policy": {
     "preserve_predecessors": true,
@@ -22,7 +30,11 @@
   },
   "research_policy": {
     "surface": "I/R/P/O",
-    "checks": ["assumption", "test", "unknown"],
+    "checks": [
+      "assumption",
+      "test",
+      "unknown"
+    ],
     "evidence_classes": [
       "executed-and-verified",
       "externally-validated",
@@ -54,13 +66,19 @@
       "USER_GOAL != SYSTEM_GOAL",
       "PREDECESSOR != SUCCESSOR",
       "INTERNAL_CONSISTENCY != EXTERNAL_VALIDATION",
-      "CLAIM != EVIDENCE"
+      "CLAIM != EVIDENCE",
+      "PUBLIC_REPOSITORY != PRIVATE_FAMILY_CONTEXT",
+      "GAME_CHARACTER != PRIVATE_PERSON",
+      "SPROUTLING != REAL_CHILD",
+      "PSEUDONYM != IDENTITY_DISCLOSURE",
+      "RESEARCH_PROVENANCE != PERSONAL_DISCLOSURE"
     ],
     "domain_distinctions": [
       "SCHEMA_VALID != REPOSITORY_VERIFIED",
       "PUBLIC_STATUS != PRIVATE_INVENTORY",
       "PROFILE_INDEX != PROJECT_AUTHORITY"
-    ]
+    ],
+    "privacy_policy": "Public repository content excludes private-family/private-person context unless a specific item is explicitly authorized for publication; fictional characters, aliases, and game forms do not imply real identities."
   },
   "boundary": {
     "owns": [
@@ -76,7 +94,8 @@
       "third-party project licensing",
       "upstream fork authorship",
       "private repository identities in public status",
-      "claims beyond repository-local evidence"
+      "claims beyond repository-local evidence",
+      "private family identities, relationships, or personal history"
     ]
   }
 }
