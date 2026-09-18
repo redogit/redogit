@@ -16,7 +16,7 @@ To publish the standalone page with GitHub Pages:
 
 The repository's GitHub Pages setting must be enabled separately; adding the HTML file alone does not enable hosting.
 
-Both versions include the requested **Free Use!** permission for this homepage's original content and code. That permission does not change the licenses of linked projects or third-party material.
+Earlier profile versions stated broader reuse permission. Current and future original additions follow [COMMERCIAL_ACCESS_POLICY.md](COMMERCIAL_ACCESS_POLICY.md): no third-party commercial access is authorized unless explicitly granted. Existing licenses and prior valid grants remain separate and are not silently rewritten.
 
 ## Private-by-default publication rule
 
