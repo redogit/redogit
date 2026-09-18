@@ -205,9 +205,17 @@ The preserved browser/API registry remains historically bounded while newer reco
 
 [Research records](https://github.com/redogit/conscience64/tree/main/research/projects) · [Research Analytics](https://redogit.github.io/conscience64/) · [Coordinate Space](https://redogit.github.io/conscience64/) · [Play](https://redogit.github.io/conscience64/) · [History](https://redogit.github.io/conscience64/)
 
-## Free use
+## Rights and commercial access
 
-Original text and code in this profile repository may be reused according to the repository’s stated terms. Linked projects and third-party material retain their own licenses, attribution, provenance, and source-specific restrictions.
+Current owner policy: **no third-party commercial access is authorized at this time** for original material controlled by the owner unless a separate written grant explicitly says otherwise.
+
+Public visibility does not itself grant commercial rights. Consumer access to RMAOS MINGX, including the declared Mini ($0.99) and Full / Pro Advanced ($1.00) tiers, is separate from business licensing or commercial exploitation rights.
+
+Earlier versions of this profile used broader “Free Use” wording. The current policy does not pretend to retroactively cancel rights already validly granted under an existing license or permission. MIT-, GPL-, upstream-, third-party-, and other already-applicable terms continue to control the material they cover.
+
+See [COMMERCIAL_ACCESS_POLICY.md](COMMERCIAL_ACCESS_POLICY.md).
+
+`PUBLIC_PROJECTION != COMMERCIAL_ACCESS` · `BUSINESS_ACCESS = DENY_UNLESS_EXPLICITLY_GRANTED`
 
 ---
 
