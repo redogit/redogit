@@ -1,5 +1,8 @@
 # History Playground — 10-Step Check-In
 
+> **Public projection status — 2026-09-18:** Conscience64 GitHub Pages is intentionally held at a minimal privacy surface pending explicit owner approval of an exact reviewed revision. Project/research state is independent of public availability. Public URLs are projections, not canonical authority.
+
+
 **Purpose:** explore years of projects, theories, formal results, experiments, tools, games, apps, education, philosophy, ethics, coding, failures, and recovered memories **without centralizing them into one authority**.
 
 This is a learning quest, not a completeness certificate.
@@ -28,7 +31,7 @@ Teaching is optional and learner-directed. The learner's goal comes first. A tea
 Human direction, agency, philosophy, ethics, morals, minimal necessity, Pursuit of Happiness, Shared Well, epistemology, axiology, and praxeology.
 
 ### Try
-- [Small Steps](https://redogit.github.io/conscience64/play/steps/)
+- [Small Steps](https://redogit.github.io/conscience64/)
 - [Dream to Action](https://github.com/redogit/Dream-To-Action)
 - Read [`FEDERATED_WORK_INDEX.md`](FEDERATED_WORK_INDEX.md)
 
@@ -61,9 +64,9 @@ Ask another learner what *they* want to learn before showing them any framework.
 REDOGIT, One_Level_Up / Airlock, provenance, chronology, source identity, history, recovery, and exact comparison.
 
 ### Try
-- [Source Compare](https://redogit.github.io/conscience64/play/compare/)
+- [Source Compare](https://redogit.github.io/conscience64/)
 - [`REDOGIT.md`](REDOGIT.md)
-- [Conscience64 History & Restore](https://redogit.github.io/conscience64/history/)
+- [Conscience64 History & Restore](https://redogit.github.io/conscience64/)
 
 ### Tiny challenge
 Take two short versions of a paragraph or idea. Find:
@@ -94,9 +97,9 @@ Show someone why keeping the failed or earlier version can make the successful v
 Orbit, Knowledge Decay, Tiny Babel, TBCL, CSOL, Language Structure Workbench, Musilanguage, source/witness/translation carriers.
 
 ### Try
-- [Orbit Shelf](https://redogit.github.io/conscience64/play/orbit/)
-- [Word Weave](https://redogit.github.io/conscience64/play/weave/)
-- [Computational Chorus](https://redogit.github.io/conscience64/play/computational-chorus/)
+- [Orbit Shelf](https://redogit.github.io/conscience64/)
+- [Word Weave](https://redogit.github.io/conscience64/)
+- [Computational Chorus](https://redogit.github.io/conscience64/)
 
 ### Tiny challenge
 Store one idea in two carriers—for example ordinary prose and a compact mnemonic. Ask:
@@ -125,8 +128,8 @@ Explain one idea twice: once for precision, once for ease of recall. Let the lea
 4D codec/observer work, inversion, ring topology, Float64/UTF-8 carriers, Compass/Compass Rose, fractals, recursive geometry, and finite observers.
 
 ### Try
-- [Pattern Garden](https://redogit.github.io/conscience64/play/garden/)
-- [Coordinate Space](https://redogit.github.io/conscience64/coordinate-space/)
+- [Pattern Garden](https://redogit.github.io/conscience64/)
+- [Coordinate Space](https://redogit.github.io/conscience64/)
 - Inspect the Geometry / 4D / Codecs research record in Conscience64.
 
 ### Tiny challenge
@@ -314,10 +317,10 @@ Let the learner teach the same idea back in a different representation. Their ve
 Explorer World, MMO, Fuzzball, Ripping Many Arms Off, Arcade Forge, Computational Chorus, Human Expression Archive, poetry, stories, music, creative engines, visual carriers.
 
 ### Try
-- [Conscience64 Play](https://redogit.github.io/conscience64/play/)
-- [Explorer World](https://redogit.github.io/conscience64/play/explorer-world/)
-- [Conscience64 MMO RPG](https://redogit.github.io/conscience64/play/mmo/simple/)
-- [Computational Chorus](https://redogit.github.io/conscience64/play/computational-chorus/)
+- [Conscience64 Play](https://redogit.github.io/conscience64/)
+- [Explorer World](https://redogit.github.io/conscience64/)
+- [Conscience64 MMO RPG](https://redogit.github.io/conscience64/)
+- [Computational Chorus](https://redogit.github.io/conscience64/)
 
 ### Tiny challenge
 Make something that is allowed to be **just fun**: a pattern, song, story fragment, game route, weird operator, puzzle, or tiny world.
