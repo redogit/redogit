@@ -1,5 +1,8 @@
 # redogit
 
+> **Public projection status — 2026-09-18:** Conscience64 GitHub Pages is intentionally held at a minimal privacy surface pending explicit owner approval of an exact reviewed revision. Project/research state is independent of public availability. Public URLs are projections, not canonical authority.
+
+
 ## About me
 
 I’m a data specialist, reverse engineer, and generalist builder. I take complicated systems apart, look for the distinction that actually changes the result, and try to turn what survives into something people can inspect, reuse, and improve.
@@ -200,7 +203,7 @@ One repository remains private. It is counted without publishing its identity, U
 
 The preserved browser/API registry remains historically bounded while newer records are added forward-only. Current human-readable records include Cross-Carrier Wave, Orbit Library, Tiny Babel / TBCL, Operator Moonshot, Model Experiments, Geometry / 4D / Codecs, Historical Recovery, Hodge Conjecture Research Spine, and Research Analytics.
 
-[Research records](https://github.com/redogit/conscience64/tree/main/research/projects) · [Research Analytics](https://redogit.github.io/conscience64/analytics/) · [Coordinate Space](https://redogit.github.io/conscience64/coordinate-space/) · [Play](https://redogit.github.io/conscience64/play/) · [History](https://redogit.github.io/conscience64/history/)
+[Research records](https://github.com/redogit/conscience64/tree/main/research/projects) · [Research Analytics](https://redogit.github.io/conscience64/) · [Coordinate Space](https://redogit.github.io/conscience64/) · [Play](https://redogit.github.io/conscience64/) · [History](https://redogit.github.io/conscience64/)
 
 ## Free use
 
