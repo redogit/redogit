@@ -24,6 +24,31 @@ My work crosses software, language, knowledge organization, accessibility, games
 
 I expect my working model to change. Better evidence can change my mind; negative results can change the design; an interpretation error becomes part of the record rather than something to hide.
 
+
+## September 18, 2026 convergence
+
+The current forward-only convergence pass is governed by [GITHUB_CONVERGENCE_PLAN_2026-09-18.md](GITHUB_CONVERGENCE_PLAN_2026-09-18.md).
+
+Current successor state includes:
+
+- **RMAO** as the active game/world target;
+- **RMALKDVMLLL** as the broader VM/link-layer framework;
+- **RMAPL / Ω** as the domain-first repair/fitting design surface, with implementation still evidence-gated;
+- **Dynamic RMAL** as a bounded dynamic game/state contract surface for the RMAO character system;
+- **Super Seraphine** as a fictional magic trickster character whose presentation may vary broadly without gaining server/admin or real-world identity authority;
+- **Sproutling** as a fictional game growth-form with no real-age or real-family mapping.
+
+Privacy remains a hard publication gate:
+
+```text
+PUBLIC_REPOSITORY != PRIVATE_FAMILY_CONTEXT
+GAME_CHARACTER != PRIVATE_PERSON
+SPROUTLING != REAL_CHILD
+PSEUDONYM != IDENTITY_DISCLOSURE
+```
+
+This section succeeds the September 14 snapshot below; it does not rewrite that historical checkpoint.
+
 ## Explore the history — 10 doors
 
 The history is intentionally **federated rather than centralized**. The [10-step History Playground](history-playground.html) gives people ten optional doors into the theories, formal results, experiments, tools, games, apps, education, accessibility, philosophy, ethics, coding, failures, and recovered history.
