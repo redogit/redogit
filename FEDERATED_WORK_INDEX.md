@@ -169,7 +169,7 @@ These are neighborhoods, not departments. A branch may belong to more than one n
 
 - Conscience64
 - MMO World / Explorer
-- Red Wilds
+- Ripping Many Arms Off
 - Fuzzball lines
 - visual carriers
 - Renderer Society / Image Society

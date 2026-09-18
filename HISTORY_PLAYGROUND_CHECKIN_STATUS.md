@@ -263,7 +263,7 @@ Checked current Conscience64 public-tool catalog:
 Also represented from the wider lineage:
 
 - Fuzzball;
-- Red Wilds;
+- Ripping Many Arms Off;
 - Arcade Forge;
 - game canon / visual carriers;
 - poetry, stories, music, creative systems;
