@@ -138,7 +138,7 @@
       "step": 10,
       "id": "play-share",
       "title": "Worlds, Games, Art, and Share-Back",
-      "domains": ["Explorer World", "MMO", "Fuzzball", "Red Wilds", "Arcade Forge", "Computational Chorus", "poetry", "music", "Human Expression Archive"],
+      "domains": ["Explorer World", "MMO", "Fuzzball", "Ripping Many Arms Off", "Arcade Forge", "Computational Chorus", "poetry", "music", "Human Expression Archive"],
       "artifacts": [
         {"name": "Conscience64 Play", "url": "https://redogit.github.io/conscience64/play/", "kind": "playground"},
         {"name": "Explorer World", "url": "https://redogit.github.io/conscience64/play/explorer-world/", "kind": "game"},

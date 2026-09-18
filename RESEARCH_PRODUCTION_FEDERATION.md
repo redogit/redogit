@@ -200,7 +200,7 @@ Production path:
 | 7 Mathematics | R³, Hodge, P vs NP, SAT, SEARCH/CERTIFY | proof/research aids, exact verifiers, reproducible notebooks/tools | proof-vs-overclaim games |
 | 8 Science/physical | GR/quantum distinctions, confounds, water engineering | physical-design briefs, measurement/experiment tools | confound/control challenges |
 | 9 Accessibility/education | CPACC/UDL, E1/E2/E3, human learning evidence | accessible documents, JAWS/Excel tooling, learner-first interfaces | teach-back and multi-representation modes |
-| 10 Worlds/art | creative systems as generators, not evidence | MMO/Explorer/Fuzzball/Red Wilds/Chorus/archives | pure play plus optional learning hooks |
+| 10 Worlds/art | creative systems as generators, not evidence | MMO/Explorer/Fuzzball/Ripping Many Arms Off/Chorus/archives | pure play plus optional learning hooks |
 
 ---
 

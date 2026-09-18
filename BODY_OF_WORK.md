@@ -402,7 +402,7 @@ The interface is a carrier for research and public interaction; it is not itself
 
 Explores algorithms as composable/mutable objects, ahead-of-time compilation of instruction/execution structures, operator mutation, ECS integration, LLVM/MLIR use, search, heuristics, and controlled evolutionary/optimization experiments.
 
-## Game systems / MMO / Red Wilds / Fuzzball / visual carriers
+## Game systems / MMO / Ripping Many Arms Off / Fuzzball / visual carriers
 
 **Status:** creative and software-engineering work with explicit canon/provenance boundaries.
 

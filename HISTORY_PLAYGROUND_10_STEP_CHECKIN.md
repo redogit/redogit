@@ -311,7 +311,7 @@ Let the learner teach the same idea back in a different representation. Their ve
 # Step 10 — Worlds, Games, Art, and Share-Back
 
 ### Theme
-Explorer World, MMO, Fuzzball, Red Wilds, Arcade Forge, Computational Chorus, Human Expression Archive, poetry, stories, music, creative engines, visual carriers.
+Explorer World, MMO, Fuzzball, Ripping Many Arms Off, Arcade Forge, Computational Chorus, Human Expression Archive, poetry, stories, music, creative engines, visual carriers.
 
 ### Try
 - [Conscience64 Play](https://redogit.github.io/conscience64/play/)

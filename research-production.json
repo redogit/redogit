@@ -72,7 +72,7 @@
     {"door":7,"id":"mathematics","research":["R3","Hodge","P vs NP","SAT","SEARCH/CERTIFY"],"production":["proof/research aids","exact verifiers"],"playTeach":["proof-vs-overclaim exercises"]},
     {"door":8,"id":"science-physical","research":["GR-quantum distinctions","confounds","water engineering"],"production":["physical-design briefs","measurement tools"],"playTeach":["confound/control challenges"]},
     {"door":9,"id":"accessibility-education","research":["CPACC/UDL","E1/E2/E3","human learning evidence"],"production":["accessible documents","JAWS/Excel tooling","learner-first interfaces"],"playTeach":["teach-back and multi-representation modes"]},
-    {"door":10,"id":"worlds-art","research":["creative systems as generators not evidence"],"production":["MMO","Explorer World","Fuzzball","Red Wilds","Computational Chorus","archives"],"playTeach":["pure play plus optional learning hooks"]}
+    {"door":10,"id":"worlds-art","research":["creative systems as generators not evidence"],"production":["MMO","Explorer World","Fuzzball","Ripping Many Arms Off","Computational Chorus","archives"],"playTeach":["pure play plus optional learning hooks"]}
   ],
   "productionStates": ["IDEA","DESIGN","PROTOTYPE","LOCAL_WORKING","SOFTWARE_VERIFIED","ACCESSIBILITY_CHECKED","SECURITY_REVIEWED","BETA","PRODUCTION_CANDIDATE","PRODUCTION","RETIRED","SUPERSEDED","UNRESOLVED"],
   "researchStates": ["PHILOSOPHY","HYPOTHESIS","DESIGNED_NOT_RUN","INVALID_RUN","NEGATIVE_RESULT","TESTED_BOUNDED","EXHAUSTIVE_FINITE","FORMAL_PROOF_WITHIN_ASSUMPTIONS","INDEPENDENT_REPLICATION","OPEN","UNRESOLVED"],
