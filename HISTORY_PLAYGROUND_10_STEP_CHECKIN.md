@@ -33,7 +33,7 @@ Human direction, agency, philosophy, ethics, morals, minimal necessity, Pursuit 
 ### Try
 - [Small Steps](https://redogit.github.io/conscience64/)
 - [Dream to Action](https://github.com/redogit/Dream-To-Action)
-- Read [`FEDERATED_WORK_INDEX.md`](FEDERATED_WORK_INDEX.md)
+- Read [`WORK_INDEX.md`](WORK_INDEX.md)
 
 ### Tiny challenge
 Pick **one thing you actually want to explore**. Write:
