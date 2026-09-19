@@ -94,6 +94,31 @@ This makes the collaboration explicit without collapsing ownership or authority:
 
 The executable RMAL carrier is maintained additively in `redogit/Other-Projects-` at `docs/RMAL_COOPERATIVE_IMPLEMENTATION_PROTOCOL.rmal`. Compilation validates the carrier syntax and structure; it does not grant scientific truth authority.
 
+
+## September 19, 2026 — current cooperation/language/evidence continuation
+
+The current synthesis now includes:
+
+- **USDAY-first cooperation** and **Pairity-before-parity** as design-state operating rules;
+- the corrected **Interlingua Linguistics Agreement System** successor;
+- a fail-closed **private-history method-learning boundary**;
+- the compiled/audited RMAL cooperative carrier in `redogit/Other-Projects-`;
+- bounded Conscience64 public-source dependency measurements under the continuing publication hold.
+
+The additive RMAL cooperative carrier passed RMALC 2.1.1 `check`, `compile`, and `audit`, with claim ceiling `PARSER_COMPILE_AUDIT_VALIDATION_ONLY`.
+
+```text
+REFERENCE -> PROPOSAL -> HANDOFF -> TARGET_DECISION -> TARGET_LOCAL_SUCCESSOR
+```
+
+```text
+DESIGN != IMPLEMENTATION
+AGREEMENT != EVIDENCE
+PRIVATE_HISTORY != PUBLIC_EVIDENCE
+SOURCE_GRAPH_MEASURED != PUBLICATION_APPROVED
+AUDIT_PASS != SEMANTIC_TRUTH
+```
+
 ## Explore the history — 10 doors
 
 The history is intentionally **distributed, independently authoritative, and reconstructible rather than centralized**. The [10-step History Playground](history-playground.html) gives people ten optional doors into the theories, formal results, experiments, tools, games, apps, education, accessibility, philosophy, ethics, coding, failures, and recovered history.
