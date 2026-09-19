@@ -811,3 +811,215 @@ LIBRARY OF BABEL
 The central invariant is:
 
 > **Preserve the possibility of faithful return while carrying only the smallest consequential state required by the human's present goal.**
+
+
+## 30. September 19 continuation — USDAY first
+
+Conscience64 now preserves a merged **USDAY-first** cooperative design as a design artifact, not an implementation claim.
+
+Canonical ordering:
+
+```text
+USDAY FIRST
+-> JUST LOAD IT
+-> UNDERSTAND
+-> PLAN
+-> PAIRITY CHECK
+-> SHARED DECISION WHERE REQUIRED
+-> DO
+-> OBSERVE
+-> COUNTERPROBE
+-> CHECK
+-> RETAIN
+-> SOLDAY CARRY
+-> RMADAY RECORD / RECONSTRUCT
+-> CONTINUE
+```
+
+The design adds:
+
+```text
+US != MERGED
+COOPERATION != OBEDIENCE
+AGREEMENT != ERASURE
+DISAGREEMENT != FAILURE
+AGREEMENT != EVIDENCE
+CONSENSUS != TRUTH
+REPETITION != INDEPENDENT_CONFIRMATION
+```
+
+USDAY is an ordering/governance design for consequential shared work. It is not a production implementation, political theory, legal governance system, or truth authority.
+
+## 31. Pairity before parity
+
+**Pairity** preserves the two sides and their relation before asking whether they match.
+
+```text
+PAIRITY
+= keep participant A
++ keep participant B
++ keep A->B
++ keep B->A
++ keep each relation
++ preserve mismatch
+```
+
+Then:
+
+```text
+PAIRITY
+-> COMPARE
+-> SAME WHERE EXPECTED
+-> DIFFERENT WHERE REQUIRED
+-> PARITY ONLY WHEN JUSTIFIED
+```
+
+This strengthens the existing Fighting Point / obligation-relative equivalence rule:
+
+```text
+PAIRITY != FORCED_EQUALITY
+AGREEMENT != COLLAPSE
+```
+
+## 32. Interlingua Linguistics Agreement System
+
+The merged predecessor remains **Shared Operational Interleaved Interlinuia**.
+
+After merge, the user corrected the forward direction to:
+
+> **Interlingua Linguistics Agreement System**
+
+The successor is design-only and does not retroactively rename the predecessor.
+
+Its purpose is to preserve source-native expression while finding enough bounded shared meaning for a declared next action.
+
+```text
+SOURCE_NATIVE_EXPRESSION
+-> CANDIDATE_INTERPRETATIONS
+-> CONSEQUENTIAL_TERMS
+-> REPRESENTATION_ROTATION_IF_USEFUL
+-> PAIRITY
+-> AGREEMENT / DISAGREEMENT / UNKNOWN
+-> ACT_ONLY_TO_AGREED_SCOPE
+-> CHECK
+-> RETAIN_WAY_BACK
+```
+
+Working agreement field:
+
+```text
+AF = (S, P, I, R, A, D, E, G, U)
+```
+
+where:
+
+- `S` = source expressions;
+- `P` = attributable participants;
+- `I` = candidate interpretations;
+- `R` = typed linguistic/semantic relations;
+- `A` = earned agreements;
+- `D` = preserved disagreement/distinctions;
+- `E` = evidence/provenance/confidence/chronology;
+- `G` = bounded shared operational goal;
+- `U` = unresolved linguistic remainder.
+
+Required boundaries:
+
+```text
+AGREEMENT != SAME_WORDS
+LEXICAL_MATCH != OPERATIONAL_AGREEMENT
+LEXICAL_DIFFERENCE != OPERATIONAL_DISAGREEMENT
+TRANSLATION != IDENTITY
+INTERPRETATION != SOURCE
+UNDERSTOOD != CONSENTED
+AGREED_MEANING != AGREED_ACTION
+```
+
+The name `Interlingua` has existing linguistic meanings and language traditions. This project currently claims no conformance with, derivation from, or implementation of any existing Interlingua standard; that relationship remains a separate research obligation.
+
+## 33. Conscience64 public-source dependency closure — bounded evidence
+
+A separate Conscience64 software-evidence line measured the static source dependencies of the held public projection.
+
+Observed sequence:
+
+```text
+58 canonical HTML routes
+369 local HTML references
+251 direct asset references
+93 unique direct assets
+
+depth 1:
+11 references / 11 unique dependencies
+
+depth 2:
+8 references / 8 unique dependencies
+
+fixed-point static JS/CSS closure:
+3 layers / 16 unique dependency files
+terminal layer introduced 0 new files
+
+quoted-literal new URL(..., import.meta.url):
+1 reference / 1 unique repository asset
+
+quoted-literal new Worker(...) / new SharedWorker(...):
+0 references / 0 unique Worker assets
+```
+
+The Worker result is explicitly negative evidence:
+
+```text
+NO_MATCH_UNDER_DECLARED_LITERAL_WORKER_RELATION
+!=
+NO_WORKER_BEHAVIOR_ANYWHERE
+```
+
+The source graph remains bounded to admitted static relations. Runtime-generated paths, ServiceWorker registration, fetch/XHR, template expressions, bundler transforms and other untested relations remain outside the result.
+
+Publication remains held.
+
+```text
+SOURCE_GRAPH_MEASURED != PUBLICATION_APPROVED
+PUBLICLY_VISIBLE != PUBLICATION_APPROVED != COMMERCIALLY_LICENSED
+SOURCE_DEPENDENCY_CLOSURE != RUNTIME_CORRECTNESS
+SOURCE_DEPENDENCY_CLOSURE != ACCESSIBILITY
+SOURCE_DEPENDENCY_CLOSURE != SEMANTIC_TRUTH
+```
+
+## 34. Extended current runtime
+
+The human/research loop now admits the linguistic agreement layer only when consequential:
+
+```text
+Human
+-> Goal
+-> USDAY
+-> JustLoadIt
+-> Understand
+-> Plan
+-> Pairity
+-> InterlinguaLinguisticsAgreementSystem?   // only when linguistic agreement matters
+-> SharedChoice?                            // only where required
+-> Obligation
+-> FightingPoint
+-> ConsequentialDistinction
+-> DecisionField
+-> Ma
+-> Orbit
+-> LibraryOfLibraries
+-> Airlock
+-> Operators
+-> Transform / Rotate / Interleave
+-> Verify
+-> HumanSurface
+-> Act
+-> Observe
+-> Counterprobe
+-> LearnedDelta
+-> Check
+-> Retain
+-> ReconstructionSeed
+-> Continue
+```
+
+The `?` branches are conditional. They do not become mandatory overhead for tasks that do not need them.
