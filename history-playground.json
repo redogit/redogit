@@ -13,40 +13,17 @@
     "RECONSTRUCTION != SOURCE",
     "UNKNOWN != FALSE != ABSENT"
   ],
-  "loop": [
-    "find",
-    "try",
-    "learn",
-    "teach",
-    "leave-a-trail"
-  ],
+  "loop": ["find", "try", "learn", "teach", "leave-a-trail"],
   "steps": [
     {
       "step": 1,
       "id": "choose",
       "title": "Choose Your Door",
-      "domains": [
-        "human-direction",
-        "philosophy",
-        "ethics",
-        "praxeology"
-      ],
+      "domains": ["human-direction", "philosophy", "ethics", "praxeology"],
       "artifacts": [
-        {
-          "name": "Small Steps",
-          "url": "https://redogit.github.io/conscience64/play/steps/",
-          "kind": "app"
-        },
-        {
-          "name": "Dream to Action",
-          "url": "https://github.com/redogit/Dream-To-Action",
-          "kind": "project"
-        },
-        {
-          "name": "Work Index",
-          "path": "WORK_INDEX.md",
-          "kind": "index"
-        }
+        {"name": "Small Steps", "url": "https://redogit.github.io/conscience64/play/steps/", "kind": "app"},
+        {"name": "Dream to Action", "url": "https://github.com/redogit/Dream-To-Action", "kind": "project"},
+        {"name": "Work Index", "path": "WORK_INDEX.md", "kind": "index"}
       ],
       "challenge": "Choose one goal, one constraint, one next action, and one observable change. Name one choice you do not delegate.",
       "teach": "Ask another learner what they want to learn before introducing a framework.",
@@ -56,28 +33,11 @@
       "step": 2,
       "id": "preserve",
       "title": "Preserve the Before and After",
-      "domains": [
-        "REDOGIT",
-        "Airlock",
-        "provenance",
-        "history"
-      ],
+      "domains": ["REDOGIT", "Airlock", "provenance", "history"],
       "artifacts": [
-        {
-          "name": "Source Compare",
-          "url": "https://redogit.github.io/conscience64/play/compare/",
-          "kind": "app"
-        },
-        {
-          "name": "History & Restore",
-          "url": "https://redogit.github.io/conscience64/history/",
-          "kind": "app"
-        },
-        {
-          "name": "REDOGIT",
-          "path": "REDOGIT.md",
-          "kind": "method"
-        }
+        {"name": "Source Compare", "url": "https://redogit.github.io/conscience64/play/compare/", "kind": "app"},
+        {"name": "History & Restore", "url": "https://redogit.github.io/conscience64/history/", "kind": "app"},
+        {"name": "REDOGIT", "path": "REDOGIT.md", "kind": "method"}
       ],
       "challenge": "Compare two revisions and identify change, preservation, and one unsupported inference.",
       "teach": "Show why preserving a failure or predecessor can improve trust.",
@@ -87,30 +47,11 @@
       "step": 3,
       "id": "language-memory",
       "title": "Language, Memory, and Knowledge",
-      "domains": [
-        "Orbit",
-        "Knowledge Decay",
-        "Tiny Babel",
-        "TBCL",
-        "CSOL",
-        "Musilanguage"
-      ],
+      "domains": ["Orbit", "Knowledge Decay", "Tiny Babel", "TBCL", "CSOL", "Musilanguage"],
       "artifacts": [
-        {
-          "name": "Orbit Shelf",
-          "url": "https://redogit.github.io/conscience64/play/orbit/",
-          "kind": "app"
-        },
-        {
-          "name": "Word Weave",
-          "url": "https://redogit.github.io/conscience64/play/weave/",
-          "kind": "app"
-        },
-        {
-          "name": "Computational Chorus",
-          "url": "https://redogit.github.io/conscience64/play/computational-chorus/",
-          "kind": "app"
-        }
+        {"name": "Orbit Shelf", "url": "https://redogit.github.io/conscience64/play/orbit/", "kind": "app"},
+        {"name": "Word Weave", "url": "https://redogit.github.io/conscience64/play/weave/", "kind": "app"},
+        {"name": "Computational Chorus", "url": "https://redogit.github.io/conscience64/play/computational-chorus/", "kind": "app"}
       ],
       "challenge": "Represent one idea in two carriers and inspect meaning, effort, and provenance changes.",
       "teach": "Explain one concept once for precision and once for recall.",
@@ -120,24 +61,10 @@
       "step": 4,
       "id": "geometry-carriers",
       "title": "Geometry, Carriers, and Strange Spaces",
-      "domains": [
-        "4D codec",
-        "Float64",
-        "Compass",
-        "fractal geometry",
-        "observer experiments"
-      ],
+      "domains": ["4D codec", "Float64", "Compass", "fractal geometry", "observer experiments"],
       "artifacts": [
-        {
-          "name": "Pattern Garden",
-          "url": "https://redogit.github.io/conscience64/play/garden/",
-          "kind": "app"
-        },
-        {
-          "name": "Coordinate Space",
-          "url": "https://redogit.github.io/conscience64/coordinate-space/",
-          "kind": "app"
-        }
+        {"name": "Pattern Garden", "url": "https://redogit.github.io/conscience64/play/garden/", "kind": "app"},
+        {"name": "Coordinate Space", "url": "https://redogit.github.io/conscience64/coordinate-space/", "kind": "app"}
       ],
       "challenge": "Transform a pattern and identify an invariant and a changed feature.",
       "teach": "Ask another learner what can and cannot be reconstructed from the transformed object.",
@@ -147,32 +74,11 @@
       "step": 5,
       "id": "build-repair",
       "title": "Build, Compile, Break, Repair",
-      "domains": [
-        "coding",
-        "algorithmic builder",
-        "optimizer",
-        "LLVM",
-        "MLIR",
-        "WASM",
-        "ECS",
-        "mutation testing"
-      ],
+      "domains": ["coding", "algorithmic builder", "optimizer", "LLVM", "MLIR", "WASM", "ECS", "mutation testing"],
       "artifacts": [
-        {
-          "name": "MauiBrickBreak",
-          "url": "https://github.com/redogit/MauiBrickBreak",
-          "kind": "project"
-        },
-        {
-          "name": "FirstNeuralNetwork",
-          "url": "https://github.com/redogit/FirstNeuralNetwork",
-          "kind": "project"
-        },
-        {
-          "name": "Other Projects",
-          "url": "https://github.com/redogit/Other-Projects-",
-          "kind": "project"
-        }
+        {"name": "MauiBrickBreak", "url": "https://github.com/redogit/MauiBrickBreak", "kind": "project"},
+        {"name": "FirstNeuralNetwork", "url": "https://github.com/redogit/FirstNeuralNetwork", "kind": "project"},
+        {"name": "Other Projects", "url": "https://github.com/redogit/Other-Projects-", "kind": "project"}
       ],
       "challenge": "Write input -> operation -> observable output -> verifier, then prove one mutation is actually exercised.",
       "teach": "Give a learner a bug plus a weak test and let them repair the test first.",
@@ -182,28 +88,10 @@
       "step": 6,
       "id": "mind-models",
       "title": "Minds, Models, Agents, and Societies",
-      "domains": [
-        "Operational Closure",
-        "Computer Mind",
-        "SHADOW",
-        "PulseNet",
-        "SPDM",
-        "agents",
-        "skills",
-        "societies",
-        "swarms"
-      ],
+      "domains": ["Operational Closure", "Computer Mind", "SHADOW", "PulseNet", "SPDM", "agents", "skills", "societies", "swarms"],
       "artifacts": [
-        {
-          "name": "Conscience64",
-          "url": "https://github.com/redogit/conscience64",
-          "kind": "project"
-        },
-        {
-          "name": "Conscience64 research records",
-          "url": "https://redogit.github.io/conscience64/research/projects/",
-          "kind": "research"
-        }
+        {"name": "Conscience64", "url": "https://github.com/redogit/conscience64", "kind": "project"},
+        {"name": "Conscience64 research records", "url": "https://redogit.github.io/conscience64/research/projects/", "kind": "research"}
       ],
       "challenge": "For one mechanism, state support observation, lesion/counterprobe, and simpler alternative.",
       "teach": "Explain why intelligent-looking output is not itself a causal mechanism test.",
@@ -213,26 +101,10 @@
       "step": 7,
       "id": "mathematics",
       "title": "Mathematics: Proof, Computation, and Open Problems",
-      "domains": [
-        "R3",
-        "Hodge",
-        "P vs NP",
-        "SAT",
-        "SEARCH/CERTIFY",
-        "Lean",
-        "SMT"
-      ],
+      "domains": ["R3", "Hodge", "P vs NP", "SAT", "SEARCH/CERTIFY", "Lean", "SMT"],
       "artifacts": [
-        {
-          "name": "Other Projects",
-          "url": "https://github.com/redogit/Other-Projects-",
-          "kind": "research"
-        },
-        {
-          "name": "Conscience64 Hodge and research records",
-          "url": "https://redogit.github.io/conscience64/research/projects/",
-          "kind": "research"
-        }
+        {"name": "Other Projects", "url": "https://github.com/redogit/Other-Projects-", "kind": "research"},
+        {"name": "Conscience64 Hodge and research records", "url": "https://redogit.github.io/conscience64/research/projects/", "kind": "research"}
       ],
       "challenge": "Label one statement PROVED, EXHAUSTIVE_FINITE, COMPUTATION, COUNTEREXAMPLE, HYPOTHESIS, or OPEN and state the next evidence rung.",
       "teach": "Present one result and one overclaim; ask the learner to locate the unsupported jump.",
@@ -242,19 +114,9 @@
       "step": 8,
       "id": "science-physical",
       "title": "Science and the Physical World",
-      "domains": [
-        "physics",
-        "GR/quantum seam",
-        "observation",
-        "confounds",
-        "water/pool engineering"
-      ],
+      "domains": ["physics", "GR/quantum seam", "observation", "confounds", "water/pool engineering"],
       "artifacts": [
-        {
-          "name": "Work Index",
-          "path": "WORK_INDEX.md",
-          "kind": "index"
-        }
+        {"name": "Work Index", "path": "WORK_INDEX.md", "kind": "index"}
       ],
       "challenge": "Write raw observation -> comparison -> interpretation and invent one confound.",
       "teach": "Ask the learner for a control that distinguishes two explanations.",
@@ -264,21 +126,9 @@
       "step": 9,
       "id": "accessibility-education",
       "title": "Accessibility, Education, and Teaching",
-      "domains": [
-        "CPACC",
-        "UDL",
-        "Section 508",
-        "JAWS",
-        "accessible documents",
-        "Education E1/E2/E3",
-        "Orbit Master"
-      ],
+      "domains": ["CPACC", "UDL", "Section 508", "JAWS", "accessible documents", "Education E1/E2/E3", "Orbit Master"],
       "artifacts": [
-        {
-          "name": "Small Steps",
-          "url": "https://redogit.github.io/conscience64/play/steps/",
-          "kind": "app"
-        }
+        {"name": "Small Steps", "url": "https://redogit.github.io/conscience64/play/steps/", "kind": "app"}
       ],
       "challenge": "Teach one concept through UDL why/what/how and let the learner's response change the explanation.",
       "teach": "Invite a teach-back in a different representation; do not require imitation.",
@@ -288,38 +138,12 @@
       "step": 10,
       "id": "play-share",
       "title": "Worlds, Games, Art, and Share-Back",
-      "domains": [
-        "Explorer World",
-        "MMO",
-        "Fuzzball",
-        "Ripping Many Arms Off",
-        "Arcade Forge",
-        "Computational Chorus",
-        "poetry",
-        "music",
-        "Human Expression Archive"
-      ],
+      "domains": ["Explorer World", "MMO", "Fuzzball", "Ripping Many Arms Off", "Arcade Forge", "Computational Chorus", "poetry", "music", "Human Expression Archive"],
       "artifacts": [
-        {
-          "name": "Conscience64 Play",
-          "url": "https://redogit.github.io/conscience64/play/",
-          "kind": "playground"
-        },
-        {
-          "name": "Explorer World",
-          "url": "https://redogit.github.io/conscience64/play/explorer-world/",
-          "kind": "game"
-        },
-        {
-          "name": "Conscience64 MMO RPG",
-          "url": "https://redogit.github.io/conscience64/play/mmo/simple/",
-          "kind": "game"
-        },
-        {
-          "name": "Computational Chorus",
-          "url": "https://redogit.github.io/conscience64/play/computational-chorus/",
-          "kind": "app"
-        }
+        {"name": "Conscience64 Play", "url": "https://redogit.github.io/conscience64/play/", "kind": "playground"},
+        {"name": "Explorer World", "url": "https://redogit.github.io/conscience64/play/explorer-world/", "kind": "game"},
+        {"name": "Conscience64 MMO RPG", "url": "https://redogit.github.io/conscience64/play/mmo/simple/", "kind": "game"},
+        {"name": "Computational Chorus", "url": "https://redogit.github.io/conscience64/play/computational-chorus/", "kind": "app"}
       ],
       "challenge": "Make something that is allowed to be just fun, then add one optional question someone could discover through it.",
       "teach": "Let someone play first; explain only when they want the explanation or it serves their goal.",
