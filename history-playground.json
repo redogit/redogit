@@ -23,7 +23,7 @@
       "artifacts": [
         {"name": "Small Steps", "url": "https://redogit.github.io/conscience64/play/steps/", "kind": "app"},
         {"name": "Dream to Action", "url": "https://github.com/redogit/Dream-To-Action", "kind": "project"},
-        {"name": "Federated Work Index", "path": "FEDERATED_WORK_INDEX.md", "kind": "index"}
+        {"name": "Work Index", "path": "WORK_INDEX.md", "kind": "index"}
       ],
       "challenge": "Choose one goal, one constraint, one next action, and one observable change. Name one choice you do not delegate.",
       "teach": "Ask another learner what they want to learn before introducing a framework.",
@@ -116,7 +116,7 @@
       "title": "Science and the Physical World",
       "domains": ["physics", "GR/quantum seam", "observation", "confounds", "water/pool engineering"],
       "artifacts": [
-        {"name": "Federated Work Index", "path": "FEDERATED_WORK_INDEX.md", "kind": "index"}
+        {"name": "Work Index", "path": "WORK_INDEX.md", "kind": "index"}
       ],
       "challenge": "Write raw observation -> comparison -> interpretation and invent one confound.",
       "teach": "Ask the learner for a control that distinguishes two explanations.",
