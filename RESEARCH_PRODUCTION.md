@@ -181,7 +181,7 @@ Bounded experiments:
 
 Production path:
 
-- `FEDERATED_WORK_INDEX.md`;
+- `WORK_INDEX.md`;
 - History Playground;
 - detachable typed links;
 - project-local state and claim labels;
