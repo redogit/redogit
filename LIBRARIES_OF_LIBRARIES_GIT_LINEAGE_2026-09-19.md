@@ -193,3 +193,10 @@ Keep the way back.
 ```text
 REFERENCE -> PROPOSAL -> HANDOFF -> TARGET_DECISION -> TARGET_LOCAL_SUCCESSOR
 ```
+
+
+### Required integration-surface gate
+
+- `9e1cd3bd` — REDOGIT profile gate extended to `WORK_INDEX.md`, `LIBRARIES_OF_LIBRARIES_*.md`, and `libraries-of-libraries.rmal`, while requiring the explicit privacy policy and public/game privacy invariants.
+
+`INTEGRATION_GATE_PASS != SCIENTIFIC_VALIDATION`
