@@ -369,3 +369,17 @@ Current bounded software evidence under the publication hold includes:
 - zero quoted-literal Worker/SharedWorker assets.
 
 The zero Worker result is preserved as negative evidence, not absence of all Worker behavior.
+
+
+### Private-history language-learning boundary
+
+Conscience64 now enforces a fail-closed boundary for private historical material used only to learn problem-solving language/method.
+
+```text
+PRIVATE_HISTORY != PUBLIC_EVIDENCE
+LANGUAGE_PATTERN != PERSONAL_PROFILE
+LEARNED_METHOD != DISCLOSURE
+DERIVED_FROM_PRIVATE_HISTORY != SAFE_TO_PUBLISH
+```
+
+Abstract method may inform internal reasoning only after private facts and identity-bearing details are removed; later project/public claims must be independently grounded in current authorized sources.
