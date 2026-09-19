@@ -159,3 +159,30 @@ Use RMAL to make the relation executable.
 Use Ma/Orbit to retrieve only what the current goal needs.
 Keep the way back.
 ```
+
+
+## September 19 continuation — current Git anchors
+
+### Conscience64 source-side public dependency mapping
+
+- `6b8c906f` — direct public assets: 58 canonical routes, 369 local HTML references, 251 direct asset references, 93 unique direct assets.
+- `bef30bae` — one-hop static JS/CSS dependencies: 11 references / 11 unique dependencies.
+- `87b32e07` — second-hop dependencies: 8 references / 8 unique dependencies.
+- `7ce19420` — fixed-point static closure: 3 layers / 16 unique dependency files; terminal layer adds zero.
+- `d68f54e9` — quoted-literal `import.meta.url`: 1 reference / 1 unique repository asset.
+- `032167e1` — quoted-literal Worker/SharedWorker: 0 references / 0 unique assets; explicit negative result.
+
+All remain source-side evidence under the explicit publication hold.
+
+### USDAY and linguistic agreement
+
+- `9ec2bf59` — merge PR #153: USDAY-first Shared Operational Interleaved Interlinuia design.
+- PR #153 user comment — forward correction marker.
+- `10ca50d6` — merge PR #157: corrected **Interlingua Linguistics Agreement System** successor.
+
+The predecessor is not rewritten.
+
+```text
+INTERLINUIA = historical working artifact
+INTERLINGUA LINGUISTICS AGREEMENT SYSTEM = corrected successor direction
+```
