@@ -335,3 +335,37 @@ When another old idea, theory, theorem attempt, corollary, conversation, program
 The objective is not one giant system.
 
 The objective is **a living ecology of work that remains yours to navigate**.
+
+
+## September 19 continuation — cooperative language and source-graph work
+
+### USDAY / Pairity / Interlingua Linguistics Agreement System
+
+Current Conscience64 design lineage now includes:
+
+- **USDAY-first cooperation** — understand/plan before consequential shared action;
+- **Pairity before parity** — preserve both participants, directions, relations and mismatches before claiming sameness;
+- **Interlingua Linguistics Agreement System** — corrected forward design for bounded operational agreement across different linguistic surfaces.
+
+These are design records, not production implementations.
+
+```text
+AGREEMENT != EVIDENCE
+PAIRITY != FORCED_EQUALITY
+TRANSLATION != IDENTITY
+UNDERSTOOD != CONSENTED
+```
+
+### Conscience64 public-source graph
+
+Current bounded software evidence under the publication hold includes:
+
+- 58 canonical HTML routes;
+- 93 unique direct assets from 251 direct references;
+- 11 unique first-hop dependencies;
+- 8 unique second-hop dependencies;
+- 3-layer fixed-point static closure containing 16 unique dependency files;
+- one quoted-literal `import.meta.url` asset;
+- zero quoted-literal Worker/SharedWorker assets.
+
+The zero Worker result is preserved as negative evidence, not absence of all Worker behavior.
