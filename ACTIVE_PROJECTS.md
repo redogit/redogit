@@ -1,6 +1,8 @@
 # Active Projects — current connected work
 
-> **Successor note — 2026-09-19:** this file changes the current-facing name only; the underlying project-status snapshot retains its original check date and authority boundaries. Historical `ACTIVE_FEDERATION.md` / `active-federation.json` remain preserved.\n>\n> **Public projection status — 2026-09-18:** Conscience64 GitHub Pages is intentionally held at a minimal privacy surface pending explicit owner approval of an exact reviewed revision. Project/research state is independent of public availability. Public URLs are projections, not canonical authority.
+> **Successor note — 2026-09-19:** this file changes the current-facing name only; the underlying project-status snapshot retains its original check date and authority boundaries. Historical `ACTIVE_FEDERATION.md` / `active-federation.json` remain preserved.
+>
+> **Public projection status — 2026-09-18:** Conscience64 GitHub Pages is intentionally held at a minimal privacy surface pending explicit owner approval of an exact reviewed revision. Project/research state is independent of public availability. Public URLs are projections, not canonical authority.
 
 
 **Checked:** September 16, 2026  
@@ -79,7 +81,7 @@ Those states remain visible without being relabeled.
 
 - **Tiny Babel / TBCL** stays a preserved verified finite result + runtime lineage rather than being relabeled active.
 - **Geometry / 4D / Codecs** stays preserved technical lineage.
-- **Fuzzball Hidden Alpha** may be active software, but it is intentionally unlisted. This federation does not defeat that distribution choice by publishing a direct active link.
+- **Fuzzball Hidden Alpha** may be active software, but it is intentionally unlisted. This routing surface does not defeat that distribution choice by publishing a direct active link.
 
 ---
 
@@ -124,13 +126,13 @@ When one lands on `main`, it can be reconsidered from its new default-branch evi
 
 ---
 
-# Library-pattern federation binding
+# Library-pattern historical binding
 
 The connected repository set now carries the dated `LIBRARY_PATTERN_2026-09-16.json` method/navigation sidecar. The shared schema and human-readable checkpoint live in this repository as `LIBRARY_PATTERN.schema.json` and `LIBRARY_PATTERN_FEDERATION_2026-09-16.md`.
 
-This binding federates recoverable organization patterns — identity, provenance, chronology, current authority, typed relations, evidence status, claim ceiling, transform history, failures/remainder, access/privacy/rights, and recovery handles — without merging evidence or authority. Private Library contents and paths are not exported.
+This binding relates recoverable organization patterns — identity, provenance, chronology, current authority, typed relations, evidence status, claim ceiling, transform history, failures/remainder, access/privacy/rights, and recovery handles — without merging evidence or authority. Private Library contents and paths are not exported.
 
-`FEDERATED_PATTERN != FEDERATED_AUTHORITY`
+`SHARED_PATTERN != SHARED_AUTHORITY`
 
 ---
 
@@ -147,4 +149,4 @@ It does **not**:
 - turn a verified finite computation into an open-problem proof;
 - activate another system merely by listing it.
 
-The federation stays useful only if every project remains detachable.
+The routing layer stays useful only if every project remains detachable.
