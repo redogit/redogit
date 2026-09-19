@@ -335,3 +335,58 @@ When another old idea, theory, theorem attempt, corollary, conversation, program
 The objective is not one giant system.
 
 The objective is **a living ecology of work that remains yours to navigate**.
+
+
+## September 19 continuation — cooperation, language, privacy, and source graph
+
+### USDAY / Pairity / Interlingua Linguistics Agreement System
+
+Current design lineage includes:
+
+- USDAY-first cooperation;
+- Pairity before parity;
+- Interlingua Linguistics Agreement System as the corrected successor to the historical Interlinuia wording.
+
+```text
+AGREEMENT != EVIDENCE
+PAIRITY != FORCED_EQUALITY
+TRANSLATION != IDENTITY
+UNDERSTOOD != CONSENTED
+```
+
+### Cooperative implementation protocol
+
+The current cross-workstream law is:
+
+```text
+REFERENCE -> PROPOSAL -> HANDOFF -> TARGET_DECISION -> TARGET_LOCAL_SUCCESSOR
+```
+
+Cross-write and evidence transfer are denied by default.
+
+The additive RMAL carrier in Other-Projects- passed RMALC 2.1.1 check, compile, and audit under a parser/compile/audit-only claim ceiling.
+
+### Private-history language-learning boundary
+
+Private history may inform abstract internal method only after private facts and identity-bearing details are removed.
+
+```text
+PRIVATE_HISTORY != PUBLIC_EVIDENCE
+LANGUAGE_PATTERN != PERSONAL_PROFILE
+LEARNED_METHOD != DISCLOSURE
+DERIVED_FROM_PRIVATE_HISTORY != SAFE_TO_PUBLISH
+```
+
+### Conscience64 public-source graph
+
+Current bounded software evidence under the publication hold includes:
+
+- 58 canonical HTML routes;
+- 93 unique direct assets from 251 direct references;
+- 11 unique first-hop dependencies;
+- 8 unique second-hop dependencies;
+- 3-layer fixed-point static closure containing 16 unique dependency files;
+- one quoted-literal `import.meta.url` asset;
+- zero quoted-literal Worker/SharedWorker assets.
+
+The zero Worker result is preserved as negative evidence, not universal absence.
