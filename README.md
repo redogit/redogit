@@ -72,6 +72,18 @@ The **fighting point** is current successor terminology for the preserve-the-dif
 `CONNECTION != OWNERSHIP` · `RELATION != AUTHORITY_TRANSFER` · `RECONSTRUCTION != SOURCE`
 
 
+
+## September 19, 2026 — USDAY / Interlingua / source-graph continuation
+
+Conscience64 has advanced the current line in two separate evidence classes:
+
+- **design:** USDAY-first cooperation, Pairity-before-parity, and the corrected [Interlingua Linguistics Agreement System](https://github.com/redogit/conscience64/blob/main/docs/superpowers/specs/2026-09-19-interlingua-linguistics-agreement-system-design.md);
+- **software evidence:** bounded public-source dependency mapping under the continuing publication hold: 93 direct assets, 16 unique fixed-point static dependency files over three layers, one quoted-literal `import.meta.url` asset, and zero quoted-literal Worker/SharedWorker assets.
+
+The zero Worker result is a scoped negative result, not proof that no Worker behavior exists.
+
+`DESIGN != IMPLEMENTATION` · `SOURCE_GRAPH_MEASURED != PUBLICATION_APPROVED` · `AGREEMENT != EVIDENCE`
+
 ## Explore the history — 10 doors
 
 The history is intentionally **distributed, independently authoritative, and reconstructible rather than centralized**. The [10-step History Playground](history-playground.html) gives people ten optional doors into the theories, formal results, experiments, tools, games, apps, education, accessibility, philosophy, ethics, coding, failures, and recovered history.
