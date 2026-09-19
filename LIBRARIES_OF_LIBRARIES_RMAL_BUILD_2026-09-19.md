@@ -1023,3 +1023,48 @@ Human
 ```
 
 The `?` branches are conditional. They do not become mandatory overhead for tasks that do not need them.
+
+
+## 35. Private-history method-learning boundary
+
+Conscience64 PR #154 adds an active fail-closed privacy rule for historical/private material supplied only to learn problem-solving language or method.
+
+Allowed internal abstraction may include:
+
+- problem framing;
+- distinctions noticed;
+- protected obligations;
+- search/comparison strategy;
+- testing/repair sequence;
+- reusable language structure with private facts removed.
+
+The protected source itself does not become project evidence.
+
+```text
+PRIVATE_HISTORY != PUBLIC_EVIDENCE
+PRIVATE_HISTORY != PROJECT_ARTIFACT
+LANGUAGE_PATTERN != PERSONAL_PROFILE
+LEARNED_METHOD != DISCLOSURE
+DERIVED_FROM_PRIVATE_HISTORY != SAFE_TO_PUBLISH
+```
+
+Operational rule:
+
+```text
+PRIVATE_HISTORY
+-> EXTRACT_ABSTRACT_METHOD
+-> REMOVE_PRIVATE_FACTS_AND_IDENTITY_DETAIL
+-> RETAIN_METHOD_INTERNALLY
+-> RE_GROUND_PROJECT_WORK_IN_CURRENT_AUTHORIZED_SOURCES
+```
+
+A public candidate explicitly marked `derived_from_private_history: true` must fail closed.
+
+Rewriting, paraphrasing, summarizing, or sanitizing a private narrative does not convert it into authorized public evidence.
+
+```text
+BOUNDARY_MAY_BE_REMEMBERED
+PRIVATE_STORY_MUST_NOT_BE_EXPORTED
+METHOD_MAY_INFORM_INTERNAL_REASONING
+PROJECT_CLAIMS_REQUIRE_PROJECT_EVIDENCE
+```
