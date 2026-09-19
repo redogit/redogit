@@ -94,7 +94,7 @@ The two main loops are deliberately different:
 
 `NEED → BUILD → VERIFY → RELEASE/USE → FEEDBACK → REPAIR`
 
-A research result may inspire a product without becoming a product claim. A successful app, game, or public release does not scientifically validate the theory that inspired it. The existing [research + production guide](RESEARCH_PRODUCTION_FEDERATION.md) (historical filename preserved) and [machine-readable research + production surface](research-production.json) carry the adaptive-organization, technical-we, meta-coordination, self-modeling, and no-center ideas alongside the existing projects.
+A research result may inspire a product without becoming a product claim. A successful app, game, or public release does not scientifically validate the theory that inspired it. The current [Research + Production guide](RESEARCH_PRODUCTION.md) and [machine-readable coordination map](research-production-map.json) carry the adaptive-organization, technical-we, meta-coordination, self-modeling, and no-center ideas alongside the existing projects. Their predecessors `RESEARCH_PRODUCTION_FEDERATION.md` and `research-production.json` remain preserved as historical provenance.
 
 The current conversation has also been restructured into an explicit [goal topology](GOAL_TOPOLOGY_2026-09-15.md) with a [machine-readable companion](goal-topology-2026-09-15.json). Each goal keeps its own owner, state, dependency, next action, and evidence boundary so independent lines can move without silently merging authority.
 
