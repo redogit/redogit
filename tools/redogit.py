@@ -61,6 +61,9 @@ REQUIRED_RESEARCH_DISTINCTIONS = {
     "PREDECESSOR != SUCCESSOR",
     "INTERNAL_CONSISTENCY != EXTERNAL_VALIDATION",
     "CLAIM != EVIDENCE",
+    "PUBLIC_REPOSITORY != PRIVATE_FAMILY_CONTEXT",
+    "GAME_CHARACTER != PRIVATE_PERSON",
+    "SPROUTLING != REAL_CHILD",
 }
 
 
@@ -119,6 +122,7 @@ def validate_research_policy(contract: dict[str, Any]) -> None:
         "promotion",
         "knowledge_decay",
         "historical_checkpoint_policy",
+        "privacy_policy",
     ):
         if not is_nonempty_string(research.get(field)):
             raise ValueError(f"research_policy.{field} must be a non-empty string")
