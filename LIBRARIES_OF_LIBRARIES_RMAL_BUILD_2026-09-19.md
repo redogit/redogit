@@ -1085,3 +1085,28 @@ Human
 ```
 
 Conditional layers stay conditional; they are not mandatory overhead for every task.
+
+
+## 37. Required integration-surface gate
+
+The current REDOGIT profile workflow now explicitly watches the integration surfaces:
+
+```text
+WORK_INDEX.md
+LIBRARIES_OF_LIBRARIES_*.md
+libraries-of-libraries.rmal
+```
+
+and the local contract checker requires the explicit privacy policy and the standing public/game privacy invariants:
+
+```text
+PUBLIC_REPOSITORY != PRIVATE_FAMILY_CONTEXT
+GAME_CHARACTER != PRIVATE_PERSON
+SPROUTLING != REAL_CHILD
+```
+
+Git anchor:
+
+`redogit/redogit@9e1cd3bd30ee15cadaeb83ade5ccf4f9e4893dee`
+
+This is an integration/configuration gate. Passing it does not upgrade scientific claims.
