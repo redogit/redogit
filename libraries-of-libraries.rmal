@@ -1,0 +1,447 @@
+RMAL::SYSTEM LibrariesOfLibraries
+VERSION 2026.09.19
+STATE FORWARD_ONLY_SUCCESSOR
+
+LAW Authority {
+    HUMAN != SYSTEM
+    HUMAN != FEDERATION
+    CONNECTION != OWNERSHIP
+    RELATION != AUTHORITY_TRANSFER
+    RECONSTRUCTION != SOURCE
+    NEWER != REPLACEMENT
+}
+
+TYPE UID128
+TYPE RID64
+
+ENTITY Thing {
+    uid : UID128
+    runtime : RID64?
+    aliases[]
+    carriers[]
+    relations[]
+    provenance[]
+}
+
+PROBLEM Babel {
+    huge_possible_field
+    REQUIRE identity addressability provenance relation relevance reconstruction human_goal
+}
+
+SYSTEM LibraryOfLibraries {
+    libraries[]
+    projects[]
+    archives[]
+    repositories[]
+    culture[]
+    research[]
+
+    RULE {
+        A != B
+        relation(A,B) != merge(A,B)
+        navigation(A,B) != authority_transfer(A,B)
+    }
+}
+
+RELATION EquivalentUnder(x,y,O)
+
+ENTITY FightingPoint {
+    x
+    y
+    obligation
+    witness?
+    disposition { COLLAPSIBLE MUST_REMAIN_DISTINCT UNRESOLVED }
+}
+
+OP Fight(x,y,O) {
+    witness := FindConsequentialWitness(x,y,O)
+
+    IF witness == NONE
+        RETURN UNRESOLVED
+
+    IF Consequence(witness,x,O) != Consequence(witness,y,O)
+        RETURN MUST_REMAIN_DISTINCT
+
+    RETURN COLLAPSIBLE
+}
+
+ENTITY DecisionField {
+    X
+    O
+    D
+    R
+    F
+    E
+    G
+    U
+}
+
+FORM DF = (X,O,D,R,F,E,G,U)
+
+OPERATORS {
+    Observe
+    Distinguish
+    Relate
+    Filter
+    Select
+    Transform
+    Project
+    Branch
+    Compose
+    Verify
+    Repair
+    Learn
+    Reconstruct
+    Terminate
+}
+
+MACHINE Airlock {
+    REQUIRE origin chronology integrity provenance interpretation privacy rights admission
+    RULE {
+        INGESTED != ACCEPTED_AS_FACT
+        RETRIEVED != EVIDENCE
+        RELATED != SUPPORTS
+    }
+}
+
+MACHINE Ma {
+    ROLE Reconstruction_Retrieval
+
+    OP Resolve(goal,question) {
+        d := CurrentUnresolvedDistinction(goal,question)
+        e := MinimumEvidenceThatCouldChange(d)
+        l := SmallestRelevantLineage(e)
+        s := Orbit.Resolve(l)
+        a := Airlock.Admit(s)
+        r := Evaluate(a,d)
+
+        IF insufficient(r)
+            WIDEN_ONE_STEP
+
+        delta := ExtractConsequentialLearning(r)
+
+        Preserve(delta)
+        Preserve(Provenance(r))
+        Preserve(Uncertainty(r))
+        Preserve(RecoveryHandle(r))
+
+        ReleaseReconstructibleWeight()
+
+        RETURN r
+    }
+}
+
+MACHINE Orbit {
+    OP Resolve(uid)
+    OP Traverse(uid,goal)
+    OP Related(uid,type)
+}
+
+FIELD Orbital {
+    books
+    code
+    archives
+    datasets
+    experiments
+    performances
+    machines
+    processes
+    culture
+    failures
+    unresolved
+}
+
+SYSTEM KnowledgeDecay {
+    DEFINITION LossOfReconstructibleConnection
+}
+
+OP Transform(X) -> (X_prime, Delta, Loss, Unresolved)
+
+OP BBF(X,axis) {
+    y := Fold(X)
+    z := Flip(y,axis)
+    r := Unfold(z)
+
+    IF !PreservesRequiredInvariants(X,r)
+        FAIL SEMANTIC_DECAY
+
+    RETURN r
+}
+
+AXES {
+    FORWARD BACKWARD
+    LEFT RIGHT
+    UP DOWN
+    ROLL PITCH YAW
+    TWIST SPIN TWIRL
+    INWARD OUTWARD
+    FOLD UNFOLD
+    INTERLEAVE DEINTERLEAVE
+    COMPRESS RESTORE
+}
+
+OP MaxInterleave(objects[],O) {
+    shared := CommonConsequentialStructure(objects,O)
+
+    FOR EACH object
+        delta[object] := Difference(object,shared,O)
+
+    carrier := Pack(shared,delta[])
+
+    ASSERT EveryRequiredObjectRestores(carrier)
+
+    RETURN carrier
+}
+
+OP OneDegreeExperiment(system,variable) {
+    FreezeOtherIndependentDegrees()
+    Change(variable)
+    observation := ObserveWholeSystem()
+    counterprobe := CheapestIndependentCounterprobe(observation)
+
+    Preserve(observation)
+    Preserve(counterprobe)
+    PreserveFailures()
+    PreserveUnresolved()
+
+    RETURN EvidenceBoundary()
+}
+
+MACHINE GSFL {
+    OP Fit(meaning,human,goal,device,accessibility) {
+        RETURN HumanSurface
+    }
+
+    RULE {
+        FIT != TRUTH
+        HumanSurface != Source
+    }
+}
+
+SYSTEM EyeOfGoals {
+    CELLS = 360
+    CELL_DEGREES = 1
+    HOT_FORWARD_DEGREES = 15
+
+    RULE {
+        UNKNOWN != SAFE
+        NOT_VISIBLE != SAFE
+        CAMERA != TRUTH
+        DETECTED != IDENTIFIED
+        PERCEPTION != RECORDING
+    }
+}
+
+SYSTEM WIDEL {
+    MAX_HELP_DISTANCE = 1
+    REQUIRE_VISIBLE_HELP_FOR {
+        sensor
+        camera
+        privacy
+        memory
+        recording
+        safety
+        permissions
+        storage
+        reconstruction
+    }
+}
+
+LAW Memory {
+    MINIMIZE {
+        RAM
+        cache
+        raw_sensor_retention
+        redundant_computation
+        bandwidth
+        permanent_clutter
+    }
+
+    PRESERVE {
+        Goal
+        Identity
+        Provenance
+        Uncertainty
+        Safety
+        LearnedDistinction
+        RecoveryHandle
+        NextReconstructionPoint
+    }
+
+    NO_RECOVERY_HANDLE -> DO_NOT_EVICT
+    VERIFIED_RECOVERY -> MAY_EVICT
+}
+
+ENTITY LearnedDelta {
+    uid
+    prior_state
+    condition
+    observation
+    difference
+    evidence
+    provenance
+    uncertainty
+}
+
+FORM K[n+1] = K[n] + Delta[n]
+
+ENTITY ReconstructionSeed {
+    uid
+    goal_uid
+    required_invariants[]
+    recovery_handles[]
+    last_distinction?
+    next_question?
+    next_reconstruction_point
+}
+
+RULE Projection {
+    FILE = possible_surface
+    FOLDER = possible_view
+    APP = possible_capability_projection
+
+    GENERATED != PERSISTED
+    TEMP_ARTIFACT != PROJECT_AUTHORITY
+}
+
+REGISTRY Research {
+    R3
+    One_Level_Up
+    CrossCarrierWave
+    OrbitLibrary
+    HistoricalRecovery
+    KnowledgeDecay
+    TinyBabel
+    TBCL
+    CSOL
+    GSFL
+    BBF
+    Musilanguage
+    LanguageStructureWorkbench
+    HumanExpressionArchive
+    ApplicabilityTopology
+    RecursiveSurvivorFrontier
+
+    DecisionField
+    DecisionFieldOperatorLab
+    SPrime
+    SAT64
+    SearchCertify
+    BoundaryQuotient
+    P_vs_NP
+    Hodge
+    POLYMETA
+    OptimizerOfOptimizers
+    AlgorithmicBuilder
+    LLVM_MLIR
+
+    FiveEyes4D
+    CompassRose
+    CoordinateSpace
+    Float64Carrier
+    S1024
+    TorsionalMotion
+    FractalGeometry
+
+    SHADOW
+    PAMP
+    PulseNet
+    SPDM
+    StreamingMemory
+    ComputerMind
+    Agents
+    Skills
+    Societies
+    Swarms
+
+    Conscience64
+    DreamToAction
+    Rivir
+    RMAOS_MINGX
+    RMAO
+    DataDrivenECS
+    Explorer
+    ArcadeForge
+    Fuzzball
+    MauiBrickBreak
+    FirstNeuralNetwork
+
+    HydrovoltaicPod
+    PoolCleaner
+    ResearchAnalytics
+}
+
+LAW ResearchIsolation {
+    METHOD_TRANSFER = ALLOWED
+    TOOLING_TRANSFER = ALLOWED
+    PROVENANCE_SCHEMA_TRANSFER = ALLOWED
+
+    CONCLUSION_TRANSFER = DENY_UNLESS_EARNED
+    PROOF_TRANSFER = DENY_UNLESS_EARNED
+    EMPIRICAL_RESULT_TRANSFER = DENY_UNLESS_EARNED
+    AUTHORITY_TRANSFER = DENY
+}
+
+ADAPTER Git {
+    ROLE chronology provenance action_history
+
+    RULE {
+        GIT_HEAD != TOTAL_HISTORY
+        CURRENT_FILE != ORIGINAL_THOUGHT
+        COMMIT != TRUTH
+    }
+}
+
+LOOP Runtime {
+    Human
+    -> Goal
+    -> Obligation
+    -> Field
+    -> Difference
+    -> FightingPoint
+    -> ConsequentialDistinction
+    -> DecisionField
+    -> Ma
+    -> Orbit
+    -> LibraryOfLibraries
+    -> SmallestRelevantLineage
+    -> Airlock
+    -> Operators
+    -> Transform
+    -> Verify
+    -> GSFL
+    -> HumanSurface
+    -> Action
+    -> Observation
+    -> Witness
+    -> LearnedDelta
+    -> Git
+    -> ReconstructionSeed
+    -> ReleaseReconstructibleWeight
+    -> NextGoal
+}
+
+LAW WayBack {
+    KEEP {
+        human
+        goal
+        identity
+        distinction
+        provenance
+        evidence
+        uncertainty
+        failure
+        recovery_relation
+        way_back
+    }
+
+    NEVER_SQUASH_AWAY {
+        conflicting_evidence
+        independent_identity
+        negative_result
+        chronology
+        privacy_boundary
+        claim_ceiling
+        unresolved_remainder
+    }
+}
