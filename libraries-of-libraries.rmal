@@ -445,3 +445,120 @@ LAW WayBack {
         unresolved_remainder
     }
 }
+
+
+SYSTEM USDAY {
+    STATE DESIGN_ONLY
+
+    ORDER {
+        JUST_LOAD_IT
+        -> UNDERSTAND
+        -> PLAN
+        -> PAIRITY
+        -> SHARED_DECISION_IF_REQUIRED
+        -> DO
+        -> OBSERVE
+        -> COUNTERPROBE
+        -> CHECK
+        -> RETAIN
+        -> SOLDAY_CARRY
+        -> RMADAY_RECORD_RECONSTRUCT
+        -> CONTINUE
+    }
+
+    RULE {
+        US != MERGED
+        COOPERATION != OBEDIENCE
+        AGREEMENT != EVIDENCE
+        CONSENSUS != TRUTH
+        DISAGREEMENT != FAILURE
+    }
+}
+
+ENTITY PairityCheck {
+    participant_a
+    participant_b
+    relation_a_to_b
+    relation_b_to_a
+    invariants[]
+    differences[]
+    mismatches[]
+    parity_if_earned?
+}
+
+RULE Pairity {
+    PAIRITY != FORCED_EQUALITY
+}
+
+ENTITY AgreementField {
+    source_expressions[]
+    participants[]
+    interpretations[]
+    relations[]
+    agreements[]
+    disagreements[]
+    evidence[]
+    goal
+    unresolved[]
+}
+
+SYSTEM InterlinguaLinguisticsAgreementSystem {
+    STATE DESIGN_ONLY
+
+    INPUT
+        AgreementField
+
+    PROCESS {
+        preserve_source_native
+        identify_consequential_terms
+        generate_candidate_interpretations
+        rotate_representation_if_useful
+        pairity_check
+        preserve_disagreement
+        state_agreement
+        state_unresolved
+    }
+
+    RULE {
+        AGREEMENT != SAME_WORDS
+        LEXICAL_MATCH != OPERATIONAL_AGREEMENT
+        LEXICAL_DIFFERENCE != OPERATIONAL_DISAGREEMENT
+        TRANSLATION != IDENTITY
+        INTERPRETATION != SOURCE
+        UNDERSTOOD != CONSENTED
+        AGREED_MEANING != AGREED_ACTION
+    }
+}
+
+EVIDENCE Conscience64PublicSourceGraph_2026_09_19 {
+    authority = redogit/conscience64
+    publication = HELD
+
+    canonical_html_routes = 58
+    local_html_references = 369
+    direct_asset_references = 251
+    unique_direct_assets = 93
+
+    depth1_dependency_references = 11
+    depth1_unique_dependencies = 11
+
+    depth2_dependency_references = 8
+    depth2_unique_dependencies = 8
+
+    fixed_point_layers = 3
+    fixed_point_unique_dependencies = 16
+    terminal_new_dependencies = 0
+
+    import_meta_url_literal_references = 1
+    import_meta_url_unique_assets = 1
+
+    literal_worker_sharedworker_references = 0
+    literal_worker_sharedworker_unique_assets = 0
+
+    RULE {
+        ZERO_LITERAL_WORKER_MATCH != NO_WORKER_BEHAVIOR_ANYWHERE
+        SOURCE_GRAPH_MEASURED != PUBLICATION_APPROVED
+        SOURCE_DEPENDENCY_CLOSURE != RUNTIME_CORRECTNESS
+        SOURCE_DEPENDENCY_CLOSURE != SEMANTIC_TRUTH
+    }
+}
