@@ -562,3 +562,29 @@ EVIDENCE Conscience64PublicSourceGraph_2026_09_19 {
         SOURCE_DEPENDENCY_CLOSURE != SEMANTIC_TRUTH
     }
 }
+
+
+LAW PrivateHistory {
+    PRIVATE_HISTORY != PUBLIC_EVIDENCE
+    PRIVATE_HISTORY != PROJECT_ARTIFACT
+    LANGUAGE_PATTERN != PERSONAL_PROFILE
+    LEARNED_METHOD != DISCLOSURE
+    DERIVED_FROM_PRIVATE_HISTORY != SAFE_TO_PUBLISH
+
+    OP LearnMethod(private_history) {
+        method := ExtractAbstractProblemSolvingStructure(private_history)
+        method := RemovePrivateFactsAndIdentityBearingDetail(method)
+        RETAIN_INTERNAL method
+        RETURN method
+    }
+
+    ADMISSION public_candidate {
+        IF derived_from_private_history == TRUE
+            FAIL_CLOSED
+    }
+
+    RULE {
+        SANITIZED_PRIVATE_NARRATIVE != PUBLIC_SOURCE
+        PROJECT_CLAIM_REQUIRES current_authorized_project_evidence
+    }
+}
