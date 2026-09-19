@@ -186,3 +186,14 @@ The predecessor is not rewritten.
 INTERLINUIA = historical working artifact
 INTERLINGUA LINGUISTICS AGREEMENT SYSTEM = corrected successor direction
 ```
+
+
+### Private-history learning boundary
+
+- `57fa9de2` — RED test: public update derived from private history was not yet rejected.
+- `d00e44a7` — fail-closed public admission for `derived_from_private_history: true`.
+- `72a53e0e` — RED recovery-boundary test.
+- `8fabd707`, `ced5026a`, `d2ef79c4` — private language-learning boundary and recovery/publication documentation.
+- `d03abc4d` — merge PR #154: **Enforce private-history learning boundary**.
+
+The merge adds no private narrative, handles, identities, relationships or links to the public repository.
