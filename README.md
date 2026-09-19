@@ -100,11 +100,11 @@ The current conversation has also been restructured into an explicit [goal topol
 
 ## Active project slice
 
-The existing [active project surface](active-federation.html) retains its historical filename but is treated as the narrower **current/runnable/deployed** projection. It connects active Conscience64 and Other-Projects work while routing status back to the owning repositories instead of making this profile the authority.
+The current [Active Projects surface](active-projects.html) is the narrower **current/runnable/deployed** projection. It routes status back to the owning repositories instead of making this profile the authority. The predecessor `active-federation.*` files remain preserved as historical provenance.
 
 `ACTIVE != UNIVERSALLY_VALID` · `CONNECTED != MERGED` · `OPEN_PR != ACTIVE_MAIN`
 
-See the [activation notes](ACTIVE_FEDERATION.md) and [machine-readable active registry](active-federation.json); those historical filenames are preserved for provenance. Conscience64 and Other-Projects keep their own local active registries.
+See the [activation notes](ACTIVE_PROJECTS.md) and [machine-readable active registry](active-projects.json). The predecessor `ACTIVE_FEDERATION.md` and `active-federation.json` remain preserved for provenance. Conscience64 and Other-Projects keep their own local active registries.
 
 ## Current work — September 14, 2026
 
@@ -239,4 +239,4 @@ See [COMMERCIAL_ACCESS_POLICY.md](COMMERCIAL_ACCESS_POLICY.md).
 
 ---
 
-Current navigation: [Libraries of Libraries](LIBRARIES_OF_LIBRARIES_RMAL_BUILD_2026-09-19.md) · [RMAL](libraries-of-libraries.rmal) · [Git lineage](LIBRARIES_OF_LIBRARIES_GIT_LINEAGE_2026-09-19.md) · [Goal Topology](GOAL_TOPOLOGY_2026-09-15.md) · [Active project slice](active-federation.html) · [Research + Production](research-production.html) · [Work Index](FEDERATED_WORK_INDEX.md) · [10-Step History Playground](history-playground.html) · [Detailed check-in guide](HISTORY_PLAYGROUND_10_STEP_CHECKIN.md) · [Body-of-work recovery snapshot](BODY_OF_WORK.md) · [Standalone homepage](index.html)
+Current navigation: [Libraries of Libraries](LIBRARIES_OF_LIBRARIES_RMAL_BUILD_2026-09-19.md) · [RMAL](libraries-of-libraries.rmal) · [Git lineage](LIBRARIES_OF_LIBRARIES_GIT_LINEAGE_2026-09-19.md) · [Goal Topology](GOAL_TOPOLOGY_2026-09-15.md) · [Active project slice](active-projects.html) · [Research + Production](research-production.html) · [Work Index](FEDERATED_WORK_INDEX.md) · [10-Step History Playground](history-playground.html) · [Detailed check-in guide](HISTORY_PLAYGROUND_10_STEP_CHECKIN.md) · [Body-of-work recovery snapshot](BODY_OF_WORK.md) · [Standalone homepage](index.html)
