@@ -159,3 +159,44 @@ Use RMAL to make the relation executable.
 Use Ma/Orbit to retrieve only what the current goal needs.
 Keep the way back.
 ```
+
+
+## September 19 continuation — current Git anchors
+
+### Conscience64 source-side public dependency mapping
+
+- `6b8c906f` — direct public assets: 58 canonical routes, 369 local HTML references, 251 direct asset references, 93 unique direct assets.
+- `bef30bae` — one-hop static JS/CSS dependencies: 11 references / 11 unique dependencies.
+- `87b32e07` — second-hop dependencies: 8 references / 8 unique dependencies.
+- `7ce19420` — fixed-point static closure: 3 layers / 16 unique dependency files; terminal layer adds zero.
+- `d68f54e9` — quoted-literal `import.meta.url`: 1 reference / 1 unique repository asset.
+- `032167e1` — quoted-literal Worker/SharedWorker: 0 references / 0 unique assets; explicit negative result.
+
+### USDAY and linguistic agreement
+
+- `9ec2bf59` — merge PR #153: USDAY-first Shared Operational Interleaved Interlinuia design.
+- PR #153 user comment — forward correction marker.
+- `10ca50d6` — merge PR #157: corrected Interlingua Linguistics Agreement System successor.
+
+### Private-history learning boundary
+
+- `57fa9de2` — RED test: public update derived from private history was not yet rejected.
+- `d00e44a7` — fail-closed public admission for `derived_from_private_history: true`.
+- `72a53e0e` — RED recovery-boundary test.
+- `d03abc4d` — merge PR #154: private-history learning boundary.
+
+### Cooperative implementation / RMAL carrier
+
+- `f93f056a` — Other-Projects- PR #75: RMAL cooperative implementation carrier and RMALC 2.1.1 validation.
+- `f75d8284` — redogit cooperative implementation/provenance protocol.
+
+```text
+REFERENCE -> PROPOSAL -> HANDOFF -> TARGET_DECISION -> TARGET_LOCAL_SUCCESSOR
+```
+
+
+### Required integration-surface gate
+
+- `9e1cd3bd` — REDOGIT profile gate extended to `WORK_INDEX.md`, `LIBRARIES_OF_LIBRARIES_*.md`, and `libraries-of-libraries.rmal`, while requiring the explicit privacy policy and public/game privacy invariants.
+
+`INTEGRATION_GATE_PASS != SCIENTIFIC_VALIDATION`

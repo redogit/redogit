@@ -445,3 +445,186 @@ LAW WayBack {
         unresolved_remainder
     }
 }
+
+
+SYSTEM USDAY {
+    STATE DESIGN_ONLY
+
+    ORDER {
+        JUST_LOAD_IT
+        -> UNDERSTAND
+        -> PLAN
+        -> PAIRITY
+        -> SHARED_DECISION_IF_REQUIRED
+        -> DO
+        -> OBSERVE
+        -> COUNTERPROBE
+        -> CHECK
+        -> RETAIN
+        -> SOLDAY_CARRY
+        -> RMADAY_RECORD_RECONSTRUCT
+        -> CONTINUE
+    }
+
+    RULE {
+        US != MERGED
+        COOPERATION != OBEDIENCE
+        AGREEMENT != EVIDENCE
+        CONSENSUS != TRUTH
+        DISAGREEMENT != FAILURE
+    }
+}
+
+ENTITY PairityCheck {
+    participant_a
+    participant_b
+    relation_a_to_b
+    relation_b_to_a
+    invariants[]
+    differences[]
+    mismatches[]
+    parity_if_earned?
+}
+
+RULE Pairity {
+    PAIRITY != FORCED_EQUALITY
+}
+
+ENTITY AgreementField {
+    source_expressions[]
+    participants[]
+    interpretations[]
+    relations[]
+    agreements[]
+    disagreements[]
+    evidence[]
+    goal
+    unresolved[]
+}
+
+SYSTEM InterlinguaLinguisticsAgreementSystem {
+    STATE DESIGN_ONLY
+
+    INPUT AgreementField
+
+    PROCESS {
+        preserve_source_native
+        identify_consequential_terms
+        generate_candidate_interpretations
+        rotate_representation_if_useful
+        pairity_check
+        preserve_disagreement
+        state_agreement
+        state_unresolved
+    }
+
+    RULE {
+        AGREEMENT != SAME_WORDS
+        LEXICAL_MATCH != OPERATIONAL_AGREEMENT
+        LEXICAL_DIFFERENCE != OPERATIONAL_DISAGREEMENT
+        TRANSLATION != IDENTITY
+        INTERPRETATION != SOURCE
+        UNDERSTOOD != CONSENTED
+        AGREED_MEANING != AGREED_ACTION
+    }
+}
+
+LAW PrivateHistory {
+    PRIVATE_HISTORY != PUBLIC_EVIDENCE
+    PRIVATE_HISTORY != PROJECT_ARTIFACT
+    LANGUAGE_PATTERN != PERSONAL_PROFILE
+    LEARNED_METHOD != DISCLOSURE
+    DERIVED_FROM_PRIVATE_HISTORY != SAFE_TO_PUBLISH
+
+    OP LearnMethod(private_history) {
+        method := ExtractAbstractProblemSolvingStructure(private_history)
+        method := RemovePrivateFactsAndIdentityBearingDetail(method)
+        RETAIN_INTERNAL method
+        RETURN method
+    }
+
+    ADMISSION public_candidate {
+        IF derived_from_private_history == TRUE
+            FAIL_CLOSED
+    }
+
+    RULE {
+        SANITIZED_PRIVATE_NARRATIVE != PUBLIC_SOURCE
+        PROJECT_CLAIM_REQUIRES current_authorized_project_evidence
+    }
+}
+
+PROTOCOL CooperativeImplementation {
+    design_authority = RYAN_MCMILLAN
+    implementation_relation = HUMAN_AI_COIMPLEMENTATION
+    cross_write_default = DENY
+    evidence_transfer_default = DENY
+
+    FLOW {
+        REFERENCE
+        -> PROPOSAL
+        -> HANDOFF
+        -> TARGET_DECISION
+        -> TARGET_LOCAL_SUCCESSOR
+    }
+
+    RULE {
+        RELATED != AUTHORIZED_TO_EDIT
+        READ != WRITE
+        PROPOSED != ACCEPTED
+        ACCEPTED != VERIFIED
+        SHARED_METHOD != SHARED_EVIDENCE
+        SUCCESSOR != REWRITTEN_PREDECESSOR
+    }
+}
+
+EVIDENCE RMALCooperativeImplementation_2026_09_19 {
+    authority = redogit/Other-Projects-
+    toolchain = RMAL_2_1_1
+    compiler = RMALC_2_1_1
+
+    check = PASS
+    compile = PASS
+    audit = PASS
+
+    abi = ABI_59035915580F518D6B99
+    object_hash = 366faf954a18ec33115dc3de17ca209857b90c282c38be2c9918b4547b929797
+    bytecode_instructions = 35
+    input_nodes = 20
+
+    claim_ceiling = PARSER_COMPILE_AUDIT_VALIDATION_ONLY
+
+    RULE {
+        AUDIT_PASS != SEMANTIC_TRUTH
+        HASH_INTEGRITY != CLAIM_VALIDITY
+        SPECIFIED_SEMANTICS != IMPLEMENTED_CORE_FRONTEND
+    }
+}
+
+EVIDENCE Conscience64PublicSourceGraph_2026_09_19 {
+    authority = redogit/conscience64
+    publication = HELD
+
+    canonical_html_routes = 58
+    local_html_references = 369
+    direct_asset_references = 251
+    unique_direct_assets = 93
+    depth1_dependency_references = 11
+    depth1_unique_dependencies = 11
+    depth2_dependency_references = 8
+    depth2_unique_dependencies = 8
+    fixed_point_layers = 3
+    fixed_point_unique_dependencies = 16
+    terminal_new_dependencies = 0
+    import_meta_url_literal_references = 1
+    import_meta_url_unique_assets = 1
+    literal_worker_sharedworker_references = 0
+    literal_worker_sharedworker_unique_assets = 0
+
+    RULE {
+        ZERO_LITERAL_WORKER_MATCH != NO_WORKER_BEHAVIOR_ANYWHERE
+        SOURCE_GRAPH_MEASURED != PUBLICATION_APPROVED
+        SOURCE_DEPENDENCY_CLOSURE != RUNTIME_CORRECTNESS
+        SOURCE_DEPENDENCY_CLOSURE != SEMANTIC_TRUTH
+    }
+}

@@ -811,3 +811,302 @@ LIBRARY OF BABEL
 The central invariant is:
 
 > **Preserve the possibility of faithful return while carrying only the smallest consequential state required by the human's present goal.**
+
+
+## 30. September 19 continuation — USDAY first
+
+Conscience64 now preserves a merged **USDAY-first** cooperative design as a design artifact.
+
+```text
+USDAY FIRST
+-> JUST LOAD IT
+-> UNDERSTAND
+-> PLAN
+-> PAIRITY CHECK
+-> SHARED DECISION WHERE REQUIRED
+-> DO
+-> OBSERVE
+-> COUNTERPROBE
+-> CHECK
+-> RETAIN
+-> SOLDAY CARRY
+-> RMADAY RECORD / RECONSTRUCT
+-> CONTINUE
+```
+
+Required distinctions:
+
+```text
+US != MERGED
+COOPERATION != OBEDIENCE
+AGREEMENT != ERASURE
+DISAGREEMENT != FAILURE
+AGREEMENT != EVIDENCE
+CONSENSUS != TRUTH
+REPETITION != INDEPENDENT_CONFIRMATION
+```
+
+USDAY is currently a cooperative operating design. It is not itself a production implementation, political theory, legal governance system, or truth authority.
+
+## 31. Pairity before parity
+
+Pairity preserves both participants, both directions, their typed relation, and any mismatch before asking whether parity has been earned.
+
+```text
+PAIRITY
+= keep participant A
++ keep participant B
++ keep A->B
++ keep B->A
++ keep relations
++ preserve mismatch
+```
+
+Then:
+
+```text
+PAIRITY
+-> COMPARE
+-> SAME WHERE EXPECTED
+-> DIFFERENT WHERE REQUIRED
+-> PARITY ONLY WHEN JUSTIFIED
+```
+
+```text
+PAIRITY != FORCED_EQUALITY
+AGREEMENT != COLLAPSE
+```
+
+## 32. Interlingua Linguistics Agreement System
+
+The predecessor remains **Shared Operational Interleaved Interlinuia**.
+
+The corrected successor direction is:
+
+> **Interlingua Linguistics Agreement System**
+
+The successor is design-only and does not retroactively rename the predecessor.
+
+Its purpose is bounded operational agreement across different linguistic surfaces while preserving source-native wording, attribution, disagreement, and unresolved remainder.
+
+```text
+SOURCE_NATIVE_EXPRESSION
+-> CANDIDATE_INTERPRETATIONS
+-> CONSEQUENTIAL_TERMS
+-> REPRESENTATION_ROTATION_IF_USEFUL
+-> PAIRITY
+-> AGREEMENT / DISAGREEMENT / UNKNOWN
+-> ACT_ONLY_TO_AGREED_SCOPE
+-> CHECK
+-> RETAIN_WAY_BACK
+```
+
+Working field:
+
+```text
+AF = (S, P, I, R, A, D, E, G, U)
+```
+
+where `S` = source expressions, `P` = participants, `I` = interpretations, `R` = linguistic/semantic relations, `A` = earned agreements, `D` = preserved disagreements, `E` = evidence/provenance/confidence, `G` = bounded shared goal, and `U` = unresolved linguistic remainder.
+
+```text
+AGREEMENT != SAME_WORDS
+LEXICAL_MATCH != OPERATIONAL_AGREEMENT
+LEXICAL_DIFFERENCE != OPERATIONAL_DISAGREEMENT
+TRANSLATION != IDENTITY
+INTERPRETATION != SOURCE
+UNDERSTOOD != CONSENTED
+AGREED_MEANING != AGREED_ACTION
+```
+
+The name `Interlingua` already has linguistic meanings and language traditions. No conformance with or derivation from an existing Interlingua standard is claimed here.
+
+## 33. Private-history method-learning boundary
+
+Conscience64 PR #154 adds an active fail-closed privacy rule for private historical material supplied only to learn problem-solving language or method.
+
+```text
+PRIVATE_HISTORY != PUBLIC_EVIDENCE
+PRIVATE_HISTORY != PROJECT_ARTIFACT
+LANGUAGE_PATTERN != PERSONAL_PROFILE
+LEARNED_METHOD != DISCLOSURE
+DERIVED_FROM_PRIVATE_HISTORY != SAFE_TO_PUBLISH
+```
+
+Allowed internal abstraction may preserve problem framing, distinctions, protected obligations, search/comparison strategy, testing/repair sequence, and reusable language structure **after private facts and identity-bearing detail are removed**.
+
+```text
+PRIVATE_HISTORY
+-> EXTRACT_ABSTRACT_METHOD
+-> REMOVE_PRIVATE_FACTS_AND_IDENTITY_DETAIL
+-> RETAIN_METHOD_INTERNALLY
+-> RE_GROUND_PROJECT_WORK_IN_CURRENT_AUTHORIZED_SOURCES
+```
+
+A public candidate marked `derived_from_private_history: true` must fail closed.
+
+Rewriting, paraphrasing, summarizing, or sanitizing a private narrative does not convert it into authorized public evidence.
+
+## 34. Cooperative implementation protocol
+
+The current cross-workstream cooperation/provenance protocol is:
+
+```text
+REFERENCE
+-> PROPOSAL
+-> HANDOFF
+-> TARGET_DECISION
+-> TARGET_LOCAL_SUCCESSOR
+```
+
+with:
+
+```text
+CROSS_WRITE_DEFAULT = DENY
+EVIDENCE_TRANSFER_DEFAULT = DENY
+RELATED != AUTHORIZED_TO_EDIT
+READ != WRITE
+PROPOSED != ACCEPTED
+ACCEPTED != VERIFIED
+SHARED_METHOD != SHARED_EVIDENCE
+SUCCESSOR != REWRITTEN_PREDECESSOR
+```
+
+The protocol records Ryan McMillan as design authority and human-AI coimplementation as the implementation relation, without transferring design, repository, or scientific authority.
+
+A valid executable RMAL carrier is merged in `redogit/Other-Projects-`:
+
+`docs/RMAL_COOPERATIVE_IMPLEMENTATION_PROTOCOL.rmal`
+
+Bounded RMALC 2.1.1 evidence:
+
+```text
+rmalc check   PASS
+rmalc compile PASS
+rmalc audit   PASS
+
+ABI: ABI-59035915580F518D6B99
+O0 object hash:
+366faf954a18ec33115dc3de17ca209857b90c282c38be2c9918b4547b929797
+
+bytecode instructions: 35
+input nodes: 20
+```
+
+Claim ceiling:
+
+```text
+PARSER_COMPILE_AUDIT_VALIDATION_ONLY
+AUDIT_PASS != SEMANTIC_TRUTH
+HASH_INTEGRITY != CLAIM_VALIDITY
+SPECIFIED_SEMANTICS != IMPLEMENTED_CORE_FRONTEND
+```
+
+## 35. Conscience64 public-source dependency closure — bounded evidence
+
+The held public projection has a measured source-side dependency graph:
+
+```text
+58 canonical HTML routes
+369 local HTML references
+251 direct asset references
+93 unique direct assets
+
+depth 1:
+11 references / 11 unique dependencies
+
+depth 2:
+8 references / 8 unique dependencies
+
+fixed-point static JS/CSS closure:
+3 layers / 16 unique dependency files
+terminal layer introduced 0 new files
+
+quoted-literal new URL(..., import.meta.url):
+1 reference / 1 unique repository asset
+
+quoted-literal new Worker(...) / new SharedWorker(...):
+0 references / 0 unique Worker assets
+```
+
+The Worker result is explicitly negative evidence:
+
+```text
+NO_MATCH_UNDER_DECLARED_LITERAL_WORKER_RELATION
+!=
+NO_WORKER_BEHAVIOR_ANYWHERE
+```
+
+Runtime-generated paths, ServiceWorker registration, fetch/XHR, template expressions, bundler transforms, and other untested relations remain outside this result.
+
+```text
+SOURCE_GRAPH_MEASURED != PUBLICATION_APPROVED
+PUBLICLY_VISIBLE != PUBLICATION_APPROVED != COMMERCIALLY_LICENSED
+SOURCE_DEPENDENCY_CLOSURE != RUNTIME_CORRECTNESS
+SOURCE_DEPENDENCY_CLOSURE != ACCESSIBILITY
+SOURCE_DEPENDENCY_CLOSURE != SEMANTIC_TRUTH
+```
+
+## 36. Extended current runtime
+
+```text
+Human
+-> Goal
+-> USDAY
+-> JustLoadIt
+-> Understand
+-> Plan
+-> Pairity
+-> InterlinguaLinguisticsAgreementSystem?   // when linguistic agreement matters
+-> SharedChoice?                            // when shared choice is required
+-> Reference / Proposal / Handoff
+-> TargetDecision
+-> TargetLocalSuccessor
+-> Obligation
+-> FightingPoint
+-> ConsequentialDistinction
+-> DecisionField
+-> Ma
+-> Orbit
+-> LibraryOfLibraries
+-> Airlock
+-> Operators
+-> Transform / Rotate / Interleave
+-> Verify
+-> HumanSurface
+-> Act
+-> Observe
+-> Counterprobe
+-> LearnedDelta
+-> Check
+-> Retain
+-> ReconstructionSeed
+-> Continue
+```
+
+Conditional layers stay conditional; they are not mandatory overhead for every task.
+
+
+## 37. Required integration-surface gate
+
+The current REDOGIT profile workflow now explicitly watches the integration surfaces:
+
+```text
+WORK_INDEX.md
+LIBRARIES_OF_LIBRARIES_*.md
+libraries-of-libraries.rmal
+```
+
+and the local contract checker requires the explicit privacy policy and the standing public/game privacy invariants:
+
+```text
+PUBLIC_REPOSITORY != PRIVATE_FAMILY_CONTEXT
+GAME_CHARACTER != PRIVATE_PERSON
+SPROUTLING != REAL_CHILD
+```
+
+Git anchor:
+
+`redogit/redogit@9e1cd3bd30ee15cadaeb83ade5ccf4f9e4893dee`
+
+This is an integration/configuration gate. Passing it does not upgrade scientific claims.
