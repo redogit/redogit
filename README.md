@@ -84,6 +84,8 @@ The zero Worker result is a scoped negative result, not proof that no Worker beh
 
 `DESIGN != IMPLEMENTATION` · `SOURCE_GRAPH_MEASURED != PUBLICATION_APPROVED` · `AGREEMENT != EVIDENCE`
 
+A separate privacy successor now enforces `PRIVATE_HISTORY != PUBLIC_EVIDENCE`: private history may inform abstract method internally, but public/project claims must be re-grounded in current authorized sources; `derived_from_private_history: true` fails closed for public admission.
+
 ## Explore the history — 10 doors
 
 The history is intentionally **distributed, independently authoritative, and reconstructible rather than centralized**. The [10-step History Playground](history-playground.html) gives people ten optional doors into the theories, formal results, experiments, tools, games, apps, education, accessibility, philosophy, ethics, coding, failures, and recovered history.
