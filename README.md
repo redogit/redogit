@@ -72,6 +72,28 @@ The **fighting point** is current successor terminology for the preserve-the-dif
 `CONNECTION != OWNERSHIP` · `RELATION != AUTHORITY_TRANSFER` · `RECONSTRUCTION != SOURCE`
 
 
+## September 19, 2026 — Cooperative implementation protocol
+
+Current cooperation/provenance authority is recorded in [COOPERATIVE_IMPLEMENTATION_PROTOCOL_2026-09-19.md](COOPERATIVE_IMPLEMENTATION_PROTOCOL_2026-09-19.md) with a [machine-readable provenance record](COOPERATIVE_IMPLEMENTATION_PROVENANCE_2026-09-19.json).
+
+The governing attribution is:
+
+```text
+DESIGN_AUTHORITY = RYAN_MCMILLAN
+IMPLEMENTATION_RELATION = HUMAN_AI_COIMPLEMENTATION
+CROSS_WRITE_DEFAULT = DENY
+```
+
+The governing coordination path is:
+
+```text
+REFERENCE -> PROPOSAL -> HANDOFF -> TARGET_DECISION -> TARGET_LOCAL_SUCCESSOR
+```
+
+This makes the collaboration explicit without collapsing ownership or authority: Ryan McMillan designed the goals, principles, named frameworks, and cooperation model; implementation and refinement are carried out collaboratively with ChatGPT/OpenAI tooling under Ryan's direction, constraints, corrections, and acceptance gates.
+
+The executable RMAL carrier is maintained additively in `redogit/Other-Projects-` at `docs/RMAL_COOPERATIVE_IMPLEMENTATION_PROTOCOL.rmal`. Compilation validates the carrier syntax and structure; it does not grant scientific truth authority.
+
 ## Explore the history — 10 doors
 
 The history is intentionally **distributed, independently authoritative, and reconstructible rather than centralized**. The [10-step History Playground](history-playground.html) gives people ten optional doors into the theories, formal results, experiments, tools, games, apps, education, accessibility, philosophy, ethics, coding, failures, and recovered history.
