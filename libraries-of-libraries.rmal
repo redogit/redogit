@@ -792,3 +792,42 @@ EVIDENCE Conscience64PrivateMethodStructuredReturn_2026_09_20 {
         STRUCTURED_RETURN_PATH != UNIVERSAL_BIDIRECTIONAL_RUNTIME
     }
 }
+
+
+EVIDENCE Conscience64PublicTestbedProjection_2026_09_20 {
+    authority = redogit/conscience64
+    source_anchor = f05fc0550ba0e945ea64e9b8447b972b1c4a11fd
+    issue = 166
+
+    approval_schema = redogit.public_testbed_approval.v1
+    approved = TRUE
+    scope = PUBLIC_TESTBED_ONLY
+    commercial_license_granted = FALSE
+
+    projection_schema = conscience64.public_testbed_projection.v0
+    source_root = public-testbed/
+    authority_class = EXPERIMENTAL_NON_AUTHORITATIVE
+    generated_file_count = 5
+    exact_source_revision_required = TRUE
+    deterministic_projection_hash = TRUE
+    gh_pages_projection_commit_distinct_from_source_commit = TRUE
+    force_with_lease = TRUE
+    network_edge_counterprobes = TRUE
+
+    FORBIDDEN_PUBLIC_ROUTES {
+        README.md
+        data-manifest.json
+        research/projects/README.md
+        play/index.html
+        about/index.html
+    }
+
+    RULE {
+        CONSCIENCE64_REPOSITORY != PUBLIC_TESTBED_PROJECTION
+        PUBLIC_TESTBED != WHOLE_REPOSITORY
+        PUBLIC_EXPERIMENT != VERIFIED_TRUTH
+        PRIVATE_SOURCE_MUST_NOT_PROPAGATE
+        PUBLIC_PROJECTION != COMMERCIAL_LICENSE
+        NETWORK_EDGE_MATCH != SCIENTIFIC_VALIDATION
+    }
+}
