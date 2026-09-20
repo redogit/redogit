@@ -497,7 +497,7 @@ adversarial stress successor
   PR #79 -> 4c9dbad649653eebb69b30eafcfd41288c2ed037
 ```
 
-The pre-witness integrated head `4c9dbad649653eebb69b30eafcfd41288c2ed037` remains preserved. The current Other-Projects head `16a6823aa563e86455ec709700d06f0b9e22b467` adds the first native Decision Field relation witness and passed post-merge run `35508603278` with 119/119 tests, all existing reproducibility audits, scale×4 adversarial stress, and frozen default stress 5,376 cases / 13/13 checks.
+The pre-witness integrated head `4c9dbad649653eebb69b30eafcfd41288c2ed037` remains preserved. The first native Decision Field relation witness remains PR #81 / `16a6823aa563e86455ec709700d06f0b9e22b467`. The current verified RMAPL/Ω runtime head is `e42f652b380eb1d68d14679d44b9328dfb2faa55` from PR #90. Post-merge run `35525090965` passed 193/193 tests, the existing reproducibility audits, contextual multicarrier 14/14, the S′ Carrier–Surface four-carrier replay, RMAPL Ω 9/9, scale×4 adversarial stress, and frozen default stress 5,376 cases / 13/13 checks.
 
 The sidecar schema is `rmapl-omega-relational-field/v0` and binds removable typed relations plus the exact consequence vector:
 
@@ -506,6 +506,23 @@ self / neighbor / shared / ambient / delayed
 ```
 
 It also carries currentness and a way-back reference while leaving Ω v0 unchanged.
+
+Current runtime hardening additionally prevents a FITTER from rewriting:
+
+```text
+nativeIdentity
+sourceRefs
+evidence
+claimCeiling
+provenance
+```
+
+while preserving ordinary non-authority fitting under its existing `PRESERVES` contract.
+
+```text
+FITTER != AUTHORITY_REWRITER
+FIT != EVIDENCE_PROMOTION
+```
 
 First native witness:
 
