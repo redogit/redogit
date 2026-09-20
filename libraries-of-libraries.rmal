@@ -628,3 +628,37 @@ EVIDENCE Conscience64PublicSourceGraph_2026_09_19 {
         SOURCE_DEPENDENCY_CLOSURE != SEMANTIC_TRUTH
     }
 }
+
+
+EVIDENCE Conscience64PrivateCarrierSuccessor_2026_09_20 {
+    relation = CROSS_REPOSITORY_REFERENCE_ONLY
+    authority = redogit/conscience64
+    source_issue = 160
+    source_issue_state = OPEN
+    federation_surface = JUST_LOAD_IT_RMADAY_RECORD_RECONSTRUCT
+
+    pr161_merge = e10db6cccfd03106adef955297917408913ee339
+    pr164_merge = 83b37a5b31e4d45ada6b5033fb69a3617a6c2b5b
+    pr165_merge = eaee7b9051cbea795e3bf9f9b8eb8da9f81849d5
+    pr169_merge = 093af636098498ce84d6fe94c6a076bb745c048b
+    pr170_merge = 1cbf372207674070332b455c8851ee7993d6cf81
+
+    VERIFIED_REFERENCE_SET {
+        KnowledgePacket_UOID_MethodOnly
+        SemanticCorpus_Graph_Query_Exclusion
+        PrivateMethod_RecoveryEnvelope
+        SpaceLens_ClientMemory_ExportBoundary
+        KnowledgeBridge_AgentToolHandoff
+    }
+
+    claim_ceiling = REFERENCE_PARITY_OVER_MERGED_BOUNDED_SLICES_ONLY
+
+    RULE {
+        FEDERATION_REFERENCE != CONSCIENCE64_IMPLEMENTATION_AUTHORITY
+        RMADAY_DESIGN != RUNTIME_IMPLEMENTATION
+        REFERENCE != EVIDENCE_TRANSFER
+        PRIVATE METHOD MAY INFORM SOLVING
+        PRIVATE SOURCE MUST NOT PROPAGATE
+        ISSUE160_OPEN != COMPLETE
+    }
+}
