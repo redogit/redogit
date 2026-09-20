@@ -818,7 +818,7 @@ EVIDENCE Conscience64PublicTestbedProjection_2026_09_20 {
     network_edge_counterprobes = TRUE
     visible_path_states { ACTIVE TESTED FAILED BLOCKED DEFERRED RETURN }
     working_principles { USDAY INTERLINGUA PAIRITY VISIBLE_PATHS WONDERMENT ONE_DEGREE_EXPERIMENT }
-    preserved_unresolved_relation = TRUE
+    preserved_unresolved_relation = PRESERVED_UNRESOLVED
     static_source_ceiling_bytes = 131072
 
     FORBIDDEN_PUBLIC_ROUTES {
