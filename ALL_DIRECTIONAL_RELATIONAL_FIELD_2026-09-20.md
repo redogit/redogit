@@ -271,13 +271,50 @@ RETURN HOME  -> way back intact
 
 ### RMAL / RMAPL / Ω
 
-They may carry or inspect typed relations and consequence metadata.
+The bounded relation/consequence carrier is now executable under the target-local Other-Projects authority without changing Ω v0.
+
+```text
+canonical runtime = redogit/Other-Projects-
+sidecar = Decision Field Operator Lab/omega_relations.py
+schema = rmapl-omega-relational-field/v0
+relation-carrier merge = PR #80 / 4625c2a5c889a8344f6f0821883c67d5eed72b0c
+integrated main = 4c9dbad649653eebb69b30eafcfd41288c2ed037
+combined verification run = 35508233228 / PASS
+```
+
+The sidecar content-addresses typed removable relations and carries exactly:
+
+```text
+self
+neighbor
+shared
+ambient
+delayed
+```
+
+plus currentness and an explicit Ω way-back reference. Relation evidence is reference-only and does not promote source authority.
+
+The integrated authoritative head passed:
+
+- 117 / 117 unit tests;
+- operator-field frozen audit;
+- GSFL operator projection audit;
+- GSFL bidirectional macro audit;
+- contextual multicarrier audit 14/14;
+- RMAPL Ω audit 9/9;
+- scale×4 adversarial stress gate;
+- frozen default stress 5,376 cases / 13/13 checks.
 
 ```text
 OMEGA_VIEW != NATIVE_OBJECT
 RMAPL_PROFILE != RMAL_CORE_FRONTEND
 ADAPTER != AUTHORITY_TRANSFER
+RELATION != MERGE
+METHOD_TRANSFER != EVIDENCE_TRANSFER
+CURRENT != PROVED
 ```
+
+This file records method/currentness only. Other-Projects remains implementation and software-evidence authority.
 
 ### Orbit / Libraries-of-Libraries
 

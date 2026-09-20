@@ -476,3 +476,43 @@ CONNECTED != MERGED
 ```
 
 This section is navigation/currentness metadata only. Source repositories remain authoritative for their own implementations, evidence, failures, and unresolved remainder.
+
+### September 20 — executable all-directional relation carrier
+
+The all-directional method layer now has a bounded executable carrier in the canonical Other-Projects Decision Field Operator Lab.
+
+Target-local lineage:
+
+```text
+RMAPL / Ω reference runtime
+  PR #77 -> 95ae82e9741d762d8b9c16907c04425378cb56e9
+
+RMAL response successor
+  PR #78 -> 8f2d4e433d4b1bff3ec6eb0cc6a054b4c5bce284
+
+all-directional Ω relation sidecar
+  PR #80 -> 4625c2a5c889a8344f6f0821883c67d5eed72b0c
+
+adversarial stress successor
+  PR #79 -> 4c9dbad649653eebb69b30eafcfd41288c2ed037
+```
+
+Current integrated Other-Projects head `4c9dbad649653eebb69b30eafcfd41288c2ed037` passed Decision Field Operator Lab run `35508233228` with 117/117 tests, all existing reproducibility audits, scale×4 adversarial stress, and frozen default stress 5,376 cases / 13/13 checks.
+
+The sidecar schema is `rmapl-omega-relational-field/v0` and binds removable typed relations plus the exact consequence vector:
+
+```text
+self / neighbor / shared / ambient / delayed
+```
+
+It also carries currentness and a way-back reference while leaving Ω v0 unchanged.
+
+```text
+RELATION != MERGE
+METHOD_TRANSFER != EVIDENCE_TRANSFER
+OMEGA_VIEW != NATIVE_OBJECT
+SOFTWARE_VERIFICATION != SCIENTIFIC_VALIDATION
+CENTRAL_REFERENCE != IMPLEMENTATION_AUTHORITY
+```
+
+Conscience64 tracks the implementation location/current plan separately; Hodge #99 may use the method for navigation but inherits no mathematical evidence from it.
