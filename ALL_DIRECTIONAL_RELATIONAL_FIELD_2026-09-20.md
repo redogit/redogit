@@ -278,8 +278,10 @@ canonical runtime = redogit/Other-Projects-
 sidecar = Decision Field Operator Lab/omega_relations.py
 schema = rmapl-omega-relational-field/v0
 relation-carrier merge = PR #80 / 4625c2a5c889a8344f6f0821883c67d5eed72b0c
-integrated main = 4c9dbad649653eebb69b30eafcfd41288c2ed037
-combined verification run = 35508233228 / PASS
+stress predecessor = PR #79 / 4c9dbad649653eebb69b30eafcfd41288c2ed037
+first native Decision Field witness = PR #81 / 16a6823aa563e86455ec709700d06f0b9e22b467
+current verified main = 16a6823aa563e86455ec709700d06f0b9e22b467
+post-merge verification run = 35508603278 / PASS
 ```
 
 The sidecar content-addresses typed removable relations and carries exactly:
@@ -294,9 +296,9 @@ delayed
 
 plus currentness and an explicit Ω way-back reference. Relation evidence is reference-only and does not promote source authority.
 
-The integrated authoritative head passed:
+The current authoritative head passed:
 
-- 117 / 117 unit tests;
+- 119 / 119 unit tests;
 - operator-field frozen audit;
 - GSFL operator projection audit;
 - GSFL bidirectional macro audit;
@@ -312,6 +314,25 @@ ADAPTER != AUTHORITY_TRANSFER
 RELATION != MERGE
 METHOD_TRANSFER != EVIDENCE_TRANSFER
 CURRENT != PROVED
+```
+
+The first native witness composes an existing DecisionField projection with the relation sidecar and exact reconstruction:
+
+```text
+DecisionField
+-> Ω
+-> relation sidecar
+-> exact way back
+-> DecisionField
+```
+
+It verifies `NEIGHBOR`, `HOLE`, and `PAIRITY` method metadata without mutating the native object or promoting evidence.
+
+```text
+GENERIC_RELATIONAL_CARRIER = COMPLETE_BOUNDED_BASELINE
+FIRST_NATIVE_WITNESS = VERIFIED
+ADDITIONAL_DOMAIN_WITNESS = OBLIGATION_DRIVEN
+Δ_required(generic relation-carrier integration) = 0
 ```
 
 This file records method/currentness only. Other-Projects remains implementation and software-evidence authority.
