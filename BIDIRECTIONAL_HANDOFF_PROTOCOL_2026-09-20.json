@@ -1,0 +1,94 @@
+{
+  "schema": "redogit/bidirectional-handoff-pairity/v1",
+  "date": "2026-09-20",
+  "authority": "COORDINATION_CONTRACT_ONLY",
+  "directions": [
+    "A_TO_B",
+    "B_TO_A"
+  ],
+  "flow": {
+    "request": [
+      "REFERENCE",
+      "PROPOSAL",
+      "HANDOFF"
+    ],
+    "target": [
+      "TARGET_DECISION",
+      "TARGET_LOCAL_SUCCESSOR"
+    ],
+    "response": [
+      "RESPONSE",
+      "RETURN_TO_REQUESTER"
+    ]
+  },
+  "request_fields": [
+    "handoff_id",
+    "from",
+    "to",
+    "subject_uid",
+    "goal",
+    "obligation",
+    "request_class",
+    "requested_action",
+    "source_refs",
+    "evidence_refs",
+    "privacy",
+    "claim_ceiling",
+    "unresolved",
+    "way_back"
+  ],
+  "response_fields": [
+    "response_id",
+    "in_reply_to",
+    "from",
+    "to",
+    "status",
+    "decision_reason",
+    "successor_refs",
+    "evidence_refs",
+    "unresolved",
+    "privacy",
+    "claim_ceiling",
+    "way_back"
+  ],
+  "statuses": [
+    "ACCEPTED",
+    "REJECTED",
+    "NEEDS_EVIDENCE",
+    "UNRESOLVED"
+  ],
+  "cross_write_default": "DENY",
+  "evidence_transfer_default": "DENY",
+  "target_local_successor_required": true,
+  "privacy_rule": "MONOTONIC_UNLESS_INDEPENDENTLY_REGROUNDED_BY_TARGET",
+  "counterproposal_rule": "NEW_HANDOFF_ID",
+  "boundaries": [
+    "REQUEST != COMMAND",
+    "RESPONSE != AUTHORITY_TRANSFER",
+    "ACCEPTED != VERIFIED",
+    "REJECTED != FAILURE",
+    "NEEDS_EVIDENCE != REJECTED",
+    "UNRESOLVED != FALSE",
+    "REFERENCE != EVIDENCE_TRANSFER",
+    "PRIVATE SOURCE MUST NOT PROPAGATE",
+    "AUTHORIZED READ != PUBLICATION PERMISSION"
+  ],
+  "current_adapters": {
+    "redogit/conscience64": {
+      "inbound": "VERIFIED_BOUNDED_PRIVATE_METHOD_HANDOFF",
+      "outbound": "REFERENCE_OR_GIT_HANDOFF_ONLY",
+      "evidence_anchor": "1cbf372207674070332b455c8851ee7993d6cf81"
+    },
+    "redogit/Other-Projects-": {
+      "inbound": "RMAL_HANDOFF_AND_TARGET_ACCEPTANCE_SYNTAX_IMPLEMENTED",
+      "outbound": "STRUCTURED_RESPONSE_PACKET_NOT_YET_ESTABLISHED",
+      "evidence_anchor": "f93f056a33d5fad0f29b763a0d49c6b79eb18d49"
+    },
+    "redogit/redogit": {
+      "inbound": "COORDINATION_REFERENCE_AND_REVIEW",
+      "outbound": "COORDINATION_REFERENCE_AND_REVIEW",
+      "evidence_anchor": "a5ed5a4dac556fe718af358dd9a2b11266a88857"
+    }
+  },
+  "claim_ceiling": "BIDIRECTIONAL_COORDINATION_CONTRACT_WITH_ASYMMETRIC_LOCAL_IMPLEMENTATION"
+}
