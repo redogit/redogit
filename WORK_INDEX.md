@@ -410,3 +410,28 @@ RED run `35504178217` failed on the missing response carrier/route. GREEN run `3
 The runtime is private-method-only.
 
 `STRUCTURED_RETURN_PATH != UNIVERSAL_BIDIRECTIONAL_RUNTIME`
+
+
+### Isolated public testbed projection
+
+Conscience64 issue #166 now authorizes only a generated `public-testbed-only` Pages projection.
+
+Current source anchor: `f05fc0550ba0e945ea64e9b8447b972b1c4a11fd`.
+
+The generated public tree is limited to:
+
+```text
+index.html
+app.js
+style.css
+testbed.json
+projection-manifest.json
+```
+
+The builder rejects private-origin carriers and symlinks; the live verifier compares exact projection bytes and requires repository routes such as `README.md`, `research/projects/README.md`, and `play/index.html` to be absent at the public edge.
+
+```text
+PUBLIC_TESTBED != WHOLE_REPOSITORY
+PUBLIC_EXPERIMENT != VERIFIED_TRUTH
+PUBLIC_PROJECTION != COMMERCIAL_LICENSE
+```
