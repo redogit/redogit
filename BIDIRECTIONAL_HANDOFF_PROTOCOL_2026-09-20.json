@@ -76,12 +76,21 @@
   "current_adapters": {
     "redogit/conscience64": {
       "inbound": "VERIFIED_BOUNDED_PRIVATE_METHOD_HANDOFF",
-      "outbound": "VERIFIED_BOUNDED_PRIVATE_METHOD_OUTWARD_BOUNDARIES",
+      "outbound": "VERIFIED_BOUNDED_PRIVATE_METHOD_STRUCTURED_RESPONSE_RUNTIME",
       "evidence_anchor": "1cbf372207674070332b455c8851ee7993d6cf81",
-      "outbound_evidence_anchor": "deba0e9b19ef1fe106ba6dea1323eb0896dd5010",
-      "structured_response_packet_runtime": false,
+      "outward_privacy_anchor": "deba0e9b19ef1fe106ba6dea1323eb0896dd5010",
+      "response_runtime_anchor": "ee740af81d95533c907a65166564e661807c50eb",
+      "request_class": "PRIVATE_METHOD_HANDOFF",
+      "request_identity": "KNOWLEDGE_PACKET_UOID",
+      "response_schema": "conscience64.handoff-response/v1",
+      "response_endpoints": [
+        "POST /v1/handoff-response",
+        "GET /v1/handoff-response/<response_id>"
+      ],
+      "structured_response_packet_runtime": true,
+      "generic_response_packet_runtime": false,
       "adapter_path": "research/bridges/libraries-of-libraries/BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json",
-      "adapter_declaration_anchor": "74ea8bdf956db0d9e5cea62f19bd6fd85c606309"
+      "adapter_declaration_anchor": "731b6040d6b342cea423d402ec2fb6c1e5ad59a9"
     },
     "redogit/Other-Projects-": {
       "inbound": "RMAL_HANDOFF_AND_TARGET_ACCEPTANCE_SYNTAX_IMPLEMENTED",
