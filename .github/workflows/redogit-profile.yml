@@ -164,9 +164,14 @@ jobs:
 
           adapters = bidirectional['current_adapters']
           assert adapters['redogit/conscience64']['evidence_anchor'] == '1cbf372207674070332b455c8851ee7993d6cf81'
-          assert adapters['redogit/conscience64']['outbound_evidence_anchor'] == 'deba0e9b19ef1fe106ba6dea1323eb0896dd5010'
-          assert adapters['redogit/conscience64']['structured_response_packet_runtime'] is False
-          assert adapters['redogit/conscience64']['adapter_declaration_anchor'] == '74ea8bdf956db0d9e5cea62f19bd6fd85c606309'
+          assert adapters['redogit/conscience64']['outward_privacy_anchor'] == 'deba0e9b19ef1fe106ba6dea1323eb0896dd5010'
+          assert adapters['redogit/conscience64']['response_runtime_anchor'] == 'ee740af81d95533c907a65166564e661807c50eb'
+          assert adapters['redogit/conscience64']['request_class'] == 'PRIVATE_METHOD_HANDOFF'
+          assert adapters['redogit/conscience64']['request_identity'] == 'KNOWLEDGE_PACKET_UOID'
+          assert adapters['redogit/conscience64']['response_schema'] == 'conscience64.handoff-response/v1'
+          assert adapters['redogit/conscience64']['structured_response_packet_runtime'] is True
+          assert adapters['redogit/conscience64']['generic_response_packet_runtime'] is False
+          assert adapters['redogit/conscience64']['adapter_declaration_anchor'] == '731b6040d6b342cea423d402ec2fb6c1e5ad59a9'
           assert adapters['redogit/Other-Projects-']['evidence_anchor'] == 'f93f056a33d5fad0f29b763a0d49c6b79eb18d49'
           assert adapters['redogit/Other-Projects-']['adapter_declaration_anchor'] == '8de91a93347aaff1ff039a4899fd56eec6689da3'
           assert adapters['redogit/redogit']['evidence_anchor'] == 'a5ed5a4dac556fe718af358dd9a2b11266a88857'
@@ -175,6 +180,9 @@ jobs:
               text = Path(path).read_text(encoding='utf-8')
               assert 'BidirectionalHandoffPairity_2026_09_20' in text
               assert 'LIBRARIES_OF_LIBRARIES_REFERENCE != TARGET_IMPLEMENTATION_AUTHORITY' in text
+              assert 'Conscience64PrivateMethodStructuredReturn_2026_09_20' in text
+              assert 'ee740af81d95533c907a65166564e661807c50eb' in text
+              assert 'STRUCTURED_RETURN_PATH != UNIVERSAL_BIDIRECTIONAL_RUNTIME' in text
 
           print('PASS - REDOGIT schema, public status, homepage, CLI, public/private boundary, and Conscience64 private-carrier reference parity and bidirectional handoff Pairity')
           PY

@@ -200,3 +200,16 @@ REFERENCE -> PROPOSAL -> HANDOFF -> TARGET_DECISION -> TARGET_LOCAL_SUCCESSOR
 - `9e1cd3bd` — REDOGIT profile gate extended to `WORK_INDEX.md`, `LIBRARIES_OF_LIBRARIES_*.md`, and `libraries-of-libraries.rmal`, while requiring the explicit privacy policy and public/game privacy invariants.
 
 `INTEGRATION_GATE_PASS != SCIENTIFIC_VALIDATION`
+
+
+### Bidirectional structured return runtime
+
+- `74ea8bdf` — Conscience64 local adapter declaration before response-runtime implementation.
+- RED run `35504178217` — exact-head Knowledge Bridge failure: response carrier and route absent.
+- GREEN run `35504268340` — exact-head Knowledge Bridge success after implementation.
+- `ee740af8` — PR #176: restricted target-local structured response runtime for admitted private-method request UOIDs.
+- `731b6040` — Conscience64 adapter promoted to `VERIFIED_BOUNDED_PRIVATE_METHOD_STRUCTURED_RESPONSE_RUNTIME`.
+
+The runtime remains scoped to `PRIVATE_METHOD_HANDOFF`; arbitrary request classes remain unresolved.
+
+`STRUCTURED_RETURN_PATH != UNIVERSAL_BIDIRECTIONAL_RUNTIME`

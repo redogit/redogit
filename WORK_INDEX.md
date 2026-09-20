@@ -390,3 +390,23 @@ Current bounded software evidence under the publication hold includes:
 - zero quoted-literal Worker/SharedWorker assets.
 
 The zero Worker result is preserved as negative evidence, not universal absence.
+
+
+### First verified structured return path
+
+Conscience64 PR #176 / `ee740af81d95533c907a65166564e661807c50eb` implements the first actual structured return runtime for the Bidirectional Handoff Pairity contract.
+
+```text
+PRIVATE_METHOD_HANDOFF request packet_uoid
+-> target-local Conscience64 decision
+-> restricted response
+-> deterministic response_id
+-> append-only response ledger
+-> authorized exact retrieval
+```
+
+RED run `35504178217` failed on the missing response carrier/route. GREEN run `35504268340` passed after implementation.
+
+The runtime is private-method-only.
+
+`STRUCTURED_RETURN_PATH != UNIVERSAL_BIDIRECTIONAL_RUNTIME`
