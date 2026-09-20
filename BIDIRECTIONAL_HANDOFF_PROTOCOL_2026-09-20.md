@@ -220,6 +220,13 @@ target_local_successor
 
 It does **not** yet establish the complete structured response-packet carrier defined here.
 
+### Landed local adapter declarations
+
+- Conscience64 adapter: `research/bridges/libraries-of-libraries/BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json`, merge `74ea8bdf956db0d9e5cea62f19bd6fd85c606309`.
+- Other-Projects adapter: `BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json`, merge `8de91a93347aaff1ff039a4899fd56eec6689da3`.
+
+These adapter records declare local capability state. They do not transfer implementation authority to the central protocol.
+
 ## 9. Current claim ceiling
 
 This protocol establishes the coordination contract and machine-readable fields used by the central Libraries-of-Libraries surface.
