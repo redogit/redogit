@@ -143,6 +143,10 @@ Conscience64 publication authority has narrowed to a generated **public-testbed-
 This does **not** publish the Conscience64 repository as a whole and does not grant commercial rights.
 
 `PUBLIC_TESTBED != WHOLE_REPOSITORY` · `PUBLIC_EXPERIMENT != VERIFIED_TRUTH` · `PUBLIC_PROJECTION != COMMERCIAL_LICENSE`
+Current verified live source: `redogit/conscience64@9a17f941808993049466e9b75ee8ec99253b5add`.
+Current projection commit: `0888f45cb99bd16e225e20bd30005c9de8582551`; projection identity: `e54b69dff1964e218d1f99d7d28f5ace05649723ff677f25840ebe502f10e4a3`.
+
+The public surface now retains six explicit path states (`active`, `tested`, `failed`, `blocked`, `deferred`, `return`) and six method labels (`USDAY`, `Interlingua`, `Pairity`, `Visible paths`, `Wonderment`, `One-degree experiment`). These are navigation/method carriers, not authority or scientific validation.
 
 ## Explore the history — 10 doors
 
