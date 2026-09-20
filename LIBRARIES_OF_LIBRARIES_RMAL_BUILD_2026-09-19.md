@@ -1288,6 +1288,16 @@ Machine-readable contract:
 - `BIDIRECTIONAL_HANDOFF_PROTOCOL_2026-09-20.json`
 - human-readable contract: `BIDIRECTIONAL_HANDOFF_PROTOCOL_2026-09-20.md`
 
+Landed local adapter declarations:
+
+```text
+Conscience64 adapter merge:
+74ea8bdf956db0d9e5cea62f19bd6fd85c606309
+
+Other-Projects adapter merge:
+8de91a93347aaff1ff039a4899fd56eec6689da3
+```
+
 Claim ceiling:
 
 `BIDIRECTIONAL_COORDINATION_CONTRACT_WITH_ASYMMETRIC_LOCAL_IMPLEMENTATION`
