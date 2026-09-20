@@ -1259,7 +1259,7 @@ Current local adapter state is intentionally asymmetric:
 
 | Repository | Inbound | Outbound |
 |---|---|---|
-| `redogit/conscience64` | verified bounded private-method handoff via PR #170 | outbound private-method privacy boundaries verified at `deba0e9b`; generic structured response packet still not implemented |
+| `redogit/conscience64` | verified bounded private-method handoff via PR #170 | verified private-method structured response runtime via PR #176 / `ee740af8`; generic response classes remain unimplemented |
 | `redogit/Other-Projects-` | RMAL handoff + target-acceptance syntax implemented | complete structured response packet not yet established |
 | `redogit/redogit` | coordination/reference/review | coordination/reference/review |
 
@@ -1292,7 +1292,7 @@ Landed local adapter declarations:
 
 ```text
 Conscience64 adapter merge:
-74ea8bdf956db0d9e5cea62f19bd6fd85c606309
+731b6040d6b342cea423d402ec2fb6c1e5ad59a9
 
 Other-Projects adapter merge:
 8de91a93347aaff1ff039a4899fd56eec6689da3
@@ -1301,3 +1301,63 @@ Other-Projects adapter merge:
 Claim ceiling:
 
 `BIDIRECTIONAL_COORDINATION_CONTRACT_WITH_ASYMMETRIC_LOCAL_IMPLEMENTATION`
+
+
+## 40. First verified structured return path
+
+Stable marker:
+
+`Conscience64PrivateMethodStructuredReturn_2026_09_20`
+
+Conscience64 PR #176 / merge `ee740af81d95533c907a65166564e661807c50eb` implements one actual target-local response path for the central Pairity contract.
+
+```text
+admitted PRIVATE METHOD request
+  packet_uoid
+      ↓
+POST /v1/handoff-response
+      ↓
+TARGET = redogit/conscience64
+      ↓
+ACCEPTED | REJECTED | NEEDS_EVIDENCE | UNRESOLVED
+      ↓
+deterministic response_id
+      ↓
+append-only response ledger
+      ↓
+authorized exact GET
+      ↓
+way_back -> request packet_uoid
+```
+
+Verified properties:
+
+- response identity is deterministic over the normalized response carrier;
+- exact response re-ingestion is idempotent;
+- response ledger is separate from the Knowledge Packet ledger;
+- target impersonation is rejected;
+- response to an unknown/unadmitted request is rejected;
+- unauthenticated response reads are concealed;
+- privacy remains `restricted`;
+- private origin remains `private-history-method-only`;
+- `independently_regrounded` remains false;
+- pre-regrounding response cannot claim successor or evidence references;
+- claim ceiling remains `abstract method only; no source or identity claim`.
+
+TDD evidence:
+
+```text
+RED run   35504178217  expected failure
+GREEN run 35504268340  success
+```
+
+Current bounded runtime scope:
+
+```text
+request_class = PRIVATE_METHOD_HANDOFF
+request_identity = KNOWLEDGE_PACKET_UOID
+response_schema = conscience64.handoff-response/v1
+generic_response_packet_runtime = FALSE
+```
+
+`STRUCTURED_RETURN_PATH != UNIVERSAL_BIDIRECTIONAL_RUNTIME`
