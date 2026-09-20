@@ -164,6 +164,8 @@ jobs:
 
           adapters = bidirectional['current_adapters']
           assert adapters['redogit/conscience64']['evidence_anchor'] == '1cbf372207674070332b455c8851ee7993d6cf81'
+          assert adapters['redogit/conscience64']['outbound_evidence_anchor'] == 'deba0e9b19ef1fe106ba6dea1323eb0896dd5010'
+          assert adapters['redogit/conscience64']['structured_response_packet_runtime'] is False
           assert adapters['redogit/Other-Projects-']['evidence_anchor'] == 'f93f056a33d5fad0f29b763a0d49c6b79eb18d49'
           assert adapters['redogit/redogit']['evidence_anchor'] == 'a5ed5a4dac556fe718af358dd9a2b11266a88857'
 
