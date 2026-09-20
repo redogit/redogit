@@ -119,6 +119,22 @@ SOURCE_GRAPH_MEASURED != PUBLICATION_APPROVED
 AUDIT_PASS != SEMANTIC_TRUTH
 ```
 
+
+## September 20, 2026 — Bidirectional Handoff Pairity
+
+The cross-project cooperation path is now explicitly **two-way** at the coordination layer:
+
+```text
+A -> REQUEST -> B -> TARGET DECISION -> RESPONSE -> A
+B -> REQUEST -> A -> TARGET DECISION -> RESPONSE -> B
+```
+
+See [Bidirectional Handoff Pairity](BIDIRECTIONAL_HANDOFF_PROTOCOL_2026-09-20.md) and its [machine-readable contract](BIDIRECTIONAL_HANDOFF_PROTOCOL_2026-09-20.json).
+
+Each target keeps local authority. A request is not a command, a response is not authority transfer, and a counterproposal creates a new handoff rather than rewriting the prior response.
+
+Current implementations are intentionally asymmetric: Conscience64 has a verified bounded inbound private-method handoff; Other-Projects has implemented RMAL handoff/target-acceptance syntax; neither is falsely described as already having the complete structured response-packet runtime.
+
 ## Explore the history — 10 doors
 
 The history is intentionally **distributed, independently authoritative, and reconstructible rather than centralized**. The [10-step History Playground](history-playground.html) gives people ten optional doors into the theories, formal results, experiments, tools, games, apps, education, accessibility, philosophy, ethics, coding, failures, and recovered history.
