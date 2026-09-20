@@ -133,7 +133,7 @@ See [Bidirectional Handoff Pairity](BIDIRECTIONAL_HANDOFF_PROTOCOL_2026-09-20.md
 
 Each target keeps local authority. A request is not a command, a response is not authority transfer, and a counterproposal creates a new handoff rather than rewriting the prior response.
 
-Current implementations are intentionally asymmetric: Conscience64 has a verified bounded inbound private-method handoff; Other-Projects has implemented RMAL handoff/target-acceptance syntax; neither is falsely described as already having the complete structured response-packet runtime.
+Current implementations are intentionally asymmetric: Conscience64 has a verified bounded inbound private-method handoff plus verified outward privacy enforcement, while its generic structured response-packet runtime is still not established; Other-Projects has implemented RMAL handoff/target-acceptance syntax but not the complete structured return packet.
 
 ## Explore the history — 10 doors
 
