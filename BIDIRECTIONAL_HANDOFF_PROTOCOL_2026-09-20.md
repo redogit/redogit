@@ -204,7 +204,9 @@ Conscience64 PR #170 establishes a bounded inbound private-method handoff across
 - source-pointer substitution rejected;
 - false independent-regrounding rejected.
 
-That evidence does **not** establish a generic structured outbound response-packet runtime.
+Conscience64 also verifies bounded outward private-method privacy enforcement across ECS/client projection, agent/tool projection, nested export blocking, and structured publication hold at `deba0e9b19ef1fe106ba6dea1323eb0896dd5010`.
+
+That outward evidence still does **not** establish a generic structured outbound response-packet runtime.
 
 The Other-Projects RMAL cooperative carrier establishes implemented RMAL syntax for:
 
