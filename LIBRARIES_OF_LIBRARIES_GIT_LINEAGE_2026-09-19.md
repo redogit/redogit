@@ -213,3 +213,18 @@ REFERENCE -> PROPOSAL -> HANDOFF -> TARGET_DECISION -> TARGET_LOCAL_SUCCESSOR
 The runtime remains scoped to `PRIVATE_METHOD_HANDOFF`; arbitrary request classes remain unresolved.
 
 `STRUCTURED_RETURN_PATH != UNIVERSAL_BIDIRECTIONAL_RUNTIME`
+
+
+### Isolated public-testbed publication authority
+
+- `4543413b` — isolated public-testbed source v0 admitted after exact-head source verification.
+- `654b0064` — publication scope authorized as `public-testbed-only`.
+- `3a342bd0` / `6a4ccda4` — live edge verifier and exact generated projection verification.
+- `c6197789` — Pages switched to generated public-testbed projection.
+- `e88ff3d` — isolated Pages contract enforced.
+- `f05fc055` — issue #166 successor: publish only generated public-testbed projection.
+
+```text
+PUBLIC_TESTBED_PUBLISHED != WHOLE_REPOSITORY_PUBLISHED
+PUBLIC_EXPERIMENT != VERIFIED_TRUTH
+```
