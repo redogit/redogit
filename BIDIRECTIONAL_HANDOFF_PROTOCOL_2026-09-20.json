@@ -79,12 +79,16 @@
       "outbound": "VERIFIED_BOUNDED_PRIVATE_METHOD_OUTWARD_BOUNDARIES",
       "evidence_anchor": "1cbf372207674070332b455c8851ee7993d6cf81",
       "outbound_evidence_anchor": "deba0e9b19ef1fe106ba6dea1323eb0896dd5010",
-      "structured_response_packet_runtime": false
+      "structured_response_packet_runtime": false,
+      "adapter_path": "research/bridges/libraries-of-libraries/BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json",
+      "adapter_declaration_anchor": "74ea8bdf956db0d9e5cea62f19bd6fd85c606309"
     },
     "redogit/Other-Projects-": {
       "inbound": "RMAL_HANDOFF_AND_TARGET_ACCEPTANCE_SYNTAX_IMPLEMENTED",
       "outbound": "STRUCTURED_RESPONSE_PACKET_NOT_YET_ESTABLISHED",
-      "evidence_anchor": "f93f056a33d5fad0f29b763a0d49c6b79eb18d49"
+      "evidence_anchor": "f93f056a33d5fad0f29b763a0d49c6b79eb18d49",
+      "adapter_path": "BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json",
+      "adapter_declaration_anchor": "8de91a93347aaff1ff039a4899fd56eec6689da3"
     },
     "redogit/redogit": {
       "inbound": "COORDINATION_REFERENCE_AND_REVIEW",
