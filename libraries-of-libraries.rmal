@@ -796,7 +796,10 @@ EVIDENCE Conscience64PrivateMethodStructuredReturn_2026_09_20 {
 
 EVIDENCE Conscience64PublicTestbedProjection_2026_09_20 {
     authority = redogit/conscience64
-    source_anchor = f05fc0550ba0e945ea64e9b8447b972b1c4a11fd
+    source_anchor = 9a17f941808993049466e9b75ee8ec99253b5add
+    projection_commit = 0888f45cb99bd16e225e20bd30005c9de8582551
+    projection_predecessor = f84b3a62c01d025a88654791b86fafbd9f719fe7
+    projection_sha256 = e54b69dff1964e218d1f99d7d28f5ace05649723ff677f25840ebe502f10e4a3
     issue = 166
 
     approval_schema = redogit.public_testbed_approval.v1
@@ -813,6 +816,10 @@ EVIDENCE Conscience64PublicTestbedProjection_2026_09_20 {
     gh_pages_projection_commit_distinct_from_source_commit = TRUE
     force_with_lease = TRUE
     network_edge_counterprobes = TRUE
+    visible_path_states { ACTIVE TESTED FAILED BLOCKED DEFERRED RETURN }
+    working_principles { USDAY INTERLINGUA PAIRITY VISIBLE_PATHS WONDERMENT ONE_DEGREE_EXPERIMENT }
+    preserved_unresolved_relation = TRUE
+    static_source_ceiling_bytes = 131072
 
     FORBIDDEN_PUBLIC_ROUTES {
         README.md
@@ -829,5 +836,9 @@ EVIDENCE Conscience64PublicTestbedProjection_2026_09_20 {
         PRIVATE_SOURCE_MUST_NOT_PROPAGATE
         PUBLIC_PROJECTION != COMMERCIAL_LICENSE
         NETWORK_EDGE_MATCH != SCIENTIFIC_VALIDATION
+        CURRENT != TRUE
+        ALIAS != LINEAGE
+        WONDER != CLAIM
+        ONE_DEGREE_TEST != UNIVERSAL_PROOF
     }
 }
