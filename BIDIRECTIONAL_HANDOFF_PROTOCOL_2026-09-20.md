@@ -204,9 +204,23 @@ Conscience64 PR #170 establishes a bounded inbound private-method handoff across
 - source-pointer substitution rejected;
 - false independent-regrounding rejected.
 
-Conscience64 also verifies bounded outward private-method privacy enforcement across ECS/client projection, agent/tool projection, nested export blocking, and structured publication hold at `deba0e9b19ef1fe106ba6dea1323eb0896dd5010`.
+Conscience64 verifies bounded outward private-method privacy enforcement across ECS/client projection, agent/tool projection, nested export blocking, and structured publication hold at `deba0e9b19ef1fe106ba6dea1323eb0896dd5010`.
 
-That outward evidence still does **not** establish a generic structured outbound response-packet runtime.
+PR #176 / merge `ee740af81d95533c907a65166564e661807c50eb` adds the first actual target-local structured return path for this protocol:
+
+```text
+PRIVATE METHOD packet_uoid
+-> POST /v1/handoff-response
+-> target-local decision
+-> deterministic restricted response_id
+-> authorized GET /v1/handoff-response/<response_id>
+```
+
+The response is stored in a separate append-only/idempotent ledger, preserves `way_back = [request packet_uoid]`, rejects target impersonation and unknown requests, and cannot claim successor/evidence references before independent re-grounding.
+
+`STRUCTURED_RETURN_PATH != UNIVERSAL_BIDIRECTIONAL_RUNTIME`
+
+The runtime is verified only for the `PRIVATE_METHOD_HANDOFF` request class. A generic structured response runtime for arbitrary request classes remains unimplemented.
 
 The Other-Projects RMAL cooperative carrier establishes implemented RMAL syntax for:
 
@@ -222,7 +236,7 @@ It does **not** yet establish the complete structured response-packet carrier de
 
 ### Landed local adapter declarations
 
-- Conscience64 adapter: `research/bridges/libraries-of-libraries/BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json`, merge `74ea8bdf956db0d9e5cea62f19bd6fd85c606309`.
+- Conscience64 adapter: `research/bridges/libraries-of-libraries/BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json`, current merge `731b6040d6b342cea423d402ec2fb6c1e5ad59a9`.
 - Other-Projects adapter: `BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json`, merge `8de91a93347aaff1ff039a4899fd56eec6689da3`.
 
 These adapter records declare local capability state. They do not transfer implementation authority to the central protocol.
