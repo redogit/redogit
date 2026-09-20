@@ -41,8 +41,19 @@ jobs:
   surface:
     needs: contract
     runs-on: ubuntu-latest
+    env:
+      VERIFY_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
     steps:
-      - uses: actions/checkout@v7
+      - name: Materialize exact commit without external Actions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init "$GITHUB_WORKSPACE"
+          cd "$GITHUB_WORKSPACE"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth 1 origin "$VERIFY_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$VERIFY_SHA"
       - name: Check schema, public status, homepage, and local CLI
         run: |
           python3 -m py_compile tools/redogit.py
