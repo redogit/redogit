@@ -497,7 +497,7 @@ adversarial stress successor
   PR #79 -> 4c9dbad649653eebb69b30eafcfd41288c2ed037
 ```
 
-Current integrated Other-Projects head `4c9dbad649653eebb69b30eafcfd41288c2ed037` passed Decision Field Operator Lab run `35508233228` with 117/117 tests, all existing reproducibility audits, scale×4 adversarial stress, and frozen default stress 5,376 cases / 13/13 checks.
+The pre-witness integrated head `4c9dbad649653eebb69b30eafcfd41288c2ed037` remains preserved. The current Other-Projects head `16a6823aa563e86455ec709700d06f0b9e22b467` adds the first native Decision Field relation witness and passed post-merge run `35508603278` with 119/119 tests, all existing reproducibility audits, scale×4 adversarial stress, and frozen default stress 5,376 cases / 13/13 checks.
 
 The sidecar schema is `rmapl-omega-relational-field/v0` and binds removable typed relations plus the exact consequence vector:
 
@@ -506,6 +506,25 @@ self / neighbor / shared / ambient / delayed
 ```
 
 It also carries currentness and a way-back reference while leaving Ω v0 unchanged.
+
+First native witness:
+
+```text
+DecisionField native object
+-> exact Ω projection
+-> NEIGHBOR + HOLE relation sidecar
+-> five-part consequence vector
+-> exact Ω way-back
+-> exact DecisionField reconstruction
+```
+
+Pairity was also exercised with reference-only evidence and no native rewrite.
+
+```text
+GENERIC_RELATIONAL_CARRIER = COMPLETE_BOUNDED_BASELINE
+FIRST_NATIVE_WITNESS = VERIFIED
+ADDITIONAL_DOMAIN_WITNESS = OPTIONAL UNTIL A LOCAL OBLIGATION REQUIRES IT
+```
 
 ```text
 RELATION != MERGE
