@@ -443,3 +443,35 @@ PUBLIC_TESTBED != WHOLE_REPOSITORY
 PUBLIC_EXPERIMENT != VERIFIED_TRUTH
 PUBLIC_PROJECTION != COMMERCIAL_LICENSE
 ```
+
+
+### September 20 — RMAPL / Ω and RMAL response authority sync
+
+The canonical executable **RMAPL 0 / Ω bounded reference runtime** is now merged in `redogit/Other-Projects-` at `95ae82e9741d762d8b9c16907c04425378cb56e9` (PR #77).
+
+It remains a domain-derived projection/repair runtime, not a replacement ontology or RMAL frontend:
+
+```text
+RMAPL_PROFILE != RMAL_CORE_FRONTEND
+OMEGA_VIEW != NATIVE_OBJECT
+METHOD_TRANSFER != EVIDENCE_TRANSFER
+SOFTWARE_VERIFICATION != SCIENTIFIC_VALIDATION
+```
+
+The additive **RMAL bidirectional response successor** is merged at `8f2d4e433d4b1bff3ec6eb0cc6a054b4c5bce284` (PR #78). Its admitted claim ceiling remains intentionally bounded:
+
+```text
+controlled RMAL successor surface = VERIFIED BY EXACT-HEAD REPOSITORY CHECK
+fresh RMALC check/compile/audit   = NOT_REVALIDATED
+generic response runtime          = NOT ESTABLISHED
+```
+
+Conscience64 references the canonical RMAPL/Ω implementation without duplicating it or inheriting evidence authority through merged PR #185 at `1be2f8207cb40913795bce89c9e9372065edd0ef`.
+
+```text
+CONSCIENCE64_REFERENCE != IMPLEMENTATION_AUTHORITY
+CONSCIENCE64_RETRIEVAL != INDEPENDENT_EVIDENCE
+CONNECTED != MERGED
+```
+
+This section is navigation/currentness metadata only. Source repositories remain authoritative for their own implementations, evidence, failures, and unresolved remainder.
