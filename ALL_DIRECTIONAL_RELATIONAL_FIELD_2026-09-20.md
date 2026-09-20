@@ -280,8 +280,9 @@ schema = rmapl-omega-relational-field/v0
 relation-carrier merge = PR #80 / 4625c2a5c889a8344f6f0821883c67d5eed72b0c
 stress predecessor = PR #79 / 4c9dbad649653eebb69b30eafcfd41288c2ed037
 first native Decision Field witness = PR #81 / 16a6823aa563e86455ec709700d06f0b9e22b467
-current verified main = 16a6823aa563e86455ec709700d06f0b9e22b467
-post-merge verification run = 35508603278 / PASS
+current verified RMAPL/Ω main = e42f652b380eb1d68d14679d44b9328dfb2faa55
+current runtime successor = PR #90 / fixed FITTER authority floor
+post-merge verification run = 35525090965 / PASS
 ```
 
 The sidecar content-addresses typed removable relations and carries exactly:
@@ -298,12 +299,14 @@ plus currentness and an explicit Ω way-back reference. Relation evidence is ref
 
 The current authoritative head passed:
 
-- 119 / 119 unit tests;
+- 193 / 193 unit tests;
 - operator-field frozen audit;
 - GSFL operator projection audit;
 - GSFL bidirectional macro audit;
 - contextual multicarrier audit 14/14;
 - RMAPL Ω audit 9/9;
+- S′ Carrier–Surface replay audit passed for four carriers;
+- fixed FITTER authority floor preserves nativeIdentity, sourceRefs, evidence, claimCeiling, and provenance;
 - scale×4 adversarial stress gate;
 - frozen default stress 5,376 cases / 13/13 checks.
 
