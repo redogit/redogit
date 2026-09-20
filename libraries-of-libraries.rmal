@@ -739,7 +739,9 @@ PROTOCOL BidirectionalHandoffPairity {
 EVIDENCE BidirectionalHandoffAdapters_2026_09_20 {
     conscience64_inbound = VERIFIED_BOUNDED_PRIVATE_METHOD_HANDOFF
     conscience64_inbound_anchor = 1cbf372207674070332b455c8851ee7993d6cf81
-    conscience64_outbound = REFERENCE_OR_GIT_HANDOFF_ONLY
+    conscience64_outbound = VERIFIED_BOUNDED_PRIVATE_METHOD_OUTWARD_BOUNDARIES
+    conscience64_outbound_anchor = deba0e9b19ef1fe106ba6dea1323eb0896dd5010
+    conscience64_structured_response_packet_runtime = FALSE
 
     other_projects_inbound = RMAL_HANDOFF_AND_TARGET_ACCEPTANCE_SYNTAX_IMPLEMENTED
     other_projects_inbound_anchor = f93f056a33d5fad0f29b763a0d49c6b79eb18d49
