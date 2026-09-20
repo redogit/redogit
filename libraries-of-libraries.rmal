@@ -750,7 +750,21 @@ EVIDENCE BidirectionalHandoffAdapters_2026_09_20 {
 
     other_projects_inbound = RMAL_HANDOFF_AND_TARGET_ACCEPTANCE_SYNTAX_IMPLEMENTED
     other_projects_inbound_anchor = f93f056a33d5fad0f29b763a0d49c6b79eb18d49
-    other_projects_outbound = STRUCTURED_RESPONSE_PACKET_NOT_YET_ESTABLISHED
+    other_projects_outbound = RMAL_STRUCTURED_RESPONSE_CARRIER_CONTROLLED_SURFACE_VERIFIED
+    other_projects_current_adapter_anchor = ab562daf0b2df085b97d5d0cc1696a9b4cf505d2
+    other_projects_adapter_declaration_anchor = 8de91a93347aaff1ff039a4899fd56eec6689da3
+    other_projects_adapter_declaration_role = HISTORICAL_INITIAL_DECLARATION
+    other_projects_response_carrier = docs/RMAL_BIDIRECTIONAL_HANDOFF_RESPONSE.rmal
+    other_projects_response_carrier_merge_anchor = 8f2d4e433d4b1bff3ec6eb0cc6a054b4c5bce284
+    other_projects_response_carrier_evidence = evidence/RMAL_BIDIRECTIONAL_HANDOFF_RESPONSE_2026-09-20.json
+    other_projects_controlled_surface_check = PASS
+    other_projects_validation_run_id = 35505020623
+    other_projects_validated_head_sha = cb3d9ef7523caa22a49bfddbaf7caf3dd776af92
+    other_projects_rmalc_revalidated = FALSE
+    other_projects_structured_response_packet_runtime = FALSE
+    other_projects_generic_response_packet_runtime = FALSE
+    other_projects_central_reconciliation_anchor = e8f98517ee5f5816e8e6d08307266a8003daa5e6
+    other_projects_claim_ceiling = OTHER_PROJECTS_AUTHORED_RESPONSE_CARRIER_CONTROLLED_SURFACE_ONLY_NO_FRESH_RMALC_OR_RUNTIME
 
     redogit_inbound = COORDINATION_REFERENCE_AND_REVIEW
     redogit_outbound = COORDINATION_REFERENCE_AND_REVIEW
