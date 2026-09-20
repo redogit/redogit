@@ -416,7 +416,7 @@ The runtime is private-method-only.
 
 Conscience64 issue #166 now authorizes only a generated `public-testbed-only` Pages projection.
 
-Current source anchor: `f05fc0550ba0e945ea64e9b8447b972b1c4a11fd`.
+Current source anchor: `9a17f941808993049466e9b75ee8ec99253b5add`.
 
 The generated public tree is limited to:
 
@@ -429,6 +429,14 @@ projection-manifest.json
 ```
 
 The builder rejects private-origin carriers and symlinks; the live verifier compares exact projection bytes and requires repository routes such as `README.md`, `research/projects/README.md`, and `play/index.html` to be absent at the public edge.
+Current live projection:
+
+- projection commit `0888f45cb99bd16e225e20bd30005c9de8582551`;
+- rollback predecessor `f84b3a62c01d025a88654791b86fafbd9f719fe7`;
+- projection identity `e54b69dff1964e218d1f99d7d28f5ace05649723ff677f25840ebe502f10e4a3`;
+- six visible path states and six public-safe working principles are verified at the edge;
+- unresolved relations remain visible rather than promoted.
+
 
 ```text
 PUBLIC_TESTBED != WHOLE_REPOSITORY
