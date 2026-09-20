@@ -1155,3 +1155,137 @@ JUST_LOAD_IT
 ```
 
 This is **reference parity**, not duplicated implementation.
+
+
+## 39. Bidirectional Handoff Pairity — September 20, 2026
+
+Stable marker:
+
+`BidirectionalHandoffPairity_2026_09_20`
+
+The current successor makes the cross-project relation explicitly two-way:
+
+```text
+A
+-> REQUEST / PROPOSAL
+-> B
+
+B
+-> TARGET-LOCAL DECISION
+-> RESPONSE
+-> A
+```
+
+and symmetrically:
+
+```text
+B
+-> REQUEST / PROPOSAL
+-> A
+
+A
+-> TARGET-LOCAL DECISION
+-> RESPONSE
+-> B
+```
+
+This does not create shared write authority.
+
+```text
+REQUEST != COMMAND
+RESPONSE != AUTHORITY_TRANSFER
+ACCEPTED != VERIFIED
+REJECTED != FAILURE
+NEEDS_EVIDENCE != REJECTED
+UNRESOLVED != FALSE
+```
+
+The request packet carries:
+
+```text
+handoff_id
+from
+to
+subject_uid
+goal
+obligation
+request_class
+requested_action
+source_refs[]
+evidence_refs[]
+privacy
+claim_ceiling
+unresolved[]
+way_back[]
+```
+
+The target-local response carries:
+
+```text
+response_id
+in_reply_to
+from
+to
+status
+decision_reason
+successor_refs[]
+evidence_refs[]
+unresolved[]
+privacy
+claim_ceiling
+way_back[]
+```
+
+Allowed response states:
+
+```text
+ACCEPTED
+REJECTED
+NEEDS_EVIDENCE
+UNRESOLVED
+```
+
+A counterproposal creates a **new handoff ID** rather than mutating the prior decision.
+
+Privacy is monotonic unless the target independently re-grounds the claim through an authorized local process:
+
+```text
+PRIVATE -> PRIVATE          allowed
+PRIVATE -> MORE_RESTRICTED  allowed
+PRIVATE -> PUBLIC           deny without independent target-local re-grounding
+```
+
+Current local adapter state is intentionally asymmetric:
+
+| Repository | Inbound | Outbound |
+|---|---|---|
+| `redogit/conscience64` | verified bounded private-method handoff via PR #170 | structured response packet not yet implemented; reference/Git handoff only |
+| `redogit/Other-Projects-` | RMAL handoff + target-acceptance syntax implemented | complete structured response packet not yet established |
+| `redogit/redogit` | coordination/reference/review | coordination/reference/review |
+
+Thus:
+
+```text
+BIDIRECTIONAL_PROTOCOL
+!=
+BIDIRECTIONAL_RUNTIME_IMPLEMENTATION_EVERYWHERE
+```
+
+Current naming:
+
+```text
+LIBRARIES_OF_LIBRARIES_REFERENCE
+!=
+TARGET_IMPLEMENTATION_AUTHORITY
+```
+
+Historical federation-named predecessor wording remains recoverable in Git, but it is not required as the current identity.
+
+Machine-readable contract:
+
+- `BIDIRECTIONAL_HANDOFF_PROTOCOL_2026-09-20.json`
+- human-readable contract: `BIDIRECTIONAL_HANDOFF_PROTOCOL_2026-09-20.md`
+
+Claim ceiling:
+
+`BIDIRECTIONAL_COORDINATION_CONTRACT_WITH_ASYMMETRIC_LOCAL_IMPLEMENTATION`
