@@ -76,8 +76,10 @@
   "current_adapters": {
     "redogit/conscience64": {
       "inbound": "VERIFIED_BOUNDED_PRIVATE_METHOD_HANDOFF",
-      "outbound": "REFERENCE_OR_GIT_HANDOFF_ONLY",
-      "evidence_anchor": "1cbf372207674070332b455c8851ee7993d6cf81"
+      "outbound": "VERIFIED_BOUNDED_PRIVATE_METHOD_OUTWARD_BOUNDARIES",
+      "evidence_anchor": "1cbf372207674070332b455c8851ee7993d6cf81",
+      "outbound_evidence_anchor": "deba0e9b19ef1fe106ba6dea1323eb0896dd5010",
+      "structured_response_packet_runtime": false
     },
     "redogit/Other-Projects-": {
       "inbound": "RMAL_HANDOFF_AND_TARGET_ACCEPTANCE_SYNTAX_IMPLEMENTED",
