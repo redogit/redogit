@@ -99,5 +99,31 @@ jobs:
               pass
 
           Parser().feed(Path('index.html').read_text(encoding='utf-8'))
-          print('PASS - REDOGIT schema, public status, homepage, CLI, and public/private boundary')
+
+          parity_marker = 'Conscience64PrivateCarrierSuccessor_2026_09_20'
+          required_anchors = {
+              'PR161': 'e10db6cccfd03106adef955297917408913ee339',
+              'PR164': '83b37a5b31e4d45ada6b5033fb69a3617a6c2b5b',
+              'PR165': 'eaee7b9051cbea795e3bf9f9b8eb8da9f81849d5',
+              'PR169': '093af636098498ce84d6fe94c6a076bb745c048b',
+              'PR170': '1cbf372207674070332b455c8851ee7993d6cf81',
+          }
+          required_boundaries = {
+              'FEDERATION_REFERENCE != CONSCIENCE64_IMPLEMENTATION_AUTHORITY',
+              'RMADAY_DESIGN != RUNTIME_IMPLEMENTATION',
+              'REFERENCE != EVIDENCE_TRANSFER',
+              'PRIVATE SOURCE MUST NOT PROPAGATE',
+          }
+          parity_surfaces = {
+              'libraries-of-libraries.rmal': Path('libraries-of-libraries.rmal').read_text(encoding='utf-8'),
+              'LIBRARIES_OF_LIBRARIES_RMAL_BUILD_2026-09-19.md': Path('LIBRARIES_OF_LIBRARIES_RMAL_BUILD_2026-09-19.md').read_text(encoding='utf-8'),
+          }
+          for surface_name, surface_text in parity_surfaces.items():
+              assert parity_marker in surface_text, f'{surface_name} missing private-carrier successor marker'
+              for label, anchor in required_anchors.items():
+                  assert anchor in surface_text, f'{surface_name} missing {label} anchor {anchor}'
+              for boundary in required_boundaries:
+                  assert boundary in surface_text, f'{surface_name} missing boundary: {boundary}'
+
+          print('PASS - REDOGIT schema, public status, homepage, CLI, public/private boundary, and Conscience64 private-carrier reference parity')
           PY
