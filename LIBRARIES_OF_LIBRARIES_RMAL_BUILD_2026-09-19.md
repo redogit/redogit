@@ -1259,7 +1259,7 @@ Current local adapter state is intentionally asymmetric:
 
 | Repository | Inbound | Outbound |
 |---|---|---|
-| `redogit/conscience64` | verified bounded private-method handoff via PR #170 | structured response packet not yet implemented; reference/Git handoff only |
+| `redogit/conscience64` | verified bounded private-method handoff via PR #170 | outbound private-method privacy boundaries verified at `deba0e9b`; generic structured response packet still not implemented |
 | `redogit/Other-Projects-` | RMAL handoff + target-acceptance syntax implemented | complete structured response packet not yet established |
 | `redogit/redogit` | coordination/reference/review | coordination/reference/review |
 
@@ -1280,6 +1280,8 @@ TARGET_IMPLEMENTATION_AUTHORITY
 ```
 
 Historical federation-named predecessor wording remains recoverable in Git, but it is not required as the current identity.
+
+`LIBRARIES_OF_LIBRARIES_REFERENCE != TARGET_IMPLEMENTATION_AUTHORITY`
 
 Machine-readable contract:
 
