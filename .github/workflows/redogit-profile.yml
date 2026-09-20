@@ -183,6 +183,13 @@ jobs:
               assert 'Conscience64PrivateMethodStructuredReturn_2026_09_20' in text
               assert 'ee740af81d95533c907a65166564e661807c50eb' in text
               assert 'STRUCTURED_RETURN_PATH != UNIVERSAL_BIDIRECTIONAL_RUNTIME' in text
+              assert 'Conscience64PublicTestbedProjection_2026_09_20' in text
+              assert '9a17f941808993049466e9b75ee8ec99253b5add' in text
+              assert 'e54b69dff1964e218d1f99d7d28f5ace05649723ff677f25840ebe502f10e4a3' in text
+              assert 'USDAY' in text and 'Interlingua' in text and 'Pairity' in text
+              assert 'PRESERVED_UNRESOLVED' in text
+              assert 'PUBLIC_TESTBED != WHOLE_REPOSITORY' in text
+              assert 'PUBLIC_EXPERIMENT != VERIFIED_TRUTH' in text
 
           print('PASS - REDOGIT schema, public status, homepage, CLI, public/private boundary, and Conscience64 private-carrier reference parity and bidirectional handoff Pairity')
           PY

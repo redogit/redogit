@@ -135,6 +135,19 @@ Each target keeps local authority. A request is not a command, a response is not
 
 Current implementations remain asymmetric, but Conscience64 now has one verified structured return runtime for `PRIVATE_METHOD_HANDOFF`: PR #176 links the admitted request packet UOID to a restricted target-local response and append-only response ledger. Generic response classes remain unimplemented. Other-Projects has implemented RMAL handoff/target-acceptance syntax but not the complete structured return packet.
 
+
+## September 20, 2026 — isolated public testbed
+
+Conscience64 publication authority has narrowed to a generated **public-testbed-only** projection under issue #166. The projection is built solely from `public-testbed/`, carries the exact source revision and deterministic projection identity, rejects private-origin carriers, and is verified against both the `gh-pages` tree and the network edge.
+
+This does **not** publish the Conscience64 repository as a whole and does not grant commercial rights.
+
+`PUBLIC_TESTBED != WHOLE_REPOSITORY` · `PUBLIC_EXPERIMENT != VERIFIED_TRUTH` · `PUBLIC_PROJECTION != COMMERCIAL_LICENSE`
+Current verified live source: `redogit/conscience64@9a17f941808993049466e9b75ee8ec99253b5add`.
+Current projection commit: `0888f45cb99bd16e225e20bd30005c9de8582551`; projection identity: `e54b69dff1964e218d1f99d7d28f5ace05649723ff677f25840ebe502f10e4a3`.
+
+The public surface now retains six explicit path states (`active`, `tested`, `failed`, `blocked`, `deferred`, `return`) and six method labels (`USDAY`, `Interlingua`, `Pairity`, `Visible paths`, `Wonderment`, `One-degree experiment`). These are navigation/method carriers, not authority or scientific validation.
+
 ## Explore the history — 10 doors
 
 The history is intentionally **distributed, independently authoritative, and reconstructible rather than centralized**. The [10-step History Playground](history-playground.html) gives people ten optional doors into the theories, formal results, experiments, tools, games, apps, education, accessibility, philosophy, ethics, coding, failures, and recovered history.

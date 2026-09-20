@@ -1361,3 +1361,118 @@ generic_response_packet_runtime = FALSE
 ```
 
 `STRUCTURED_RETURN_PATH != UNIVERSAL_BIDIRECTIONAL_RUNTIME`
+
+
+## 41. Conscience64 isolated public testbed projection — September 20, 2026
+
+Stable marker:
+
+`Conscience64PublicTestbedProjection_2026_09_20`
+
+Conscience64 issue #166 changes the publication boundary from a broad repository-derived Pages surface to a **generated public-testbed-only projection**.
+
+Current source authority:
+
+`redogit/conscience64@9a17f941808993049466e9b75ee8ec99253b5add`
+
+Authorization artifact:
+
+`PUBLIC_TESTBED_APPROVAL.json`
+
+The authorization is explicitly bounded:
+
+```text
+approved = true
+scope = public-testbed-only
+issue = 166
+commercial_license_granted = false
+```
+
+Required review gates:
+
+```text
+source isolation
+privacy boundary
+experimental labeling
+accessibility
+network-edge verification
+```
+
+The generated projection is built only from `public-testbed/` sources.
+
+Current generated tree:
+
+```text
+index.html
+app.js
+style.css
+testbed.json
+projection-manifest.json
+```
+
+The manifest carries:
+
+```text
+source_revision = exact 40-character Git SHA
+source_root = public-testbed/
+publication_scope = public-testbed-only
+authority = experimental-non-authoritative
+projection_sha256 = deterministic projection identity
+```
+
+Current public-testbed boundaries include:
+
+```text
+CONSCIENCE64_REPOSITORY != PUBLIC_TESTBED_PROJECTION
+PUBLIC_TESTBED != WHOLE_REPOSITORY
+PUBLIC_EXPERIMENT != VERIFIED_TRUTH
+PRIVATE SOURCE MUST NOT PROPAGATE
+PUBLIC_PROJECTION != COMMERCIAL_LICENSE
+```
+
+The builder rejects:
+
+- private-origin structured carriers;
+- nested `derived_from_private_history: true` material;
+- symlinks;
+- unsupported source extensions;
+- widened publication scope;
+- inflated authority.
+
+The Pages publication workflow clears the previous projection tree, copies only the generated projection, creates a distinct projection commit, and advances `gh-pages` with `--force-with-lease`.
+
+The live verifier reconstructs the exact expected projection from the source revision, compares the full `gh-pages` file inventory and bytes, then counterprobes the network edge.
+
+Repository routes such as:
+
+```text
+README.md
+data-manifest.json
+research/projects/README.md
+play/index.html
+about/index.html
+```
+
+are required to return `404` at the public-testbed edge.
+
+This is a publication-scope result, not scientific promotion.
+Final live successor evidence:
+
+- source revision: `9a17f941808993049466e9b75ee8ec99253b5add`;
+- projection commit: `0888f45cb99bd16e225e20bd30005c9de8582551`;
+- rollback predecessor: `f84b3a62c01d025a88654791b86fafbd9f719fe7`;
+- projection identity: `e54b69dff1964e218d1f99d7d28f5ace05649723ff677f25840ebe502f10e4a3`;
+- visible path states: `active`, `tested`, `failed`, `blocked`, `deferred`, `return`;
+- public-safe methods: `USDAY`, `Interlingua`, `Pairity`, `Visible paths`, `Wonderment`, `One-degree experiment`;
+- exact branch-byte comparison and network-edge verification: PASS;
+- repository-route leakage counterprobes: declared routes absent;
+- unresolved experiment-to-canon relation remains `PRESERVED_UNRESOLVED`.
+
+The earlier `f05fc055...` source remains a valid predecessor: it established the first live narrow projection before visible-state and named-principle completion.
+
+
+```text
+PUBLIC_TESTBED_PUBLISHED != WHOLE_REPOSITORY_PUBLISHED
+NETWORK_EDGE_MATCH != SCIENTIFIC_VALIDATION
+EXPERIMENTAL_NON_AUTHORITATIVE != CANONICAL_TRUTH
+```
