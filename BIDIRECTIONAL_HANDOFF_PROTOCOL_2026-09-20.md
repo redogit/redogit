@@ -232,12 +232,17 @@ target_acceptance
 target_local_successor
 ```
 
-It does **not** yet establish the complete structured response-packet carrier defined here.
+The response-side RMAL successor is also merged: Other-Projects PR #78 at `8f2d4e433d4b1bff3ec6eb0cc6a054b4c5bce284`. Its controlled-surface check passed in run `35505020623` at exact contributor head `cb3d9ef7523caa22a49bfddbaf7caf3dd776af92`. The local evidence, adapter, and pointer were reconciled by PR #82 at `ab562daf0b2df085b97d5d0cc1696a9b4cf505d2`.
+
+This records an authored, structurally checked response carrier. It does **not** establish fresh RMALC check/compile/audit or a generic response-packet runtime. The original successful source/checker blobs and prior adapter declaration remain recoverable.
+
+`CONTROLLED_SURFACE_CHECK != RMALC_COMPILE`
+`AUTHORED_CARRIER != GENERIC_RESPONSE_RUNTIME`
 
 ### Landed local adapter declarations
 
 - Conscience64 adapter: `research/bridges/libraries-of-libraries/BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json`, current merge `731b6040d6b342cea423d402ec2fb6c1e5ad59a9`.
-- Other-Projects adapter: `BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json`, merge `8de91a93347aaff1ff039a4899fd56eec6689da3`.
+- Other-Projects adapter: `BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json`, initial declaration `8de91a93347aaff1ff039a4899fd56eec6689da3`; current response-carrier reconciliation `ab562daf0b2df085b97d5d0cc1696a9b4cf505d2`.
 
 These adapter records declare local capability state. They do not transfer implementation authority to the central protocol.
 
