@@ -12,6 +12,8 @@ on:
       - 'index.html'
       - 'WORK_INDEX.md'
       - 'LIBRARIES_OF_LIBRARIES_*.md'
+      - 'BIDIRECTIONAL_HANDOFF_PROTOCOL_*.md'
+      - 'BIDIRECTIONAL_HANDOFF_PROTOCOL_*.json'
       - 'libraries-of-libraries.rmal'
       - 'tools/redogit.py'
       - '.github/workflows/redogit-profile.yml'
@@ -26,6 +28,8 @@ on:
       - 'index.html'
       - 'WORK_INDEX.md'
       - 'LIBRARIES_OF_LIBRARIES_*.md'
+      - 'BIDIRECTIONAL_HANDOFF_PROTOCOL_*.md'
+      - 'BIDIRECTIONAL_HANDOFF_PROTOCOL_*.json'
       - 'libraries-of-libraries.rmal'
       - 'tools/redogit.py'
       - '.github/workflows/redogit-profile.yml'
@@ -125,5 +129,52 @@ jobs:
               for boundary in required_boundaries:
                   assert boundary in surface_text, f'{surface_name} missing boundary: {boundary}'
 
-          print('PASS - REDOGIT schema, public status, homepage, CLI, public/private boundary, and Conscience64 private-carrier reference parity')
+          bidirectional = json.loads(Path('BIDIRECTIONAL_HANDOFF_PROTOCOL_2026-09-20.json').read_text(encoding='utf-8'))
+          assert bidirectional['schema'] == 'redogit/bidirectional-handoff-pairity/v1'
+          assert bidirectional['directions'] == ['A_TO_B', 'B_TO_A']
+          assert set(bidirectional['statuses']) == {'ACCEPTED', 'REJECTED', 'NEEDS_EVIDENCE', 'UNRESOLVED'}
+          assert bidirectional['cross_write_default'] == 'DENY'
+          assert bidirectional['evidence_transfer_default'] == 'DENY'
+          assert bidirectional['target_local_successor_required'] is True
+          assert bidirectional['privacy_rule'] == 'MONOTONIC_UNLESS_INDEPENDENTLY_REGROUNDED_BY_TARGET'
+          assert bidirectional['counterproposal_rule'] == 'NEW_HANDOFF_ID'
+
+          required_request = {
+              'handoff_id','from','to','subject_uid','goal','obligation','request_class',
+              'requested_action','source_refs','evidence_refs','privacy','claim_ceiling',
+              'unresolved','way_back'
+          }
+          required_response = {
+              'response_id','in_reply_to','from','to','status','decision_reason',
+              'successor_refs','evidence_refs','unresolved','privacy','claim_ceiling','way_back'
+          }
+          assert set(bidirectional['request_fields']) == required_request
+          assert set(bidirectional['response_fields']) == required_response
+
+          bidirectional_boundaries = set(bidirectional['boundaries'])
+          for boundary in {
+              'REQUEST != COMMAND',
+              'RESPONSE != AUTHORITY_TRANSFER',
+              'ACCEPTED != VERIFIED',
+              'REFERENCE != EVIDENCE_TRANSFER',
+              'PRIVATE SOURCE MUST NOT PROPAGATE',
+              'AUTHORIZED READ != PUBLICATION PERMISSION',
+          }:
+              assert boundary in bidirectional_boundaries
+
+          adapters = bidirectional['current_adapters']
+          assert adapters['redogit/conscience64']['evidence_anchor'] == '1cbf372207674070332b455c8851ee7993d6cf81'
+          assert adapters['redogit/conscience64']['outbound_evidence_anchor'] == 'deba0e9b19ef1fe106ba6dea1323eb0896dd5010'
+          assert adapters['redogit/conscience64']['structured_response_packet_runtime'] is False
+          assert adapters['redogit/conscience64']['adapter_declaration_anchor'] == '74ea8bdf956db0d9e5cea62f19bd6fd85c606309'
+          assert adapters['redogit/Other-Projects-']['evidence_anchor'] == 'f93f056a33d5fad0f29b763a0d49c6b79eb18d49'
+          assert adapters['redogit/Other-Projects-']['adapter_declaration_anchor'] == '8de91a93347aaff1ff039a4899fd56eec6689da3'
+          assert adapters['redogit/redogit']['evidence_anchor'] == 'a5ed5a4dac556fe718af358dd9a2b11266a88857'
+
+          for path in ['LIBRARIES_OF_LIBRARIES_RMAL_BUILD_2026-09-19.md', 'libraries-of-libraries.rmal']:
+              text = Path(path).read_text(encoding='utf-8')
+              assert 'BidirectionalHandoffPairity_2026_09_20' in text
+              assert 'LIBRARIES_OF_LIBRARIES_REFERENCE != TARGET_IMPLEMENTATION_AUTHORITY' in text
+
+          print('PASS - REDOGIT schema, public status, homepage, CLI, public/private boundary, and Conscience64 private-carrier reference parity and bidirectional handoff Pairity')
           PY
