@@ -311,6 +311,7 @@ The same artifact may be visible from several lanes without those lanes becoming
 - [`BODY_OF_WORK.md`](BODY_OF_WORK.md) — first broad recovery snapshot; useful as a catalog, not authority.
 - [`README.md`](README.md) — concise public About Me and current entry point.
 - [`REDOGIT.md`](REDOGIT.md) — successor / provenance working rule.
+- [All-Directional Relational Field](ALL_DIRECTIONAL_RELATIONAL_FIELD_2026-09-20.md) — current method successor adding lateral/ambient consequence accounting to vertical and temporal traversal; method only, no domain evidence transfer.
 - [`GSFL_V0_1_COMPLETE_2026-09-16.md`](GSFL_V0_1_COMPLETE_2026-09-16.md) — canonical complete-bounded GSFL v0.1 lifecycle record; the proposed/active predecessors remain preserved.
 - [`GSFL_V0_1_ACTIVE_2026-09-16.md`](GSFL_V0_1_ACTIVE_2026-09-16.md) — preserved active-state predecessor for GSFL v0.1.
 - [Conscience64](https://github.com/redogit/conscience64) — large active research/software surface.
