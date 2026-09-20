@@ -1110,3 +1110,48 @@ Git anchor:
 `redogit/redogit@9e1cd3bd30ee15cadaeb83ade5ccf4f9e4893dee`
 
 This is an integration/configuration gate. Passing it does not upgrade scientific claims.
+
+
+## 38. Conscience64 private-carrier successor — September 20, 2026
+
+Stable reference marker:
+
+`Conscience64PrivateCarrierSuccessor_2026_09_20`
+
+Pairity resolves the named federation operations `JUST LOAD IT` and `RMADAY RECORD / RECONSTRUCT` to a **reference-only relation** with the bounded private-history carrier work implemented and verified in `redogit/conscience64`.
+
+The current merged Conscience64 anchors are:
+
+| Slice | Merge anchor | Bounded result |
+|---|---|---|
+| PR #161 | `e10db6cccfd03106adef955297917408913ee339` | Private-history method-only Knowledge Packet/UOID carrier |
+| PR #164 | `83b37a5b31e4d45ada6b5033fb69a3617a6c2b5b` | Private-origin semantic corpus/graph/query exclusion |
+| PR #165 | `eaee7b9051cbea795e3bf9f9b8eb8da9f81849d5` | Recovery envelope restores the abstract method and boundary, not the protected source story |
+| PR #169 | `093af636098498ce84d6fe94c6a076bb745c048b` | Space Lens client-memory marker propagation and fail-closed export |
+| PR #170 | `1cbf372207674070332b455c8851ee7993d6cf81` | End-to-end loopback Knowledge Bridge handoff verification |
+
+This successor does **not** copy Conscience64 implementation into the federation layer. It does not make the design-only USDAY/RMADAY sequence a runtime implementation, and it does not transfer evidence or project authority.
+
+```text
+FEDERATION_REFERENCE != CONSCIENCE64_IMPLEMENTATION_AUTHORITY
+RMADAY_DESIGN != RUNTIME_IMPLEMENTATION
+REFERENCE != EVIDENCE_TRANSFER
+PRIVATE METHOD MAY INFORM SOLVING
+PRIVATE SOURCE MUST NOT PROPAGATE
+```
+
+Conscience64 issue #160 remains open. These anchors establish only the bounded slices listed above; they do not claim perfect privacy, semantic detection of unmarked private material, independent re-grounding, or universal completion of the deep-carrier work.
+
+The federation role is therefore:
+
+```text
+JUST_LOAD_IT
+-> recover the smallest authorized current state
+-> preserve the private-history boundary
+-> use only the abstract method where allowed
+-> require current authorized project evidence for project claims
+-> RMADAY_RECORD_RECONSTRUCT
+-> retain reference + provenance + unresolved remainder
+```
+
+This is **reference parity**, not duplicated implementation.
