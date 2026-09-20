@@ -1260,8 +1260,31 @@ Current local adapter state is intentionally asymmetric:
 | Repository | Inbound | Outbound |
 |---|---|---|
 | `redogit/conscience64` | verified bounded private-method handoff via PR #170 | verified private-method structured response runtime via PR #176 / `ee740af8`; generic response classes remain unimplemented |
-| `redogit/Other-Projects-` | RMAL handoff + target-acceptance syntax implemented | complete structured response packet not yet established |
+| `redogit/Other-Projects-` | RMAL handoff + target-acceptance syntax implemented | response carrier controlled-surface check PASS; fresh RMALC validation and response runtime remain unestablished |
 | `redogit/redogit` | coordination/reference/review | coordination/reference/review |
+
+Other-Projects' response carrier is present and structurally checked. Its current state matches the target-local adapter reconciled in PR #82 and the central contract reconciled in redogit PR #40; it is not a fresh compiler or runtime result.
+
+```text
+outbound = RMAL_STRUCTURED_RESPONSE_CARRIER_CONTROLLED_SURFACE_VERIFIED
+response_carrier = docs/RMAL_BIDIRECTIONAL_HANDOFF_RESPONSE.rmal
+response_carrier_merge_anchor = 8f2d4e433d4b1bff3ec6eb0cc6a054b4c5bce284
+response_carrier_evidence = evidence/RMAL_BIDIRECTIONAL_HANDOFF_RESPONSE_2026-09-20.json
+controlled_surface_check = PASS
+validation_run_id = 35505020623
+validated_head_sha = cb3d9ef7523caa22a49bfddbaf7caf3dd776af92
+rmalc_revalidated = false
+structured_response_packet_runtime = false
+generic_response_packet_runtime = false
+claim_ceiling = OTHER_PROJECTS_AUTHORED_RESPONSE_CARRIER_CONTROLLED_SURFACE_ONLY_NO_FRESH_RMALC_OR_RUNTIME
+```
+
+The carrier and evidence paths above are owned by `redogit/Other-Projects-`. Fresh RMALC `check`, `compile`, and `audit` remain **not revalidated**. The structural-check evidence does not transfer implementation authority or establish response transport.
+
+```text
+CONTROLLED_SURFACE_CHECK != RMALC_COMPILE
+AUTHORED_CARRIER != GENERIC_RESPONSE_RUNTIME
+```
 
 Thus:
 
@@ -1294,8 +1317,14 @@ Landed local adapter declarations:
 Conscience64 adapter merge:
 731b6040d6b342cea423d402ec2fb6c1e5ad59a9
 
-Other-Projects adapter merge:
+Other-Projects current adapter reconciliation (PR #82):
+ab562daf0b2df085b97d5d0cc1696a9b4cf505d2
+
+Other-Projects initial declaration (HISTORICAL_INITIAL_DECLARATION):
 8de91a93347aaff1ff039a4899fd56eec6689da3
+
+Central contract reconciliation (redogit PR #40):
+e8f98517ee5f5816e8e6d08307266a8003daa5e6
 ```
 
 Claim ceiling:
