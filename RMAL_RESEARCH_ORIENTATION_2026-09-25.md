@@ -317,6 +317,7 @@ The path that earned the short rule is what keeps it honest.
 ---
 
 **Public orientation:** https://redogit.github.io/redogit/  
+**Full condensed-wisdom analysis:** [Algorithmic Condensed Wisdom Analysis](ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md) · https://redogit.github.io/redogit/condensed-wisdom.html  
 **Public live design:** https://redogit.github.io/redogit/live-design.html  
 **Current live proof artifact:** [Signed Binary-Cluster Augmentation Carrier](PNP_SIGNED_BINARY_CLUSTER_CARRIER_2026-09-25.md)  
 **Repository:** https://github.com/redogit/redogit
