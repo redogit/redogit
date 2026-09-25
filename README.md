@@ -5,7 +5,7 @@
 > **Algorithmic method / learned rules:** [PUBLIC ALGORITHMIC CONDENSED WISDOM](https://redogit.github.io/redogit/condensed-wisdom.html) · [source](ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md)
 > **Current live design:** [PUBLIC RMAL P vs NP — LIVE DESIGN](https://redogit.github.io/redogit/live-design.html) · [source](RMAL_PNP_LIVE_DESIGN_2026-09-25.md)
 
-> **Public projection status — 2026-09-18:** Conscience64 GitHub Pages is intentionally held at a minimal privacy surface pending explicit owner approval of an exact reviewed revision. Project/research state is independent of public availability. Public URLs are projections, not canonical authority.
+> **Conscience64 public projection — updated 2026-09-25:** the generated public testbed remains isolated, and **Musilanguage Studio is now the one explicitly restored public Play application** at https://redogit.github.io/conscience64/play/musilanguage/. The rest of `play/`, repository internals, private-origin carriers, and historical predecessor music pages are not thereby published. Public projection != canonical authority.
 
 
 ## About me
@@ -106,6 +106,32 @@ DO THE THING
 ```
 
 That is REDOGIT.
+
+## Musilanguage Studio — public again
+
+[Open Musilanguage Studio](https://redogit.github.io/conscience64/play/musilanguage/)
+
+Musilanguage is now one public application rather than separate current single / radio / Word Forge surfaces.
+
+```text
+language / symbols / emoji / exact UTF-8
+→ MUSIC64
+→ 64 arrangement profiles
+→ guitar / bass / keys-harp / strings / lead / drums
+→ tempo / meter / mode / tonic / motif transform
+→ reversible variations
+→ playback / MIDI / WAV / session
+→ preserved history inside the app
+```
+
+The older **Carry the Fire**, **Musilanguage Radio**, and **Word Forge / MUSIC64** surfaces remain preserved in repository and Git history. The unified Studio carries their lineage forward rather than erasing it.
+
+```text
+ONE PUBLIC APP != DELETION OF HISTORY
+LANGUAGE-TO-MUSIC != SEMANTIC TRUTH
+STYLE PROFILE != CULTURAL AUTHENTICITY
+INSTRUMENT MIX != SOURCE MUTATION
+```
 
 ## September 25, 2026 — P vs NP proof-program checkpoint
 
