@@ -2460,3 +2460,162 @@ The next proof obligation is not to rename arbitrary SAT as an autarky problem. 
     or a strictly smaller certified residual in another existing carrier.
 
 No universal theorem is claimed yet.
+
+
+## 28. Matching-autarky and maximal-deficiency carrier
+
+The clause-star SAT normal form makes the next lawful reduction family explicit.
+
+An autarky is a partial truth assignment phi such that every clause touched by a variable assigned by phi is satisfied by phi.
+
+Therefore autarky reduction
+
+    F -> phi * F
+
+removes exactly the clauses already satisfied by the partial assignment and leaves every untouched clause semantically untouched.
+
+Hence:
+
+    SAT(F) iff SAT(phi * F).
+
+This is an exact minimal-repair operation: solve one self-contained portion and preserve the remainder.
+
+### 28.1 Matching autarkies
+
+Matching autarkies are a polynomially tractable autarky subsystem defined through matching conditions in the clause-variable incidence graph.
+
+Every clause-set F has a unique largest matching-lean sub-clause-set
+
+    N_ma(F),
+
+the matching-lean kernel, obtained after exhaustive matching-autarky reduction.
+
+Published autarky theory gives:
+
+    N_ma(F) is computable in polynomial time.
+
+A nonempty clause-set K is matching-lean exactly when every proper sub-clause-set K' has strictly smaller deficiency:
+
+    delta(K') < delta(K),
+
+where
+
+    delta(K) = c(K) - n(K).
+
+Therefore, for matching-lean K,
+
+    delta_star(K)
+      := max_{K' subseteq K} delta(K')
+      = delta(K).
+
+In particular every nonempty matching-lean kernel has
+
+    delta(K) >= 1.
+
+### 28.2 Homeward preservation
+
+Every matching-autarky reduction stores:
+
+- the partial assignment;
+- the exact clauses it satisfied;
+- the predecessor formula identifier.
+
+Composing the retained partial assignments reconstructs the removed portion.
+
+If the matching-lean kernel is empty, the composed autarkies form a satisfying assignment for the original clause-set.
+
+If the kernel is nonempty, any satisfying assignment of the kernel can be joined with the retained autarky assignments because the removed clauses were satisfied without touching the surviving clauses.
+
+Thus the reduction is Homeward-exact.
+
+### 28.3 Maximal deficiency is computable
+
+For an arbitrary clause-set F,
+
+    delta_star(F) = max_{F' subseteq F} (c(F') - n(F'))
+
+is computable in polynomial time through matching in the clause-variable incidence graph.
+
+After matching-autarky normalization, however, no subset search is needed conceptually:
+
+    K matching-lean
+    ->
+    delta_star(K) = delta(K).
+
+So the residual degree becomes the directly visible integer
+
+    k = c(K) - n(K).
+
+### 28.4 Exact logarithmic-deficiency terminal
+
+Szeider gives an exact SAT algorithm with runtime
+
+    O(2^k n^3)
+
+for formulas of maximal deficiency k, returning either a satisfying assignment or a regular resolution refutation.
+
+Therefore for any fixed constant c:
+
+    k <= c log_2 n
+    ->
+    O(2^k n^3)
+    <= O(n^(c+3)),
+
+so the matching-lean kernel is exactly decidable in polynomial time.
+
+This adds the terminal carrier:
+
+    MATCHING_AUTARKY_NORMALIZE
+    ->
+    MATCHING_LEAN_KERNEL
+    ->
+    if delta <= c log n:
+         EXACT_DEFICIENCY_SOLVER.
+
+### 28.5 One-degree interpretation
+
+The maximal-deficiency algorithm can first transform the residual into a critical form in which assigning either truth value to any active variable lowers maximal deficiency.
+
+Thus a variable assignment is an exact signed one-degree move:
+
+    k -> k-1 or lower.
+
+But both truth-value descendants may remain necessary.
+
+The known runtime pays for this with a binary tree of height at most k:
+
+    total <= 2^k poly(n).
+
+For logarithmic k that total work is polynomial and the carrier is admitted.
+
+For superlogarithmic k, merely knowing that each child has one lower deficiency is not enough: keeping both children yields exponential branching mass.
+
+### 28.6 Exact live remainder
+
+After this carrier, the unresolved clause-star hard core can be normalized to:
+
+    K is matching-lean
+    delta_star(K) = delta(K) = k
+    k > c log n.
+
+The next universal obligation is therefore not "solve arbitrary SAT from scratch."
+
+It is:
+
+    given a matching-lean high-deficiency residual,
+    replace the two-child deficiency branch
+    by either
+      (a) one certified signed child,
+      (b) an exact merge/reuse object that pays for both children polynomially,
+      or
+      (c) an independent negative certificate,
+
+    while preserving Homeward reconstruction and full lifecycle cost.
+
+This is the precise point at which the existing O(2^k n^3) proof ceases to satisfy the desired polynomial-work contract.
+
+MATCHING_AUTARKY_REDUCTION = EXACT_SCOPED_PROGRESS
+
+LOG_DEFICIENCY = POLYNOMIAL_TERMINAL
+
+HIGH_DEFICIENCY_MATCHING_LEAN = OPEN_RESIDUAL
