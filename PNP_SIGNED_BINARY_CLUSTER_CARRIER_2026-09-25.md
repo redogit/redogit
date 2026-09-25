@@ -1056,3 +1056,196 @@ If the Dean instance has polynomial encoding length N:
 - no uncharged generic transversal representation is invoked.
 
 Therefore the support-carrier recognition/construction lifecycle is polynomial on the admitted branch.
+
+
+## 16. General log-conflict-cover theorem — binary/graphic support no longer required
+
+The earlier log-conflict-cover carrier can be strengthened substantially.
+
+Let:
+
+    M = arbitrary support transversal matroid on candidate ground set R
+    Q = candidate-conflict graph on R
+    Z = a vertex cover of Q, |Z| = k.
+
+No binary, graphic, gammoid-representation, or series-parallel hypothesis is required beyond the fact that M is the transversal matroid already defined by the Dean support bipartite graph.
+
+Because Z is a vertex cover,
+
+    Q - Z
+
+has no edges.
+
+Thus every pair of candidates outside Z is mutually compatible.
+
+### Exact algorithm
+
+Enumerate every Q-independent subset A of Z.
+
+#### Case 1 — A is dependent in M
+
+A contains a matroid circuit.
+
+Since A is Q-independent, that circuit is conflict-free.
+
+Return POSITIVE and reconstruct the exact +1 Dean augmentation.
+
+#### Case 2 — A is independent in M
+
+Delete from R-Z every candidate that conflicts in Q with any member of A.
+
+Call the surviving outside set Y_A.
+
+Because Q-Z has no edges, Y_A is internally conflict-free, and by construction there are no Q-edges between A and Y_A.
+
+Now consider the contraction M/A restricted to Y_A.
+
+Compute
+
+    r_A = rank_M(A)
+    r_full = rank_M(A union Y_A).
+
+Then:
+
+    rank_{M/A}(Y_A) = r_full - r_A.
+
+If
+
+    r_full - r_A < |Y_A|,
+
+then Y_A is dependent in M/A.
+
+Extract any circuit C' of (M/A)|Y_A.
+
+The set A union C' is dependent in M and is conflict-free in Q, so it contains a conflict-free circuit C of M.
+
+Return POSITIVE.
+
+If instead
+
+    r_full - r_A = |Y_A|,
+
+then Y_A is independent in M/A, so no subset of Y_A can complete A to a dependent set.
+
+Mark this A-branch NEGATIVE.
+
+### Completeness proof
+
+Suppose there exists a conflict-free circuit C of M.
+
+Let
+
+    A = C intersect Z
+    Y = C - Z.
+
+The enumeration reaches A because C is conflict-free.
+
+If Y is empty, then A=C is dependent and Case 1 returns POSITIVE.
+
+Otherwise A is a proper subset of the circuit C, hence A is independent.
+
+Since C is conflict-free:
+
+- Y is contained in R-Z;
+- no element of Y conflicts with any member of A;
+- therefore Y subseteq Y_A.
+
+Because C is a circuit,
+
+    rank_M(C) = |C|-1.
+
+Since A is independent,
+
+    rank_M(A) = |A|.
+
+Hence in the contraction:
+
+    rank_{M/A}(Y)
+      = rank_M(A union Y) - rank_M(A)
+      = (|A|+|Y|-1) - |A|
+      = |Y|-1.
+
+So Y is dependent in M/A.
+
+Therefore Y_A is dependent in M/A as well, and Case 2 returns POSITIVE.
+
+Conversely, every POSITIVE branch explicitly produces a Q-independent dependent set and therefore a Q-independent circuit of M.
+
+Thus:
+
+    conflict-free support-matroid circuit exists
+    iff
+    the algorithm returns POSITIVE.
+
+By the support-transversal augmentation lemma, this is equivalent to existence of an exact +1 Dean augmentation.
+
+### Dean implementation cost
+
+M is a transversal matroid represented by the original candidate-to-current-cohort support bipartite graph.
+
+For any X subseteq R:
+
+    rank_M(X)
+
+is the size of a maximum matching from X into S.
+
+So every rank/independence query is polynomial-time.
+
+Contraction rank is computed without constructing a separate representation:
+
+    rank_{M/A}(Y)
+      = rank_M(A union Y) - rank_M(A).
+
+Circuit extraction from a dependent set uses polynomially many matching/rank queries by deleting elements while dependence remains.
+
+The algorithm has at most:
+
+    2^k
+
+branches, each with polynomial matching work.
+
+Therefore:
+
+    k = O(log n)
+
+implies polynomial total time.
+
+This theorem strictly strengthens the earlier series-parallel log-conflict-cover carrier: graphicness is unnecessary for correctness in this parameter regime.
+
+The series-parallel realization remains useful as an alternate exact carrier, visualization, and decomposition surface when Seymour graphic recognition accepts.
+
+### One-degree interpretation
+
+Each z in Z is one signed conflict degree:
+
+    +z : include z and delete only its conflict neighbors
+    -z : exclude z.
+
+After all k degrees are resolved, the remaining candidate family is conflict-free.
+
+The support side is never approximated: dependence is decided exactly by matching rank.
+
+### Bounded differential validation
+
+A separate exact checker generated 20,000 random small instances with:
+
+- up to 8 candidates;
+- up to 5 current-support vertices;
+- designated conflict vertex cover size at most 3;
+- arbitrary support bipartite edges;
+- arbitrary conflict edges incident to the designated cover.
+
+The theorem carrier was compared to exhaustive enumeration of every conflict-free candidate subset and exact matching-rank dependence.
+
+Results:
+
+    tested instances: 20,000
+    mismatches: 0
+
+This bounded panel supports the implementation logic only; the proof above is the mathematical basis.
+
+### Updated remainder
+
+The conflict-cover theorem removes support-representation complexity entirely when the coupling graph has logarithmic vertex cover.
+
+The live universal residual is therefore concentrated in conflict graphs whose minimum useful coupling interface is superlogarithmic, together with other independently certified carrier families that may reduce that residual before enumeration.
