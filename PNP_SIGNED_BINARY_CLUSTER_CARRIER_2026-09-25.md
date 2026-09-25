@@ -804,3 +804,163 @@ The proof above is the theorem; this panel is bounded implementation evidence.
 Any cluster-conflict residual outside the current exact carrier must now have a superpolynomial product of inclusion-minimal support-neighborhood antichains, not merely many raw candidates or duplicate support signatures.
 
 That is the next exact representation-selection obstruction on the cluster side.
+
+
+## 12. Binary gammoid -> series-parallel support carrier
+
+The binary support-transversal hypothesis has a stronger structural consequence than an arbitrary GF(2) representation.
+
+The support matroid M_S is transversal by construction from the candidate-to-current-cohort bipartite support graph.
+
+Every transversal matroid is a gammoid. A classical characterization of binary gammoids states that the following are equivalent:
+
+    binary gammoid
+    graphic gammoid
+    regular gammoid
+    no U_{2,4} or M(K_4) minor.
+
+Since binary matroids already exclude U_{2,4}, a binary gammoid has no M(K_4) minor and has a graphic realization.
+
+Therefore a binary support transversal matroid M_S has a graph H_S such that
+
+    M_S ~= M(H_S)
+
+and H_S may be chosen K_4-minor-free, i.e. series-parallel in the standard graphic-matroid sense.
+
+An independent source theorem of de Sousa and Welsh states that every binary transversal matroid is graphic. Ingleton-Piff duality also identifies strict gammoids as precisely the duals of transversal matroids.
+
+### Consequence for Dean augmentation
+
+Circuits of M(H_S) are exactly graph cycles of H_S.
+
+Hence:
+
+    +1 Dean augmentation
+    iff
+    H_S contains a cycle C whose candidate edges are pairwise compatible
+    in the original candidate-conflict graph.
+
+The binary support side is therefore frozen as a series-parallel cycle carrier. Remaining hardness may live entirely in the coupling to candidate conflicts.
+
+This is a carrier translation, not evidence that arbitrary conflict constraints are easy.
+
+## 13. Log-conflict-cover extension
+
+Let:
+
+    H = series-parallel support graph whose cycle matroid is M_S
+    Q = candidate-conflict graph on E(H)
+
+A cycle of H is a valid +1 augmentation circuit exactly when its edge set is an independent set of Q.
+
+Let Z be a vertex cover of Q of size k. Here vertices of Q are candidate edges of H.
+
+Because Z covers every conflict edge,
+
+    Q - Z
+
+has no edges.
+
+So all nontrivial conflict choices are concentrated in Z.
+
+### Exact algorithm
+
+Enumerate every independent subset A of Q[Z].
+
+Interpret:
+
+    A     = conflict-cover candidates included in the desired cycle
+    Z-A   = conflict-cover candidates excluded from the desired cycle.
+
+For each A:
+
+1. Delete from H every edge represented by Z-A.
+2. Delete from H every edge outside Z that conflicts in Q with some edge of A.
+3. Retain all edges in A as required edges.
+4. Decide whether the resulting series-parallel graph contains a simple cycle containing every edge of A.
+5. If yes, return that cycle and map it Homeward through the support-transversal circuit to the exact +1 Dean augmentation.
+
+Correctness:
+
+- A is independent inside Q[Z].
+- Q-Z has no edges.
+- every outside neighbor conflicting with A was removed.
+- no edge of Z-A may enter the cycle.
+
+Therefore every returned cycle is Q-independent.
+
+Conversely, let C be any Q-independent cycle and set
+
+    A = C intersect Z.
+
+The enumeration reaches A. No edge of C is deleted in that branch, and the marked-cycle test accepts C.
+
+Thus the procedure finds a compatible support cycle iff one exists.
+
+### Marked-cycle subproblem
+
+The support graph H is series-parallel and therefore has treewidth at most two (after the standard simple/partial-2-tree interpretation of its biconnected blocks).
+
+The property
+
+    there exists a simple cycle containing every marked edge
+
+has a constant-boundary dynamic program on a series-parallel decomposition. Equivalently, it is a fixed finite-state connectivity problem on treewidth two.
+
+Hence each marked-cycle query is polynomial-time (indeed linear-time with a fixed SP decomposition and finite state table).
+
+### Cost
+
+There are at most
+
+    2^k
+
+branches and polynomial work in each branch.
+
+Therefore:
+
+    k = O(log n)
+
+implies polynomial total work.
+
+This gives another exact one-degree carrier:
+
+    conflict vertex-cover size k
+        -> enumerate signed hub choices
+        -> series-parallel marked-cycle DP
+        -> +1 augmentation or exact no-compatible-cycle certificate.
+
+The original candidate-conflict graph remains authoritative. Z is a carrier/interface set, not semantic deletion.
+
+### Relation to known forbidden-pair complexity
+
+Arbitrary forbidden-pair constraints can make path/cycle routing hard even when the host graph is structurally simple. The structural parameter must therefore control the coupling relation Q, not only H.
+
+Published PAFP work likewise finds fixed-parameter tractability when parameterizing the forbidden-pair graph by structural measures such as its vertex-cover number, while host-graph width alone need not remove hardness.
+
+## 14. One-degree interpretation of the conflict-cover carrier
+
+Choose one z in Z.
+
+The two signed moves are:
+
+    +z : require z in the candidate cycle
+    -z : forbid z from the candidate cycle.
+
+The repair is local:
+
+    +z removes only conflict neighbors of z
+    -z removes only z.
+
+No support relation is rewritten.
+
+After k signed decisions, the remaining conflict graph is empty and the residual problem is a pure series-parallel cycle query.
+
+For k=O(log n), carrying both signs exactly remains polynomial.
+
+This is a literal implementation of:
+
+    one degree of change
+    -> positive / negative family
+    -> smallest exact repair
+    -> Homeward reconstruction.
