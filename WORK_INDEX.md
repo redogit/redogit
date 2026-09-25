@@ -5,6 +5,25 @@
 **Status:** active navigation layer — not a central authority  
 **Predecessor:** [`BODY_OF_WORK.md`](BODY_OF_WORK.md), preserved as the first broad recovery snapshot
 
+## September 25 current additions — terms / proof / executable language game
+
+**Navigation only. Project-local evidence and source authority remain local.**
+
+- [Recent Work — 2026-09-25](RECENT_WORK_2026-09-25.md) — current cross-project update with explicit status boundaries.
+- [RMAL Research Orientation — TERMS FIRST](RMAL_RESEARCH_ORIENTATION_2026-09-25.md) — definitions before claims.
+- [Algorithmic Condensed Wisdom Analysis](ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md) — current synthesis; not retroactive naming.
+- [RMAL P vs NP — Live Design](RMAL_PNP_LIVE_DESIGN_2026-09-25.md) — current proof-program execution shape and exact remainder.
+- Current local reversible 3D roguelike artifact — hackable `let`/`iff` planning language, rollback/look-ahead, state-aware IntelliSense, searchable docs, Musilanguage timing/world carrier, local PIV_FONT use, and bounded Decision-Field/gammoid route mechanics. **Local artifact != repository source; repository/CI promotion remains open.**
+- PIV / Polymath Invariant Variable — current repaired local build remains bounded-verified; public summaries may describe it, but font bytes remain local unless separately promoted.
+
+```text
+RESULT != METHOD
+DESIGN != IMPLEMENTED
+IMPLEMENTED != VERIFIED
+LOCAL ARTIFACT != REPO SOURCE
+GAME MECHANIC != MATHEMATICAL EVIDENCE
+```
+
 This index exists to make years of work easier to **find, separate, combine, test, play with, leave alone, revisit, or discard**.
 
 It is deliberately *not* a master theory and not a command center.
