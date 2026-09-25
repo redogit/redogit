@@ -89,6 +89,12 @@ Knowledge-Decay protections, and Homeward witness reconstruction.
 
 If that signed-progress theorem is proved uniformly, the gap `U-L` can shrink at most `n` times, yielding a polynomial exact Independent-Set solver and therefore `P = NP`.
 
+
+
+Current refinement: relative to a present independent cohort `S`, the candidate-to-`S` support graph defines a **transversal matroid**: a candidate subset is matroid-independent exactly when it can be matched into `S`. A +1 augmentation exists exactly when this matroid has a circuit that is also independent in the candidate-candidate conflict graph. Every such circuit has support deficiency exactly one and replaces its supported members of `S` with one additional candidate. The uniform-transversal special case recovers ordinary size-`k` Stable Set, so this positive augmentation subproblem is itself a genuine hardness locus rather than a hidden matching shortcut.
+
+A 2026 external result also aligns two previously separate repair families: vertex-packing LP structure and critical-independent-set structure are equivalent views of the same independence machinery. Accordingly, LP persistency / crown / critical-set extraction are treated as one saturated degree family before moving to independent carriers such as odd-cycle frames, matching/min-cut structure, rank, and signed residual repairs.
+
 **Current mathematical status remains open.** Scoped carrier theorems, finite computations, codecs, semantic compression, and successful special cases are not promoted into a universal P=NP claim.
 
 
