@@ -101,6 +101,8 @@ A further support-side admission theorem removes another hidden representation c
 
 The next one-degree support move is now bounded by an explicit obstruction: a single K2,2 support cycle with two one-sided candidates realizes the nonbinary transversal matroid U(2,4), and deleting any cycle edge changes a previously valid matching. So cyclic support is not silently simplified to the forest carrier; U(2,4)/nonbinary structure is retained as a first-class residual for the next carrier.
 
+That obstruction is now locally closed without changing fields. The bipartite support presentation decomposes into connected components, and the corresponding transversal matroid is their direct sum; every augmentation circuit therefore lives entirely in one support component. Any support component of fixed rank d has circuits of size at most d+1, so exact circuit enumeration is polynomial for constant d. In particular, the U(2,4) rank-2 obstruction is solved by checking conflict-free circuits of size at most three. The live support-side remainder has moved to connected support components of unbounded rank that are outside the existing binary/cluster carriers.
+
 
 A 2026 external result also aligns two previously separate repair families: vertex-packing LP structure and critical-independent-set structure are equivalent views of the same independence machinery. Accordingly, LP persistency / crown / critical-set extraction are treated as one saturated degree family before moving to independent carriers such as odd-cycle frames, matching/min-cut structure, rank, and signed residual repairs.
 
