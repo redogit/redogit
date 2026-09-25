@@ -403,3 +403,76 @@ A cyclic support graph is now an explicit next-degree residual.
 The forest theorem does not justify deleting support edges from the original obligation. Any future repair must preserve all support edges semantically and move only the carrier representation.
 
 A promising bounded direction is to treat a small support-cycle defect as an explicit exception carrier, analogous to the log-cluster-defect treatment on the candidate-conflict side, but no universal theorem for that extension is claimed here.
+
+
+## 14. One-cycle support obstruction
+
+The first support-cycle degree is not harmless.
+
+Consider two current support vertices s0,s1 and four outside candidates:
+
+    x0 -> {s0,s1}
+    x1 -> {s0,s1}
+    p  -> {s0}
+    q  -> {s1}
+
+The support presentation contains exactly one K2,2 cycle on x0,x1,s0,s1, with p and q attached as one-sided candidates.
+
+### Exact support matroid
+
+Every pair of candidates is matchable into {s0,s1}:
+
+- x0,x1 use opposite supports;
+- xi,p assigns p->s0 and xi->s1;
+- xi,q assigns q->s1 and xi->s0;
+- p,q use s0,s1.
+
+No set of three candidates can be matched into two supports.
+
+Therefore the support transversal matroid is exactly
+
+    U_{2,4}.
+
+U_{2,4} is the canonical excluded minor for binary representability, so this one-cycle support presentation is genuinely nonbinary.
+
+### No lossless one-edge deletion
+
+Deleting any one of the four cycle edges changes the matchability relation.
+
+Example:
+
+    delete x0--s0.
+
+Then x0 and q are both restricted to s1 and the pair {x0,q}, previously matchable, is no longer matchable.
+
+The other cycle edges are symmetric.
+
+Hence:
+
+    forest -> one support cycle
+
+cannot be implemented as
+
+    delete one cycle edge -> reuse forest carrier.
+
+That would change the Dean obligation rather than merely change its carrier.
+
+### Bounded validation
+
+A separate exhaustive enumeration checked connected simple bipartite unicyclic presentations for side sizes up to 4 x 4 until the first counterexample was reached.
+
+    connected unicyclic presentations examined before witness: 729
+
+The witness above is the first retained obstruction from that enumeration under its generation order. The mathematical U_{2,4} argument, not enumeration order, is the evidence for the boundary.
+
+### Next degree
+
+The correct next support-side degree is therefore:
+
+    BINARY SUPPORT
+        ->
+    EXPLICIT NONBINARY OBSTRUCTION
+
+rather than destructive cycle removal.
+
+For transversal/gammoid matroids, published structure identifies U_{2,4} and M(K4) as excluded-minor obstructions to the binary-gammoid class. Future repair should preserve such an obstruction as a first-class residual and move to a carrier capable of representing it exactly.
