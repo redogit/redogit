@@ -1482,3 +1482,132 @@ Continue one degree at a time on the separated carriers:
 - signed interaction: only through explicitly costed joins that do not recreate the whole original graph without compression.
 
 The next valid move must reduce one of these separated carriers or provide an exact signed result; recombining them losslessly into G is a calibration identity, not a reduction.
+
+
+## 12. Support-transversal to binary-gammoid series-parallel recognition
+
+This section removes the earlier requirement that an exact GF(2) representation be supplied externally.
+
+Let B=(R,S,E_B) be the current candidate-to-cohort support bipartite graph. Its transversal matroid M_S has ground set R and rank function
+
+    r_M(X) = maximum matching size from X into S.
+
+Hence every rank query is polynomial-time computable by bipartite matching.
+
+Every transversal matroid is a gammoid. Classical work of Brylawski shows that binary gammoids are exactly the graphic matroids of series-parallel networks. Equivalently, for the support matroid:
+
+    M_S is binary
+    iff
+    M_S is a series-parallel / quasi-series-parallel graphic matroid
+    (componentwise, allowing loops/coloops/direct sums as appropriate).
+
+This gives a direct recognition route from the original Dean support relation.
+
+### Rank oracle for every residual minor
+
+Maintain contracted and deleted sets C,D.
+
+For any active subset X disjoint from C union D:
+
+    r_(M/C\D)(X)
+      = r_M(X union C) - r_M(C).
+
+So even though transversal matroids are not closed under contraction, every rank query in every residual minor is still answered using the original support matching oracle.
+
+### One-degree reductions
+
+On the current active ground set A, repeatedly apply exactly one certified reduction:
+
+#### Loop
+
+    r({e}) = 0
+
+Delete e.
+
+In the Dean interpretation this means the candidate has no support capacity in the current residual matching carrier.
+
+#### Coloop
+
+    r(A) - r(A\{e}) = 1
+
+Remove e as a direct rank-one bridge component and retain its reconstruction relation.
+
+#### Parallel pair
+
+For nonloops e,f:
+
+    r({e,f}) = 1.
+
+Delete one representative and record a parallel-extension edge.
+
+#### Series pair
+
+A pair e,f is a 2-element cocircuit exactly when
+
+    r(A\{e,f}) = r(A)-1
+    r(A\{e})   = r(A)
+    r(A\{f})   = r(A).
+
+Contract one representative and record a series-extension edge.
+
+Each test uses only polynomially many matching-rank queries.
+
+### Recognition theorem
+
+A quasi-series-parallel matroid reduces completely by repeated loop/coloop/series/parallel reductions.
+
+Conversely, reversing a successful reduction sequence constructs a series-parallel graphic realization:
+
+- parallel reduction reverses to adding a parallel edge;
+- series reduction reverses to subdividing an edge;
+- coloop reverses to a bridge component;
+- loop reverses to a graph loop;
+- direct components remain direct components.
+
+Therefore the above procedure is a polynomial exact recognizer for the support matroid's binary-gammoid island and simultaneously yields a constructive series-parallel graphic carrier.
+
+### Consequence for augmentation
+
+Inside this island:
+
+    support-matroid circuits
+    =
+    simple cycles of the reconstructed series-parallel graph.
+
+So the +1 Dean augmentation problem becomes:
+
+    find a simple support-cycle whose ground elements
+    are independent in the candidate-conflict graph.
+
+The previously proved binary-cluster and log-cluster-defect carriers apply directly to this graphic realization.
+
+### Exact residual when recognition fails
+
+Because M_S is already a gammoid, failure to lie in the binary-gammoid class means the support matroid is nonbinary. The minimal representability obstruction is therefore a U_{2,4} minor.
+
+Semantically, U_{2,4} is a rank-two four-candidate residual in which:
+
+    every pair is support-matchable,
+    every triple is support-dependent.
+
+This becomes the next independent one-degree repair target.
+
+The recognition failure is not promoted to a hardness claim and does not alter the original Dean graph. It creates one typed residual:
+
+    NONBINARY_SUPPORT_U24
+
+with the contraction/deletion provenance needed to reconstruct the four original candidate objects.
+
+## 13. Immediate next degree
+
+The smallest exact carrier change for U_{2,4} is field enlargement:
+
+    GF(2) -> GF(3)
+
+because U_{2,4} is not binary but is representable over GF(3), for example by the four projective columns
+
+    (1,0), (0,1), (1,1), (1,-1).
+
+This repairs the local representation obstruction only.
+
+It does not yet establish that the binary rainbow-circuit algorithm extends to ternary support. That extension is the next proof obligation and must be treated as a new degree rather than silently inheriting the GF(2) theorem.
