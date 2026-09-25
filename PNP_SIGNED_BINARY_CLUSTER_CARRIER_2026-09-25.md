@@ -341,3 +341,65 @@ The conflict-side residual is now narrower:
 - preservation/rotation between these carriers after repeated +1 augmentations.
 
 The next one-degree repair should target one of these residuals directly rather than modifying already-closed binary/cluster cases.
+
+
+## 12. Forest-support admission theorem
+
+The binary-support precondition has a direct Dean-level sufficient condition that avoids abstract binary-matroid recognition.
+
+Let B=(R,S;E_B) be the bipartite support graph between outside candidates R and the current cohort S.
+
+Assume B is a forest.
+
+Form the |S| x |R| zero-one adjacency matrix A over GF(2):
+
+    A[s,b] = 1 iff candidate b conflicts with current member s.
+
+### Theorem
+
+A candidate subset X subseteq R is matchable injectively into S if and only if the columns A[X] are linearly independent over GF(2).
+
+Therefore A is an exact binary representation of the support transversal matroid.
+
+### Proof
+
+If X is matchable, choose |X| support vertices used by a matching covering X and inspect the corresponding |X| x |X| square submatrix.
+
+A bipartite forest cannot contain two distinct perfect matchings on the same square subgraph: the symmetric difference of two distinct perfect matchings would contain an alternating cycle.
+
+Hence the determinant expansion contains exactly one nonzero matching permutation. Its determinant is 1 over GF(2), so A[X] has full column rank.
+
+Conversely, if A[X] has full column rank, some |X| x |X| minor has nonzero determinant. The determinant expansion therefore contains at least one nonzero permutation, which is a matching covering X.
+
+Thus matchability and GF(2) column independence coincide.
+
+### Consequence
+
+When:
+
+1. the support graph B is a forest;
+2. the candidate-conflict graph is a cluster graph;
+3. the cluster/color count satisfies the binary-cluster carrier's rank guard;
+
+the signed binary-cluster theorem can run directly on the original Dean relations using A as its exact binary matrix.
+
+No separate matroid-representation discovery step is required.
+
+### Bounded implementation validation
+
+A separate checker generated random bipartite forests with up to seven vertices on each side and compared matching feasibility against GF(2) column rank on random candidate subsets.
+
+Results:
+
+    subset comparisons: 25,000
+    mismatches: 0
+
+This is bounded implementation evidence; the determinant/matching argument above is the theorem.
+
+## 13. Support-side remainder
+
+A cyclic support graph is now an explicit next-degree residual.
+
+The forest theorem does not justify deleting support edges from the original obligation. Any future repair must preserve all support edges semantically and move only the carrier representation.
+
+A promising bounded direction is to treat a small support-cycle defect as an explicit exception carrier, analogous to the log-cluster-defect treatment on the candidate-conflict side, but no universal theorem for that extension is claimed here.
