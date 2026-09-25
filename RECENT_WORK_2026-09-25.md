@@ -202,11 +202,32 @@ HUMAN DISTINGUISHABILITY BENCHMARK = NOT YET RUN
 UNIVERSAL UNICODE COVERAGE = NOT CLAIMED
 ```
 
-## 6. Musilanguage -> world / timing carrier
+## 6. Musilanguage — public Studio + game/world adapter
 
-**Status:** `EXISTING LINEAGE + CURRENT_LOCAL_ADAPTER`
+**Status:** `REPO_SOURCE + CURATED GH-PAGES PROJECTION + CURRENT_LOCAL_GAME_ADAPTER`
 
-Musilanguage is now connected to the roguelike as an actual serialized world/timing carrier.
+**Public Studio:** https://redogit.github.io/conscience64/play/musilanguage/
+
+The Conscience64 Pages projection now explicitly admits one Musilanguage application route. The public Studio combines the earlier Carry the Fire, Musilanguage Radio, and Word Forge/MUSIC64 lineage into one current application with:
+
+- 64 arrangement profiles across eight broad families;
+- six procedural instrument buses: guitar, bass, keys/harp, strings, lead, drums;
+- tempo, meter, mode, tonic, motif transform, and intensity controls;
+- listener-controlled instrument mix presets and per-bus levels;
+- reversible local note/rhythm variation;
+- MIDI, WAV, and replayable session export;
+- in-app history pointing back to predecessor commits.
+
+The predecessor `single.html`, `radio.html`, and `word-forge.html` files remain source/history but are intentionally absent as separate current Pages routes.
+
+```text
+ONE PUBLIC APP != DELETION OF HISTORY
+MUSILANGUAGE PUBLIC != WHOLE PLAY PUBLIC
+INSTRUMENT MIX != SOURCE MUTATION
+LANGUAGE-TO-MUSIC != SEMANTIC TRUTH
+```
+
+Musilanguage is also connected to the current local roguelike as an actual serialized world/timing carrier.
 
 The local adapter preserves fields such as:
 
