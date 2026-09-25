@@ -711,3 +711,96 @@ For arbitrary transversal support plus cluster conflicts, the unresolved instanc
 - and no applicability of the binary / bounded-rank / log-cluster-defect carriers.
 
 This is a narrower representation-selection obstruction than the original raw candidate search.
+
+
+## 19. Minimal support-signature antichain repair
+
+The support-signature entropy carrier admits an exact one-degree reduction before any Cartesian enumeration.
+
+Fix one candidate-conflict clique / color C_i.
+
+For candidates a,b in C_i, write
+
+    a <=_S b
+
+when
+
+    N_S(a) subseteq N_S(b).
+
+If the inclusion is strict, b is support-dominated by a for the purpose of finding a +1 augmentation.
+
+### Dominance theorem
+
+Suppose a full rainbow selection X contains b and is support-dependent.
+
+Replace b by a, where a and b are in the same conflict clique and
+
+    N_S(a) subseteq N_S(b).
+
+Call the new full rainbow selection X'.
+
+Any matching covering X' would also cover X after replacing the edge incident with a by the same support assignment for b only if that assignment lies in N_S(b); more directly, shrinking one left vertex's allowed support neighborhood cannot increase maximum matching size.
+
+Therefore
+
+    rank_support(X') <= rank_support(X) < |X| = |X'|,
+
+so X' remains dependent.
+
+Consequently every dependent raw rainbow transversal can be transformed, color by color, into a dependent transversal using only inclusion-minimal support neighborhoods in each color.
+
+### Exact carrier
+
+Within each color:
+
+1. quotient identical support neighborhoods as in Section 17;
+2. remove every quotient signature that strictly contains another signature of the same color;
+3. retain the removed occurrences and dominance edge for Homeward/provenance;
+4. enumerate only the remaining inclusion-minimal signatures.
+
+Let
+
+    a_i = number of inclusion-minimal distinct support signatures in color C_i.
+
+The exact enumeration count becomes
+
+    product_i a_i
+
+rather than
+
+    product_i t_i.
+
+Define minimal-antichain entropy
+
+    H_min = sum_i log2(a_i).
+
+If
+
+    H_min = O(log n)
+
+under a fixed admitted bound, exact augmentation-or-certify remains polynomial for arbitrary transversal support.
+
+### Anti-decay boundary
+
+A dominated candidate is not declared semantically equal to its dominator.
+
+Only its role in the current support-deficiency search is dominated.
+
+The authoritative occurrence, original student ID, full conflict relations, and historical support neighborhood remain preserved. If S changes, the order is recomputed.
+
+### Bounded differential validation
+
+A separate random checker compared raw full-rainbow dependence against enumeration restricted to inclusion-minimal same-color support signatures.
+
+Results:
+
+    generated instances: 10,000
+    mismatches: 0
+
+The proof above is the theorem; this panel is bounded implementation evidence.
+
+## 20. Updated entropy remainder
+
+Any cluster-conflict residual outside the current exact carrier must now have a superpolynomial product of inclusion-minimal support-neighborhood antichains, not merely many raw candidates or duplicate support signatures.
+
+That is the next exact representation-selection obstruction on the cluster side.
