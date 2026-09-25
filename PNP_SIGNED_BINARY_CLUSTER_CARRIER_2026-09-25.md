@@ -3220,3 +3220,138 @@ For every active variable x, the two cofactors are therefore not yet lawfully me
     non-increasing explicit projection.
 
 The next degree must either discover a stronger exact relation between those cofactors, compress their shared consequences without reintroducing a selector, or provide a negative signed certificate that changes the original obligation.
+
+
+## 34. Blocked-clause one-degree closure
+
+Before introducing another search degree, exhaust polynomial SAT-preserving clause redundancy.
+
+Let C be a clause of F and l a literal in C.
+
+The literal l blocks C when, for every clause D containing the complementary literal not-l, the resolvent of C and D on l is a tautology.
+
+Then C is a blocked clause.
+
+Classical blocked-clause elimination gives:
+
+    SAT(F)
+    iff
+    SAT(F \ {C}).
+
+### 34.1 One-degree semantics
+
+Remove exactly one blocked clause:
+
+    clause_count -> clause_count - 1.
+
+No variable decision is introduced.
+
+The blocking literal, the removed clause, and the clauses checked against its opposite polarity are stored as the reconstruction receipt.
+
+Blocked-clause recognition is polynomial by scanning the opposite-polarity clauses and checking each resolvent for tautology.
+
+Repeated BCE is confluent and reaches a unique fixpoint.
+
+Therefore exhaustive BCE is a polynomial exact normalization step.
+
+### 34.2 Homeward reconstruction
+
+Given a satisfying assignment of the BCE-fixed residual, restore blocked clauses in reverse deletion order.
+
+If a restored clause C is already satisfied, keep the assignment.
+
+Otherwise set its stored blocking literal l to true.
+
+The blocking condition guarantees that this repair cannot destroy satisfaction of a surviving clause containing not-l; otherwise a non-tautological resolvent would have existed.
+
+Thus witness reconstruction is polynomial and exact.
+
+### 34.3 Admission
+
+Add BCE to the normalization loop:
+
+    linear autarky
+    -> signed cofactor dominance
+    -> blocked clause elimination
+    -> non-increasing DP merge
+    -> repeat.
+
+BCE_SAT_PRESERVATION != LOGICAL_EQUIVALENCE
+
+The authoritative source and Homeward receipt are retained because blocked-clause removal may enlarge the model set of the residual.
+
+## 35. Certified functional-variable / gate elimination
+
+A different one-degree repair is available when one active Boolean variable is not actually independent.
+
+Suppose an exact certificate establishes
+
+    F |= (x <-> g(Y))
+
+where x is not in Y and g is a Boolean function over already-existing variables.
+
+Then every model of F has x uniquely determined by Y.
+
+If replacing x by g(Y) can be performed inside a declared polynomial representation envelope, x may be removed as an independent degree.
+
+### 35.1 Exact substitution theorem
+
+Let F' be obtained from F by replacing every occurrence of x by g(Y) and every occurrence of not-x by not-g(Y), followed by exact simplification.
+
+Then:
+
+    SAT(F) iff SAT(F').
+
+Moreover every model of F' reconstructs a model of F uniquely by
+
+    x := g(Y).
+
+So this is stronger than ordinary existential forgetting: no binary choice is lost or hidden, because x was already functionally determined.
+
+### 35.2 Discovery is evidence-gated
+
+Do not assume arbitrary semantic functional-dependency discovery is polynomial.
+
+Admit a gate only through a polynomial recognizer/certificate, for example:
+
+- an explicit Tseitin-style AND/OR/XOR/equivalence definition;
+- a retained circuit/gate source relation;
+- a tractable implication carrier proving both directions;
+- a polynomially verifiable interpolation/proof receipt already produced by another admitted process.
+
+Semantic gate-extraction literature can detect definitions beyond syntax, but its discovery cost is not silently treated as free.
+
+### 35.3 Representation-growth guard
+
+Even a valid functional definition can expand badly when naively substituted.
+
+Therefore admit the degree removal only when one of these is true:
+
+1. direct substitution is non-increasing under the declared size measure;
+2. g belongs to an exact carrier closed under the substitution with polynomial size;
+3. an already-existing shared representation of g is reused without introducing a fresh independent selector.
+
+Introducing a new variable z with
+
+    z <-> g(Y)
+
+and replacing x by z does not remove a degree if z merely takes x's place.
+
+COMPUTED_FUNCTION_REUSE = ALLOWED
+
+FRESH_SELECTOR_RENAMING = NOT DEGREE REDUCTION
+
+### 35.4 Updated normalization core
+
+An unresolved formula after the present polynomial suite can now be required to be:
+
+    LINEARLY_LEAN
+    MATCHING_LEAN
+    BCE_IRREDUCIBLE
+    NO_CERTIFIED_COFACTOR_DOMINANCE
+    NO_ADMISSIBLE_FUNCTIONAL_VARIABLE
+    DP_NONINCREASING_IRREDUCIBLE
+    HIGH_DEFICIENCY
+    POSITIVE_BALANCE_CERTIFIED.
+
+This is a substantially smaller proof surface than arbitrary CNF SAT.
