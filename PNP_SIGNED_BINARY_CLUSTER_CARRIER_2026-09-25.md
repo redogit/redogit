@@ -476,3 +476,113 @@ The correct next support-side degree is therefore:
 rather than destructive cycle removal.
 
 For transversal/gammoid matroids, published structure identifies U_{2,4} and M(K4) as excluded-minor obstructions to the binary-gammoid class. Future repair should preserve such an obstruction as a first-class residual and move to a carrier capable of representing it exactly.
+
+
+## 15. Support-component direct-sum and bounded-rank closure
+
+The U(2,4) obstruction does not require an immediate global field change.
+
+Let B=(R,S;E_B) be the candidate-to-current-cohort support presentation. Decompose B into connected bipartite components
+
+    B_1, ..., B_t.
+
+Let R_i be the candidate side and S_i the current-cohort side of component B_i.
+
+### Direct-sum theorem
+
+The support transversal matroid decomposes as
+
+    M_S = M_1 direct-sum ... direct-sum M_t,
+
+where M_i is the transversal matroid presented by B_i.
+
+Reason: every support matching is the disjoint union of its component matchings, and no candidate in R_i can use a support vertex outside S_i.
+
+Therefore every matroid circuit is contained entirely in one R_i.
+
+This has an important Dean consequence:
+
+    +1 augmentation exists globally
+    iff
+    some support component contains a candidate-conflict-free circuit.
+
+Candidate-conflict edges joining different support components do not affect this existential circuit test because a circuit never uses candidates from two distinct direct-sum components.
+
+### Bounded-rank circuit closure
+
+Let a support component M_i have rank at most d.
+
+Every circuit C of M_i satisfies
+
+    |C| = rank(C) + 1 <= d + 1.
+
+Therefore, for fixed constant d, enumerate all candidate subsets
+
+    C subseteq R_i
+    with
+    1 <= |C| <= d+1.
+
+For each C:
+
+1. verify candidate-conflict independence in the original Dean graph;
+2. verify C is dependent in the support transversal matroid by maximum matching;
+3. verify every proper one-element deletion C-{x} is support-matchable.
+
+If all three hold, C is a stable support-matroid circuit and yields an exact +1 Dean augmentation.
+
+If no component contains such a circuit, and every support component has rank at most d, then no +1 augmentation exists and the current cohort S is maximum.
+
+### Complexity
+
+For fixed d, circuit enumeration costs at most
+
+    sum_i O(|R_i|^(d+1) * poly(n))
+
+and matching/candidate-conflict verification is polynomial.
+
+Hence:
+
+    fixed maximum support-component rank
+    -> exact polynomial augmentation-or-certify.
+
+### U(2,4) closure
+
+The first one-cycle obstruction retained in Section 14 has rank 2.
+
+All circuits of U(2,4) are 3-element subsets.
+
+Thus the obstruction is completely handled by the d=2 bounded-rank carrier:
+
+    stable 3-circuit exists
+        -> exact +1 augmentation
+
+    no stable 3-circuit
+        -> no augmentation through that support component.
+
+No GF(3) representation is required for this local closure.
+
+### Bounded differential validation
+
+A separate random checker compared:
+
+- brute-force search for any candidate-conflict-free support circuit; and
+- componentwise enumeration of all circuits of size at most 3
+
+on random support/conflict instances for which every support component had rank at most 2.
+
+Results:
+
+    generated cases: 10,000
+    eligible cases: 7,978
+    mismatches: 0
+
+This finite panel is implementation evidence only. The direct-sum and circuit-size arguments above are the scoped theorem.
+
+## 16. New support-side remainder
+
+The support-side obstruction has moved from “first nonbinary cycle” to:
+
+    support components of unbounded rank
+    that are not already covered by the binary/cluster carriers.
+
+The next one-degree support question is therefore not whether U(2,4) is representable over a larger field, but whether one can expose a polynomially bounded separator / decomposition / rank defect inside an unbounded-rank connected support component while preserving the exact matching semantics.
