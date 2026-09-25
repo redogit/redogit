@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RMAL P vs NP — Live Design</title>
+<style>
+:root{color-scheme:dark;--b:#0b0d10;--p:#12161b;--t:#e9eef3;--m:#9cabb8;--l:#27313b;--a:#d8ff70;--c:#8ed8ff}
+*{box-sizing:border-box}body{margin:0;background:var(--b);color:var(--t);font:16px/1.58 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+main{max-width:980px;margin:auto;padding:48px 22px 96px}h1{font-size:clamp(2rem,5vw,4rem);line-height:1;margin:.2em 0}.tag{color:var(--m)}
+h2{color:var(--a);margin-top:2.3em}h3{color:var(--c)}pre{white-space:pre-wrap;background:#090b0e;border:1px solid var(--l);padding:16px;border-radius:6px}
+.call{background:var(--p);border-left:4px solid var(--a);padding:16px 18px;margin:22px 0}a{color:var(--c)}nav{display:flex;gap:16px;flex-wrap:wrap;margin:20px 0 34px}
+</style></head><body><main>
+<div class="tag">REDOGIT / RMAL / 2026-09-25</div>
+<h1>LIVE DESIGN.</h1>
+<p>This is the current execution/proof shape. <strong>Definitions come first on the orientation page.</strong></p>
+<nav><a href="./">Terms / orientation</a><a href="https://github.com/redogit/redogit/blob/main/RMAL_PNP_LIVE_DESIGN_2026-09-25.md">Markdown source</a><a href="https://github.com/redogit/redogit/blob/main/PNP_SIGNED_BINARY_CLUSTER_CARRIER_2026-09-25.md">Proof notebook</a></nav>
+
+<h2>The thing I am trying to prove</h2>
+<p>Not that one SAT solver is fast on a pile of cases. I need an exact uniform process where every unresolved state closes positive, closes negative, or moves to a strictly smaller/cheaper exact remainder, with the complete lifecycle cost charged.</p>
+<pre>RECOGNIZE
+-> SELECT
+-> TRANSFORM
+-> VERIFY
+-> STORE
+-> RECONSTRUCT</pre>
+
+<h2>The doughnut split</h2>
+<pre>MAKING THE DOUGHNUTS
+!=
+KNOWING HOW TO MAKE THE DOUGHNUTS</pre>
+<p>The normalization theorem is the “knowing how it was made” layer: reproducible rule selection, proof receipts, bounded cost, and a way Homeward.</p>
+
+<h2>Current execution shape</h2>
+<pre>ORIGINAL OBLIGATION
+-> FOUR-ID SEMANTIC BINDING
+-> EXACT NORMALIZATION
+-> CERTIFIED TRACTABLE TERMINAL, if one applies
+-> OTHERWISE: EXPLICIT RESIDUAL
+-> ONE NEW CONSEQUENTIAL DEGREE
+-> VERIFY
+-> HOMEWARD
+-> CONTINUE</pre>
+
+<h2>Exact normalization</h2>
+<pre>R0  exact cleanup / unit consequences
+R1  maximal linear-autarky reduction
+R2  signed cofactor dominance
+R3  blocked-clause elimination
+R4  certified functional-variable / gate elimination
+R5  non-increasing Davis-Putnam merge</pre>
+
+<div class="call"><strong>Closure theorem.</strong> With μ(F)=variables+clauses, every successful admitted normalization step strictly lowers μ. Discovery and verification are polynomial under the declared guards; representation and trace stay polynomial. Therefore the complete normalization lifecycle is polynomial and Homeward-reconstructible.</div>
+
+<pre>P5/P6 LOCAL NORMALIZATION LIFECYCLE: CLOSED FOR DECLARED RULES.
+
+NORMALIZATION != SOLVER
+P5/P6 != P7</pre>
+
+<h2>Current residual</h2>
+<pre>NO LINEAR AUTARKY
+NO CERTIFIED COFACTOR DOMINANCE
+NO BLOCKED CLAUSE
+NO ADMISSIBLE FUNCTIONAL VARIABLE
+NO NON-INCREASING DP VARIABLE
+NO ALREADY-CERTIFIED TRACTABLE TERMINAL</pre>
+<p>In the linearly-lean matrix carrier the residual also has full column rank and a strictly positive clause-balance vector y with Mᵀy=0. Deficiency equals the left-nullspace dimension. Logarithmic deficiency is already an exact polynomial terminal.</p>
+
+<h2>Condensed wisdom</h2>
+<pre>DON'T BRANCH ON A DEGREE
+UNTIL I HAVE FAILED TO PROVE THAT THE DEGREE IS:
+
+    REDUNDANT,
+    DOMINATED,
+    FUNCTIONALLY DETERMINED,
+    LOCALLY SATISFIED,
+    OR CHEAPLY PROJECTABLE.</pre>
+<p>The short rule does not outrank the exact mechanisms that earned it.</p>
+
+<h2>Next degree</h2>
+<p>The next live object is the high-deficiency, linearly-lean, projection-growth-positive fixed point. The positive balance space is structural evidence, not a truth certificate.</p>
+<pre>POSITIVE BALANCE != UNSAT
+HIGH DEFICIENCY != HARDNESS CERTIFICATE</pre>
+<p>The next useful theorem must turn that structure into an exact polynomial reduction, decomposition, dominance relation, reusable projected consequence, or negative certificate without recreating the removed Boolean choice under a new name.</p>
+
+<h2>Claim ceiling</h2>
+<pre>ACTIVE PROOF PROGRAM
+SCOPED EXACT THEOREMS: YES
+POLYNOMIAL NORMALIZATION LIFECYCLE: YES
+UNIVERSAL P=NP PROOF: NOT ESTABLISHED</pre>
+</main></body></html>
