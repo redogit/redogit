@@ -3355,3 +3355,208 @@ An unresolved formula after the present polynomial suite can now be required to 
     POSITIVE_BALANCE_CERTIFIED.
 
 This is a substantially smaller proof surface than arbitrary CNF SAT.
+
+
+## 36. Qualitative-centrality equivalence
+
+The positive clause-balance certificate from linear-autarky saturation is centrality of one concrete signed-incidence matrix.
+
+The full SAT/UNSAT distinction is stronger: robustness of that centrality over every magnitude assignment with the same sign pattern.
+
+Let
+
+    M = M(F) in {-1,0,+1}^{m x n}
+
+be the signed clause-variable matrix and set
+
+    A = M^T in {-1,0,+1}^{n x m}.
+
+Let Q(A) be the qualitative class of all real matrices B with exactly the same zero/positive/negative entry pattern as A.
+
+Call B central when there exists
+
+    lambda >= 0,
+    lambda != 0,
+    B lambda = 0.
+
+Call the sign pattern A sign-central when every
+
+    B in Q(A)
+
+is central.
+
+Qualitative-matrix SAT theory identifies unsatisfiable clause-sets with sign-central signed clause-variable patterns. The equivalence also has the following direct constructive proof.
+
+### 36.1 SAT -> a noncentral same-sign reweighting
+
+Assume F has satisfying assignment tau.
+
+Define a row-sign vector s in {+1,-1}^n by
+
+    s_j = +1  if x_j is TRUE,
+    s_j = -1  if x_j is FALSE.
+
+For each clause C_i choose one literal made true by tau.
+
+Construct column i of B as follows:
+
+- preserve every sign from A;
+- give the chosen satisfied literal magnitude |C_i|;
+- give every other present literal magnitude 1.
+
+Then B belongs to Q(A).
+
+For every clause column b_i:
+
+- the chosen satisfied term contributes +|C_i| to s^T b_i;
+- every other term contributes at least -1.
+
+Therefore
+
+    s^T b_i >= |C_i|-(|C_i|-1) = 1.
+
+Hence
+
+    s^T B > 0
+
+componentwise.
+
+If B were central, some nonzero lambda>=0 would satisfy B lambda=0. Multiplying by s^T would give
+
+    0
+    = s^T B lambda
+    > 0,
+
+a contradiction.
+
+So B is noncentral.
+
+Moreover this SAT-side witness uses only integer magnitudes between 1 and the clause length, hence polynomial bit size.
+
+### 36.2 Noncentral same-sign reweighting -> SAT
+
+Assume there exists B in Q(A) that is noncentral.
+
+By the Gordan-Stiemke theorem of alternatives, failure of
+
+    exists nonzero lambda>=0 : B lambda=0
+
+implies the existence of a separator
+
+    s in R^n
+
+with
+
+    s^T B > 0
+
+componentwise.
+
+Assign:
+
+    x_j = TRUE   if s_j>0,
+    x_j = FALSE  if s_j<0,
+
+and assign variables with s_j=0 arbitrarily.
+
+For every clause column b_i, the strict inequality
+
+    s^T b_i > 0
+
+implies that at least one nonzero term s_j b_(j,i) is positive.
+
+Because B has exactly the literal sign pattern of A:
+
+- s_j>0 and b_(j,i)>0 means positive literal x_j is satisfied;
+- s_j<0 and b_(j,i)<0 means negative literal not-x_j is satisfied.
+
+Thus every clause has a satisfied literal.
+
+So F is satisfiable.
+
+### 36.3 Exact qualitative theorem
+
+Therefore:
+
+    F is SAT
+    iff
+    exists B in Q(M(F)^T) that is noncentral.
+
+Equivalently:
+
+    F is UNSAT
+    iff
+    M(F)^T is sign-central.
+
+This is an exact carrier equivalence, not a complexity reduction to an easier known problem.
+
+Sign-central recognition for this family carries the same universal SAT/UNSAT difficulty.
+
+### 36.4 Relation to the current linear-autarky normal form
+
+For a linearly-lean residual the Section 31 negative-balance certificate gives
+
+    y>0,
+    M^T y=0.
+
+Therefore the concrete unit-magnitude matrix
+
+    A=M^T
+
+is not merely central but strict-central.
+
+So the normalized residual has become:
+
+    A is known central at the current carrier weights;
+
+    unknown:
+        is A central for every B in Q(A)?
+
+The distinction is:
+
+    CONCRETE CENTRALITY
+    !=
+    QUALITATIVE / SIGN CENTRALITY.
+
+A satisfiable linearly-lean formula is exactly a case where the unit carrier is central but some lawful same-sign magnitude reweighting destroys centrality.
+
+### 36.5 One-degree reweighting path
+
+The SAT construction above gives a bounded target reweighting B with integer magnitudes at most the clause length.
+
+Starting from A, B can be reached by changing the magnitude of one nonzero literal-incidence entry at a time.
+
+The number of incidence coordinates is exactly the literal-occurrence count L(F), so a SAT instance has a certificate path of at most L(F) one-coordinate carrier changes leading to a noncentral matrix.
+
+Centrality of any fixed intermediate numeric matrix is polynomially testable by linear programming.
+
+This establishes:
+
+    POLYNOMIAL CERTIFICATE PATH SPAN.
+
+It does not establish:
+
+    POLYNOMIAL DISCOVERY WORK.
+
+Choosing the productive coordinate/value sequence without already knowing the satisfying orthant remains the missing theorem.
+
+This explicitly preserves the existing distinction:
+
+    SPAN != WORK.
+
+### 36.6 New universal target in the balance carrier
+
+For a normalized strict-central A=M(F)^T, construct in polynomial total work either:
+
+POSITIVE:
+    a same-sign polynomial-bit reweighting B plus separator s
+    with s^T B>0,
+    which reconstructs a satisfying assignment;
+
+NEGATIVE:
+    a polynomially verifiable certificate that every B in Q(A)
+    remains central,
+    which proves UNSAT.
+
+A polynomial signed one-degree navigation theorem through the qualitative cell would therefore decide SAT.
+
+No such universal navigation theorem is claimed here.
