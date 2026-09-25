@@ -1,6 +1,7 @@
 # redogit
 
 > **Start here — terms before claims:** [RMAL Research Orientation — TERMS FIRST](RMAL_RESEARCH_ORIENTATION_2026-09-25.md) · public site target: https://redogit.github.io/redogit/
+> **Current live design:** [RMAL P vs NP — Live Design](RMAL_PNP_LIVE_DESIGN_2026-09-25.md) · Pages target: https://redogit.github.io/redogit/live-design.html
 
 > **Public projection status — 2026-09-18:** Conscience64 GitHub Pages is intentionally held at a minimal privacy surface pending explicit owner approval of an exact reviewed revision. Project/research state is independent of public availability. Public URLs are projections, not canonical authority.
 
