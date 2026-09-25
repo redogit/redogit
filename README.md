@@ -1,5 +1,6 @@
 # redogit
 
+> **Newest integrated work:** [PUBLIC RECENT WORK](https://redogit.github.io/redogit/recent-work.html) · [source](RECENT_WORK_2026-09-25.md)
 > **Start here — terms before claims:** [PUBLIC RMAL ORIENTATION](https://redogit.github.io/redogit/) · [source](RMAL_RESEARCH_ORIENTATION_2026-09-25.md)
 > **Algorithmic method / learned rules:** [PUBLIC ALGORITHMIC CONDENSED WISDOM](https://redogit.github.io/redogit/condensed-wisdom.html) · [source](ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md)
 > **Current live design:** [PUBLIC RMAL P vs NP — LIVE DESIGN](https://redogit.github.io/redogit/live-design.html) · [source](RMAL_PNP_LIVE_DESIGN_2026-09-25.md)
