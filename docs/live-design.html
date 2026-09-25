@@ -13,6 +13,19 @@ h2{color:var(--a);margin-top:2.3em}h3{color:var(--c)}pre{white-space:pre-wrap;ba
 <p>This is the current execution/proof shape. <strong>Definitions come first on the orientation page.</strong></p>
 <nav><a href="./">Terms / orientation</a><a href="https://github.com/redogit/redogit/blob/main/RMAL_PNP_LIVE_DESIGN_2026-09-25.md">Markdown source</a><a href="https://github.com/redogit/redogit/blob/main/PNP_SIGNED_BINARY_CLUSTER_CARRIER_2026-09-25.md">Proof notebook</a></nav>
 
+<h2>Terms I am using here</h2>
+<p>This page does not get to redefine the words just because the proof machinery got deeper. The full dictionary is the <a href="./">TERMS FIRST orientation</a>; these are the minimum bindings I need before reading the design.</p>
+<pre>OBJECT        := the thing I am preserving / reasoning about
+OBLIGATION    := what the result actually has to satisfy
+RESULT        := what came out
+METHOD        := repeatable lawful path + checks + cost
+CARRIER       := what currently holds / moves what matters
+TRACE         := ordered record of what changed and what was checked
+REMAINDER     := exact unresolved part after admitted work
+HOMEWARD      := way back to original obligation / witness / source
+CLAIM CEILING := strongest claim current evidence supports</pre>
+<div class="call"><strong>Orientation invariant.</strong> RESULT != METHOD != PROOF != EXPLANATION. MAKING THE DOUGHNUTS != KNOWING HOW TO MAKE THE DOUGHNUTS. The design below is mainly the second Object: preserving enough method, receipts, cost, and reconstruction that the result can be earned again.</div>
+
 <h2>The thing I am trying to prove</h2>
 <p>Not that one SAT solver is fast on a pile of cases. I need an exact uniform process where every unresolved state closes positive, closes negative, or moves to a strictly smaller/cheaper exact remainder, with the complete lifecycle cost charged.</p>
 <pre>RECOGNIZE
