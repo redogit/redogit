@@ -2987,3 +2987,236 @@ POSITIVE_BALANCE != UNSAT
 LINEARLY_LEAN != LEAN
 
 LINEAR_AUTARKY_COMPLETE != GENERAL_AUTARKY_COMPLETE
+
+
+## 32. Signed cofactor-dominance carrier
+
+Non-increasing Davis-Putnam elimination merges the two signs of a variable when explicit CNF projection is cheap.
+
+There is a second exact one-degree route that avoids both branching and projection: if one Boolean cofactor semantically contains the other, keep only the dominating sign.
+
+Let x be an active variable of CNF F and define the two simplified cofactors
+
+    F_0 = F[x := 0]
+    F_1 = F[x := 1].
+
+Then
+
+    SAT(F)
+    iff
+    SAT(F_0) OR SAT(F_1).
+
+### 32.1 Positive semantic unateness
+
+If
+
+    F_0 => F_1,
+
+then every model of the x=0 branch is also a model of the x=1 branch on the remaining variables.
+
+Therefore
+
+    SAT(F)
+    iff
+    SAT(F_1).
+
+So x may be fixed to 1 with no branching.
+
+### 32.2 Negative semantic unateness
+
+If
+
+    F_1 => F_0,
+
+then
+
+    SAT(F)
+    iff
+    SAT(F_0),
+
+and x may be fixed to 0 with no branching.
+
+Thus semantic unateness in one variable is an exact signed degree-removal rule:
+
+    F_0 => F_1  -> choose +x
+    F_1 => F_0  -> choose -x.
+
+The variable itself disappears after restriction.
+
+This is stronger than the syntactic pure-literal rule: x may occur in both polarities and still be semantically unate.
+
+### 32.3 Equivalent local-clause form
+
+Write F as
+
+    A
+    AND
+    AND_i (x OR P_i)
+    AND
+    AND_j (not-x OR N_j),
+
+where A contains no x and every P_i,N_j is a clause over the remaining variables.
+
+Then
+
+    F_0 = A AND P
+    F_1 = A AND N
+
+with
+
+    P = AND_i P_i
+    N = AND_j N_j.
+
+The positive signed move is valid exactly when
+
+    A AND P => N.
+
+The negative signed move is valid exactly when
+
+    A AND N => P.
+
+Equivalently:
+
+    exists x . F
+    =
+    A AND (P OR N).
+
+If A AND P => N, this reduces to A AND N.
+If A AND N => P, it reduces to A AND P.
+
+So the signed choice is not heuristic branch selection. It is exact Boolean absorption.
+
+### 32.4 Polynomially admissible implication certificates
+
+Arbitrary propositional implication is coNP-complete, so the proof algorithm may not call a generic implication oracle.
+
+Admit a dominance move only when the implication comes with a polynomially checkable/discoverable certificate from an already-certified carrier.
+
+#### A. Clause subsumption certificate
+
+To certify
+
+    F_0 => F_1,
+
+it is sufficient that for every clause D in F_1 there exists a clause C in F_0 with
+
+    C subseteq D.
+
+Then F_0 entails every D directly.
+
+The reverse direction is symmetric.
+
+#### B. Unit-resolution / failed-clause certificate
+
+For each clause D in F_1, temporarily falsify every literal of D in F_0.
+
+If unit propagation derives contradiction, unit resolution proves
+
+    F_0 => D.
+
+If this succeeds for every D, the collection of unit-resolution receipts certifies
+
+    F_0 => F_1.
+
+This remains polynomial and independently verifiable.
+
+#### C. Exact implication inside a tractable carrier
+
+If F_0 lies in a class with polynomial SAT decision closed under literal assignments, test every clause D of F_1 by deciding
+
+    F_0 AND not(D).
+
+Examples already present in the portfolio include:
+
+    2-CNF,
+    Horn,
+    dual-Horn,
+    recognized affine/GF(2) carriers,
+    other explicitly certified tractable terminals.
+
+UNSAT for every such test proves the implication.
+
+#### D. Existing proof receipt
+
+Any retained polynomial-size resolution or other admitted proof that establishes the cofactor implication may be reused.
+
+Receipt verification is charged separately from discovery.
+
+### 32.5 Claim boundary
+
+Failure of one incomplete implication recognizer does not prove that the variable is not semantically unate.
+
+Return
+
+    UNKNOWN_DOMINANCE
+
+unless an exact checker also produces a countermodel to the implication.
+
+General cofactor-implication discovery is not assumed polynomial.
+
+### 32.6 Interaction with projection growth
+
+For a DP-growth-positive variable x:
+
+    g_F(x) > 0
+
+means explicit CNF projection grows the formula.
+
+Cofactor dominance can still remove x at zero projection cost:
+
+    F_0 => F_1
+    or
+    F_1 => F_0.
+
+Therefore the normalized loop becomes:
+
+    linear-autarky reduction
+    -> signed cofactor dominance
+    -> non-increasing DP merge
+    -> repeat.
+
+Only when all three saturate do we retain the variable as a genuine unresolved degree.
+
+### 32.7 Homeward
+
+If F_0=>F_1 and the positive branch x=1 is retained, every satisfying assignment of F_1 extends immediately to a satisfying assignment of F by x=1.
+
+The eliminated sign and implication receipt are retained in the trace.
+
+The negative direction is symmetric.
+
+No witness search is needed during reconstruction.
+
+### 32.8 Bounded validation
+
+A separate random exhaustive checker sampled 20,000 small CNFs.
+
+In 14,635 tested variable states where exact truth-table checking established
+
+    F_0 => F_1,
+
+the original CNF and the retained x=1 cofactor agreed on satisfiability in every case.
+
+    mismatches: 0.
+
+This finite validation is not the theorem. The theorem follows directly from cofactor implication and Boolean disjunction.
+
+## 33. Updated irreducible residual
+
+After the current polynomial normalization suite, an unresolved formula may be assumed to satisfy all of:
+
+    LINEARLY_LEAN
+    MATCHING_LEAN
+    DP_NONINCREASING_IRREDUCIBLE
+    NO_CERTIFIED_COFACTOR_DOMINANCE
+    HIGH_DEFICIENCY
+    FULL_COLUMN_RANK_SIGNED_INCIDENCE
+    STRICTLY_POSITIVE_LEFT_BALANCE_CERTIFICATE.
+
+For every active variable x, the two cofactors are therefore not yet lawfully mergeable by:
+
+    an admitted dominance receipt,
+    or
+    non-increasing explicit projection.
+
+The next degree must either discover a stronger exact relation between those cofactors, compress their shared consequences without reintroducing a selector, or provide a negative signed certificate that changes the original obligation.
