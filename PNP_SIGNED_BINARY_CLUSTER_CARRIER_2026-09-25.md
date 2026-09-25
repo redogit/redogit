@@ -1,5 +1,33 @@
 # Signed Binary-Cluster Augmentation Carrier — 2026-09-25
 
+
+## 0. TERMS FIRST // RMAL SELF-ORIENTATION
+
+**Read this before the theorem machinery:** [RMAL Research Orientation — TERMS FIRST](RMAL_RESEARCH_ORIENTATION_2026-09-25.md)
+
+```text
+MAKING THE DOUGHNUTS
+!=
+KNOWING HOW TO MAKE THE DOUGHNUTS
+!=
+PRESERVING WHY / WHEN / FOR WHOM THE DOUGHNUTS MATTER
+```
+
+For this artifact:
+
+```text
+RESULT != METHOD
+METHOD != PROOF
+CARRIER != OBJECT
+DESCRIPTION != RECONSTRUCTION
+SCOPED THEOREM != UNIVERSAL THEOREM
+```
+
+The definitions of **Obligation, Object, Surface, Carrier, Context, Relation, Consequential Distinction, one-degree move, Remainder, Homeward, Knowledge Decay, Evidence, Authority, Provenance, Claim Ceiling**, and the four semantic IDs are kept in the orientation page so the rest of this file does not silently change their meanings.
+
+**Algorithmic condensed wisdom rule:** compress repeated behavior only after failures, repairs, and survivors are preserved; keep enough lineage to unfold the short rule back into the reasons that earned it.
+
+
 **Target research program:** P vs NP through the DEAN / Independent-Set obligation  
 **Claim ceiling:** scoped exact theorem; **not** a universal P=NP proof  
 **Status:** theorem proved below; bounded exhaustive implementation check also recorded
