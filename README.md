@@ -5,28 +5,102 @@
 
 ## About me
 
-I’m a data specialist, reverse engineer, and generalist builder. I take complicated systems apart, look for the distinction that actually changes the result, and try to turn what survives into something people can inspect, reuse, and improve.
+I did not get here by starting with complexity theory, reading the P versus NP problem, and deciding I was going to prove `P = NP`.
 
-The central idea behind my work is simple to state and large in consequence:
+I got here sideways.
 
-**higher organization = differentiation + relation + coordination**
+I’m a data specialist, reverse engineer, builder, and mostly a random guy with a knack for ideation, imagination, pattern matching, and being stubbornly honest when something does **not** work. I usually take a problem apart until I can see what actually has to remain true, strip away the names that are not doing any work, keep the relations that are, and then ask what the smallest next change has to be.
 
-I am interested in how this pattern scales outward: from bounded self-maintaining cells, to multicellular organisms, to animals acting in environments, to social coordination, language and culture, technical extension, distributed human-machine cognition, civilization, planetary coupling, meta-coordination, and collective self-modeling.
+The first clue did not come from P versus NP at all. It came from practical education-sector algorithms. I was trying to serialize algorithms and their data properly. I found that when I stripped away the domain semantics and kept a minimal representation of the data, the relations, and the transforms it went through, the same machinery could survive outside the problem it was written for.
 
-I do **not** treat those levels as literally identical. A civilization is not simply a giant animal, and a machine is not made equivalent to a person by participating in a feedback loop. The structural question is more careful: how can heterogeneous components retain their distinctions while coordinating well enough to sense, distinguish, remember, model, value, act, repair, learn, and reorganize together?
+My own rough description at the time was basically:
 
-That is the technical **we** I want my work to help: humans, animals and other living systems, tools and machines, institutions, durable information, networks, and environments working together without erasing agency, boundaries, provenance, or evidence. The higher-level whole should not require its parts to become the same.
+```text
+minimal representation
++ algorithm
++ stripped semantics
++ relations between the data
++ the transforms it went through
+```
 
-A recurring working motif is:
+That was the beginning.
 
-`SENSE → DISTINGUISH → REMEMBER → MODEL → VALUE → COORDINATE → ACT → REPAIR → LEARN → REORGANIZE`
+I was not asking, “How do I prove P = NP?”
 
-At the highest level I currently use, **adaptive organization** means the ability of a system to modify its own organization while preserving enough continuity to remain meaningfully the same system. That turns a decision field into something stronger: a field capable of changing its own decision operators.
+I was asking things like:
 
-My work crosses software, language, knowledge organization, accessibility, games, mathematics, and experimental research. The common thread is human-directed problem solving: preserve context, make assumptions visible, keep provenance, test bounded changes, and do not confuse a useful representation with proof.
+```text
+What was this solver actually for?
+What obligation was it supposed to satisfy?
+What did it learn by solving one case?
+Can I describe why and how it worked faithfully enough to reuse it?
+What is still unresolved?
+What is the smallest thing I have to change next?
+```
 
-I expect my working model to change. Better evidence can change my mind; negative results can change the design; an interpretation error becomes part of the record rather than something to hide.
+The direction that kept surviving was:
 
+```text
+OBLIGATION
+→ MINIMAL REPRESENTATION
+→ RELATIONS
+→ TRANSFORMS
+→ RESULT
+→ WHY THE RESULT IS VALID
+→ WHAT REMAINS
+→ REUSE WHAT WAS LEARNED
+```
+
+I kept finding that the names of things could change while the relational behavior stayed useful. So I started treating the **reason for the solver + the knowledge needed to describe it faithfully** as part of the thing being solved, not as documentation added afterward.
+
+The housing / Dean problem came later. I had my own messy formulation about selecting students under exclusions, capacity, and an output requirement. I treated it as a practical obligation: get the requested valid result, preserve the constraints that actually matter, and do not silently lose the reason the answer is valid.
+
+Only later did that line up with Independent Set, NP-completeness, the Dean-style example, and eventually Stephen Cook’s formal statement of the P versus NP problem.
+
+I did not begin by reading Cook’s paper. I read it **after** following this path far enough that the formal language started looking uncomfortably familiar. Cook defines NP through a polynomial-time checking relation and asks whether every problem with that kind of efficiently checkable witness also has a deterministic polynomial-time solution. That is very close to the boundary I had reached from the other direction: start with the obligation and the witness/output, preserve exactly what makes it valid, and ask whether the path that produces it can be made as disciplined as the path that checks it.
+
+Stephen Cook’s official Clay problem description is here:
+
+[The P Versus NP Problem — Stephen Cook](https://www.claymath.org/wp-content/uploads/2022/06/pvsnp.pdf)
+
+The weird part for me is that getting this far was not mostly calculation.
+
+The calculations matter. The code matters. The proofs of the small pieces matter. The searches matter. But the route here was mostly **deductive reasoning over the mathematics of the problem**:
+
+```text
+state the obligation
+→ preserve the exact distinctions that can change it
+→ derive what follows
+→ change one degree
+→ repair only what that change damages
+→ keep the negative result if it fails
+→ reconstruct the way back
+→ continue
+```
+
+That is how I ended up working with things I did not set out to study: Independent Set, matching, matroids, gammoids, series-parallel graphs, GF(2), odd-cycle structure, roof duality, fixed points, proof certificates, codecs, and complexity bounds.
+
+I did not pick those subjects because I wanted a collection of advanced words. They kept appearing because the previous step forced the next one.
+
+That distinction matters to me.
+
+I am not claiming that I have solved P versus NP. I have a proof program, a growing set of scoped exact results, a lot of preserved failures, and a much narrower universal remainder than I started with. Until the universal polynomial step is actually proved, `P ?= NP` remains open.
+
+If this does eventually close, the story will not be that I sat down knowing the right mathematics and calculated my way to an answer.
+
+It will be that I kept asking what the problem was actually obligated to do, refused to throw away failed information, kept representations separate from truth, changed one thing at a time, and followed the deductions wherever they went.
+
+That is also how I work outside mathematics.
+
+```text
+DO THE THING
+→ INSPECT WHAT ACTUALLY HAPPENED
+→ KEEP WHAT SURVIVED
+→ REPAIR THE SMALLEST FAILURE
+→ DO IT AGAIN
+```
+
+That is REDOGIT.
 
 ## September 25, 2026 — P vs NP proof-program checkpoint
 
