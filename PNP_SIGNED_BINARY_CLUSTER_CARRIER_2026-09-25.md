@@ -1249,3 +1249,127 @@ This bounded panel supports the implementation logic only; the proof above is th
 The conflict-cover theorem removes support-representation complexity entirely when the coupling graph has logarithmic vertex cover.
 
 The live universal residual is therefore concentrated in conflict graphs whose minimum useful coupling interface is superlogarithmic, together with other independently certified carrier families that may reduce that residual before enumeration.
+
+
+## 17. One-degree U2,4 obstruction extraction on the non-graphic support branch
+
+The NONBINARY_SUPPORT remainder from Section 15 can be made constructive without invoking a generic binary-matroid oracle.
+
+Let M be the Dean support transversal matroid.
+
+M is a gammoid. The class of gammoids is closed under minors.
+
+For gammoids, the classical binary-gammoid theorem gives:
+
+    binary
+    iff
+    graphic.
+
+Therefore graphic recognition can be used as a binary test on every minor encountered below, even though binary recognition is not polynomial for arbitrary oracle-given matroids.
+
+### Minor oracle from the original Dean support relation
+
+Maintain two disjoint sets:
+
+    C = elements contracted so far
+    D = elements deleted so far.
+
+The active minor is
+
+    N = M / C \ D.
+
+For any active set X,
+
+    rank_N(X)
+      = rank_M(X union C) - rank_M(C).
+
+The ranks on the right are computed exactly by maximum matching in the original candidate-to-current-cohort support bipartite graph.
+
+Thus every active minor has a polynomial-time rank/independence oracle without constructing a new transversal presentation.
+
+### One-degree descent
+
+Assume Seymour graphic recognition rejects N.
+
+Because N is still a gammoid, N is nonbinary.
+
+For each active element e, test the two one-degree minors:
+
+    N \ e
+    N / e.
+
+Each is a gammoid and therefore:
+
+    non-graphic
+    iff
+    nonbinary.
+
+If either one is non-graphic, replace N by that one-element minor and append the exact operation to the Homeward trace:
+
+    -e = delete e
+    +e = contract e.
+
+Only one element / one degree changes in a step.
+
+Repeat.
+
+### Termination and identification
+
+The active ground set strictly decreases at every accepted step, so there are at most |E(M)| steps.
+
+If no one-element deletion or contraction preserves non-graphicness, N is minor-minimal nonbinary.
+
+Tutte's excluded-minor characterization of binary matroids states:
+
+    matroid is binary
+    iff
+    it has no U_{2,4} minor.
+
+Therefore the unique minor-minimal nonbinary matroid is U_{2,4}.
+
+Hence the descent terminates with an explicit minor:
+
+    N ~= U_{2,4}.
+
+Its four surviving elements, together with the ordered contraction/deletion trace, form a recoverable NONBINARY_SUPPORT obstruction certificate.
+
+### Cost
+
+At most O(n) descent rounds are needed.
+
+A straightforward implementation may test O(n) candidate one-element minors per round.
+
+Each test runs Seymour's polynomial graphic-recognition procedure on a minor whose independence/rank oracle is implemented by polynomially many maximum-matching computations in the original support graph.
+
+Therefore the complete obstruction extraction is polynomial-time.
+
+### Why this does not contradict oracle lower bounds
+
+Generic binary recognition from an independence oracle is not polynomially query-bounded.
+
+This procedure uses additional certified structure:
+
+    every active matroid is a gammoid.
+
+Within gammoids:
+
+    binary <=> graphic,
+
+and graphicness *is* polynomially recognizable from an independence oracle.
+
+The structure is doing the work.
+
+### Signed one-degree interpretation
+
+The support carrier now has an exact dichotomy:
+
+    GRAPHIC
+      -> construct series-parallel support carrier
+
+    NOT_GRAPHIC
+      -> one-element minor descent
+      -> explicit U_{2,4} obstruction + Homeward trace.
+
+No abstract NONBINARY_SUPPORT label needs to remain source-less.
+
+The next repair obligation is not to erase U_{2,4}; it is to determine the smallest lawful carrier transformation that uses this four-element obstruction while preserving the original Dean augmentation obligation.
