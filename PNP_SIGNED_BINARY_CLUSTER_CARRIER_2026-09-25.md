@@ -964,3 +964,95 @@ This is a literal implementation of:
     -> positive / negative family
     -> smallest exact repair
     -> Homeward reconstruction.
+
+
+## 15. Operational support-carrier recognition from Dean data
+
+The earlier binary-support carrier does not need to assume that an exact GF(2) representation is supplied externally.
+
+Let P_S be the original Dean candidate-to-current-cohort bipartite support graph and let M_S be its transversal matroid on the candidate side.
+
+### Polynomial independence oracle
+
+For any candidate subset X,
+
+    X is independent in M_S
+
+iff P_S has a matching that covers X.
+
+Therefore an independence/rank query to M_S is computable in polynomial time by bipartite matching.
+
+### Seymour graphic-recognition step
+
+Paul Seymour proved that an arbitrary matroid presented by an independence oracle can be tested for graphicness with polynomially many oracle calls, even though binary representability itself cannot be tested with polynomially many independence-oracle queries.
+
+The constructive graphic-recognition procedure also yields a realizing graph H whenever the input matroid is graphic.
+
+Hence, using only the original Dean support relation:
+
+    support bipartite graph
+        -> matching independence oracle
+        -> Seymour graphic recognition
+        -> either GRAPHIC(H) or NOT_GRAPHIC.
+
+No generic transversal-matroid linear representation needs to be constructed.
+
+### Why an accepted support carrier is series-parallel
+
+M_S is transversal by construction, hence it is a gammoid.
+
+If Seymour's recognizer accepts M_S as graphic, then M_S is binary because every graphic matroid is binary.
+
+Thus M_S is a binary gammoid.
+
+A standard binary-gammoid characterization gives the equivalences:
+
+    binary gammoid
+    <=> graphic gammoid
+    <=> regular gammoid
+    <=> no U_{2,4} or M(K_4) minor.
+
+Therefore an accepted graphic M_S has no M(K_4) minor.
+
+Its realizing graph H may consequently be taken as a K_4-minor-free / series-parallel support graph (componentwise, with the usual matroid series/parallel interpretation).
+
+So the exact executable route is:
+
+    Dean support relation
+        -> matching oracle
+        -> graphic recognizer
+        -> series-parallel graph carrier
+        -> compatible-cycle search.
+
+### Rejection semantics
+
+If graphic recognition rejects M_S, do not infer a false NO for the Dean obligation.
+
+Because M_S remains a transversal matroid / gammoid, rejection only means that this particular series-parallel support carrier is not admissible.
+
+Moreover, a non-graphic gammoid cannot be binary under the binary-gammoid characterization. Therefore the rejected support matroid is nonbinary and, by Tutte's theorem, contains a U_{2,4} minor.
+
+This U_{2,4} statement is a structural remainder, not yet a polynomially located repair coordinate: binary recognition / U_{2,4}-minor detection is not polynomial in the general independence-oracle model.
+
+Accordingly:
+
+    GRAPHIC
+        -> admit series-parallel support carrier
+
+    NOT_GRAPHIC
+        -> preserve NONBINARY_SUPPORT remainder
+        -> do not fabricate a U_{2,4} witness unless independently constructed.
+
+This closes representation-selection cost on the accepted branch while preserving the exact unresolved negative branch.
+
+### Cost contract
+
+If the Dean instance has polynomial encoding length N:
+
+- each independence query is a polynomial bipartite-matching computation;
+- Seymour graphic recognition uses polynomially many oracle queries and polynomial auxiliary work;
+- the realizing support graph is polynomial-size;
+- subsequent series-parallel recognition/decomposition is polynomial;
+- no uncharged generic transversal representation is invoked.
+
+Therefore the support-carrier recognition/construction lifecycle is polynomial on the admitted branch.
