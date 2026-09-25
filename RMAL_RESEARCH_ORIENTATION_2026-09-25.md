@@ -2,7 +2,106 @@
 
 > **SELF-ORIENTATION FIRST.** This is written in my working language first. Public readability matters, but not at the cost of flattening the distinctions that let me reconstruct the work.
 
-## 0. THE DOUGHNUT LAW
+## 0. DEFINITION OF TERMS — I NEED THESE WORDS BEFORE I DO ANYTHING ELSE
+
+I need to mean the same thing when I reuse a word later.
+
+If the word moves, the proof can look like it moved when really the language did.
+
+### RESULT
+**MEAN:** what came out of the work.  
+**NOT:** automatically the method, proof, explanation, or reusable knowledge that produced it.  
+**KEEP:** making the doughnut is one Object; knowing how to make it again is another.
+
+### METHOD
+**MEAN:** the repeatable relation between starting state, lawful moves, checks, and result.  
+**NOT:** one successful execution.  
+**KEEP:** METHOD needs enough trace / conditions / cost to be run or audited again.
+
+### CONDENSED WISDOM
+**MEAN:** a compressed operational rule that can still be unfolded back into the experience, failures, conditions, evidence, and remainder that earned it.  
+**NOT:** a slogan that became true because I like it.  
+**KEEP:** compression is useful only while Homeward still exists.
+
+### OBLIGATION
+**MEAN:** what the result actually has to satisfy.  
+**NOT:** a story about what I hope the solver does.  
+**KEEP:** because a correct-looking result that misses the obligation is still wrong.
+
+### OBJECT
+**MEAN:** the thing I am trying to preserve or reason about.  
+**NOT:** its current filename, coordinate, encoding, wording, or carrier.  
+**KEEP:** object identity and representation must not silently collapse into each other.
+
+### SURFACE
+**MEAN:** the current view / address / interface where an Object is available.  
+**NOT:** the Object itself.  
+**KEEP:** failed representation != failed object.
+
+### CARRIER
+**MEAN:** the structure currently holding or moving what matters.  
+**NOT:** permanent ontology.  
+**KEEP:** when a carrier starts losing recoverability, move the carrier rather than letting the knowledge decay with it.
+
+### CONTEXT
+**MEAN:** the relations that make a meaning valid *here*.  
+**NOT:** permission to promote a local equivalence into a universal one.
+
+### RELATION
+**MEAN:** an explicit typed connection between Objects.  
+**NOT:** adjacency, resemblance, co-occurrence, or my feeling that two things belong together.
+
+### CONSEQUENTIAL DISTINCTION
+**MEAN:** a difference whose resolution can change what I may lawfully do next.  
+**KEEP:** preserve these first; do not spend precision on distinctions that cannot affect the obligation.
+
+### ONE-DEGREE MOVE
+**MEAN:** change one consequential degree while holding the rest fixed enough to know what caused the result.  
+**NOT:** one line of code, one variable name, or one arbitrary mutation.
+
+### SIGNED MOVE
+**MEAN:** a degree has two exact lawful directions and I preserve which direction was taken and why.  
+**KEEP:** `+` and `-` are proof-bearing alternatives, not vibes.
+
+### TRACE
+**MEAN:** the ordered record of what was selected, changed, checked, observed, and retained.  
+**NOT:** proof by itself.  
+**KEEP:** the trace is what lets me distinguish execution from reconstruction from evidence.
+
+### REMAINDER
+**MEAN:** what is still unresolved after the exact work is removed.  
+**NOT:** failure.  
+**KEEP:** the remainder is the next problem, not something to hide.
+
+### HOMEWARD
+**MEAN:** the way back from a transformed / compressed / solved carrier to the original obligation, witness, and source.  
+**NOT:** byte-for-byte reversal unless byte identity is the actual obligation.
+
+### RECONSTRUCTION
+**MEAN:** use preserved relations / receipts / provenance to recover what matters about an earlier state.  
+**NOT:** pretending a summary is the source.  
+**KEEP:** reconstructibility is part of whether compressed knowledge survived.
+
+### KNOWLEDGE DECAY
+**MEAN:** a consequential distinction that used to be reconstructible is no longer reconstructible.  
+**FIGHT IT:** move toward a lower-decay carrier; preserve provenance and reconstruction while moving.
+
+### EVIDENCE
+**MEAN:** what was actually observed, proved, checked, or independently supported.  
+**NOT:** a claim becoming stronger because it was repeated.
+
+### AUTHORITY
+**MEAN:** what is allowed to control the current decision.  
+**NOT:** automatically the newest artifact.
+
+### PROVENANCE
+**MEAN:** where this came from, what changed it, and what evidence supports the change.
+
+### CLAIM CEILING
+**MEAN:** the strongest claim the current evidence actually supports.  
+**KEEP:** scoped theorem != universal theorem.
+
+## 1. THE DOUGHNUT LAW
 
 ```text
 MAKING THE DOUGHNUTS
@@ -28,12 +127,12 @@ PROVENANCE
 RECONSTRUCTION
 ```
 
-A result is not automatically a method.
-A method is not automatically proof.
-A description is not automatically reconstruction.
+A result is not automatically a method.  
+A method is not automatically proof.  
+A description is not automatically reconstruction.  
 A carrier is not automatically the thing it carries.
 
-## 1. ALGORITHMIC CONDENSED WISDOM ANALYSIS
+## 2. ALGORITHMIC CONDENSED WISDOM ANALYSIS
 
 This is the working meaning I use:
 
@@ -76,76 +175,6 @@ what do I need to keep so I can do it again?
 The elder side compresses the answers.
 
 The algorithmic job is to keep both directions.
-
-## 2. TERMS I NEED BEFORE THE MATH
-
-### OBLIGATION
-**MEAN:** what the result actually has to satisfy.  
-**NOT:** a story about what I hope the solver does.  
-**KEEP:** because a correct-looking result that misses the obligation is still wrong.
-
-### OBJECT
-**MEAN:** the thing I am trying to preserve or reason about.  
-**NOT:** its current filename, coordinate, encoding, wording, or carrier.  
-**KEEP:** object identity and representation must not silently collapse into each other.
-
-### SURFACE
-**MEAN:** the current view / address / interface where an Object is available.  
-**NOT:** the Object itself.  
-**KEEP:** failed representation != failed object.
-
-### CARRIER
-**MEAN:** the structure currently holding or moving what matters.  
-**NOT:** permanent ontology.  
-**KEEP:** when a carrier starts losing recoverability, move the carrier rather than letting the knowledge decay with it.
-
-### CONTEXT
-**MEAN:** the relations that make a meaning valid *here*.  
-**NOT:** permission to promote a local equivalence into a universal one.
-
-### RELATION
-**MEAN:** an explicit typed connection between Objects.  
-**NOT:** adjacency, resemblance, co-occurrence, or my feeling that two things belong together.
-
-### CONSEQUENTIAL DISTINCTION
-**MEAN:** a difference whose resolution can change what I may lawfully do next.  
-**KEEP:** preserve these first; do not spend precision on distinctions that cannot affect the obligation.
-
-### ONE-DEGREE MOVE
-**MEAN:** change one consequential degree while holding the rest fixed enough to know what caused the result.  
-**NOT:** one line of code, one variable name, or one arbitrary mutation.
-
-### SIGNED MOVE
-**MEAN:** a degree has two exact lawful directions and I preserve which direction was taken and why.  
-**KEEP:** `+` and `-` are proof-bearing alternatives, not vibes.
-
-### REMAINDER
-**MEAN:** what is still unresolved after the exact work is removed.  
-**NOT:** failure.  
-**KEEP:** the remainder is the next problem, not something to hide.
-
-### HOMEWARD
-**MEAN:** the way back from a transformed / compressed / solved carrier to the original obligation, witness, and source.  
-**NOT:** byte-for-byte reversal unless byte identity is the actual obligation.
-
-### KNOWLEDGE DECAY
-**MEAN:** a consequential distinction that used to be reconstructible is no longer reconstructible.  
-**FIGHT IT:** move toward a lower-decay carrier; preserve provenance and reconstruction while moving.
-
-### EVIDENCE
-**MEAN:** what was actually observed, proved, checked, or independently supported.  
-**NOT:** a claim becoming stronger because it was repeated.
-
-### AUTHORITY
-**MEAN:** what is allowed to control the current decision.  
-**NOT:** automatically the newest artifact.
-
-### PROVENANCE
-**MEAN:** where this came from, what changed it, and what evidence supports the change.
-
-### CLAIM CEILING
-**MEAN:** the strongest claim the current evidence actually supports.  
-**KEEP:** scoped theorem != universal theorem.
 
 ## 3. FOUR IDS FOR SEMANTIC RECONSTRUCTION
 
@@ -287,6 +316,7 @@ The path that earned the short rule is what keeps it honest.
 
 ---
 
-**Current live proof artifact:** [Signed Binary-Cluster Augmentation Carrier](PNP_SIGNED_BINARY_CLUSTER_CARRIER_2026-09-25.md)
-
+**Public orientation:** https://redogit.github.io/redogit/  
+**Public live design:** https://redogit.github.io/redogit/live-design.html  
+**Current live proof artifact:** [Signed Binary-Cluster Augmentation Carrier](PNP_SIGNED_BINARY_CLUSTER_CARRIER_2026-09-25.md)  
 **Repository:** https://github.com/redogit/redogit
