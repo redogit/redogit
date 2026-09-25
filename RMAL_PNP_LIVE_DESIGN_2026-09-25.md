@@ -185,3 +185,31 @@ without recreating the removed Boolean degree under a new name.
 - [Terms-first orientation](RMAL_RESEARCH_ORIENTATION_2026-09-25.md)
 - [Live carrier/proof notebook](PNP_SIGNED_BINARY_CLUSTER_CARRIER_2026-09-25.md)
 - [Profile checkpoint](README.md)
+
+
+## POSITIVE BALANCE-CIRCUIT CARRIER
+
+On the normalized linearly-lean residual:
+
+    rank(M)=n
+    y>0
+    M^T y=0
+    k = deficiency = dim ker(M^T)
+
+the positive balance vector can be decomposed into at most k support-minimal positive row-dependency circuits.
+
+Those circuit supports cover every clause.
+
+So I can carry the continuous balance remainder as a finite typed relation set:
+
+    <= k BalanceCircuit Objects
+    + exact rational weights
+    + source clause IDs
+    + reconstruction receipts
+
+This is structural compression only.
+
+    POSITIVE BALANCE CIRCUIT != UNSAT CORE
+    CIRCUIT COVER <= DEFICIENCY != SAT ALGORITHM
+
+The new exact question is whether the **overlap relation among those positive circuits** can remove, dominate, decompose, or cheaply project one Boolean degree without recreating that degree as a fresh selector.
