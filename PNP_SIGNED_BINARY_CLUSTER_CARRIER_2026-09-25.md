@@ -1373,3 +1373,199 @@ The support carrier now has an exact dichotomy:
 No abstract NONBINARY_SUPPORT label needs to remain source-less.
 
 The next repair obligation is not to erase U_{2,4}; it is to determine the smallest lawful carrier transformation that uses this four-element obstruction while preserving the original Dean augmentation obligation.
+
+
+## 18. General logarithmic coupling-width augmentation theorem
+
+The binary/gammoid/graphic support seam reveals a stronger representation-independent carrier.
+
+Let S be the current independent cohort and R = V(G) \ S the candidate set.
+
+Define the **Dean coupling graph** J_S with vertex set
+
+    R disjoint-union S
+
+and two edge types:
+
+1. candidate-conflict edge {u,v} for every original Dean exclusion edge with u,v in R;
+2. support edge {b,s} for b in R, s in S exactly when b is incompatible with s.
+
+For B subseteq R define
+
+    delta_S(B) = |B| - |N(B) intersect S|.
+
+Only candidate-conflict-stable B are admissible.
+
+### Exact augmentation criterion
+
+There exists an exact +1 augmentation of S if and only if
+
+    max { delta_S(B) :
+          B subseteq R,
+          B is stable in the candidate-conflict graph } > 0.
+
+Proof:
+
+- If an augmentation exists, its entering candidate set B is conflict-stable and has more entering than displaced vertices, so delta_S(B)>0.
+- If a conflict-stable B has delta_S(B)>0, replace N(B) intersect S by B. The result is independent and larger than S. Inclusion-minimizing B while preserving positive deficiency yields a subset B' with
+
+      |B'| = |N(B') intersect S| + 1,
+
+  and therefore an exact one-degree +1 augmentation.
+
+No matroid representation is needed for this statement.
+
+## 19. Dynamic program on the coupling graph
+
+Assume J_S is supplied with a tree decomposition of width w.
+
+Convert it to a standard nice tree decomposition with introduce-vertex, introduce-edge, forget, join, and root operations.
+
+For each bag maintain one bit per bag vertex:
+
+- for a candidate b: x_b=1 iff b is selected into B;
+- for a current-cohort support s: y_s=1 iff a selected candidate already processed is adjacent to s.
+
+The invariant is that y_s records activation of the cost for displacing s.
+
+### Local transitions
+
+Candidate vertex:
+    introduce with x in {0,1}.
+
+Support vertex:
+    introduce with y=0.
+
+Candidate-conflict edge {u,v}:
+    reject any state with x_u=x_v=1.
+
+Support edge {b,s}:
+    if x_b=1, set y_s=1.
+
+Join:
+    candidate selection bits must agree;
+    support activation bits combine by Boolean OR.
+
+Forget candidate b:
+    if x_b=1, add +1 to the objective.
+
+Forget support s:
+    if y_s=1, add -1 to the objective.
+
+No objective contribution is charged before forget, so join nodes do not double count completed vertices.
+
+At the empty root, the maximum DP value is exactly
+
+    max_B delta_S(B)
+
+over all candidate-conflict-stable B.
+
+The DP also stores one predecessor per state, so an optimizing B can be reconstructed Homeward.
+
+### State count and cost
+
+A bag of size at most w+1 has at most
+
+    2^(w+1)
+
+bit states.
+
+A straightforward implementation has c^w polynomial work per bag for a fixed constant c; standard rank-based connectivity machinery is not even required here because the deficiency objective has no connectivity constraint.
+
+Thus, given the decomposition:
+
+    runtime = 2^O(w) * poly(n).
+
+### Finding the decomposition
+
+Korhonen's single-exponential treewidth approximation gives, for parameter k, in time
+
+    2^O(k) n
+
+either:
+
+- a tree decomposition of width at most 2k+1; or
+- a certificate that treewidth(J_S) > k.
+
+Therefore if
+
+    treewidth(J_S) = O(log n),
+
+the decomposition and the exact augmentation DP both run in polynomial total time.
+
+## 20. Signed result of the coupling-width carrier
+
+Let OPT be the root DP value.
+
+### Positive
+
+If
+
+    OPT > 0,
+
+recover an optimizing stable candidate set B.
+
+Repeatedly delete a candidate b whenever B-{b} still has positive deficiency.
+
+The process terminates with an inclusion-minimal positive-deficiency set B'.
+
+For every b in B',
+
+    |B'|-1 <= |N(B'-{b}) intersect S|
+             <= |N(B') intersect S|.
+
+Since positive deficiency gives
+
+    |N(B') intersect S| <= |B'|-1,
+
+equality follows:
+
+    |B'| = |N(B') intersect S| + 1.
+
+Hence
+
+    S' = (S \ N(B')) union B'
+
+is an exact +1 augmentation.
+
+### Negative
+
+If
+
+    OPT <= 0,
+
+the empty candidate set already has value zero, so OPT=0.
+
+There is no conflict-stable B with positive support deficiency.
+
+By the augmenting-graph theorem, S admits no larger independent set.
+
+Therefore S is maximum and
+
+    U <- L = |S|
+
+is an exact negative closure.
+
+### Consequence
+
+For every current Dean state whose coupling graph has logarithmic treewidth, this carrier provides exactly the desired signed alternative in polynomial total cost:
+
+    (+) L -> L+1
+
+or
+
+    (-) U -> L.
+
+This strictly generalizes the earlier logarithmic conflict-vertex-cover carrier. A conflict vertex cover Z of size k gives a simple decomposition of the conflict coupling, but low treewidth can hold without any small vertex cover.
+
+## 21. New universal remainder
+
+The positive augmentation problem has now been localized to states where the joined Dean coupling graph J_S has superlogarithmic treewidth after all earlier exact reductions/carrier rotations.
+
+Support complexity alone is not sufficient to explain the remainder:
+
+- arbitrary support transversal structure is already handled by matching inside the log-conflict-cover theorem;
+- graphic/binary support admits an alternate series-parallel cycle/bond carrier;
+- logarithmic joined coupling width admits the direct deficiency DP above.
+
+The remaining universal question is whether every unresolved Dean state can be moved, by one exact signed degree with minimal repair, into one of the certified low-coupling carriers or can instead yield a polynomial negative upper-bound move.
