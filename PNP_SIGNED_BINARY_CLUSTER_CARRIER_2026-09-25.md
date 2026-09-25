@@ -1611,3 +1611,68 @@ because U_{2,4} is not binary but is representable over GF(3), for example by th
 This repairs the local representation obstruction only.
 
 It does not yet establish that the binary rainbow-circuit algorithm extends to ternary support. That extension is the next proof obligation and must be treated as a new degree rather than silently inheriting the GF(2) theorem.
+
+
+## 14. Field-lift and strong-base-orderability saturation
+
+Two natural one-degree continuations were checked and are retained as bounded negative knowledge.
+
+### 14.1 GF(2) -> GF(3) repairs representation, not signed progress
+
+The nonbinary obstruction U_{2,4} is representable over GF(3), so the local representability defect can be repaired by changing one carrier degree:
+
+    GF(2) -> GF(3).
+
+However, the binary signed theorem does not transfer unchanged.
+
+Bérczi-Schwarcz characterize binary matroids by the structure of their rank-preserving rainbow-circuit-free colorings. U_{2,4} is their canonical nonbinary example: it has rank 2, every circuit has size 3, and a two-coloring with two elements in each color is rainbow-circuit-free but has no monochromatic cocircuit.
+
+Therefore:
+
+    FIELD REPRESENTATION REPAIRED
+    !=
+    SIGNED RAINBOW PROGRESS REPAIRED.
+
+The GF(3) carrier is retained as a valid representation option, but it is not admitted as a universal successor to the binary augmentation theorem.
+
+### 14.2 Strong base orderability is already present everywhere on the support side
+
+Every transversal matroid is strongly base orderable, and every gammoid is strongly base orderable.
+
+Therefore the Dean support matroid M_S already has the strongest standard subset-wise base exchange property before any binary restriction is imposed.
+
+This means the unresolved difficulty cannot be attributed to a lack of legal base exchanges.
+
+The remaining obstruction is the coupling:
+
+    support-matroid legal exchange
+    AND
+    candidate-conflict independence.
+
+A one-exchange or strong-base-ordering map may be useful for navigation, but no monotone conflict-decrease theorem follows from strong base orderability alone.
+
+Status:
+
+    FIELD-LIFT-ONLY = SATURATED AS UNIVERSAL REPAIR
+    STRONG-BASE-ORDERABILITY = SATURATED AS UNIVERSAL REPAIR
+
+The live proof surface returns to:
+
+    series-parallel graphic support
+    x
+    candidate-conflict overlay.
+
+## 15. Graphic restatement of the live positive problem
+
+When M_S is binary, the recognition theorem constructs a series-parallel graph H whose cycle matroid is M_S.
+
+Then:
+
+    +1 Dean augmentation
+    iff
+    H contains a simple cycle C
+    such that C is an independent set of the candidate-conflict graph.
+
+Equivalently, the binary support side is no longer abstract matroid search. It is a cycle-selection problem in a series-parallel graph with external forbidden/conflict pairs among the cycle edges.
+
+General path/cycle selection with forbidden pairs is known to retain hardness under severe restrictions, while structured forbidden-pair families admit polynomial algorithms. Therefore the next admissible degree is the **structure of the conflict overlay relative to the series-parallel decomposition**, not further weakening of the already-solved support representation.
