@@ -28,6 +28,70 @@ My work crosses software, language, knowledge organization, accessibility, games
 I expect my working model to change. Better evidence can change my mind; negative results can change the design; an interpretation error becomes part of the record rather than something to hide.
 
 
+## September 25, 2026 — P vs NP proof-program checkpoint
+
+The current P-versus-NP research line is being carried forward as an **exact obligation-preserving proof program**, not as a solved claim. The working Dean/Independent-Set obligation is used as the concrete NP-complete carrier.
+
+Current proof architecture:
+
+```text
+ORIGINAL OBLIGATION
+→ four-ID semantic catalog
+→ bounded-arity exact facts
+→ one signed degree of change
+→ minimal dynamic repair
+→ Homeward reconstruction
+→ verified residual
+```
+
+Each semantic object/relation is tracked through four distinct ID roles:
+
+```text
+OccurrenceID
+SemanticObjectID
+SemanticContextSupportsIDs
+SemanticClarityIDs
+```
+
+The active anti-decay rule is:
+
+```text
+OBJECT / OBLIGATION STAYS
+CARRIER MAY MOVE
+MOVE AWAY FROM IRREVERSIBLE KNOWLEDGE LOSS
+```
+
+The current one-degree progress carrier maintains a certified interval
+
+```text
+L <= alpha(G) <= U
+```
+
+for the graph independence number. A positive move is an exact augmentation `L -> L+1`; a negative move is a certified upper-bound improvement `U -> U-1`. Inclusion-minimal augmentation gives an exact +1 move whenever a larger independent set is available, but finding such a move is not yet proved polynomial on arbitrary graphs. Existing exact scoped negative carriers include LP/dual and odd-cycle support-frame bounds.
+
+The semantic-event/storage side has been narrowed substantially: under a fixed finite bounded-arity vocabulary, the number of possible authoritative semantic facts is polynomial in the catalog domain size. This controls storage/fixed-point event growth, but **does not by itself prove obligation completeness**.
+
+Current universal proof obligation:
+
+```text
+For every unresolved Dean / Independent-Set state with L < q <= U,
+produce in polynomial total cost either:
+
+  (+) a certified exact augmentation L -> L+1
+
+or
+
+  (-) a certified exact upper-bound improvement U -> U-1
+
+while preserving the original obligation, provenance, exactness,
+Knowledge-Decay protections, and Homeward witness reconstruction.
+```
+
+If that signed-progress theorem is proved uniformly, the gap `U-L` can shrink at most `n` times, yielding a polynomial exact Independent-Set solver and therefore `P = NP`.
+
+**Current mathematical status remains open.** Scoped carrier theorems, finite computations, codecs, semantic compression, and successful special cases are not promoted into a universal P=NP claim.
+
+
 ## September 18, 2026 convergence
 
 The current forward-only convergence pass is governed by [GITHUB_CONVERGENCE_PLAN_2026-09-18.md](GITHUB_CONVERGENCE_PLAN_2026-09-18.md). Its exact-head verification and closure evidence are recorded in [GITHUB_CONVERGENCE_RESULT_2026-09-18.md](GITHUB_CONVERGENCE_RESULT_2026-09-18.md).
