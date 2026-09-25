@@ -2619,3 +2619,192 @@ MATCHING_AUTARKY_REDUCTION = EXACT_SCOPED_PROGRESS
 LOG_DEFICIENCY = POLYNOMIAL_TERMINAL
 
 HIGH_DEFICIENCY_MATCHING_LEAN = OPEN_RESIDUAL
+
+
+## 29. Non-increasing Davis-Putnam merge closure
+
+The high-deficiency residual still has two lawful truth directions for each variable. Before branching, attempt to merge those two directions exactly by existential projection.
+
+Let x be a variable of CNF F.
+
+Write:
+
+    P_x = {C in F : x in C}
+    N_x = {C in F : not-x in C}.
+
+For every C in P_x and D in N_x form the resolvent on x, discarding tautologies and duplicate clauses.
+
+Let R_x be the resulting set of non-tautological resolvents and define
+
+    VE_x(F)
+      =
+      (F \ (P_x union N_x))
+      union
+      R_x.
+
+Classical Davis-Putnam elimination gives
+
+    SAT(F) iff SAT(VE_x(F)).
+
+More strongly, VE_x(F) is the exact existential projection of x onto the remaining variables at the clausal consequence level.
+
+### 29.1 One-degree merge rule
+
+Call x non-increasing when
+
+    |VE_x(F)| <= |F|.
+
+Then perform the single exact move
+
+    F -> VE_x(F).
+
+This changes one computational degree:
+
+    number of active variables decreases by exactly one,
+
+while the two truth directions of x are merged into one successor instead of retained as two branches.
+
+Store the removed x-clauses and the generated resolvent receipt for Homeward reconstruction.
+
+### 29.2 Polynomial closure theorem
+
+Let the initial formula have n_0 variables and m_0 clauses.
+
+Repeatedly eliminate any non-increasing variable until none remains.
+
+At every step:
+
+    variables decrease by one;
+    clause count <= m_0;
+    every clause contains at most n_0 variables.
+
+For one candidate x, at most m_0^2 clause pairs need be considered, with polynomial work to build, canonicalize, and deduplicate each resolvent.
+
+There are at most n_0 successful eliminations.
+
+Therefore exhaustive non-increasing DP closure has polynomial total construction cost and polynomial retained reconstruction data.
+
+A satisfying assignment of the terminal residual can be extended back through eliminated variables in reverse order using the retained predecessor clauses, exactly as in bounded-variable-elimination preprocessing.
+
+### 29.3 Structural residue of a DP-irreducible core
+
+Suppose x occurs positively p times and negatively q times.
+
+Before tautology/duplicate/subsumption savings,
+
+    |R_x| <= p q.
+
+Therefore if
+
+    p q <= p+q,
+
+x is certainly non-increasing under the clause-count criterion.
+
+Hence any residual in which no variable is non-increasing must satisfy, for every active variable,
+
+    p q > p+q.
+
+Consequences:
+
+    p >= 2,
+    q >= 2,
+    (p,q) != (2,2),
+    p+q >= 5.
+
+So every variable in the exact residual occurs in both polarities and at least five times total.
+
+This is a necessary structural property of the residual, not a hardness claim.
+
+### 29.4 Combined normalization
+
+Use the exact loop:
+
+    matching-autarky reduction
+    -> non-increasing DP elimination
+    -> matching-autarky reduction
+    -> ...
+
+until both operations are saturated.
+
+Each DP step removes one variable.
+
+Each matching-autarky step removes clauses and/or variables without increasing the formula.
+
+Thus the combined normalization remains polynomial.
+
+The resulting core K has all of the following:
+
+    K is matching-lean;
+    every active variable is DP-growth-positive;
+    delta_star(K) = delta(K);
+    every active variable occurs in both polarities;
+    every active variable has total degree >= 5.
+
+If
+
+    delta(K) <= c log n,
+
+the maximal-deficiency terminal from Section 28 solves K exactly.
+
+Otherwise the live residual is:
+
+    MATCHING_LEAN
+    AND
+    DP_NONINCREASING_IRREDUCIBLE
+    AND
+    HIGH_DEFICIENCY.
+
+## 30. Exact projection-growth coordinate
+
+For an active variable x define its one-step projection growth
+
+    g_F(x) = |VE_x(F)| - |F|.
+
+The new closure exhausts every variable with
+
+    g_F(x) <= 0.
+
+So the unresolved core satisfies
+
+    g_F(x) > 0
+
+for every active x.
+
+This is a more precise obstruction than "both truth values are unknown."
+
+The exact issue is:
+
+    eliminating one decision degree in CNF form
+    requires additional projected consequences.
+
+Known propositional-forgetting and knowledge-compilation results show that repeated exact projection can have unavoidable exponential representation growth in standard target languages.
+
+Therefore a compact replacement carrier must satisfy all three:
+
+    1. remove the original Boolean degree;
+    2. preserve exact satisfiability / Homeward semantics;
+    3. not introduce an equivalent fresh Boolean selector that merely renames the removed degree.
+
+A Tseitin selector that represents
+
+    F[x=0] OR F[x=1]
+
+compactly but introduces a new unconstrained binary selector does not count as one-degree progress: the coordinate changed but the independent choice did not disappear.
+
+The next universal theorem target is consequently:
+
+    HIGH-DEFICIENCY PROJECTION REPAIR
+
+For every normalized residual K, find one x with g_K(x)>0 and either:
+
+    (+) an exact polynomial-size projection carrier that genuinely removes x,
+
+    (-) an exact certificate that changes the Dean/SAT bound in the negative direction,
+
+or move to another already-certified carrier.
+
+NONINCREASING_DP = EXACT_POLYNOMIAL_MERGE
+
+POSITIVE_PROJECTION_GROWTH = LIVE_RESIDUAL
+
+COMPACT_RENAMING != DEGREE_REDUCTION
