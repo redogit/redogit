@@ -219,3 +219,125 @@ No second independent degree is silently changed.
 GENERATE != VERIFY != ADMIT
 
 SCOPED THEOREM != UNIVERSAL P=NP PROOF
+
+
+## 10. Log-cluster-defect extension
+
+The cluster-graph requirement can be relaxed by one bounded defect family without changing the original Dean constraints.
+
+Let H be the candidate-conflict graph and let Z be a **carrier exception set** such that H-Z is a disjoint union of cliques.
+
+Z is not deleted from the mathematical problem. It is separated into an explicit exception carrier so that every choice involving Z remains reconstructible.
+
+Assume:
+
+1. the support matroid M is binary and supplied with an exact GF(2) representation;
+2. |Z| = k;
+3. for every stable independent exception choice A subseteq Z that is reached below, the residual cluster color count c_A is at least the residual matroid rank r_A whenever that branch is needed for complete closure.
+
+### Exact branch construction
+
+Enumerate every conflict-stable subset A of Z.
+
+#### A is already dependent in M
+
+Then A contains a conflict-free circuit. Return POSITIVE.
+
+#### A is independent in M
+
+Remove from the outside carrier every candidate conflicting with A and set
+
+    R_A = (E(M) \ Z) \ N_H(A).
+
+Contract A in the support matroid and restrict to R_A:
+
+    M_A = (M / A) | R_A.
+
+Because binary matroids are closed under minors, M_A remains binary.
+
+Because H-Z is a cluster graph, H[R_A] is also a cluster graph.
+
+Let:
+
+    c_A = number of nonempty conflict cliques in H[R_A]
+    r_A = rank(M_A).
+
+##### c_A > r_A
+
+Choose one element from any r_A + 1 distinct cliques.
+
+The chosen set is conflict-free but has cardinality larger than rank(M_A), so it is dependent. Extract a circuit and return POSITIVE.
+
+##### c_A = r_A
+
+Run the signed binary-cluster carrier proved above.
+
+It either returns a conflict-free circuit (POSITIVE) or certifies that no such circuit exists in this branch.
+
+##### c_A < r_A
+
+This carrier does not claim completeness for the branch. Return branch status UNRESOLVED rather than laundering the gap into NO.
+
+### Completeness inside the guard
+
+Suppose the original instance has a conflict-free support-matroid circuit C.
+
+Let
+
+    A = C intersect Z
+    Y = C \ A.
+
+A is conflict-stable.
+
+If A is dependent, its branch returns POSITIVE.
+
+Otherwise A is independent. Since C is conflict-free, Y is contained in R_A. Moreover
+
+    A union Y
+
+is dependent in M, so Y is dependent in M/A.
+
+Therefore the exact A-branch contains a conflict-free dependent set in the residual binary cluster carrier. If c_A > r_A it is detected by rank. If c_A = r_A it is detected by the binary-cluster theorem.
+
+Consequently, if every stable branch satisfies the stated rank/color guard and every branch returns NEGATIVE, then no original conflict-free circuit exists.
+
+### Cost
+
+Cluster Vertex Deletion is fixed-parameter tractable; published algorithms include O*(1.811^k).
+
+After a suitable Z is obtained, this carrier uses at most
+
+    2^k
+
+exception subsets, with polynomial work per branch.
+
+Hence for
+
+    k = O(log n)
+
+the full guarded carrier has polynomial total cost.
+
+The fixed-parameter search is used only to locate the carrier exception set. The original conflict graph remains authoritative and unchanged.
+
+### Bounded differential validation
+
+A separate random exact checker generated binary matrix matroids, conflict graphs whose deletion of at most two designated exception vertices leaves a cluster graph, and compared the guarded carrier result against brute-force conflict-free dependence.
+
+Results:
+
+    generated cases: 5,000
+    cases decided by the theorem guard: 4,195
+    mismatches: 0
+
+This is bounded implementation evidence only. The proof above supplies the scoped mathematical claim.
+
+## 11. New remainder after the extension
+
+The conflict-side residual is now narrower:
+
+- binary support with large cluster-deletion distance;
+- guarded branches where c_A < r_A;
+- nonbinary support;
+- preservation/rotation between these carriers after repeated +1 augmentations.
+
+The next one-degree repair should target one of these residuals directly rather than modifying already-closed binary/cluster cases.
