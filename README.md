@@ -99,6 +99,8 @@ The same carrier now has an exact **log-cluster-defect extension**. Candidate-co
 
 A further support-side admission theorem removes another hidden representation cost: when the candidate→current-cohort support graph is a bipartite forest, its ordinary 0/1 adjacency matrix is an exact GF(2) representation of the support transversal matroid. Matching a candidate subset into the current cohort is equivalent to linear independence of its adjacency columns; uniqueness of perfect matchings in a forest prevents determinant cancellation. This lets the binary signed carrier operate directly on original Dean relations for that family.
 
+The next one-degree support move is now bounded by an explicit obstruction: a single K2,2 support cycle with two one-sided candidates realizes the nonbinary transversal matroid U(2,4), and deleting any cycle edge changes a previously valid matching. So cyclic support is not silently simplified to the forest carrier; U(2,4)/nonbinary structure is retained as a first-class residual for the next carrier.
+
 
 A 2026 external result also aligns two previously separate repair families: vertex-packing LP structure and critical-independent-set structure are equivalent views of the same independence machinery. Accordingly, LP persistency / crown / critical-set extraction are treated as one saturated degree family before moving to independent carriers such as odd-cycle frames, matching/min-cut structure, rank, and signed residual repairs.
 
