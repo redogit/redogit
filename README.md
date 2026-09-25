@@ -1,5 +1,6 @@
 # redogit
 
+> **About me:** [PUBLIC ABOUT ME](https://redogit.github.io/redogit/about.html) — fire, carriers, music/language, REDOGIT, and current work
 > **Newest integrated work:** [PUBLIC RECENT WORK](https://redogit.github.io/redogit/recent-work.html) · [source](RECENT_WORK_2026-09-25.md)
 > **Start here — terms before claims:** [PUBLIC RMAL ORIENTATION](https://redogit.github.io/redogit/) · [source](RMAL_RESEARCH_ORIENTATION_2026-09-25.md)
 > **Algorithmic method / learned rules:** [PUBLIC ALGORITHMIC CONDENSED WISDOM](https://redogit.github.io/redogit/condensed-wisdom.html) · [source](ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md)
