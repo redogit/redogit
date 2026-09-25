@@ -2808,3 +2808,182 @@ NONINCREASING_DP = EXACT_POLYNOMIAL_MERGE
 POSITIVE_PROJECTION_GROWTH = LIVE_RESIDUAL
 
 COMPACT_RENAMING != DEGREE_REDUCTION
+
+
+## 31. Linear-autarky signed balance carrier
+
+Matching autarkies are not the strongest polynomial autarky system available.
+
+Kullmann's linear autarkies are computable in polynomial time by linear programming, strictly extending the matched/matching-autarky tractable region. Repeated simple-linear-autarky reduction has a unique linearly-lean normal form, and the decomposition into a largest linearly-lean sub-clause-set plus a largest linearly-autark subset is polynomially computable.
+
+Thus replace the matching-only normalization by the stronger exact lane whenever possible.
+
+### 31.1 Signed clause-variable matrix
+
+For CNF F with m clauses and n variables, define
+
+    M(F) in {-1,0,+1}^{m x n}
+
+by
+
+    +1  if variable x_j occurs positively in clause C_i
+    -1  if variable x_j occurs negatively in clause C_i
+     0  otherwise.
+
+The simple linear-autarky cone is
+
+    K(F) = { z in R^n : M(F) z >= 0 }.
+
+The sign pattern of a nonzero z gives a nontrivial simple linear autarky.
+
+### 31.2 Exact theorem of alternatives for the carrier
+
+For this concrete matrix exactly one of the following can hold:
+
+POSITIVE:
+    there exists z != 0 with M z >= 0.
+
+NEGATIVE-BALANCE:
+    rank(M) = n
+    and there exists y > 0 with M^T y = 0.
+
+#### Incompatibility
+
+Assume NEGATIVE-BALANCE and Mz>=0.
+
+Then
+
+    y^T M z
+      = (M^T y)^T z
+      = 0.
+
+Since y is strictly positive and Mz is componentwise nonnegative,
+
+    Mz = 0.
+
+Full column rank gives z=0.
+
+So no nontrivial linear-autarky direction exists.
+
+#### Completeness of the alternative
+
+Assume there is no nonzero z with Mz>=0.
+
+First, M must have full column rank: otherwise a nonzero z in ker(M) would satisfy Mz=0>=0.
+
+With full column rank, the absence of nonzero z with Mz>=0 is the Stiemke/Gordan theorem-of-alternatives condition. Therefore there exists a strictly positive vector y with
+
+    M^T y=0.
+
+So the two cases are exhaustive.
+
+Both sides are polynomially discoverable/certifiable by linear programming plus exact rational rank/nullspace verification.
+
+### 31.3 Semantic meaning of the negative certificate
+
+For every variable x_j,
+
+    sum_{C_i contains x_j} y_i
+    =
+    sum_{C_i contains not-x_j} y_i.
+
+Thus y is a strictly positive clause weighting that exactly balances the total positive and negative incidence weight of every variable.
+
+The negative result is not an UNSAT certificate.
+
+It certifies only:
+
+    no nontrivial linear autarky remains.
+
+This distinction is mandatory.
+
+### 31.4 Deficiency becomes balance-space dimension
+
+In the NEGATIVE-BALANCE case:
+
+    rank(M)=n.
+
+Therefore
+
+    dim ker(M^T)
+      = m-rank(M)
+      = m-n
+      = delta(F).
+
+So on a linearly-lean residual, ordinary deficiency has a second exact meaning:
+
+    deficiency
+    =
+    dimension of the clause-balance left-nullspace.
+
+A high-deficiency residual is therefore a high-dimensional family of exact signed clause balances, not merely "many more clauses than variables."
+
+### 31.5 Stronger normalization loop
+
+The exact polynomial normalization portfolio now includes:
+
+    linear-autarky reduction
+    -> non-increasing DP merge
+    -> linear-autarky reduction
+    -> ...
+
+until both saturate.
+
+Each linear-autarky step removes satisfied clauses and variables.
+
+Each admitted DP step removes one variable without increasing the clause count.
+
+Hence the loop terminates after polynomially many structural deletions/variable eliminations and keeps polynomial representation size.
+
+The final residual is:
+
+    LINEARLY_LEAN
+    AND
+    MATCHING_LEAN
+    AND
+    DP_NONINCREASING_IRREDUCIBLE.
+
+It carries an explicit positive balance certificate y and has
+
+    delta_star(F)=delta(F)=dim ker(M^T).
+
+### 31.6 One-degree interpretation
+
+The positive side:
+
+    z != 0, Mz>=0
+    -> remove exactly the linearly-autark clauses
+    -> preserve untouched remainder
+    -> retain z/sign/weight receipt.
+
+The negative side:
+
+    y>0, M^T y=0
+    -> retain the formula unchanged
+    -> add one exact BALANCE certificate object.
+
+Thus the LP itself obeys the signed one-degree protocol:
+
+    AUTARKY MOTION
+    or
+    BALANCE CERTIFICATE.
+
+### 31.7 Live remainder
+
+The universal problem is now localized further.
+
+After polynomial normalization, a still-unresolved formula can be assumed to have:
+
+    a strictly positive clause-balance vector;
+    full column rank;
+    high balance-space dimension k=delta;
+    no matching or linear autarky;
+    no non-increasing CNF projection variable.
+
+The next degree must use this balance structure without confusing it with satisfiability.
+
+POSITIVE_BALANCE != UNSAT
+
+LINEARLY_LEAN != LEAN
+
+LINEAR_AUTARKY_COMPLETE != GENERAL_AUTARKY_COMPLETE
