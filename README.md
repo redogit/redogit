@@ -97,6 +97,8 @@ A new scoped exact carrier is now recorded in [Signed Binary-Cluster Augmentatio
 
 The same carrier now has an exact **log-cluster-defect extension**. Candidate-conflict vertices that obstruct cluster structure are retained as an explicit exception carrier Z rather than semantically deleted. Stable choices A⊆Z are enumerated, chosen exceptions are contracted in the binary support matroid, and the remaining cluster carrier is solved exactly when its nonempty clique count is at least its residual matroid rank. With |Z|=O(log n), Cluster Vertex Deletion plus the 2^|Z| exact exception branches remains polynomial. Branches with fewer residual cliques than residual rank remain explicitly UNRESOLVED.
 
+A further support-side admission theorem removes another hidden representation cost: when the candidate→current-cohort support graph is a bipartite forest, its ordinary 0/1 adjacency matrix is an exact GF(2) representation of the support transversal matroid. Matching a candidate subset into the current cohort is equivalent to linear independence of its adjacency columns; uniqueness of perfect matchings in a forest prevents determinant cancellation. This lets the binary signed carrier operate directly on original Dean relations for that family.
+
 
 A 2026 external result also aligns two previously separate repair families: vertex-packing LP structure and critical-independent-set structure are equivalent views of the same independence machinery. Accordingly, LP persistency / crown / critical-set extraction are treated as one saturated degree family before moving to independent carriers such as odd-cycle frames, matching/min-cut structure, rank, and signed residual repairs.
 
