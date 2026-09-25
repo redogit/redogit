@@ -2,6 +2,27 @@
 
 > Start with [TERMS FIRST](RMAL_RESEARCH_ORIENTATION_2026-09-25.md). This page is the current design, not the dictionary.
 
+## TERMS I AM USING HERE
+
+```text
+OBJECT        := the thing I am preserving / reasoning about
+OBLIGATION    := what the result actually has to satisfy
+RESULT        := what came out
+METHOD        := repeatable lawful path + checks + cost
+CARRIER       := what currently holds / moves what matters
+TRACE         := ordered record of what changed and what was checked
+REMAINDER     := exact unresolved part after admitted work
+HOMEWARD      := way back to original obligation / witness / source
+CLAIM CEILING := strongest claim current evidence supports
+```
+
+```text
+RESULT != METHOD != PROOF != EXPLANATION
+MAKING THE DOUGHNUTS != KNOWING HOW TO MAKE THE DOUGHNUTS
+```
+
+The design below is mainly the second Object: preserving enough method, receipts, cost, and reconstruction that the result can be earned again.
+
 ## THE THING I AM TRYING TO PROVE
 
 I am not trying to prove that a particular SAT solver is fast on a pile of cases.
