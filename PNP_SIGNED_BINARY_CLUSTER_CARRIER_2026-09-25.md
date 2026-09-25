@@ -1676,3 +1676,265 @@ Then:
 Equivalently, the binary support side is no longer abstract matroid search. It is a cycle-selection problem in a series-parallel graph with external forbidden/conflict pairs among the cycle edges.
 
 General path/cycle selection with forbidden pairs is known to retain hardness under severe restrictions, while structured forbidden-pair families admit polynomial algorithms. Therefore the next admissible degree is the **structure of the conflict overlay relative to the series-parallel decomposition**, not further weakening of the already-solved support representation.
+
+
+## 20. Hierarchical conflict-overlay carrier on series-parallel support
+
+This section advances the live graphic remainder:
+
+    series-parallel support cycle
+    x
+    candidate-conflict overlay.
+
+The support graph H is the exact series-parallel graphic realization of the binary Dean support matroid. Its edges are candidate elements. A support-matroid circuit is therefore a simple cycle of H.
+
+The candidate-conflict graph Q has the same edge-elements as vertices: a conflict pair {f,g} means a valid augmentation circuit may not contain both support edges f and g.
+
+### 20.1 Cycle anchoring
+
+Every simple cycle lies in one biconnected block of H.
+
+Loops are handled earlier as one-element circuits. Parallel two-edge circuits can be checked directly. Consider a simple biconnected series-parallel block B with at least three edges.
+
+Fix an edge
+
+    e = st.
+
+Eppstein's series-parallel decomposition theorem states that a biconnected series-parallel graph can be treated as a two-terminal series-parallel graph with the endpoints of any chosen edge as terminals.
+
+Because e itself joins the two terminals directly, the TTSP decomposition can expose e as one parallel branch. Therefore
+
+    B = P(e, N_e)
+
+for a two-terminal series-parallel network N_e with terminals s,t.
+
+Hence
+
+    B - e = N_e.
+
+Orient N_e recursively from s to t. The result is a DAG. By induction on the TTSP construction, every simple undirected s-t path in N_e is directed in this orientation.
+
+Therefore:
+
+    simple cycle C of B containing e
+    iff
+    directed simple s-t path P = C-e in N_e.
+
+### 20.2 Carry conflicts exactly into the path instance
+
+A conflict-free cycle containing e cannot contain any support edge f with
+
+    {e,f} in E(Q).
+
+Delete those f from N_e.
+
+For every remaining support edge f, subdivide f once and call its new marker vertex x_f.
+
+For every remaining candidate-conflict pair
+
+    {f,g} in E(Q),
+
+create the forbidden marker pair
+
+    {x_f,x_g}.
+
+A directed s-t path in the subdivided DAG is safe exactly when it contains at most one marker from every forbidden pair.
+
+Thus:
+
+    conflict-free support cycle containing e
+    iff
+    safe directed s-t path in the transformed branch D_e.
+
+This is an exact carrier translation with a direct Homeward map from marker vertices to original candidate/support edges.
+
+### 20.3 Remove semantically irrelevant forbidden pairs
+
+Let a < b mean that marker b is reachable from marker a in D_e.
+
+If the two markers of a forbidden pair are incomparable under reachability, they cannot both lie on one directed path.
+
+Such a pair is irrelevant to the branch and can be removed without weakening the original cycle obligation.
+
+Orient every remaining forbidden pair as
+
+    (a,b) with a < b.
+
+### 20.4 Hierarchical overlay theorem
+
+For two oriented forbidden pairs
+
+    p=(a,b)
+    q=(c,d),
+
+call them crossing / halving when their endpoints interlace:
+
+    a < c < b < d
+
+or symmetrically
+
+    c < a < d < b.
+
+The active forbidden-pair family is hierarchical exactly when no such crossing pair exists.
+
+Kolman and Pangrac proved that Path Avoiding Forbidden Pairs on a DAG is polynomial-time solvable when the forbidden pairs have this hierarchical structure. Their reduction repeatedly:
+
+1. contracts a vertex that is in no remaining forbidden pair while retaining a path label;
+2. removes an edge joining the endpoints of a forbidden pair;
+3. removes a forbidden pair whose endpoints are no longer reachable.
+
+The reductions preserve a Homeward path witness.
+
+Consequently, if the transformed branch D_e is hierarchical, the existence or nonexistence of a conflict-free support cycle through e is decidable in polynomial time.
+
+### 20.5 Global exact binary-support carrier
+
+Choose an arbitrary spanning forest T of H.
+
+Every nonempty support cycle contains at least one non-tree edge.
+
+Therefore it suffices to use as anchors
+
+    A = E(H) \ E(T).
+
+For each e in A, build and solve D_e.
+
+If any branch returns a safe path, reconstruct its support cycle and the corresponding exact +1 Dean augmentation.
+
+If every anchor branch is hierarchical and every one returns NO, then H contains no candidate-conflict-free circuit. Therefore the current Dean cohort is maximum.
+
+This defines a new exact polynomial terminal island:
+
+    BINARY_GAMMOID_SERIES_PARALLEL_SUPPORT
+    +
+    EDGEWISE_HIERARCHICAL_CONFLICT_OVERLAY.
+
+This island is different from the earlier log-conflict-vertex-cover carrier: the candidate-conflict graph may contain many conflicts, provided their positions along every required anchor branch are hierarchically nested rather than crossing.
+
+## 21. Log crossing-defect extension
+
+The hierarchical theorem gives a natural one-degree defect measure.
+
+For one anchor branch e, construct the crossing graph X_e:
+
+- one vertex for every active comparable forbidden pair in D_e;
+- two vertices are adjacent exactly when the corresponding forbidden pairs interlace.
+
+Then:
+
+    X_e has no edges
+    iff
+    the branch is hierarchical.
+
+A set P of forbidden-pair vertices whose deletion makes X_e edgeless is exactly a vertex cover of X_e.
+
+### 21.1 Preserve, do not discard, the removed pair obligations
+
+A vertex cover P is only a carrier modulator. Its forbidden pairs remain authoritative.
+
+For each selected forbidden pair
+
+    p={x,y} in P,
+
+the safe-path obligation says at least one of x,y must be absent.
+
+Create exactly two signed repairs:
+
+    -x : forbid x in this branch
+    -y : forbid y in this branch.
+
+Enumerate the 2^|P| signed endpoint choices.
+
+After deleting the chosen marker vertices:
+
+- every modulator pair in P is satisfied explicitly;
+- the remaining forbidden pairs F-P were non-crossing before the deletions;
+- deletion can remove reachability but cannot create a new interlacing reachability chain.
+
+After pruning newly incomparable pairs, the residual instance is hierarchical and is solved by the polynomial PAFP carrier.
+
+### 21.2 Completeness
+
+Suppose a safe s-t path exists in the original anchor branch.
+
+For every modulator pair p in P, the safe path omits at least one endpoint.
+
+Choose an omitted endpoint as that pair's signed deletion.
+
+The enumeration includes this choice, so one branch preserves the safe path.
+
+Conversely, every branch deletes one endpoint of every modulator pair and then solves all remaining forbidden pairs exactly. Any returned path is therefore safe for the original branch.
+
+Hence the signed modulator enumeration is exact.
+
+### 21.3 Finding the modulator without hiding optimization
+
+Do not assume a minimum crossing repair is available.
+
+Run the standard parameterized Vertex Cover decision/search procedure on X_e with a declared cap
+
+    k_e <= c log n
+
+for fixed constant c.
+
+If no such vertex cover is found, return this anchor branch as UNRESOLVED under this carrier.
+
+If such P is found, total branch work is
+
+    2^k_e poly(n).
+
+The vertex-cover search itself is also 2^O(k_e) poly(n).
+
+Thus for
+
+    k_e = O(log n)
+
+the complete anchor cost remains polynomial.
+
+If every non-tree anchor e satisfies the declared logarithmic crossing-defect guard, the entire cycle/augmentation decision is polynomial.
+
+### 21.4 One-degree semantics
+
+Each crossing-modulator pair is one repair degree.
+
+The two signs are not "truth values" for the pair; they are the two lawful ways to satisfy its at-most-one obligation:
+
+    LEFT  -> exclude first endpoint
+    RIGHT -> exclude second endpoint.
+
+No other support or conflict degree changes.
+
+### 21.5 Bounded differential validation
+
+Two bounded checks were run separately from the proof.
+
+1. The direct Kolman-Pangrac hierarchical reduction was compared against brute-force safe-path enumeration on 2,956 random small TTSP DAG instances whose active forbidden pairs were hierarchical.
+
+       mismatches: 0
+       stuck reductions: 0
+
+2. The crossing-graph vertex-cover extension was compared against brute-force safe-path enumeration on 10,000 random small TTSP instances with arbitrary marker conflicts and a declared crossing-cover cap k<=2.
+
+       instances decided by the guard: 9,995
+       mismatches: 0
+       stuck reductions: 0
+
+These finite panels are implementation evidence only.
+
+### 21.6 Updated live residual
+
+Inside binary-gammoid / series-parallel support, arbitrary conflict count is no longer the correct obstruction.
+
+The exact residual is now the **crossing structure** of the conflict pairs relative to the anchor TTSP order.
+
+The carrier closes:
+
+    crossing defect 0
+    -> polynomial hierarchical solve
+
+and
+
+    crossing vertex-cover O(log n)
+    -> polynomial signed repair + hierarchical solve.
+
+The next one-degree conflict-side target is therefore a branch whose crossing graph has superlogarithmic vertex cover. It should be changed or summarized directly; already hierarchical/nested conflicts should not be touched.
