@@ -2150,3 +2150,313 @@ For binary-gammoid / series-parallel support, an anchor branch is now certified 
 No evidence transfers between these domains merely because they solve the same branch.
 
 A global NO is admitted only when every cycle anchor is closed by an exact negative certificate from some admitted carrier.
+
+
+## 24. Forest-presentation circuit anatomy
+
+The Dean support matroid is transversal. For the binary-transversal case there is a sharper structural theorem than the generic series-parallel realization.
+
+Sali and Simonyi record the following theorem of Edmonds:
+
+    A transversal matroid is binary
+    iff
+    it possesses a presentation by a bipartite forest.
+
+They also record de Sousa-Welsh:
+
+    A transversal matroid is binary
+    iff
+    it is graphic.
+
+The de Sousa-Welsh result is published; the forest-presentation theorem is attributed by Sali-Simonyi to an unpublished result of Edmonds.
+
+This section uses the forest presentation only as a mathematical carrier. The universal execution contract does not assume that an arbitrary such forest presentation is supplied for free.
+
+### 24.1 Circuit theorem for a forest presentation
+
+Let F=(L,R,E) be a bipartite forest presenting a transversal matroid M on left ground set L.
+
+For nonempty C subseteq L, the following are equivalent:
+
+1. C is a circuit of M.
+2. The induced bipartite graph
+
+       F[C union N(C)]
+
+   is connected and every right/support vertex in N(C) has degree exactly 2 into C.
+
+#### Proof: circuit -> forest shape
+
+Because C is dependent, Hall gives
+
+    |N(C)| <= |C|-1.
+
+For any c in C, the proper subset C-c is independent, so Hall gives
+
+    |N(C-c)| >= |C|-1.
+
+But
+
+    N(C-c) subseteq N(C).
+
+Therefore
+
+    |N(C)| = |C|-1
+
+and, for every c,
+
+    N(C-c) = N(C).
+
+If F[C union N(C)] had more than one connected component, let C_i be the nonempty left vertices of a component. Every C_i would be a proper subset of C, hence Hall-independent:
+
+    |N(C_i)| >= |C_i|.
+
+Summing over components contradicts
+
+    |N(C)| = |C|-1.
+
+So the induced graph is connected. Since F is a forest, it is a tree.
+
+The equality N(C-c)=N(C) for every c implies that no support vertex has degree one into C. Thus every support degree is at least 2.
+
+A tree on |C|+|N(C)| vertices has
+
+    |C|+|N(C)|-1
+    = 2|N(C)|
+
+edges, because |C|=|N(C)|+1.
+
+The sum of support degrees is exactly this edge count. Since every support degree is at least 2, every support degree is exactly 2.
+
+#### Proof: forest shape -> circuit
+
+Assume F[C union N(C)] is connected and every support vertex has degree 2 into C.
+
+It is a tree. Therefore
+
+    2|N(C)|
+    = |E|
+    = |C|+|N(C)|-1,
+
+so
+
+    |C| = |N(C)|+1.
+
+Hence C is dependent.
+
+Now contract every support vertex r in N(C) to an ordinary edge joining its two C-neighbors. Because the bipartite graph is a tree, this produces an ordinary tree T on vertex set C.
+
+For any nonempty proper X subset C, N_F(X) corresponds exactly to the edges of T incident with X.
+
+If T[X] has k connected components, it has |X|-k internal edges; because X is proper and T is connected, every such component has at least one boundary edge. Hence T has at least
+
+    (|X|-k)+k = |X|
+
+edges incident with X.
+
+Thus
+
+    |N_F(X)| >= |X|
+
+for every proper X. Hall's theorem makes every proper subset of C independent.
+
+So C is a circuit.
+
+### 24.2 Consequence
+
+A circuit in a binary-transversal forest presentation is a closed support tree:
+
+- selected candidates are the left vertices;
+- each touched support is paired with exactly two selected candidates;
+- contracting touched supports yields a tree on the candidate circuit.
+
+This is substantially narrower than an arbitrary series-parallel cycle representation, although the two represent the same binary-transversal matroid at the matroid level.
+
+## 25. Clause-star forest normal form for SAT
+
+The forest circuit theorem reveals an exact hard-core calibration.
+
+Let Phi be a CNF formula with nonempty clauses
+
+    C_1, ..., C_m.
+
+Create one left candidate rho, called the root.
+
+For every literal occurrence l in clause C_j create one left occurrence candidate
+
+    o_(j,l).
+
+Create one right support vertex s_j for each clause.
+
+Add support edges
+
+    rho -- s_j
+
+for every clause, and
+
+    o_(j,l) -- s_j
+
+for every literal occurrence.
+
+The resulting presentation graph is a radius-two bipartite tree: root -> clause supports -> literal-occurrence leaves.
+
+### 25.1 Candidate-conflict overlay
+
+Keep rho conflict-free.
+
+Add a candidate-conflict edge between:
+
+1. every pair of distinct literal occurrences in the same clause; and
+2. every pair of occurrences labelled by complementary literals x and not-x.
+
+The same-clause conflicts are the minimal repair that prevents an unintended two-leaf circuit from being accepted as a satisfying witness.
+
+### 25.2 Exact theorem
+
+Phi is satisfiable if and only if the presented binary transversal matroid has a circuit that is independent in the candidate-conflict graph.
+
+#### SAT -> conflict-free circuit
+
+Take a satisfying truth assignment.
+
+Choose exactly one true literal occurrence from every clause.
+
+Let C contain rho and these m chosen occurrences.
+
+Every support s_j has degree exactly two into C:
+
+    rho
+    +
+    the chosen literal of C_j.
+
+The induced support graph is connected. By the forest circuit theorem, C is a circuit.
+
+It is conflict-free because:
+
+- exactly one occurrence was chosen per clause;
+- a single truth assignment cannot make both x and not-x true.
+
+#### conflict-free circuit -> SAT
+
+Let C be a conflict-free circuit.
+
+C must contain rho.
+
+Otherwise C lies wholly among literal leaves. By the forest circuit theorem, a connected circuit without rho can use only one clause support and exactly two of its occurrence leaves. Those two leaves conflict by construction.
+
+Since rho belongs to C, every clause support s_j lies in N(C).
+
+Every support has degree exactly two into C, so C contains exactly one literal occurrence from every clause.
+
+Conflict-freedom guarantees that the selected occurrences never contain both polarities of the same variable.
+
+Assign each selected positive literal's variable TRUE and each selected negative literal's variable FALSE; assign unused variables arbitrarily.
+
+Every clause contains its selected true literal. Hence Phi is satisfiable.
+
+### 25.3 Complexity consequence
+
+Checking a proposed conflict-free circuit is polynomial.
+
+Therefore conflict-free circuit existence is NP-complete even when the support transversal matroid is:
+
+- binary;
+- given directly by a forest presentation;
+- presented by a radius-two tree with one central root.
+
+This is a calibration of the coupling boundary, not evidence for P != NP.
+
+It proves:
+
+    BINARY_TRANSVERSAL_SUPPORT
+    !=
+    UNIVERSAL EASY AUGMENTATION.
+
+The universal difficulty can survive entirely in consistency relations among candidate occurrences.
+
+### 25.4 Bounded differential validation
+
+A separate exhaustive/brute-force checker generated 1,500 random small CNF formulas over one to three variables and up to four clauses.
+
+For each formula it compared:
+
+    ordinary truth-table satisfiability
+
+against
+
+    existence of a conflict-free circuit in the clause-star forest construction.
+
+Results:
+
+    tested: 1,500
+    mismatches: 0.
+
+The finite panel validates the implementation of the reduction only. The proof above is the mathematical basis.
+
+## 26. Four-ID compression of the clause-star hard core
+
+The clause-star construction also shows why the four-ID catalog is useful even though it does not solve SAT by itself.
+
+Each literal occurrence keeps its own OccurrenceID.
+
+All occurrences of the same signed literal can share a SemanticObjectID, for example:
+
+    LIT(x, TRUE)
+    LIT(x, FALSE).
+
+Clause membership is carried by SemanticContextSupportsIDs.
+
+The complement relation
+
+    COMPLEMENT(LIT(x,TRUE), LIT(x,FALSE))
+
+is a SemanticClarity relation.
+
+Thus the quadratic number of explicit occurrence-to-occurrence complement conflict edges need not be authoritative storage.
+
+They can be reconstructed from:
+
+    occurrence -> signed-literal object
+    signed-literal -> complement object.
+
+This compresses duplicated conflict representation while preserving exact semantics and Homeward provenance.
+
+It does not reduce the logical problem:
+
+    choose one supported literal object per clause
+    without choosing both polarities of a variable.
+
+That object is exactly CNF satisfiability in relational form.
+
+REPRESENTATION COMPRESSION != COMPLEXITY COLLAPSE.
+
+## 27. Independent-transversal and autarky directions
+
+Dropping the artificial same-clause conflict clique and instead treating each clause's literal occurrences as one partition class gives the equivalent statement:
+
+    Phi is satisfiable
+    iff
+    the complementary-literal conflict graph has
+    an independent transversal choosing one occurrence per clause.
+
+Graf-Haxell give polynomial algorithms under structural hypotheses that either find such an independent transversal or return a subset of classes with a small dominating set.
+
+This is admitted as a one-degree structural carrier only under its stated hypotheses. A returned dominating set is structural information, not by itself an UNSAT certificate.
+
+A second lawful reduction family is SAT autarky theory:
+
+    partial assignment
+    -> satisfies every clause it touches
+    -> remove exactly those satisfied clauses
+    -> untouched remainder is equisatisfiable.
+
+Matching autarkies connect this reduction to Hall/matching structure and deficiency. Lean kernels preserve the exact unresolved remainder after all admitted autarky reductions.
+
+The next proof obligation is not to rename arbitrary SAT as an autarky problem. It is to determine whether the clause-star hard core always yields, in polynomial total cost, one of:
+
+    a satisfying independent transversal;
+    an exact autarky reduction;
+    an exact negative signed certificate;
+    or a strictly smaller certified residual in another existing carrier.
+
+No universal theorem is claimed yet.
