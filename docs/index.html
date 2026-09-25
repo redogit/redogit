@@ -34,11 +34,43 @@ strong{color:#fff}
 <div><span class="badge">REDOGIT</span><span class="badge">RMAL</span><span class="badge">2026-09-25</span></div>
 <h1>TERMS FIRST.</h1>
 <p><strong>Self-orientation first.</strong> I am writing this in my working language first. Public readability matters, but not at the cost of flattening the distinctions that let me reconstruct the work.</p>
-<nav><a href="live-design.html">Live design</a><a href="#doughnut">Doughnut law</a><a href="#wisdom">Condensed wisdom</a><a href="#terms">Terms</a><a href="#proof">Proof program</a><a href="#remainder">Current remainder</a></nav>
+<nav><a href="#terms">Definitions</a><a href="live-design.html">Live design</a><a href="#doughnut">Doughnut law</a><a href="#wisdom">Condensed wisdom</a><a href="#proof">Proof program</a><a href="#remainder">Current remainder</a></nav>
 </header>
 
+<section id="terms">
+<h2>0 // DEFINITION OF TERMS — I NEED THESE WORDS BEFORE I DO ANYTHING ELSE</h2>
+<p>I need to mean the same thing when I reuse a word later. If the word moves, the proof can look like it moved when really the language did.</p>
+<div class="term"><b>RESULT</b> := what came out. Not automatically method, proof, explanation, or reusable knowledge.</div>
+<div class="term"><b>METHOD</b> := the repeatable relation between starting state, lawful moves, checks, cost, and result. One successful execution != Method.</div>
+<div class="term"><b>CONDENSED WISDOM</b> := a compressed operational rule that can still be unfolded into the experience, failures, conditions, evidence, and remainder that earned it.</div>
+<div class="term"><b>OBLIGATION</b> := what the result actually has to satisfy. Not the story I hope the solver tells.</div>
+<div class="term"><b>OBJECT</b> := the thing I am preserving or reasoning about. Not its current filename, coordinate, encoding, wording, or carrier.</div>
+<div class="term"><b>SURFACE</b> := the current view / address / interface where an Object is available. Failed representation != failed Object.</div>
+<div class="term"><b>CARRIER</b> := the structure currently holding or moving what matters. When it starts losing recoverability, move the carrier rather than letting the knowledge decay with it.</div>
+<div class="term"><b>CONTEXT</b> := the relations that make a meaning valid here. Contextual equivalence != universal equivalence.</div>
+<div class="term"><b>RELATION</b> := an explicit typed connection. Not resemblance, adjacency, or co-occurrence.</div>
+<div class="term"><b>CONSEQUENTIAL DISTINCTION</b> := a difference whose resolution can change what I may lawfully do next.</div>
+<div class="term"><b>ONE-DEGREE MOVE</b> := change one consequential degree while holding the rest fixed enough to know what caused the result.</div>
+<div class="term"><b>TRACE</b> := the ordered record of what I selected, changed, checked, observed, and retained. Trace != proof by itself.</div>
+<div class="term"><b>REMAINDER</b> := what is still unresolved after exact work is removed. Remainder != failure.</div>
+<div class="term"><b>HOMEWARD</b> := the way back from a transformed / compressed / solved carrier to the original obligation, witness, and source.</div>
+<div class="term"><b>RECONSTRUCTION</b> := recovering what mattered about an earlier state from preserved relations, receipts, and provenance. Summary != source.</div>
+<div class="term"><b>KNOWLEDGE DECAY</b> := a consequential distinction that used to be reconstructible is no longer reconstructible.</div>
+<div class="term"><b>EVIDENCE</b> := what was actually observed, proved, checked, or independently supported.</div>
+<div class="term"><b>AUTHORITY</b> := what is allowed to control the current decision. Newest != automatically authoritative.</div>
+<div class="term"><b>PROVENANCE</b> := where this came from, what changed it, and what evidence supports the change.</div>
+<div class="term"><b>CLAIM CEILING</b> := the strongest claim the current evidence actually supports.</div>
+
+<h3>Four IDs</h3>
+<pre>OccurrenceID
+SemanticObjectID
+SemanticContextSupportsIDs
+SemanticClarityIDs</pre>
+<p>Where did this exact occurrence come from? What object does it mean? Why does that meaning apply here? What distinction must stay explicit so it does not drift?</p>
+</section>
+
 <section id="doughnut">
-<h2>0 // THE DOUGHNUT LAW</h2>
+<h2>1 // THE DOUGHNUT LAW</h2>
 <pre>MAKING THE DOUGHNUTS
 !=
 KNOWING HOW TO MAKE THE DOUGHNUTS
@@ -49,7 +81,7 @@ PRESERVING WHY / WHEN / FOR WHOM THE DOUGHNUTS MATTER</pre>
 </section>
 
 <section id="wisdom">
-<h2>1 // ALGORITHMIC CONDENSED WISDOM ANALYSIS</h2>
+<h2>2 // ALGORITHMIC CONDENSED WISDOM ANALYSIS</h2>
 <pre>MANY OBSERVATIONS
 -> REPEATED BEHAVIOR
 -> FAILURES + REPAIRS
@@ -65,32 +97,6 @@ NEW != BETTER
 SIMILAR != RELATED
 REPEATED != INDEPENDENTLY VERIFIED
 COMPRESSED != RECONSTRUCTIBLE</pre>
-</section>
-
-<section id="terms">
-<h2>2 // TERMS I NEED BEFORE THE MATH</h2>
-<div class="term"><b>OBLIGATION</b> := what the result actually has to satisfy. Not the story I hope the solver tells.</div>
-<div class="term"><b>OBJECT</b> := the thing I am preserving or reasoning about. Not its current filename, coordinate, encoding, wording, or carrier.</div>
-<div class="term"><b>SURFACE</b> := the current view / address / interface where an Object is available. Failed representation != failed Object.</div>
-<div class="term"><b>CARRIER</b> := the structure currently holding or moving what matters. When it starts losing recoverability, move the carrier rather than letting the knowledge decay with it.</div>
-<div class="term"><b>CONTEXT</b> := the relations that make a meaning valid here. Contextual equivalence != universal equivalence.</div>
-<div class="term"><b>RELATION</b> := an explicit typed connection. Not resemblance, adjacency, or co-occurrence.</div>
-<div class="term"><b>CONSEQUENTIAL DISTINCTION</b> := a difference whose resolution can change what I may lawfully do next.</div>
-<div class="term"><b>ONE-DEGREE MOVE</b> := change one consequential degree while holding the rest fixed enough to know what caused the result.</div>
-<div class="term"><b>REMAINDER</b> := what is still unresolved after exact work is removed. Remainder != failure.</div>
-<div class="term"><b>HOMEWARD</b> := the way back from a transformed / compressed / solved carrier to the original obligation, witness, and source.</div>
-<div class="term"><b>KNOWLEDGE DECAY</b> := a consequential distinction that used to be reconstructible is no longer reconstructible.</div>
-<div class="term"><b>EVIDENCE</b> := what was actually observed, proved, checked, or independently supported.</div>
-<div class="term"><b>AUTHORITY</b> := what is allowed to control the current decision. Newest != automatically authoritative.</div>
-<div class="term"><b>PROVENANCE</b> := where this came from, what changed it, and what evidence supports the change.</div>
-<div class="term"><b>CLAIM CEILING</b> := the strongest claim the current evidence actually supports.</div>
-
-<h3>Four IDs</h3>
-<pre>OccurrenceID
-SemanticObjectID
-SemanticContextSupportsIDs
-SemanticClarityIDs</pre>
-<p>Where did this exact occurrence come from? What object does it mean? Why does that meaning apply here? What distinction must stay explicit so it does not drift?</p>
 </section>
 
 <section>
