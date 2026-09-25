@@ -1938,3 +1938,215 @@ and
     -> polynomial signed repair + hierarchical solve.
 
 The next one-degree conflict-side target is therefore a branch whose crossing graph has superlogarithmic vertex cover. It should be changed or summarized directly; already hierarchical/nested conflicts should not be touched.
+
+
+## 22. Choice-CNF compilation of a TTSP conflict overlay
+
+The hierarchical-path carrier is not the only exact way to use the series-parallel support decomposition.
+
+For one anchored branch, let N be the oriented two-terminal series-parallel DAG after:
+
+- removing the anchor edge e;
+- deleting every support edge that conflicts with e.
+
+Fix a binary TTSP decomposition tree for N.
+
+### 22.1 Parallel nodes are Boolean decision fields
+
+For every parallel-composition node p introduce one Boolean variable:
+
+    x_p = 0  -> choose the left child
+    x_p = 1  -> choose the right child.
+
+Series nodes introduce no variable because an s-t path traverses both series children.
+
+A total assignment to all parallel-node variables determines an s-t path recursively:
+
+- at a leaf, use its support edge;
+- at a series node, concatenate the two recursively chosen paths;
+- at a parallel node, recurse only into the selected child.
+
+Values assigned inside an unselected parallel subtree are semantically irrelevant to the resulting path but are harmless.
+
+### 22.2 Exact edge signatures
+
+For each support edge f, define its path signature sigma_f as the partial assignment containing, for every parallel ancestor p of f, the branch value that selects the child containing f.
+
+Then:
+
+    f lies on the path determined by assignment a
+    iff
+    a extends sigma_f.
+
+This is proved directly by induction on the TTSP decomposition.
+
+### 22.3 One candidate conflict becomes one CNF clause
+
+Take a candidate-conflict pair {f,g}.
+
+If sigma_f and sigma_g disagree on any common parallel ancestor, f and g can never occur on the same s-t path. The conflict is branch-irrelevant and creates no clause.
+
+Otherwise merge the compatible signatures:
+
+    sigma_fg = sigma_f union sigma_g.
+
+The two support edges occur together exactly when every required decision in sigma_fg is satisfied.
+
+Therefore the conflict is enforced by the single clause
+
+    C_fg = OR over (p=b) in sigma_fg of [x_p != b].
+
+Equivalently, C_fg is the negation of the conjunction specifying simultaneous reachability of f and g.
+
+Let F_choice be the conjunction of all such clauses.
+
+### 22.4 Exact equivalence theorem
+
+For every full assignment a:
+
+    a satisfies F_choice
+    iff
+    the TTSP path P(a) contains no candidate-conflict pair.
+
+Proof:
+
+If a violates C_fg, then it extends both edge signatures and the selected path contains f and g.
+
+If the selected path contains a conflict pair f,g, then a extends both signatures and violates C_fg.
+
+Hence:
+
+    safe support path exists
+    iff
+    F_choice is satisfiable.
+
+Combined with cycle anchoring:
+
+    conflict-free support cycle through e
+    iff
+    ChoiceCNF(e) is satisfiable.
+
+The compiler is polynomial in the decomposition size plus the number of conflict pairs.
+
+The assignment-to-path and path-to-original-candidate maps provide Homeward reconstruction.
+
+### 22.5 Existing exact SAT terminals transfer lawfully
+
+This compiler does not make SAT easy by renaming it.
+
+It does allow already certified tractable SAT structure to be reused without semantic loss.
+
+Admit an anchor branch when ChoiceCNF(e) is recognized as any independently polynomial class, including:
+
+- 2-CNF;
+- Horn;
+- dual-Horn;
+- beta-acyclic CNF.
+
+For beta-acyclic CNF, the clause hypergraph admits a polynomially computable weakly-simplicial variable elimination ordering. Davis-Putnam elimination along this ordering does not increase the number of clauses because each generated resolvent is contained in a parent clause.
+
+This gives an exact one-degree execution law:
+
+    choose one weakly-simplicial parallel variable
+    -> eliminate it
+    -> retain the reconstruction receipt
+    -> continue.
+
+At the end:
+
+- SAT reconstructs the parallel choices and support path;
+- UNSAT provides the corresponding resolution/elimination certificate.
+
+### 22.6 Simple derived island: parallel depth one
+
+If every support edge has at most one parallel ancestor in the TTSP decomposition, every edge signature contains at most one Boolean choice.
+
+Every conflict clause then contains at most two choice variables.
+
+Therefore:
+
+    parallel-decision depth <= 1
+    -> ChoiceCNF is 2-CNF
+    -> exact polynomial branch.
+
+This includes series compositions of independent binary parallel gadgets.
+
+### 22.7 Bounded differential validation
+
+A separate exact checker generated 3,481 random binary TTSP decomposition trees with random candidate-conflict pairs.
+
+For each instance it compared:
+
+    existence of a conflict-free recursively selected s-t path
+
+against:
+
+    satisfiability of the compiled ChoiceCNF.
+
+Results:
+
+    tested instances: 3,481
+    mismatches: 0
+
+This panel validates the compiler implementation only. The equivalence proof above is the mathematical basis.
+
+### 22.8 Claim boundary
+
+ChoiceCNF is an exact representation change, not a universal complexity collapse.
+
+If the compiled formula falls outside all currently certified tractable SAT classes, the branch remains unresolved.
+
+CHOICE_CNF_COMPILED != CHOICE_CNF_SOLVED.
+
+## 23. Skew-symmetric forbidden-pair carrier
+
+The hierarchical and ChoiceCNF carriers have an orthogonal exact neighbor from classical forbidden-pair path theory.
+
+For an anchor branch D_e after edge-marker subdivision, suppose:
+
+1. the active forbidden marker pairs are mutually disjoint;
+2. each pair defines a mate involution v <-> v';
+3. the branch satisfies Yinnone's skew-symmetry condition:
+
+       arc (u,v) exists
+       ->
+       arc (v',u') exists
+
+   for paired vertices u,u' and v,v'.
+
+Yinnone proved that this Skew Forbidden Path problem is polynomially equivalent to finding an augmenting path with respect to a matching.
+
+More importantly for the signed proof architecture, the same work defines a dual F-cut and proves:
+
+    safe F-path exists
+    iff
+    no F-cut exists.
+
+Therefore a recognized skew-symmetric anchor branch provides the exact two-direction contract:
+
+    POSITIVE
+      -> safe support path
+      -> conflict-free support cycle
+      -> +1 Dean augmentation
+
+    NEGATIVE
+      -> F-cut
+      -> certificate that this anchor has no safe support path.
+
+Recognition of the stated skew-symmetry and pair-disjointness conditions is polynomial by direct inspection.
+
+This carrier may apply even when the forbidden pairs are not hierarchical.
+
+### Updated conflict-overlay portfolio
+
+For binary-gammoid / series-parallel support, an anchor branch is now certified by any of the following independent exact mechanisms:
+
+    hierarchical forbidden-pair order
+    log crossing-defect -> signed endpoint repair -> hierarchical order
+    ChoiceCNF in a certified polynomial SAT class
+    skew-symmetric disjoint forbidden pairs
+    prior log conflict-vertex-cover transversal-matroid carrier
+
+No evidence transfers between these domains merely because they solve the same branch.
+
+A global NO is admitted only when every cycle anchor is closed by an exact negative certificate from some admitted carrier.
