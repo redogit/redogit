@@ -586,3 +586,128 @@ The support-side obstruction has moved from “first nonbinary cycle” to:
     that are not already covered by the binary/cluster carriers.
 
 The next one-degree support question is therefore not whether U(2,4) is representable over a larger field, but whether one can expose a polynomially bounded separator / decomposition / rank defect inside an unbounded-rank connected support component while preserving the exact matching semantics.
+
+
+## 17. Exact support-signature entropy carrier
+
+The cluster-conflict family admits another exact carrier that does not require binary support.
+
+Let the candidate-conflict graph on one support component be a disjoint union of nonempty cliques / color classes
+
+    C_1, ..., C_c.
+
+Let M be the support transversal matroid presented directly by the candidate-to-current-cohort bipartite support graph.
+
+### Full-rainbow reduction
+
+A candidate-conflict-free circuit exists if and only if there is a **full rainbow transversal**
+
+    X = {x_1, ..., x_c},  x_i in C_i,
+
+that is dependent in M.
+
+Proof:
+
+- if a full rainbow transversal is dependent, it contains a matroid circuit, and that circuit remains rainbow/conflict-free;
+- if a rainbow circuit uses only some colors, extend it by choosing one arbitrary candidate from every unused color. Matroid dependence is monotone under supersets, so the resulting full rainbow transversal is still dependent.
+
+Thus the search need not enumerate arbitrary subsets.
+
+### Exact semantic quotient within one color
+
+For candidates x,y in the same color C_i, define
+
+    x ~_S y
+    iff
+    N_S(x) = N_S(y),
+
+where N_S(x) is the exact set of current-cohort support vertices adjacent to x.
+
+Candidates equivalent under ~_S are interchangeable for support matchability because every matching query sees the same candidate-to-support neighborhood.
+
+The quotient does **not** merge authoritative occurrences:
+
+- every candidate keeps its OccurrenceID / original student ID;
+- the quotient key is a derived SemanticObjectID for the current support-neighborhood signature;
+- Homeward retains the occurrence list for each signature.
+
+Let
+
+    t_i = number of distinct support-neighborhood signatures in C_i.
+
+Choose one representative for each signature.
+
+### Theorem
+
+Enumerate all
+
+    product_i t_i
+
+full tuples of support-signature representatives, one from each color.
+
+For each tuple X:
+
+1. compute maximum bipartite matching from X into the current cohort S;
+2. if the matching size is |X|, continue;
+3. if the matching size is smaller, X is support-dependent;
+4. repeatedly delete elements while dependence persists to extract an inclusion-minimal dependent rainbow subset C;
+5. C is a conflict-free support-matroid circuit and therefore gives an exact +1 Dean augmentation.
+
+If every signature tuple is matchable, then every raw full rainbow transversal is matchable, hence no rainbow circuit exists and the current cohort is maximum.
+
+### Polynomial envelope
+
+Define exact support-signature choice entropy
+
+    H_sig = sum_i log2(t_i).
+
+Then
+
+    product_i t_i = 2^(H_sig).
+
+Hence if
+
+    H_sig = O(log n)
+
+with a fixed constant in the O(log n) bound, total enumeration and matching cost are polynomial.
+
+Equivalently, the carrier is polynomial whenever
+
+    product_i t_i <= n^c
+
+for a fixed constant c.
+
+This condition is checked directly; no claim is made when the product is superpolynomial.
+
+### Why this is anti-decay rather than lossy compression
+
+The quotient removes only a coordinate that is provably irrelevant to the current support-matching obligation: which same-color occurrence realizes an identical current support neighborhood.
+
+It does not identify different original students globally, transfer evidence, or erase provenance.
+
+If the support context changes later, signatures are recomputed from the new context and the old occurrence/signature relation remains in history.
+
+### Bounded differential validation
+
+A separate random checker generated arbitrary transversal support presentations and cluster-conflict color classes, then compared:
+
+- brute-force raw one-per-color rainbow-transversal dependence; and
+- enumeration after exact same-color support-neighborhood quotienting.
+
+Results:
+
+    generated instances: 10,000
+    mismatches: 0
+
+This finite panel is implementation evidence only. The full-rainbow extension and matching-equivalence arguments above are the scoped theorem.
+
+## 18. Updated cluster-conflict remainder
+
+For arbitrary transversal support plus cluster conflicts, the unresolved instances can now be required to have simultaneously:
+
+- an unbounded-rank connected support component;
+- support-signature choice product larger than every admitted fixed polynomial bound;
+- no immediate rank-vs-color positive certificate;
+- and no applicability of the binary / bounded-rank / log-cluster-defect carriers.
+
+This is a narrower representation-selection obstruction than the original raw candidate search.
