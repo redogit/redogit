@@ -229,6 +229,9 @@ That terminal is now strictly broader through **nonclash-clique inclusion-exclus
 
 The guard is broader once more: degeneracy is only a sufficient proxy. An output-sensitive all-clique enumerator is run under a declared fixed polynomial cap, so any instance with a polynomial **actual conformal-event count** is solved exactly by the same inclusion-exclusion carrier even when the nonclash graph has high degeneracy. The remaining qualitative-matrix obstruction is now super-cap multiplicity of jointly falsifiable clause-event intersections, not graph density by itself.
 
+The event carrier is now factored by the clause-variable incidence graph before any global multiplicity judgment. Independent CNF components multiply conformal cliques through graph join even though SAT/#SAT decomposes exactly as a product, so that multiplication is not treated as intrinsic complexity. Balance circuits localize to the same components. The surviving event-side object is now **incidence-connected super-cap conformal multiplicity**.
+
+
 
 
 
