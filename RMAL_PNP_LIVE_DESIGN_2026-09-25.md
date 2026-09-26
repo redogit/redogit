@@ -775,3 +775,94 @@ GLOBAL QUALITATIVE CENTRALITY OPEN
 ~~~
 
 Next one-degree experiment: test whether the sigma=4 degree-6 profiles receive enough exact redundancy from existing R2-R4 or positive-circuit incidence to reduce their cleaned DP debt to <=1; otherwise evaluate a separately charged global growth budget.
+
+
+## 2026-09-26 core-climb / tight-edge successors
+
+New target-local successors:
+
+- [Fixed-B Additive BVE and Uniformity Edge](PNP_FIXED_B_BVE_UNIFORMITY_EDGE_2026-09-26.md)
+- [Surplus Inflation Uniform Edge](PNP_SURPLUS_INFLATION_UNIFORM_EDGE_2026-09-26.md)
+- [Surplus Inflation Counterprobe](PNP_SURPLUS_INFLATION_COUNTERPROBE_2026-09-26.md)
+- [Minimum-Surplus Fork](PNP_MINIMUM_SURPLUS_FORK_2026-09-26.md)
+- [Logarithmic-Surplus Tight-Edge Closure](PNP_LOG_SURPLUS_TIGHT_EDGE_CLOSURE_2026-09-26.md)
+- [Tight-Block Balance Inheritance](PNP_TIGHT_BLOCK_BALANCE_INHERITANCE_2026-09-26.md)
+- [Tight-Block Cofactor Deficiency — corrected scope](PNP_TIGHT_BLOCK_COFACTOR_DEFICIENCY_2026-09-26.md)
+- [Tight-Block Parent Interface Lift](PNP_TIGHT_BLOCK_INTERFACE_LIFT_2026-09-26.md)
+
+Core-climb correction:
+
+~~~text
+INITIAL UNBOUNDED SURPLUS
+!=
+THE ACTUAL UNIFORM EDGE.
+
+ACTUAL EDGE:
+PROJECTION
+-> SURPLUS / EXPANSION-WITNESS CHANGE
+-> NEXT DEGREE / INTERFACE COST.
+~~~
+
+Surplus is not paid by clause growth alone: exact zero-clause-growth DP counterexamples increase surplus.
+
+For a minimum-surplus set V, G=F[V] gives the exact fork:
+
+~~~text
+G SAT
+-> parent autarky / clause removal
+
+G UNSAT
+-> internal low-degree structure
+-> DOES NOT by itself force a parent literal.
+~~~
+
+The first version of the tight-block cofactor artifact incorrectly lifted internal UNSAT forcing to the parent. This was adversarially detected and corrected at commit:
+
+~~~text
+24caddc99aa1f62df397bc2f8d98e261b18f7fa8
+~~~
+
+Preserved Ash:
+
+~~~text
+INTERNAL FORCING != PARENT FORCING
+RESTRICTION != EQUIVALENCE
+QUASI-POLYNOMIAL RECURRENCE BASED ON THAT LIFT = REJECTED
+~~~
+
+Parent-safe replacement:
+
+~~~text
+restricted resolution proof
+-> annotate deleted outside literals
+-> replay on parent clauses
+-> outside-interface clause
+
+non-tautological interface clause
+-> valid parent consequence.
+~~~
+
+A tautological lifted clause is a failed lift, not progress.
+
+The exact parent-safe boundary Object is:
+
+~~~text
+exists V . conjunction(clauses touching V)
+~~~
+
+not the strengthened restriction G alone.
+
+Current nearest edge:
+
+~~~text
+TIGHT INTERNAL BLOCK
++
+STRICT POSITIVE BALANCE
++
+OUTSIDE INTERFACE
+->
+POLYNOMIALLY COMPACT, NONTAUTOLOGICAL,
+PARENT-LIFTABLE CONSEQUENCE / PROJECTION?
+~~~
+
+Liftability/Homeward is now first-class in every internal carrier experiment.
