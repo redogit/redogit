@@ -599,3 +599,22 @@ after all earlier terminals.
 This is still a scoped representation-growth obstruction, not a hardness certificate.
 
 The next one-degree repair should project equality coordinates that can no longer affect any unprocessed hyperedge, rather than changing truth values.
+
+
+## 13. Executable receipts for the signed coefficient carrier
+
+Executable checker:
+
+    PNP_CUBIC_BOND_COEFFICIENT_CHECK_2026-09-26.py
+
+Bounded evidence:
+
+    PNP_CUBIC_BOND_COEFFICIENT_EVIDENCE_2026-09-26.json
+
+The checker reconstructs the full equality-partition carrier and the nonzero signed-coefficient carrier independently, compares exact counts to exhaustive 2-coloring on the bounded panels, and reports the active-width reduction.
+
+The JSON evidence remains:
+
+    BOUNDED_VALIDATION_ONLY.
+
+The theorem authority is Section 12.
