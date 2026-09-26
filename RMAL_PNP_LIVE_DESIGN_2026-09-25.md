@@ -924,3 +924,146 @@ FORGETTING CAN BE EXPONENTIAL
 Current nearest seam:
 
 > Find the smallest Boolean distinction that survives after quotienting by the boundary-residual sign arrangement. Press with first-mixed proof structure, outside-sign conflict, surplus, and positive balance until either a polynomial joint carrier survives or the quotient is shown insufficient.
+
+
+## Minimal rho-identical / Boolean-different seam pair
+
+New successors:
+
+- [Minimal Linear-Seam / Boolean-Seam Separation Pair](PNP_MINIMAL_LINEAR_BOOLEAN_SEAM_PAIR_2026-09-26.md)
+- [Replay checker](PNP_MINIMAL_LINEAR_BOOLEAN_SEAM_PAIR_CHECK_2026-09-26.py)
+- [Boolean Shear Fiber Theorem](PNP_BOOLEAN_SHEAR_FIBER_THEOREM_2026-09-26.md)
+
+The smallest fully parent-valid witness under the declared seam contract has:
+
+~~~text
+3 variables
+4 clauses
+tight V={x,y}
+boundary B={a}
+same internal A_V
+same exact rho_B
+same beta=1
+same full column rank
+same strictly positive global balance
+same outside clause
+different exact Boolean interface
+different final SAT status.
+~~~
+
+Witness:
+
+~~~text
+F_A =
+(x or a)
+and y
+and (not x or not y)
+and (not a)
+
+F_B =
+(x or a)
+and (y or a)
+and (not x or not y or not a)
+and (not a)
+~~~
+
+Both restrict on V to:
+
+~~~text
+x
+and y
+and (not x or not y).
+~~~
+
+Boundary columns satisfy:
+
+~~~text
+e_B - e_A = A_V[:,y].
+~~~
+
+Therefore for every internal balance z:
+
+~~~text
+e_A^T z = e_B^T z,
+~~~
+
+so rho is identical.
+
+But:
+
+~~~text
+exists x,y touched(F_A) = a
+exists x,y touched(F_B) = TRUE
+
+F_A = UNSAT
+F_B = SAT.
+~~~
+
+### What is hidden
+
+For fixed full-column-rank A_V:
+
+~~~text
+rho_E = rho_E'
+iff
+E' - E = A_V T
+~~~
+
+for a unique shear coordinate T.
+
+The linear seam sees only the coset:
+
+~~~text
+E + col(A_V).
+~~~
+
+Boolean semantics also needs the discrete representative inside that coset: the clausewise ownership/complement coupling of signed literal occurrences.
+
+Thus:
+
+~~~text
+LINEAR CANCELLATION
+!=
+BOOLEAN VARIABLE OWNERSHIP.
+~~~
+
+### Normalization caveat
+
+The minimal witness's shear copies the complete y-sign column onto boundary a.
+
+That makes every y-resolvent tautological, so BCE / bounded DP removes y.
+
+Hence the first witness is:
+
+~~~text
+BOOLEAN-CHANGING
+BUT
+NORMALIZER-VISIBLE.
+~~~
+
+It proves rho alone is insufficient in general, but does not yet defeat rho after full normalization.
+
+### Current nearest edge
+
+Partition admissible shears T into:
+
+~~~text
+BOOLEAN STABILIZER
+NORMALIZER-VISIBLE SHEAR
+HARD SHEAR
+~~~
+
+where a HARD SHEAR changes the Boolean interface and both sides remain normalization-irreducible.
+
+Current decisive question:
+
+~~~text
+DOES ANY HARD SHEAR EXIST
+IN A FULLY NORMALIZED TIGHT BLOCK?
+~~~
+
+If no, the linear seam becomes sufficient after normalization.
+
+If yes, the smallest hard shear is the next missing Object.
+
+Do not broaden the search until this fork is resolved.
