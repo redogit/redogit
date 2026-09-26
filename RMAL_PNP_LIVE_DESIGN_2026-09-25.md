@@ -101,6 +101,7 @@ Then test existing certified terminals:
     other explicitly admitted scoped terminals
     log conformal-defect hitting / exact model-count terminal
     log nonclash-degeneracy / conformal-clique inclusion-exclusion terminal
+    incidence-component factorization
     polynomial conformal-event-count / output-sensitive clique terminal
 
 ## NORMALIZATION CLOSURE THEOREM
@@ -323,6 +324,39 @@ hits every circuit in the positive balance-circuit cover.
 This is the first direct exact seam between the balance carrier and the conformal-event carrier.
 
 It does not yet bound the number of conformal events. The next useful theorem must exploit the overlap structure of the balance-circuit hypergraph strongly enough to force polynomial event count, decomposition, dominance, projection, or a negative sign-central certificate.
+
+## INCIDENCE-COMPONENT FACTORIZATION
+
+Before treating global conformal-event multiplicity as a live obstruction, split the CNF by connected components of the clause-variable incidence graph.
+
+For disjoint components F_i:
+
+    SAT(F) iff every SAT(F_i)
+
+and
+
+    #SAT(F)
+      =
+    2^(free variables)
+      * product_i #SAT(F_i).
+
+The clause nonclash graph is the graph join of the component nonclash graphs, so:
+
+    K(F)+1
+      =
+    product_i (K(F_i)+1).
+
+Thus global clique/event count may be exponential solely because independent components multiply. That is not intrinsic hard-core growth.
+
+Run conformal-event enumeration and every other exact terminal componentwise.
+
+Positive balance circuits also localize componentwise because the signed incidence matrix is block diagonal and a support-minimal positive dependency cannot span two blocks.
+
+Current event-side remainder:
+
+    INCIDENCE-CONNECTED
+    +
+    SUPER-CAP CONFORMAL EVENT MULTIPLICITY.
 
 ## CLAIM CEILING
 
