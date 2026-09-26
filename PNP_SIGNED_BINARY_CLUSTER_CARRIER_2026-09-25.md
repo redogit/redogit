@@ -3589,3 +3589,233 @@ A polynomial signed one-degree navigation theorem through the qualitative cell w
 
 No such universal navigation theorem is claimed here.
 \n## 36. RMAL deterministic normalization closure theorem\n\nThe individual reduction carriers above are useful only if their **combined lifecycle** is also bounded.\n\n    MAKING THE RESIDUAL\n    !=\n    KNOWING HOW THE RESIDUAL WAS MADE.\n\nThe first is an execution result. The second requires a reproducible rule order, proof receipts, cost accounting, and Homeward reconstruction.\n\n### 36.1 Canonical schedule\n\nGive every variable, clause, semantic object, and source occurrence a stable reconstructible ID.\n\nAt each stage choose the lowest-ID applicable object under this fixed priority:\n\n    R0  canonical clause cleanup + unit consequences\n    R1  maximal linear-autarky reduction\n    R2  certified signed cofactor dominance\n    R3  blocked-clause elimination\n    R4  certified functional-variable / gate elimination\n    R5  non-increasing Davis-Putnam elimination\n\nAfter any successful change, restart at R0. Stop only when a complete pass changes nothing.\n\nThe exact lexical order of IDs is not mathematically important; fixing it makes the carrier reproducible and prevents execution order from becoming hidden authority.\n\n### 36.2 Admission conditions per rule\n\nR0: only exact logical simplifications / forced literals.\n\nR1: polynomial LP-derived linear autarky; remove exactly the clauses it satisfies.\n\nR2: implication must have an admitted polynomial receipt; fix the dominating sign only.\n\nR3: every removed clause has an explicit blocking literal and tautological-resolvent check receipt.\n\nR4: functional definition must be explicitly certified; substitution must obey the declared polynomial-size guard.\n\nR5: exact DP projection; resulting clause count may not exceed the current declared envelope.\n\nA failed recognizer changes nothing.\n\n    UNKNOWN != NEGATIVE.\n\n### 36.3 Termination measure\n\nFor current CNF F define\n\n    mu(F) = n(F) + c(F).\n\nEvery successful rule strictly lowers mu:\n\n- R0 removes a forced variable and/or satisfied/redundant clauses;\n- R1 removes at least one clause touched by the nontrivial autarky;\n- R2 fixes and removes one variable;\n- R3 removes one clause;\n- R4 removes one functionally determined variable;\n- R5 removes one projected variable.\n\nNo admitted rule increases both n and c, and R4/R5 are size-guarded.\n\nTherefore the number of successful normalization steps is at most\n\n    n_0 + c_0.\n\n### 36.4 Representation-size bound\n\nLet the input have n_0 variables and c_0 clauses.\n\nThe guarded rules maintain n(F) <= n_0 and a polynomial clause envelope; under the present non-increasing R5 guard, c(F) <= c_0 unless an explicitly separate polynomial carrier says otherwise.\n\nEvery clause contains at most n_0 variables, so the literal representation stays polynomial. Gate representations reused from an existing shared carrier are charged by their actual stored size.\n\n### 36.5 Discovery-cost bound\n\nEach complete scan is polynomial in the current representation:\n\n- LP feasibility / linearly-lean reduction: polynomial rational linear programming;\n- admitted dominance checks: polynomial proof search/verification in their declared carriers;\n- BCE: polynomial opposite-polarity resolvent checks;\n- gate-pattern / certified-definition scans: polynomial under the admitted recognizers;\n- bounded DP candidate construction: polynomially many clause pairs.\n\nThere are at most n_0+c_0 successful restarts plus the final unsuccessful pass. Hence the total normalization lifecycle is polynomial.\n\n### 36.6 Trace-size bound\n\nEvery successful operation stores only polynomial-size receipts: predecessor stable IDs, rule ID, affected objects, proof/certificate, generated exact relations, and Homeward reconstruction data.\n\nWith at most n_0+c_0 successful steps and polynomial receipt size per step, the entire execution trace is polynomial.\n\n### 36.7 Homeward theorem\n\nCompose the rule-specific reconstruction maps in reverse execution order.\n\nIf the terminal residual K is satisfiable and returns witness w_K, reverse replay reconstructs a witness w_F for the original formula F.\n\nIf an admitted terminal returns an UNSAT proof whose transformations preserve the required negative direction, replayed receipts verify that the original F is also UNSAT.\n\nTherefore:\n\n    TERMINAL CERTIFICATE\n    + NORMALIZATION TRACE\n    ->\n    ORIGINAL-OBLIGATION CERTIFICATE.\n\n### 36.8 What this proves\n\nThe canonical RMAL normalization phase satisfies local lifecycle obligations for its declared rules: exact rule application, polynomial recognized-rule selection, polynomial transformation cost, polynomial trace/provenance cost, and polynomial Homeward reconstruction cost.\n\nThis is genuine progress on P5/P6 for the preprocessing/normalization layer.\n\nIt does **not** prove that every nonterminal residual is closed.\n\n    NORMALIZATION != SOLVER\n    POLYNOMIAL PREPARATION != POLYNOMIAL SAT\n    P5/P6 LOCAL CLOSURE != P7 UNIVERSAL MASS CLOSURE.\n\n### 36.9 Current canonical residual\n\nAfter normalization reaches its fixed point, an unresolved residual can be required to have no admitted instance of:\n\n    linear autarky\n    certified cofactor dominance\n    blocked clause\n    admissible functional variable\n    non-increasing DP variable\n    already-certified low-deficiency / tractable terminal.\n\nIt additionally carries the positive balance structure from Section 31 whenever linearly lean.\n\nThis fixed-point residual, not arbitrary CNF, is now the next proof Object.\n\n## 37. Condensed wisdom extracted from the normalization theorem\n\nThe long proof above compresses to:\n\n    DON'T BRANCH ON A DEGREE\n    UNTIL I HAVE FAILED TO PROVE THAT THE DEGREE IS:\n\n        REDUNDANT,\n        DOMINATED,\n        FUNCTIONALLY DETERMINED,\n        LOCALLY SATISFIED,\n        OR CHEAPLY PROJECTABLE.\n\nReverse-decomposition of that sentence is Sections 28 through 36.\n\nThat is **algorithmic condensed wisdom** in the intended sense:\n\n    SHORT RULE\n    <- recoverable exact mechanisms\n    <- preserved failures\n    <- explicit scope\n    <- charged cost\n    <- way Homeward.\n\nThe short rule is not promoted beyond the theorem that earned it.\n\n## 38. Positive balance-circuit decomposition theorem\n\nTake the fully normalized linearly-lean residual F from Section 31.\n\nLet M=M(F) be its m x n signed clause-variable matrix. The negative side of the linear-autarky alternative gives:\n\n    rank(M)=n\n    y>0\n    M^T y=0.\n\nWrite\n\n    k = delta(F) = m-n = dim ker(M^T).\n\nDefine the nonnegative balance cone\n\n    K_F = { z in R^m : z>=0 and M^T z=0 }.\n\nBecause y is strictly positive, K_F has full relative dimension k inside ker(M^T).\n\n### 38.1 Positive balance circuit\n\nA nonzero z in K_F is a positive balance circuit when its support is inclusion-minimal among nonzero nonnegative balance vectors.\n\nEquivalently, after normalization by sum(z)=1, it lies on an extreme ray of K_F / is an extreme point of the normalized balance polytope.\n\nIts support is a circuit of the row matroid of M with all circuit coefficients having one sign.\n\nTherefore every positive balance circuit has support size at most\n\n    n+1.\n\n### 38.2 Circuit-cover theorem\n\nNormalize y so that sum(y)=1 and consider\n\n    P_F = { z>=0 : M^T z=0, sum(z)=1 }.\n\nP_F has affine dimension k-1.\n\nBy the convex/conic Caratheodory theorem, y is a convex combination of at most k extreme points of P_F:\n\n    y = lambda_1 z_1 + ... + lambda_t z_t\n\nwith\n\n    t <= k\n    lambda_i > 0\n    sum(lambda_i)=1.\n\nEach z_i is a positive balance circuit.\n\nSince y is strictly positive in every clause coordinate, every clause coordinate must be positive in at least one selected z_i.\n\nHence:\n\n    every clause of F is covered\n    by at most k=delta(F)\n    positive balance circuits.\n\n### 38.3 Constructive extraction\n\nA polynomial exact extraction route is available:\n\n1. work in the rational polytope P_F;\n2. use LP plus support shrinking to obtain an extreme nonnegative balance vector on the current residual support;\n3. subtract the maximum nonnegative multiple that keeps the residual balance vector nonnegative, causing at least one clause coordinate to reach zero;\n4. repeat until the original y is decomposed;\n5. if more than k circuit vectors remain, use linear dependence in the k-dimensional nullspace to Caratheodory-reduce the representation while preserving nonnegative coefficients.\n\nAll matrix entries are rational/integer, so the receipts can be retained as exact rational vectors with polynomially checkable equations.\n\n### 38.4 Four-ID carrier projection\n\nEach extracted circuit becomes a derived Object with:\n\n    OccurrenceIDs = participating clause occurrences\n    SemanticObjectID = BALANCE_CIRCUIT\n    SemanticContextSupportsIDs = the current normalized CNF / matrix carrier\n    SemanticClarityIDs = POSITIVE_DEPENDENCY_NOT_TRUTH_CERTIFICATE\n\nRetain:\n\n    circuit support\n    exact rational coefficients\n    source clause IDs\n    M^T z = 0 receipt\n    decomposition coefficient lambda_i.\n\nThis makes the continuous balance certificate reconstructible as a finite typed carrier.\n\n### 38.5 What this does not prove\n\nA positive balance circuit may be satisfiable.\n\nIt is not:\n\n    an UNSAT core,\n    a resolution refutation,\n    a contradiction,\n    or a proof that one Boolean branch can be discarded.\n\nTherefore:\n\n    POSITIVE BALANCE CIRCUIT != UNSAT CORE\n    CIRCUIT COVER <= DEFICIENCY != SAT ALGORITHM.\n\n## 39. New balance-side research object\n\nThe current high-deficiency remainder can now be represented by two synchronized views:\n\n    CNF / Boolean obligation view\n    +\n    positive balance-circuit cover view.\n\nThe balance view uses at most k=delta(F) circuit Objects to cover every clause.\n\nThis gives a new exact question:\n\n    Which overlap relation between positive balance circuits\n    is sufficient to remove, dominate, or project one Boolean degree\n    without recreating the same degree under a fresh selector?\n\nThat is narrower than asking for an arbitrary SAT branching heuristic.\n\nThe next admitted move must still produce one of:\n\n    exact degree removal,\n    exact decomposition into independently solvable obligations,\n    certified dominance,\n    polynomial reusable projection,\n    or an exact negative certificate.\n\nBALANCE_STRUCTURE = NEW CARRIER\n\nBALANCE_STRUCTURE != EVIDENCE_TRANSFER TO SAT/UNSAT\n
+
+## 40. Log conformal-defect / hitting terminal
+
+The qualitative-matrix carrier gives another exact polynomial island directly on the normalized SAT side.
+
+Let F be a CNF over n variables and let
+
+    A = M(F)^T
+
+be its signed clause-column matrix.
+
+Two clause columns are **conformal** exactly when their Hadamard product has no negative component.
+
+For clause columns this is equivalent to:
+
+    the two clauses do not clash on any complementary literal.
+
+Therefore:
+
+    pairwise nonconformal columns
+    <=>
+    hitting clause-set.
+
+This is the SAT translation of the tight sign-pattern condition used in sign-central matrix theory.
+
+### 40.1 Nonclash / conformal graph
+
+Define the nonclash graph Q_F:
+
+- one vertex for every clause of F;
+- edge {C,D} exactly when C and D do **not** clash.
+
+Equivalently, Q_F joins conformal clause columns.
+
+Let Z be a vertex cover of Q_F.
+
+Then:
+
+    H = F \ Z
+
+is hitting, because every nonclashing clause pair has at least one endpoint in Z.
+
+Z is a carrier exception set only. Its clauses remain authoritative and are never deleted from the original obligation.
+
+### 40.2 Exact hitting model count
+
+For a hitting clause-set H, the total assignments falsifying distinct clauses are pairwise disjoint.
+
+Therefore over N currently free variables:
+
+    #SAT(H)
+      =
+    2^N - sum_{C in H} 2^(N-|C|).
+
+The same statement remains valid after a partial assignment alpha:
+
+- remove clauses satisfied by alpha;
+- delete falsified literals from surviving clauses;
+- if an empty clause appears, the count is zero.
+
+The surviving residual clause-set remains hitting.
+
+Reason: if two original hitting clauses clash on x / not-x and alpha assigns x, then at least one of the two clauses is satisfied and disappears. If both clauses survive, no assigned variable destroyed all of their clashes, so at least one clash remains.
+
+Thus #SAT of a restricted hitting remainder is polynomial-time computable with exact integer arithmetic.
+
+### 40.3 Inclusion-exclusion over exceptional clauses
+
+For T subseteq Z, let Bad(T) mean that every clause in T is falsified.
+
+Falsifying all clauses in T fixes each literal in those clauses to false.
+
+If those requirements force one variable to both truth values, Bad(T) is inconsistent and contributes zero.
+
+Otherwise they define a partial assignment alpha_T.
+
+Let
+
+    N_T
+      =
+    number of assignments satisfying H and Bad(T).
+
+Compute N_T by applying alpha_T to H and using the exact hitting count above.
+
+Inclusion-exclusion gives:
+
+    #SAT(F)
+      =
+    sum_{T subseteq Z}
+      (-1)^|T| N_T.
+
+Hence:
+
+    #SAT(F) > 0
+        -> SAT
+
+    #SAT(F) = 0
+        -> UNSAT.
+
+No Boolean search selector is introduced. The two truth directions of original variables are not materialized as branches.
+
+### 40.4 Cost
+
+Build Q_F in polynomial time by pairwise clause-clash tests.
+
+Use a standard parameterized Vertex Cover search with declared cap
+
+    k = |Z| <= c log N_input
+
+for fixed constant c.
+
+The cover search costs
+
+    2^O(k) poly(N_input).
+
+The inclusion-exclusion table has exactly
+
+    2^k
+
+terms.
+
+Each term performs polynomial simplification, exact hitting counting, and O(N_input)-bit integer arithmetic.
+
+Therefore:
+
+    k = O(log N_input)
+        ->
+    exact polynomial #SAT / SAT decision.
+
+### 40.5 Homeward witness reconstruction
+
+If the exact count is positive, recover a satisfying assignment by ordinary self-reduction.
+
+For each original variable x in stable-ID order:
+
+1. restrict x=0 and recompute the exact count using the same exceptional-clause carrier;
+2. if the count remains positive, keep x=0;
+3. otherwise choose x=1.
+
+Restriction preserves the hitting property of H and cannot increase |Z|.
+
+At most n such calls are needed.
+
+Thus witness reconstruction remains polynomial inside the same logarithmic guard.
+
+### 40.6 Negative certificate
+
+For an UNSAT result retain:
+
+- the nonclash graph Q_F;
+- the vertex cover Z;
+- every inclusion-exclusion subset T;
+- its consistency / partial-assignment receipt;
+- the exact hitting residual and model count N_T;
+- the final exact integer sum zero.
+
+Every receipt is polynomially checkable and Homeward-linked to original clauses.
+
+### 40.7 Sign-central interpretation
+
+If Z is empty, F itself is hitting / the sign pattern is tight.
+
+The counting formula decides whether that tight pattern is sign-central:
+
+    hitting + zero models
+        <=> tight sign-central
+        <=> UNSAT;
+
+    hitting + positive models
+        <=> tight but not sign-central
+        <=> SAT.
+
+This matches the published fact that tight sign-central matrices are minimal sign-central, while SAT literature independently recognizes hitting formulas as a polynomial-time model-counting class.
+
+TIGHT PATTERN != SIGN-CENTRAL.
+
+The model-count receipt decides the difference.
+
+### 40.8 One-degree semantics
+
+Every exceptional clause z in Z is one conformal-defect degree.
+
+The carrier does not choose a truth value for z.
+
+Instead z contributes one Möbius / inclusion-exclusion coordinate:
+
+    absent from T
+    or
+    required falsified in T.
+
+After all k exception coordinates are accounted for, the remainder is the exact hitting carrier.
+
+For logarithmic k, retaining both signs of every exception degree is polynomial total work.
+
+### 40.9 Bounded differential validation
+
+A separate exact checker generated 10,000 random small CNFs.
+
+For each instance it:
+
+1. built the clause nonclash graph;
+2. searched for a vertex cover of size at most 3;
+3. when found, ran the exact conformal-defect inclusion-exclusion count;
+4. compared the result to exhaustive truth-table model counting.
+
+Results:
+
+    generated instances: 10,000
+    decided under cap: 7,089
+    mismatches: 0.
+
+The finite panel is implementation evidence only. The disjoint-falsifying-subcube and inclusion-exclusion arguments above are the theorem.
+
+### 40.10 Claim boundary
+
+This carrier does not solve arbitrary SAT.
+
+If every admitted nonclash vertex cover is superlogarithmic, the formula remains unresolved under this terminal.
+
+The new exact terminal is:
+
+    LOG_CONFORMAL_DEFECT
+        ->
+    HITTING CORE
+        ->
+    EXACT INCLUSION-EXCLUSION
+        ->
+    SAT / UNSAT + HOMEWARD.
+
+This should be added to the deterministic terminal portfolio before any new Boolean branching.
