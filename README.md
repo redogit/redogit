@@ -264,6 +264,9 @@ The current cubic calibration now has an exact **paired-NAE bond-lattice carrier
 
 That carrier now streams its inclusion-exclusion coefficients instead of retaining every generated equality partition. Each hyperedge performs one absent/present signed transition; histories reaching the same partition merge immediately, and exact zero coefficients are discarded because their future contribution is identically zero. The tighter execution resource is therefore **active partition-coefficient width** under a fixed charged hyperedge order, not full bond-lattice size. A 1,000-instance bounded cubic panel returned zero count mismatches; the strongest observed reduction was 139 full states to 100 active states.
 
+The next one-degree carrier is **future-frontier projection**. Once no unprocessed hyperedge can touch a vertex again, that equality coordinate leaves the hot carrier; a fully closed block pays its exact color factor immediately. The decision guard is actual nonzero projected state width, not frontier size alone. Homeward is separately protected with UNFIXED/0/1 block labels during conditional-count self-reduction and fails closed if that labeled width exceeds the polynomial cap. Bounded decision and witness panels each covered 1,000 cubic instances with zero failures; one observed execution shrank global active coefficient width 118 to projected width 12.
+
+
 
 **Current mathematical status remains open.** Scoped carrier theorems, finite computations, codecs, semantic compression, and successful special cases are not promoted into a universal P=NP claim.
 
