@@ -298,6 +298,32 @@ Current qualitative residual:
 
 This is representation-growth evidence, not a hardness certificate.
 
+## BALANCE-CIRCUIT / CONFORMAL-EVENT BRIDGE
+
+For every positive balance circuit B:
+
+    z>0 on B
+    M^T z=0
+
+every variable used in B occurs in both polarities inside B.
+
+Therefore every clause in B clashes with at least one other clause in B, and B can never be a clique of the clause nonclash / column-conformality graph.
+
+So for every conformal event T:
+
+    B_i not-subseteq T
+    for every balance circuit B_i.
+
+Equivalently:
+
+    F \ T
+
+hits every circuit in the positive balance-circuit cover.
+
+This is the first direct exact seam between the balance carrier and the conformal-event carrier.
+
+It does not yet bound the number of conformal events. The next useful theorem must exploit the overlap structure of the balance-circuit hypergraph strongly enough to force polynomial event count, decomposition, dominance, projection, or a negative sign-central certificate.
+
 ## CLAIM CEILING
 
     ACTIVE PROOF PROGRAM
