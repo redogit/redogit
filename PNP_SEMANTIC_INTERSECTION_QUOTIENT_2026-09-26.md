@@ -308,6 +308,10 @@ Do not re-expand to raw clique subsets.
 
 ## 11. Bounded validation
 
+Executable checker:
+
+    PNP_SEMANTIC_INTERSECTION_QUOTIENT_CHECK_2026-09-26.py
+
 Evidence artifact:
 
     PNP_SEMANTIC_INTERSECTION_QUOTIENT_EVIDENCE_2026-09-26.json
