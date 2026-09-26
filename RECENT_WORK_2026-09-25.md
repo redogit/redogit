@@ -84,6 +84,8 @@ positive balance vector
 -> every clause covered
 ```
 
+A new exact terminal has also been added from the qualitative-matrix side: **log conformal defect to hitting**. Clause columns are conformal exactly when the clauses do not clash. Removing a vertex cover Z of the clause nonclash graph leaves a hitting formula. For |Z|=O(log N), inclusion-exclusion over the exceptional clauses plus the closed-form model count for hitting formulas yields exact polynomial #SAT/SAT decision and Homeward witness reconstruction. A 10,000-instance bounded differential panel decided 7,089 guarded cases with zero mismatches.
+
 The current exact question is the overlap relation among those circuits:
 
 ```text
