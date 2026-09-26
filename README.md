@@ -227,6 +227,9 @@ The qualitative-matrix branch now also has an exact **log conformal-defect / hit
 
 That terminal is now strictly broader through **nonclash-clique inclusion-exclusion**. Simultaneous falsification sets are exactly cliques of the clause nonclash / column-conformality graph. If that graph has degeneracy O(log N), all contributing cliques can be enumerated in polynomial total work and exact inclusion-exclusion yields #SAT/SAT plus Homeward reconstruction. Hitting is the zero-degeneracy endpoint; log conformal vertex cover is only one sufficient route into the broader terminal. The surviving qualitative residual therefore has superlogarithmic conformality degeneracy.
 
+The guard is broader once more: degeneracy is only a sufficient proxy. An output-sensitive all-clique enumerator is run under a declared fixed polynomial cap, so any instance with a polynomial **actual conformal-event count** is solved exactly by the same inclusion-exclusion carrier even when the nonclash graph has high degeneracy. The remaining qualitative-matrix obstruction is now super-cap multiplicity of jointly falsifiable clause-event intersections, not graph density by itself.
+
+
 
 
 The four-ID catalog compresses that normal form without changing its logic: literal occurrences retain OccurrenceIDs, repeated signed literals share SemanticObjectIDs, clause membership is ContextSupport, and positive/negative polarity is linked by one Clarity/COMPLEMENT relation rather than repeated pairwise conflict storage.
