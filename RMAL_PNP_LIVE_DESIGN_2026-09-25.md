@@ -1067,3 +1067,66 @@ If no, the linear seam becomes sufficient after normalization.
 If yes, the smallest hard shear is the next missing Object.
 
 Do not broaden the search until this fork is resolved.
+
+
+## Boundary rescue / correction-set seam
+
+Successor:
+
+- [Boundary Rescue / Correction-Set Seam](PNP_BOUNDARY_RESCUE_CORRECTION_SET_SEAM_2026-09-26.md)
+
+The exact Boolean information omitted by the linear residual quotient is now identified.
+
+For tight block (G=F[V]), each boundary assignment (alpha) satisfies some outside clause remainders and thereby rescues/removes a clause set:
+
+~~~text
+R(alpha) = { tight clauses already satisfied by outside literals }.
+~~~
+
+Exact interface law:
+
+~~~text
+I_V(alpha)=SAT
+iff
+G \ R(alpha) is SAT.
+~~~
+
+For UNSAT G:
+
+~~~text
+I_V(alpha)=SAT
+iff
+R(alpha) is a correction set
+iff
+R(alpha) hits every MUS of G.
+~~~
+
+Thus the hidden Boolean seam is:
+
+~~~text
+BOUNDARY ASSIGNMENT
+-> CLAUSE-RESCUE OWNERSHIP
+-> CORRECTION SET
+-> MUS TRANSVERSAL.
+~~~
+
+This explains the minimal rho-identical pair exactly: the two instances have the same linear residual map but map the boundary truth values to different correction sets.
+
+The positive-circuit and interface lines now converge:
+
+~~~text
+MU(1)
+=
+UNSAT POSITIVE-BALANCE CIRCUIT.
+
+HIGHER-DEFICIENCY MUS
+=
+GLOBAL INCOMPATIBILITY
+AMONG LOCALLY SAT POSITIVE CIRCUITS.
+~~~
+
+Current nearest edge:
+
+> Represent/query the MUS-transversal predicate of a fully normalized tight block in polynomial work from its positive-circuit compatibility structure, without enumerating all MUSes or all correction sets.
+
+Do not revert to generic interface compilation; the exact missing Object is now correction-set/MUS structure.
