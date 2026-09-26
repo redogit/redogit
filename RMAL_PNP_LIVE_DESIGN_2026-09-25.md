@@ -1130,3 +1130,70 @@ Current nearest edge:
 > Represent/query the MUS-transversal predicate of a fully normalized tight block in polynomial work from its positive-circuit compatibility structure, without enumerating all MUSes or all correction sets.
 
 Do not revert to generic interface compilation; the exact missing Object is now correction-set/MUS structure.
+
+
+## Full positive-circuit signature completeness
+
+Successor:
+
+- [Positive-Circuit Signature Completeness for Correction Status](PNP_POSITIVE_CIRCUIT_SIGNATURE_COMPLETENESS_2026-09-26.md)
+
+The selected positive-circuit cover was counterprobed and is insufficient: two rescue sets can hit the same selected cover circuits yet have opposite correction status.
+
+The **full** positive-circuit family is different.
+
+For rescue/deletion sets C,D:
+
+~~~text
+same hit signature against every support-minimal positive row circuit
+->
+G\C SAT iff G\D SAT.
+~~~
+
+Proof: if one remaining formula were UNSAT, choose a MUS H. Its strictly positive balance decomposes into positive circuits covering every clause of H. Signature equality transfers survival of every one of those circuits, hence of all H, to the other formula.
+
+Thus the exact Boolean rescue interface factors through:
+
+~~~text
+BOUNDARY ASSIGNMENT
+-> RESCUE SET
+-> FULL POSITIVE-CIRCUIT HIT SIGNATURE
+-> CORRECTION STATUS.
+~~~
+
+The full circuit family need not be enumerated. It is the extreme-ray structure of:
+
+~~~text
+M^T y = 0
+y >= 0.
+~~~
+
+Signature difference/equality and clause membership in a surviving positive circuit are polynomially queryable by LP.
+
+For C define:
+
+~~~text
+U(C) =
+union of all positive circuits disjoint from C.
+~~~
+
+Then U(C) is polynomially constructible with clausewise LP tests and:
+
+~~~text
+G\C SAT
+iff
+U(C) SAT.
+~~~
+
+So boundary rescue followed by positive-circuit closure is exactly another entrance into the linear-autarky / linearly-lean normalization core.
+
+Current nearest edge:
+
+~~~text
+EVALUATE SAT ON THE
+NORMALIZED SURVIVING POSITIVE-CIRCUIT CORE
+WITHOUT ENUMERATING BOOLEAN ASSIGNMENTS
+OR HIGHER-ORDER COMPATIBILITY STATES.
+~~~
+
+This is the remaining compatibility function. P=NP remains open.
