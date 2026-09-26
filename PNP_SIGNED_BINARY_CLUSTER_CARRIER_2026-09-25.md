@@ -4345,3 +4345,162 @@ A useful next theorem would show that some polynomially recognizable property of
 - or a sign-central negative certificate.
 
 Until such a theorem is proved, the blocker relation remains structural evidence only.
+
+
+## 44. Incidence-component factorization of conformal events
+
+Section 42 identified the actual number of conformal clause-event intersections as a more faithful resource than graph density.
+
+There is one further anti-decay correction before treating a large global event count as a live obstruction:
+
+    INDEPENDENT COMPONENT PRODUCTS
+    !=
+    INTRINSIC EVENT EXPLOSION.
+
+Let G_inc(F) be the ordinary clause-variable incidence graph of F.
+
+Assume its nontrivial connected components induce clause-sets
+
+    F_1,...,F_t
+
+on pairwise disjoint active variable sets
+
+    V_1,...,V_t.
+
+Free variables not occurring in any clause are carried separately.
+
+### 44.1 SAT / #SAT factorization
+
+Because the component variable sets are disjoint:
+
+    F = F_1 AND ... AND F_t
+
+with no cross-component variable relation.
+
+Therefore:
+
+    SAT(F)
+      iff
+    SAT(F_i) for every i.
+
+And for exact model count:
+
+    #SAT(F)
+      =
+    2^(#free variables)
+      * product_i #SAT(F_i).
+
+Witness reconstruction is componentwise union plus arbitrary values for free variables.
+
+This is an exact decomposition, not a heuristic split.
+
+### 44.2 Nonclash graph is a graph join
+
+Let Q_i be the clause nonclash / column-conformality graph of F_i.
+
+Clauses belonging to different incidence components share no variable at all, so they cannot contain complementary literals.
+
+Therefore every clause in F_i is adjacent in Q_F to every clause in F_j for i!=j.
+
+Hence:
+
+    Q_F
+      =
+    Q_1 join Q_2 join ... join Q_t.
+
+A clique of a graph join is exactly the union of one clique (possibly empty) chosen independently from each factor.
+
+Let K_i be the number of nonempty cliques of Q_i and K(F) the number for Q_F.
+
+Then:
+
+    K(F) + 1
+      =
+    product_i (K_i + 1).
+
+So the global conformal-event count may be exponential even when every component has a tiny exact event family.
+
+That multiplication is benign because the Boolean obligation itself decomposes.
+
+### 44.3 Componentwise event-count terminal
+
+Do not run the polynomial conformal-event cap on the whole formula before component factorization.
+
+Instead:
+
+1. compute G_inc(F) in polynomial time;
+2. split F into incidence components;
+3. normalize / solve each component independently;
+4. on each unresolved component, run the capped output-sensitive conformal-clique carrier;
+5. multiply exact model counts and compose witnesses.
+
+Fix the same declared polynomial cap
+
+    P(N_input)=N_input^c
+
+for every component.
+
+There are at most N_input components.
+
+If every component completes within the cap, total work is at most
+
+    N_input * P(N_input) * poly(N_input),
+
+hence polynomial even when the product of their clique counts is exponential.
+
+### 44.4 Balance circuits localize automatically
+
+After permuting rows/columns by incidence component, the signed clause-variable matrix is block diagonal:
+
+    M(F)
+      =
+    diag(M(F_1),...,M(F_t)).
+
+A support-minimal positive row dependency cannot use rows from two different blocks.
+
+If it did, restricting the dependency to either nonempty block would give a smaller nonzero nonnegative dependency, contradicting support minimality.
+
+Therefore every positive balance circuit lies entirely within one incidence component.
+
+The Section 38 balance-circuit cover can be chosen componentwise, and the Section 43 balance/conformality bridge remains component-local.
+
+### 44.5 Bounded validation
+
+A separate checker generated 5,000 pairs of random CNF components on disjoint variable sets.
+
+For every case it verified:
+
+    K(F_1 AND F_2)+1
+      =
+    (K(F_1)+1)(K(F_2)+1).
+
+Results:
+
+    tested: 5,000
+    mismatches: 0.
+
+This finite panel is implementation evidence only; the graph-join proof above is the theorem.
+
+### 44.6 Updated live residual
+
+The qualitative residual should now be stated componentwise.
+
+A surviving component must be:
+
+- incidence-connected;
+- normalized under the deterministic exact rule suite;
+- outside every admitted tractable terminal;
+- carrying positive balance structure when linearly lean;
+- and emitting more than the admitted polynomial number of conformal events under output-sensitive enumeration.
+
+Thus:
+
+    GLOBAL SUPER-CAP EVENT COUNT
+
+is no longer sufficient evidence of a live obstruction.
+
+The correct remainder is:
+
+    CONNECTED SUPER-CAP CONFORMAL EVENT MULTIPLICITY.
+
+This is a representation-growth obstruction inside one irreducible semantic component, not multiplication of independent work.
