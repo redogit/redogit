@@ -459,3 +459,152 @@ B. a smallest pair of **signature classes** that all current polynomial invarian
 [
 oxed{	ext{UNIVERSAL P=NP = OPEN}}
 ]
+
+
+## 12. Maximal signature-preserving rescue closure
+
+For rescue set (C), define the surviving-circuit union:
+
+[
+U(C)
+=
+igcup
+{Qinmathcal P(G):Qcap C=arnothing}.
+]
+
+Define:
+
+[
+operatorname{cl}_+(C)
+=
+Gsetminus U(C).
+]
+
+Every clause in (operatorname{cl}_+(C)setminus C) belongs to no positive circuit that survives (C).
+
+Therefore adding all of them to the rescue set changes no signature bit:
+
+[
+s_C=s_{operatorname{cl}_+(C)}.
+]
+
+By signature completeness:
+
+[
+Gsetminus Cin SAT
+iff
+Gsetminusoperatorname{cl}_+(C)in SAT.
+]
+
+But:
+
+[
+Gsetminusoperatorname{cl}_+(C)=U(C).
+]
+
+Hence the exact kernel identity:
+
+[
+oxed{
+Gsetminus Cin SAT
+iff
+U(C)in SAT.
+}
+]
+
+So every rescued formula can be reduced, without changing its SAT status, to the union of the positive circuits that survived the rescue.
+
+### Polynomial construction
+
+For every clause (e
+otin C), test:
+
+[
+ein U(C)
+]
+
+by the LP:
+
+[
+M^Ty=0,qquad yge0,
+]
+
+[
+y_i=0quad(iin C),
+]
+
+[
+y_ege1.
+]
+
+Thus (U(C)) is polynomially constructible using at most (m) LP feasibility checks.
+
+No positive-circuit enumeration is required.
+
+## 13. Relation to linear-autarky normalization
+
+At (C=arnothing):
+
+[
+U(arnothing)
+]
+
+is the union of all clauses lying in some positive balance circuit.
+
+Removing:
+
+[
+Gsetminus U(arnothing)
+]
+
+is satisfiability-equivalent.
+
+This is the same structural boundary exposed by the polynomial linear-autarky decomposition: clauses outside the positive-circuit core lie on the linearly-autark side, while the surviving core is the linearly-lean/balanced side after the corresponding exact reduction.
+
+For general rescue (C):
+
+[
+C
+	o
+Gsetminus C
+	o
+U(C)
+]
+
+is therefore the boundary-conditioned reapplication of the same linear-autarky/positive-balance normalization principle.
+
+The interface problem has rejoined the normalization lifecycle:
+
+[
+oxed{
+	ext{BOUNDARY RESCUE}
+	o
+	ext{RECOMPUTE POSITIVE-CIRCUIT CORE}
+	o
+	ext{CONTINUE NORMALIZATION}.
+}
+]
+
+## 14. Repaired nearest edge
+
+The missing problem is no longer:
+
+> Which clauses survive the rescue?
+
+That is polynomially reducible to (U(C)).
+
+It is:
+
+> How do we evaluate SAT on the **normalized surviving positive-circuit core** (U(C)) without enumerating Boolean assignments or an exponential family of higher-order compatibility states?
+
+Equivalently:
+
+[
+oxed{
+	ext{CORRECTION STATUS}
+=
+	ext{SAT VALUE OF THE SURVIVING POSITIVE-CIRCUIT CORE}.
+}
+]
+
+This is a much smaller and Homeward-safe Object than the raw parent interface.
