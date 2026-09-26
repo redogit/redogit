@@ -4219,3 +4219,129 @@ It is:
 under every currently admitted fixed polynomial cap, after deterministic normalization and all earlier terminals.
 
 This is an exact representation-growth obstruction, not a hardness certificate.
+
+
+## 43. Balance-circuit / conformality bridge
+
+The positive-balance carrier from Section 38 and the conformal-event carrier from Sections 40-42 are not independent descriptions.
+
+Let z be a positive balance circuit of the normalized signed clause-variable matrix M(F):
+
+    z > 0 on its support B,
+    M(F)^T z = 0,
+
+with B inclusion-minimal among nonzero nonnegative balances.
+
+Assume clauses are nonempty after canonical cleanup.
+
+### 43.1 Every used variable occurs in both polarities inside the circuit
+
+Fix a variable x that appears in at least one clause of B.
+
+The x-coordinate of the balance equation is
+
+    sum_{C in B} z_C M[C,x] = 0.
+
+All z_C on B are strictly positive.
+
+If x occurred only positively inside B, this sum would be strictly positive.
+
+If x occurred only negatively, it would be strictly negative.
+
+Therefore x occurs in both polarities among clauses of B.
+
+### 43.2 Every circuit clause clashes with another circuit clause
+
+Take any clause C in B and any literal of variable x occurring in C.
+
+By 43.1, the opposite polarity of x occurs in some other clause D in B.
+
+Hence C and D clash.
+
+Therefore the clause-clash graph induced by B has minimum degree at least one.
+
+Equivalently, in the nonclash / conformality graph Q_F:
+
+    no vertex of B is adjacent to every other vertex of B.
+
+### 43.3 No positive balance circuit is a conformal event
+
+Suppose B were a clique of Q_F.
+
+Then every pair of clauses in B would be nonclashing.
+
+But 43.2 gives a clashing pair.
+
+Contradiction.
+
+Hence:
+
+    positive balance circuit
+    !=
+    nonclash clique.
+
+### 43.4 Blocker relation
+
+Let
+
+    B_1,...,B_t
+
+be the <=k positive balance circuits in the Section 38 cover, with
+
+    k = deficiency(F).
+
+Let T be any nonempty clique of Q_F, i.e. any jointly falsifiable clause-event set contributing to the inclusion-exclusion carrier.
+
+Since no B_i is a nonclash clique:
+
+    B_i is not subseteq T
+
+for every i.
+
+Therefore:
+
+    F \ T
+
+intersects every B_i.
+
+So the complement of every conformal event is a transversal / hitting set of the positive-balance-circuit hypergraph.
+
+This gives an exact relation between the two carriers:
+
+    CONFORMAL EVENT T
+        ->
+    OMITTED CLAUSES F\T
+        ->
+    HITS EVERY POSITIVE BALANCE CIRCUIT.
+
+### 43.5 What this does not prove
+
+The blocker relation alone does not bound the number of conformal events.
+
+A circuit hypergraph can have many transversals, and many distinct conformal cliques may have complements hitting the same balance circuits.
+
+Therefore:
+
+    BALANCE-CIRCUIT COVER
+    !=
+    POLYNOMIAL CONFORMAL-EVENT COUNT.
+
+The relation is admitted as a new exact structural seam, not as a universal SAT decision rule.
+
+### 43.6 Next one-degree object
+
+The live overlap object can now be stated explicitly:
+
+    positive-balance-circuit hypergraph
+    x
+    conformal-event clique family.
+
+A useful next theorem would show that some polynomially recognizable property of the balance-circuit overlap forces one of:
+
+- polynomially many conformal events;
+- an exact decomposition;
+- a certified dominance relation;
+- a polynomial projection;
+- or a sign-central negative certificate.
+
+Until such a theorem is proved, the blocker relation remains structural evidence only.
