@@ -631,3 +631,29 @@ Current RMAL execution/tooling authority is target-local in `redogit/DnD`; curre
 NEWEST TOOLING + CORRECT PROOF LINEAGE
 TARGET_LOCAL_EVIDENCE > CENTRAL SUMMARY
 ~~~
+
+
+## 2026-09-26 positive-circuit local closure
+
+Successors:
+
+- [Positive Balance-Circuit Local Decision](PNP_POSITIVE_CIRCUIT_LOCAL_DECISION_2026-09-26.md)
+- [Cross-Circuit Bounded-Adhesion Terminal](PNP_CROSS_CIRCUIT_BOUNDED_ADHESION_2026-09-26.md)
+
+For every support-minimal positive balance circuit C, row-circuit minimality implies maximum clause-subset deficiency at most one. If its clause support is UNSAT, Tarsi's deficiency bound forces the entire support to be minimally UNSAT with deficiency exactly one. This yields an exact polynomial local SAT/UNSAT terminal using the known bounded/max-deficiency algorithms.
+
+Therefore internal hardness of one positive circuit is removed from the live remainder.
+
+A second exact terminal closes circuit systems admitting a running-intersection tree whose signed variable boundary per circuit is O(log n): boundary conditioning raises local maximum deficiency by at most the boundary size, and exact maximum-deficiency SAT plus tree compatibility gives polynomial total work.
+
+Current remainder:
+
+~~~text
+ALL POSITIVE CIRCUITS LOCALLY SAT
++
+NO ADMITTED LOG-BOUNDARY RUNNING-INTERSECTION DECOMPOSITION
++
+GLOBAL QUALITATIVE CENTRALITY UNRESOLVED
+~~~
+
+Next degree: large/irreducible signed cross-circuit compatibility. Existence of a small decomposition is not discovery; discovery cost remains charged.
