@@ -439,3 +439,67 @@ Current cubic remainder:
     PAIRED BALANCE CIRCUITS
 
 with no NP-hardness claim attached to the exact cubic restriction.
+
+
+## 2026-09-26 successor — cubic paired-NAE bond lattice
+
+Successor: [PNP_CUBIC_BOND_LATTICE_CARRIER_2026-09-26.md](PNP_CUBIC_BOND_LATTICE_CARRIER_2026-09-26.md).
+
+The paired cubic NAE carrier now preserves the original hyperedge obligation instead of splitting it into two signed clause-falsification descriptions.
+
+For each hyperedge e:
+
+    Mono(e)
+      := all vertices of e have the same color.
+
+For any selected edge set A, the intersection of Mono(e), e in A, depends only on the equality partition pi_A induced by connected components of the selected-edge subhypergraph.
+
+Therefore:
+
+    EDGE-SUBSET HISTORY
+    !=
+    EVENT IDENTITY
+
+    EVENT IDENTITY
+    =
+    EQUALITY PARTITION.
+
+The distinct equality partitions form the hypergraph bond/intersection lattice L_H. Möbius inversion gives the exact 2-color count:
+
+    P_H(2)
+      =
+    sum_{pi in L_H}
+      mu(hat0,pi) 2^(|pi|).
+
+If the distinct partition-state count is within a declared polynomial cap, the carrier yields exact SAT/UNSAT/#2-color plus Homeward witness reconstruction in polynomial total work.
+
+The retained cubic witnesses compress further in this carrier:
+
+    Fano:
+        73 signed semantic states
+        -> 37 equality-partition states
+        -> 0 colorings
+
+    full-rank SAT-7:
+        69
+        -> 35
+        -> 14 colorings
+
+    SAT girth-6 n=10:
+        495
+        -> 227
+        -> 48 colorings.
+
+A 1,000-instance bounded cubic differential panel returned zero total-count mismatches and zero partial-extension mismatches.
+
+Current cubic remainder:
+
+    EDGE-CRITICAL CUBIC 3-UNIFORM
+    +
+    SUPER-CAP EQUALITY-PARTITION MULTIPLICITY.
+
+Do not return to generic recoloring coordinates.
+
+    PAIRED OBLIGATION PRESERVED
+    !=
+    UNIVERSAL P=NP CLOSURE.
