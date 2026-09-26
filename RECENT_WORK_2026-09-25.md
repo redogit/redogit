@@ -88,6 +88,8 @@ A new exact terminal has also been added from the qualitative-matrix side: **log
 
 The qualitative-matrix branch is broader again through **nonclash-clique inclusion-exclusion**. A set of clauses can be falsified simultaneously exactly when it forms a clique in the clause nonclash / column-conformality graph. Thus exact #SAT is inclusion-exclusion over those cliques only. A degeneracy ordering with d=O(log N) enumerates all relevant cliques in polynomial total work (at most m·2^d candidate subsets). Hitting is the d=0 endpoint; the prior log conformal-vertex-cover terminal is a sufficient special case. Homeward self-reduction reuses the original clique carrier so simplification cannot silently increase the admitted degeneracy. Two bounded panels (10,000 count checks + 5,000 witness checks) returned zero mismatches.
 
+The conformal-clique terminal is now admission-tested by **actual event count** as well. An output-sensitive clique enumerator runs under a fixed polynomial cap. If the clause nonclash graph contains only polynomially many cliques, every jointly falsifiable clause-event intersection is retained exactly and inclusion-exclusion decides #SAT/SAT regardless of degeneracy. If the cap is exceeded, the carrier returns UNRESOLVED. This moves the residual from a width proxy to the real representation-growth object: super-cap conformal event multiplicity.
+
 The current exact question is the overlap relation among those circuits:
 
 ```text
