@@ -560,3 +560,48 @@ Successor/source:
 - [Cubic Paired-NAE Bond-Lattice Carrier](PNP_CUBIC_BOND_LATTICE_CARRIER_2026-09-26.md)
 - [checker](PNP_CUBIC_BOND_COEFFICIENT_CHECK_2026-09-26.py)
 - [bounded evidence](PNP_CUBIC_BOND_COEFFICIENT_EVIDENCE_2026-09-26.json)
+
+
+## 2026-09-26 successor — future-frontier projection carrier
+
+Successor: [Cubic Paired-NAE Future-Frontier Projection Carrier](PNP_CUBIC_FRONTIER_PROJECTION_CARRIER_2026-09-26.md).
+
+The signed bond-lattice execution now projects an equality coordinate as soon as no unprocessed hyperedge can touch it again.
+
+When an entire equality block closes:
+
+    unfixed block -> multiply by 2
+    fixed-color block -> multiply by 1.
+
+Decision uses nonzero signed equality-partition states on the future-active frontier.
+
+Homeward is separately guarded: partial-color queries attach only one minimal status per active block:
+
+    UNFIXED / 0 / 1.
+
+A 0/1 conflict inside a joined block is an empty event and drops.
+
+The complete terminal is admitted only when both actual widths stay inside the fixed polynomial cap:
+
+    W_front  = projected decision-state width
+    W_home   = maximum labeled state width during self-reduction.
+
+Bounded validation:
+
+    decision panel: 1,000 cubic instances, 0 mismatches
+    Homeward panel: 1,000 cubic instances, 0 failures
+    strongest observed global->frontier width reduction: 118 -> 12
+    maximum labeled Homeward width observed: 66.
+
+Current cubic remainder:
+
+    EDGE-CRITICAL CUBIC 3-UNIFORM
+    +
+    SUPER-CAP PROJECTED FRONTIER WIDTH
+    OR
+    SUPER-CAP LABELED HOMEWARD WIDTH.
+
+The next lawful degree may alter/factor incidence ordering only through a polynomially discoverable certificate.
+
+- [checker](PNP_CUBIC_FRONTIER_PROJECTION_CHECK_2026-09-26.py)
+- [bounded evidence](PNP_CUBIC_FRONTIER_PROJECTION_EVIDENCE_2026-09-26.json)
