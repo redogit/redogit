@@ -225,6 +225,9 @@ The linearly-lean balance carrier now has an exact qualitative-matrix interpreta
 
 The qualitative-matrix branch now also has an exact **log conformal-defect / hitting** terminal. Clause columns are conformal exactly when the corresponding clauses do not clash. A logarithmic vertex cover of the clause nonclash graph isolates a hitting core; inclusion-exclusion over the exceptional clauses plus exact hitting model counting decides SAT/#SAT in polynomial total work and reconstructs a witness Homeward. This is a scoped terminal, not a universal collapse; superlogarithmic conformal defect remains open.
 
+That terminal is now strictly broader through **nonclash-clique inclusion-exclusion**. Simultaneous falsification sets are exactly cliques of the clause nonclash / column-conformality graph. If that graph has degeneracy O(log N), all contributing cliques can be enumerated in polynomial total work and exact inclusion-exclusion yields #SAT/SAT plus Homeward reconstruction. Hitting is the zero-degeneracy endpoint; log conformal vertex cover is only one sufficient route into the broader terminal. The surviving qualitative residual therefore has superlogarithmic conformality degeneracy.
+
+
 
 The four-ID catalog compresses that normal form without changing its logic: literal occurrences retain OccurrenceIDs, repeated signed literals share SemanticObjectIDs, clause membership is ContextSupport, and positive/negative polarity is linked by one Clarity/COMPLEMENT relation rather than repeated pairwise conflict storage.
 
