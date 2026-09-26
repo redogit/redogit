@@ -101,6 +101,7 @@ Then test existing certified terminals:
     other explicitly admitted scoped terminals
     log conformal-defect hitting / exact model-count terminal
     log nonclash-degeneracy / conformal-clique inclusion-exclusion terminal
+    polynomial conformal-event-count / output-sensitive clique terminal
 
 ## NORMALIZATION CLOSURE THEOREM
 
@@ -272,6 +273,30 @@ Hitting is d=0.
 For Homeward reconstruction, do not rebuild Q_F after partial assignments. Reuse the original clique list and intersect each original falsifying subcube with the partial assignment. This prevents the carrier guard from silently worsening during self-reduction.
 
 The next qualitative residual therefore has superlogarithmic nonclash/conformality degeneracy.
+
+## POLYNOMIAL CONFORMAL-EVENT-COUNT TERMINAL
+
+The log-degeneracy guard is only a sufficient proxy.
+
+The exact inclusion-exclusion carrier needs one event for each nonempty clique of the clause nonclash / column-conformality graph Q_F. Use an output-sensitive all-clique enumerator with a fixed polynomial cap P(N)=N^c.
+
+    enumeration completes <= P(N)
+        -> retain every conformal event
+        -> exact inclusion-exclusion #SAT / SAT / UNSAT
+
+    more than P(N) events emitted
+        -> stop
+        -> UNRESOLVED under this carrier.
+
+This is polynomial because clique listing has polynomial work per emitted clique.
+
+Thus the admitted resource is the actual number of jointly falsifiable clause-event intersections, not merely a structural width proxy.
+
+Current qualitative residual:
+
+    SUPER-CAP CONFORMAL EVENT MULTIPLICITY.
+
+This is representation-growth evidence, not a hardness certificate.
 
 ## CLAIM CEILING
 
