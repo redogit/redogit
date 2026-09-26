@@ -416,3 +416,26 @@ The balance-side counterprobe also burned an overly weak next target: pairwise s
 
     DESCRIPTION MULTIPLICITY != EVENT MULTIPLICITY
     CIRCUIT OVERLAP ALONE != UNIVERSAL NAVIGATION
+
+
+## 2026-09-26 successor — cubic 3-uniform residual calibration
+
+Successor: [PNP_CUBIC_3UNIFORM_RESIDUAL_2026-09-26.md](PNP_CUBIC_3UNIFORM_RESIDUAL_2026-09-26.md).
+
+The paired positive-balance family was pushed one degree further. Under 3-uniformity, maximum degree <=3, connectedness, and the current full-rank paired residual, the surviving boundary has m=n and every variable degree exactly 3: a cubic 3-uniform hypergraph.
+
+The external Henning-Yeo boundary makes every non-2-colorable cubic component edge-critical: deleting any hyperedge yields a 2-colorable remainder. This does not by itself reduce complexity. Flip/recolor coordinates relative to such a near-solution are a bijective XOR change of variables and therefore fail the degree-removal gate.
+
+Incidence girth was also counterprobed and rejected as a decision invariant: a 10-vertex cubic 3-uniform girth-6 instance with 48 valid 2-colorings was found.
+
+A quasi-matching theorem supplies a conditional positive certificate through perfect-matching count modulo 3, but generic permanent-mod-3 computation is not admitted as polynomial. Use it only inside independently tractable matching-count carriers.
+
+Current cubic remainder:
+
+    EDGE-CRITICAL CUBIC 3-UNIFORM INCIDENCE CARRIER
+    x
+    SEMANTIC INTERSECTION-STATE CARRIER
+    x
+    PAIRED BALANCE CIRCUITS
+
+with no NP-hardness claim attached to the exact cubic restriction.
