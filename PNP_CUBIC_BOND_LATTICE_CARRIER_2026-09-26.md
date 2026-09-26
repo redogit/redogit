@@ -303,3 +303,299 @@ Do not return to generic recoloring coordinates.
 GENERATE != VERIFY != ADMIT.
 
 SCOPED CHROMATIC CARRIER != UNIVERSAL P=NP PROOF.
+
+
+## 12. Signed partition-coefficient transfer carrier
+
+The full bond lattice L_H is an exact semantic carrier, but it still retains every generated equality partition even when the total inclusion-exclusion coefficient of that partition has already canceled to zero.
+
+The next one-degree repair is to carry the signed aggregate coefficient **during** hyperedge processing and retain only nonzero partition states.
+
+Fix the stable hyperedge order
+
+    e_1,...,e_m.
+
+For a prefix [i], define
+
+    c_i(pi)
+      =
+    sum_{A subseteq {e_1,...,e_i} : pi_A=pi}
+      (-1)^|A|.
+
+Thus c_i(pi) is the complete signed weight of every processed-edge history that has the same current equality-partition Object pi.
+
+### 12.1 Exact transition
+
+Initialize
+
+    c_0(hat0)=1
+
+for the discrete partition hat0.
+
+When processing e_i, each existing history has exactly two inclusion-exclusion directions:
+
+    -e_i : do not include e_i
+    +e_i : include e_i.
+
+At the partition level this gives:
+
+    new[pi]          += c_(i-1)(pi)
+    new[join(pi,e_i)] -= c_(i-1)(pi).
+
+After aggregating equal partitions, delete every state whose new coefficient is exactly zero.
+
+### 12.2 Inductive correctness
+
+Assume c_(i-1) has the stated subset-sum meaning.
+
+Every subset A of the first i hyperedges is uniquely either:
+
+    A'                       with e_i absent
+
+or
+
+    A' union {e_i}           with e_i present.
+
+The absent subset contributes
+
+    (-1)^|A'|
+
+to pi_(A').
+
+The present subset contributes
+
+    -(-1)^|A'|
+
+to join(pi_(A'),e_i).
+
+Therefore the transition produces exactly
+
+    c_i(rho)
+      =
+    sum_{A subseteq [i] : pi_A=rho}
+      (-1)^|A|.
+
+No history is lost; only histories with the same semantic equality state are algebraically combined.
+
+### 12.3 Zero-state deletion is exact
+
+Suppose after aggregation:
+
+    c_i(pi)=0.
+
+Every future hyperedge operation is linear in this coefficient:
+
+    carry contribution       = c_i(pi)
+    join contribution        = -c_i(pi).
+
+Both are zero.
+
+So the histories represented by pi have no net contribution to **any future coefficient state**.
+
+The state may be removed permanently from the active carrier.
+
+A partition with the same identity can still be generated later from another nonzero state; that future contribution is retained normally.
+
+Thus:
+
+    ZERO AGGREGATE COEFFICIENT
+        ->
+    NO FUTURE CONTRIBUTION FROM CURRENT HISTORY CLASS.
+
+This is cancellation, not semantic deletion.
+
+### 12.4 Exact final count
+
+After all m hyperedges:
+
+    c_m(pi)
+      =
+    sum_{A subseteq E : pi_A=pi}
+      (-1)^|A|.
+
+Grouping the Whitney-Tutte-Fortuin-Kasteleyn expansion by equality partition gives:
+
+    P_H(q)
+      =
+    sum_pi c_m(pi) q^(|pi|).
+
+In particular:
+
+    #2-colorings
+      =
+    P_H(2)
+      =
+    sum_pi c_m(pi) 2^(|pi|).
+
+For the complete bond lattice these aggregate coefficients coincide with the Möbius coefficients used in Sections 3-4.
+
+### 12.5 Coefficient bit size
+
+For prefix i:
+
+    |c_i(pi)| <= 2^i.
+
+Therefore every exact coefficient requires at most
+
+    i+1 <= m+1
+
+bits up to sign.
+
+Large arithmetic values do not hide exponential bit complexity.
+
+### 12.6 Active coefficient width
+
+Define
+
+    W_coeff(H, order)
+      =
+    max_i |supp(c_i)|,
+
+where supp(c_i) is the set of partitions with nonzero coefficient after prefix i.
+
+Fix one reproducible hyperedge order by stable IDs.
+
+Fix an admitted polynomial cap
+
+    P(N_input)=N_input^c.
+
+Run the signed transfer fail-closed:
+
+    if active nonzero state count exceeds P(N_input):
+        stop
+        return UNRESOLVED under this carrier;
+
+    otherwise:
+        continue exactly.
+
+There are m rounds.
+
+Each active state creates only two transition contributions, and partition join/canonicalization is polynomial.
+
+Hence:
+
+    W_coeff <= P(N_input)
+        ->
+    exact polynomial chromatic / 2-color counting.
+
+No search for an optimal edge order is assumed.
+
+A separately certified low-width order may be admitted, but order discovery is charged independently.
+
+### 12.7 Homeward under the retained final coefficient map
+
+For a partial 2-coloring alpha and a retained partition pi:
+
+- if one block contains vertices fixed to both colors, contribution is zero;
+- otherwise let fixed_alpha(pi) be the number of blocks touched by alpha.
+
+Then:
+
+    extensions(pi,alpha)
+      =
+    2^(|pi|-fixed_alpha(pi)).
+
+So:
+
+    #proper extensions of alpha
+      =
+    sum_pi
+      c_m(pi)
+      * extensions(pi,alpha).
+
+Self-reduction uses the same final coefficient map.
+
+The carrier is not rebuilt and the width guard cannot worsen during witness reconstruction.
+
+### 12.8 Relationship to standard chromatic expansions
+
+The transition is the streaming form of the Whitney-Tutte-Fortuin-Kasteleyn subset expansion:
+
+    P_H(q)
+      =
+    sum_{A subseteq E(H)}
+      (-1)^|A| q^(components(V,A)).
+
+The present contribution is the proof-program carrier choice:
+
+    subset histories
+      ->
+    equality-partition Object
+      ->
+    aggregate exact signed coefficient
+      ->
+    delete zero coefficient Objects.
+
+This is a representation/algorithm theorem, not a new chromatic-polynomial identity.
+
+### 12.9 Retained calibration witnesses
+
+Using the stable edge order recorded in the cubic residual artifacts:
+
+| instance | full equality states | final nonzero coefficient states | maximum active coefficient width | #2-colorings |
+|---|---:|---:|---:|---:|
+| Fano | 37 | 37 | 37 | 0 |
+| full-rank SAT-7 | 35 | 32 | 32 | 14 |
+| SAT girth-6 n=10 | 227 | 226 | 226 | 48 |
+
+So cancellation is real, but is not claimed to be universally large.
+
+### 12.10 Bounded differential validation
+
+A separate checker generated 1,000 random connected simple cubic 3-uniform hypergraphs with 6-9 vertices.
+
+For every instance it compared:
+
+    signed partition-coefficient transfer count
+
+against:
+
+    exhaustive 2^n color enumeration.
+
+Results:
+
+    tested: 1,000
+    count mismatches: 0.
+
+The strongest observed state reduction in this panel was:
+
+    full equality-partition states: 139
+    final nonzero coefficient states: 100
+    maximum active coefficient width: 100
+    exact #2-colorings: 54.
+
+Witness hyperedges:
+
+    (1,5,8)
+    (2,6,7)
+    (2,3,8)
+    (0,1,5)
+    (0,1,4)
+    (4,7,8)
+    (0,5,7)
+    (3,4,6)
+    (2,3,6)
+
+Finite validation is implementation evidence only.
+
+### 12.11 Updated cubic remainder
+
+The full bond-lattice size is now only a sufficient upper bound on execution state.
+
+The tighter execution resource is:
+
+    ACTIVE NONZERO PARTITION-COEFFICIENT WIDTH
+
+under a fixed, charged hyperedge order.
+
+Therefore the live cubic residual becomes:
+
+    EDGE-CRITICAL CUBIC 3-UNIFORM
+    +
+    SUPER-CAP ACTIVE PARTITION-COEFFICIENT WIDTH
+
+after all earlier terminals.
+
+This is still a scoped representation-growth obstruction, not a hardness certificate.
+
+The next one-degree repair should project equality coordinates that can no longer affect any unprocessed hyperedge, rather than changing truth values.
