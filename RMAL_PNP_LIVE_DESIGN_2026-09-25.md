@@ -99,6 +99,7 @@ Then test existing certified terminals:
     logarithmic maximal deficiency
     binary-cluster / log-cluster-defect carriers
     other explicitly admitted scoped terminals
+    log conformal-defect hitting / exact model-count terminal
 
 ## NORMALIZATION CLOSURE THEOREM
 
@@ -193,6 +194,38 @@ The next job is to determine whether that balance space yields an exact polynomi
     or negative certificate
 
 without recreating the removed Boolean degree under a new name.
+
+## LOG CONFORMAL-DEFECT / HITTING TERMINAL
+
+For the clause-column sign pattern A=M(F)^T, two columns are conformal exactly when the corresponding clauses do not clash.
+
+Build the clause nonclash graph Q_F and find a vertex cover Z.
+
+Then:
+
+    F \ Z
+
+is hitting.
+
+If
+
+    |Z| = O(log N_input),
+
+retain Z as an exception carrier and evaluate the formula exactly by inclusion-exclusion over exceptional clauses. Every inclusion-exclusion term falsifies a subset of Z, producing a partial assignment; restricting the hitting core by that assignment leaves a hitting formula, whose exact model count is
+
+    2^N - sum_C 2^(N-|C|).
+
+This yields exact SAT / UNSAT and exact model count in polynomial total work under the logarithmic guard. A positive count reconstructs a witness by self-reduction; a zero count carries an exact arithmetic receipt.
+
+This terminal is the qualitative-matrix translation of a tight-pattern neighborhood:
+
+    TIGHT / HITTING
+    +
+    LOG CONFORMAL DEFECT
+    ->
+    EXACT POLYNOMIAL TERMINAL.
+
+It does not close formulas whose minimum useful conformal-defect cover is superlogarithmic.
 
 ## CLAIM CEILING
 
