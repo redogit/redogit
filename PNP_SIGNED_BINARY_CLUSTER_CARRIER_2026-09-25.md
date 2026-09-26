@@ -4068,3 +4068,154 @@ The remaining qualitative-matrix residual must therefore have:
 after the existing deterministic normalization and other admitted terminals are exhausted.
 
 This is a strictly sharper live remainder than arbitrary sign-central recognition.
+
+
+## 42. Polynomial conformal-event-count terminal
+
+Section 41 used logarithmic nonclash degeneracy as a sufficient structural guarantee that all jointly falsifiable clause-event intersections can be enumerated in polynomial total work.
+
+The inclusion-exclusion theorem itself needs less.
+
+The true resource is the number of nonempty cliques of the clause nonclash / column-conformality graph.
+
+Let
+
+    K(F)
+      =
+    number of nonempty cliques of Q_F.
+
+Every such clique is exactly one nonempty intersection of clause-falsification subcubes.
+
+Therefore the exact model-count formula has exactly K(F) nonzero inclusion-exclusion terms.
+
+### 42.1 Output-sensitive admission
+
+Use an output-sensitive all-clique enumeration algorithm on Q_F.
+
+Chiba-Nishizeki give an algorithm that lists all cliques with polynomial graph work per reported clique.
+
+Fix once and for all an admitted polynomial cap
+
+    P(N_input) = N_input^c
+
+for constant c.
+
+Run clique enumeration with this fail-closed rule:
+
+    if more than P(N_input) nonempty cliques are emitted:
+        stop
+        return UNRESOLVED under this carrier;
+
+    if enumeration completes with K(F) <= P(N_input):
+        admit the exact conformal-event-count carrier.
+
+Because the delay / work per produced clique is polynomial, either outcome is reached in polynomial total work under the fixed cap.
+
+No assumption that K(F) is cheaply known in advance is required.
+
+### 42.2 Exact solve inside the cap
+
+When enumeration completes inside the cap, retain every clique T with:
+
+- stable clause IDs;
+- V(T), the union of variables occurring in its clauses;
+- sign (-1)^|T|;
+- exact falsifying-subcube size 2^(n-|V(T)|).
+
+Then:
+
+    #SAT(F)
+      =
+    2^n
+      +
+    sum_{nonempty clique T}
+        (-1)^|T| 2^(n-|V(T)|).
+
+So SAT / UNSAT and exact model count are polynomial.
+
+Homeward witness reconstruction reuses this same retained clique list exactly as in Section 41.
+
+### 42.3 Why this is strictly a better guard than a width proxy
+
+Logarithmic degeneracy guarantees polynomially many cliques, but high degeneracy does not force exponentially many cliques.
+
+For example, complete bipartite graphs can have linear degeneracy while containing only vertices and edges as cliques.
+
+Therefore:
+
+    LOG_NONCLASH_DEGENERACY
+        ->
+    POLYNOMIAL_CONFORMAL_EVENT_COUNT
+
+but the reverse implication need not hold for general graphs.
+
+The admitted quantity is now the actual number of consequential overlap events rather than a worst-case structural proxy.
+
+### 42.4 Knowledge-Decay interpretation
+
+Do not compress the conformal overlap graph by deleting edges merely to obtain a small width parameter.
+
+Enumerate the exact jointly compatible event family when that family itself is polynomial.
+
+Thus:
+
+    REPRESENTATION LOOKS DENSE
+    !=
+    CONSEQUENTIALLY MANY OVERLAP EVENTS.
+
+The carrier follows the actual obligation-relevant event count.
+
+### 42.5 Connection to the earlier semantic-event theorem
+
+The four-ID semantic-event argument required a polynomial universe of consequential events plus monotone exact processing.
+
+Here the events are explicit:
+
+    Event(T)
+      =
+    "all clauses in nonclash clique T are simultaneously falsified."
+
+There are exactly K(F) such nonempty intersection events.
+
+So this terminal instantiates the older abstract condition with a concrete SAT event family and an output-sensitive discovery procedure.
+
+### 42.6 Updated exact terminal
+
+The qualitative-matrix side now admits:
+
+    POLYNOMIAL_CONFORMAL_EVENT_COUNT
+        ->
+    OUTPUT-SENSITIVE CLIQUE ENUMERATION
+        ->
+    EXACT INCLUSION-EXCLUSION
+        ->
+    #SAT / SAT / UNSAT + HOMEWARD.
+
+The previous guards remain useful sufficient recognizers:
+
+    HITTING / TIGHT
+        -> K(F)=m
+
+    LOG_CONFORMAL_VERTEX_COVER
+        -> polynomial K(F)
+
+    LOG_NONCLASH_DEGENERACY
+        -> polynomial K(F).
+
+But none is required when the actual conformal-event count is already within the declared polynomial cap.
+
+### 42.7 Updated remainder
+
+A formula not closed by this carrier must cause the capped exact clique enumerator to emit more than the admitted polynomial number of jointly falsifiable clause-event intersections.
+
+The live qualitative remainder is therefore no longer merely:
+
+    HIGH NONCLASH DEGENERACY.
+
+It is:
+
+    SUPER-CAP CONFORMAL EVENT MULTIPLICITY
+
+under every currently admitted fixed polynomial cap, after deterministic normalization and all earlier terminals.
+
+This is an exact representation-growth obstruction, not a hardness certificate.
