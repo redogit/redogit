@@ -503,3 +503,60 @@ Do not return to generic recoloring coordinates.
     PAIRED OBLIGATION PRESERVED
     !=
     UNIVERSAL P=NP CLOSURE.
+
+
+## 2026-09-26 successor — signed partition-coefficient transfer
+
+Inside the cubic paired-NAE bond lattice, edge-subset histories can be aggregated during execution rather than only after the full lattice is built.
+
+For every active equality partition pi carry one signed coefficient c(pi).
+
+Processing one hyperedge e performs exactly:
+
+    absent:
+        new[pi] += c(pi)
+
+    present:
+        new[join(pi,e)] -= c(pi).
+
+After aggregation, a state with coefficient zero is deleted exactly: both of its future linear contributions are zero.
+
+The final exact count is:
+
+    #2-colorings
+      =
+    sum_pi c(pi) 2^(blocks(pi)).
+
+Coefficient magnitude has only O(m) bits.
+
+The admitted execution measure is now:
+
+    W_coeff
+      =
+    maximum number of active nonzero coefficient partitions
+    under the fixed stable hyperedge order.
+
+If W_coeff is polynomially capped, exact solve and Homeward reconstruction are polynomial even when the full generated bond lattice is larger.
+
+Bounded cubic validation:
+
+    1,000 instances
+    count mismatches: 0
+
+strongest observed reduction:
+
+    139 full equality states
+    ->
+    100 active coefficient states.
+
+Current cubic remainder:
+
+    EDGE-CRITICAL CUBIC 3-UNIFORM
+    +
+    SUPER-CAP ACTIVE PARTITION-COEFFICIENT WIDTH.
+
+Successor/source:
+
+- [Cubic Paired-NAE Bond-Lattice Carrier](PNP_CUBIC_BOND_LATTICE_CARRIER_2026-09-26.md)
+- [checker](PNP_CUBIC_BOND_COEFFICIENT_CHECK_2026-09-26.py)
+- [bounded evidence](PNP_CUBIC_BOND_COEFFICIENT_EVIDENCE_2026-09-26.json)
