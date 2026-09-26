@@ -90,6 +90,8 @@ The qualitative-matrix branch is broader again through **nonclash-clique inclusi
 
 The conformal-clique terminal is now admission-tested by **actual event count** as well. An output-sensitive clique enumerator runs under a fixed polynomial cap. If the clause nonclash graph contains only polynomially many cliques, every jointly falsifiable clause-event intersection is retained exactly and inclusion-exclusion decides #SAT/SAT regardless of degeneracy. If the cap is exceeded, the carrier returns UNRESOLVED. This moves the residual from a width proxy to the real representation-growth object: super-cap conformal event multiplicity.
 
+The balance and qualitative carriers now meet through an exact **balance-circuit / conformal-event bridge**. In any positive balance circuit, every used variable appears in both polarities, so every circuit clause clashes with another circuit clause; therefore no positive balance circuit can itself be a nonclash clique. Every jointly falsifiable conformal event must omit at least one clause from every positive balance circuit, so its omitted-clause set hits the entire balance-circuit cover. This is structural evidence only; it does not yet bound conformal-event multiplicity.
+
 The current exact question is the overlap relation among those circuits:
 
 ```text
