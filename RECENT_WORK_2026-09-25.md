@@ -398,3 +398,32 @@ P vs NP RESEARCH
 The relation is the useful part.
 
 The projects do not have to become one project.
+
+
+## 11. P vs NP successor — semantic event identity (2026-09-26)
+
+**Status:** SCOPED EXACT THEOREM + BOUNDED VALIDATION · UNIVERSAL OBLIGATION OPEN
+
+The newest successor repairs the conformal-event carrier by separating clique descriptions from exact event identity.
+
+For each clause, its falsification signature is a partial assignment. Compatible signatures join by union. The closure of those joins is the exact intersection semilattice L(F). Distinct conformal cliques that induce the same partial assignment are now one semantic event Object.
+
+Möbius inversion on L(F) yields exact #SAT and Homeward witness reconstruction whenever the number of distinct intersection states is polynomial. A 5,000-instance differential panel returned zero model-count mismatches.
+
+A strict family shows why this matters: at 252 clauses the raw nonempty conformal-clique count is
+
+    170141183460469231731687303715884105726
+
+while the exact semantic intersection-state count is only
+
+    513.
+
+The previous next-step hypothesis was also counterprobed. Balance-circuit support overlap alone is insufficient: same-size full-rank SAT and UNSAT instances can have the identical overlap object of seven disjoint positive 2-circuits.
+
+Current remainder:
+
+    SUPER-CAP DISTINCT SEMANTIC INTERSECTION-STATE MULTIPLICITY
+    +
+    INCIDENCE-AWARE BALANCE / EVENT COUPLING
+
+Source: [PNP_SEMANTIC_INTERSECTION_QUOTIENT_2026-09-26.md](PNP_SEMANTIC_INTERSECTION_QUOTIENT_2026-09-26.md)
