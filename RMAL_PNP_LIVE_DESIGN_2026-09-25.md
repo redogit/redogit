@@ -866,3 +866,61 @@ PARENT-LIFTABLE CONSEQUENCE / PROJECTION?
 ~~~
 
 Liftability/Homeward is now first-class in every internal carrier experiment.
+
+
+## BEND update — seam between tight restriction and parent interface
+
+BEND is used here in the authored sense:
+
+~~~text
+PRESERVE OBJECT
+-> PRESS EDGE FROM ONE / MANY / ALL ANGLES
+-> ALLOW DIRECT CONFLICT
+-> INSPECT WHAT MOVES / SURVIVES / FAILS
+-> IDENTIFY WHAT THE EDGE IS MADE OF
+-> REPAIR THE ACTUAL CONFLICT
+-> PRESS AGAIN
+~~~
+
+New target-local carriers:
+
+- [BEND First Mixed Layer](PNP_BEND_FIRST_MIXED_LAYER_2026-09-26.md)
+- [Boundary Residual Map](PNP_BOUNDARY_RESIDUAL_MAP_2026-09-26.md)
+- [Boundary Residual Orthant Arrangement](PNP_BOUNDARY_RESIDUAL_ORTHANTS_2026-09-26.md)
+
+The tight restriction G=F[V] and exact parent projection are no longer conflated.
+
+The seam now has explicit layers:
+
+~~~text
+INTERNAL TIGHT PROOF
+<-> FIRST MIXED RESOLUTION LAYER
+<-> BOUNDARY RESIDUAL SUBSPACE / SIGN ARRANGEMENT
+<-> EXACT BOOLEAN EXISTENTIAL INTERFACE.
+~~~
+
+Exact survivors:
+
+1. an internal proof whose source outside remainders are sign-compatible lifts to a non-tautological parent interface clause;
+2. internal positive-circuit minimality does not prevent outside-sign conflict;
+3. for touched parent matrix A=[A_V|A_B],
+
+       rho_B : ker(A_V^T) -> R^B
+       rho_B(z)=A_B^T z
+
+   exactly records boundary residual pressure of internal balances;
+4. global parent positive balance cancels the tight-block residual against the outside-parent residual;
+5. if beta=rank(rho_B) is fixed, the linear residual subspace has only polynomially many coordinate-sign regimes.
+
+Preserved boundaries:
+
+~~~text
+SMALL beta != PROVED SMALL BOOLEAN INTERFACE
+INTERNAL CIRCUIT != CLEAN PARENT LIFT
+SMALL PROOF != SMALL INTERPOLANT
+FORGETTING CAN BE EXPONENTIAL
+~~~
+
+Current nearest seam:
+
+> Find the smallest Boolean distinction that survives after quotienting by the boundary-residual sign arrangement. Press with first-mixed proof structure, outside-sign conflict, surplus, and positive balance until either a polynomial joint carrier survives or the quotient is shown insufficient.
