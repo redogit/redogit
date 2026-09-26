@@ -398,3 +398,21 @@ This is structural compression only.
     CIRCUIT COVER <= DEFICIENCY != SAT ALGORITHM
 
 The new exact question is whether the **overlap relation among those positive circuits** can remove, dominate, decompose, or cheaply project one Boolean degree without recreating that degree as a fresh selector.
+
+
+## 2026-09-26 successor — semantic intersection-state quotient
+
+Successor artifact: [Semantic Intersection-State Quotient](PNP_SEMANTIC_INTERSECTION_QUOTIENT_2026-09-26.md).
+
+The conformal-clique carrier was exact but still counted descriptions rather than semantic event identities. The successor quotients all compatible clause subsets by their exact joined falsifying partial assignment, producing an intersection semilattice L(F). Möbius inversion over L(F) gives exact #SAT, SAT/UNSAT, and Homeward reconstruction whenever the number of distinct semantic states is polynomially bounded.
+
+A strict separation family has exponentially many raw conformal cliques but only polynomially many semantic intersection states, so the live qualitative remainder is now:
+
+    SUPER-CAP DISTINCT SEMANTIC INTERSECTION-STATE MULTIPLICITY
+
+not raw clique multiplicity.
+
+The balance-side counterprobe also burned an overly weak next target: pairwise support overlap among selected positive balance circuits is not enough. Two full-rank 7-variable instances have the same seven disjoint positive 2-circuit overlap object but opposite SAT status. The next relation must preserve variable/sign incidence together with canonical semantic intersection states.
+
+    DESCRIPTION MULTIPLICITY != EVENT MULTIPLICITY
+    CIRCUIT OVERLAP ALONE != UNIVERSAL NAVIGATION
