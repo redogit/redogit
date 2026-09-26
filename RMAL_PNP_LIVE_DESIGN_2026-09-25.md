@@ -657,3 +657,62 @@ GLOBAL QUALITATIVE CENTRALITY UNRESOLVED
 ~~~
 
 Next degree: large/irreducible signed cross-circuit compatibility. Existence of a small decomposition is not discovery; discovery cost remains charged.
+
+
+## 2026-09-26 R6 — surplus / non-Mersenne autarky-object reduction
+
+Successor: [PNP_SURPLUS_AUTARKY_OBJECT_REDUCTION_2026-09-26.md](PNP_SURPLUS_AUTARKY_OBJECT_REDUCTION_2026-09-26.md).
+
+The normalization lifecycle gains an exact polynomial SAT-decision reduction from Kullmann-Zhao Theorem 10.2.
+
+After matching-autarky saturation, compute surplus sigma(F) and a minimum-surplus variable set V. If
+
+~~~text
+muvd(F) > nM(sigma(F)),
+~~~
+
+remove every clause touching V and restart normalization. The reduced clause-set is polynomially computable and satisfiability-equivalent to the predecessor because some autarky realizes exactly that reduction.
+
+Important Homeward boundary:
+
+~~~text
+POLYTIME REDUCED CLAUSE OBJECT
+!=
+POLYTIME WITNESS AUTARKY ASSIGNMENT.
+~~~
+
+The latter is the explicit MLCR / Conjecture 10.3 seam in the source literature.
+
+For SAT/UNSAT decision, R6 is admitted now. For polynomial SAT-witness reconstruction, the removed block remains a Homeward obligation.
+
+At the new R6 fixed point:
+
+~~~text
+sigma(F) >= 1
+muvd(F) <= nM(sigma(F))
+        <= sigma(F) + 1 + log2(sigma(F)).
+~~~
+
+This does not justify branching: sigma may grow with input size.
+
+Current one-degree theorem target:
+
+~~~text
+R6-SATURATED
++
+LINEARLY LEAN
++
+STRICT POSITIVE BALANCE
++
+POSITIVE-CIRCUIT COVER
+->
+DOES SOME GUARANTEED LOW-DEGREE VARIABLE
+HAVE EXTRA STRUCTURE:
+  singular polarity,
+  non-increasing DP,
+  functional/dominance removal,
+  few-circuit concentration,
+  or reusable polynomial projection?
+~~~
+
+No stronger published guarantee for this exact subclass has been admitted yet.
