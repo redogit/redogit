@@ -716,3 +716,62 @@ HAVE EXTRA STRUCTURE:
 ~~~
 
 No stronger published guarantee for this exact subclass has been admitted yet.
+
+
+## 2026-09-26 R5+1 — charged additive bounded variable elimination
+
+Successors:
+
+- [R5 + R6 Surplus Floor and Tight 2x3 DP Crown](PNP_R5_R6_SURPLUS_FLOOR_2X3_CROWN_2026-09-26.md)
+- [R5+1 Additive Bounded Variable Elimination](PNP_R5_PLUS1_ADDITIVE_BVE_2026-09-26.md)
+
+The previous zero-growth R5 guard was stronger than the polynomial lifecycle requires.
+
+Allow exact DP elimination when cleaned clause count grows by at most one:
+
+~~~text
+c' <= c + 1.
+~~~
+
+At most n_0 variables can be eliminated, so R5+1 contributes at most n_0 additional clauses globally. Hence:
+
+~~~text
+c(F) <= c_0 + n_0
+~~~
+
+from this rule, and discovery/trace/Homeward remain polynomial.
+
+This consumes the exact tight 2x3 crown at surplus 3. Therefore every unresolved R5+1 + R6 fixed point satisfies:
+
+~~~text
+sigma(F) >= 4.
+~~~
+
+At sigma=4:
+
+~~~text
+muvd(F)=6
+polarity profile in {2+4,3+3,4+2}.
+~~~
+
+Raw local DP debt is at most +3.
+
+Do not silently raise the growth guard without a global cumulative-size proof. A fixed positive bound is safe; an uncharged growing bound can reproduce ordinary DP explosion.
+
+Current quantitative remainder:
+
+~~~text
+SIGMA >= 4
++
+R5+1 IRREDUCIBLE
++
+R6 IRREDUCIBLE
++
+STRICT POSITIVE BALANCE
++
+LOCALLY TRACTABLE POSITIVE CIRCUITS
++
+GLOBAL QUALITATIVE CENTRALITY OPEN
+~~~
+
+Next one-degree experiment: test whether the sigma=4 degree-6 profiles receive enough exact redundancy from existing R2-R4 or positive-circuit incidence to reduce their cleaned DP debt to <=1; otherwise evaluate a separately charged global growth budget.
