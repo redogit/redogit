@@ -1,0 +1,201 @@
+{
+  "schema": "pnp-cubic-3uniform-calibration/v1",
+  "date": "2026-09-26",
+  "claim_ceiling": "BOUNDED_COUNTERPROBE_ONLY",
+  "witnesses": {
+    "fano": {
+      "vertices": 7,
+      "edges": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "colorings": 0,
+      "incidence_girth": 6,
+      "perfect_matchings": 24,
+      "perfect_matchings_mod3": 0
+    },
+    "sat_girth6": {
+      "vertices": 10,
+      "edges": [
+        [
+          3,
+          6,
+          9
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          5,
+          9
+        ],
+        [
+          1,
+          5,
+          7
+        ],
+        [
+          0,
+          3,
+          8
+        ],
+        [
+          0,
+          4,
+          7
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          8
+        ]
+      ],
+      "colorings": 48,
+      "incidence_girth": 6,
+      "perfect_matchings": 60,
+      "perfect_matchings_mod3": 0
+    },
+    "sat7": {
+      "vertices": 7,
+      "edges": [
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "colorings": 14,
+      "perfect_matchings": 20,
+      "perfect_matchings_mod3": 2
+    }
+  },
+  "recoloring_counterprobe": {
+    "statement": "some valid H-e colorings require at least 3 coordinated flips to reach a valid H coloring",
+    "witness_edges": [
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        4,
+        6
+      ],
+      [
+        0,
+        3,
+        6
+      ],
+      [
+        2,
+        5,
+        6
+      ],
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        5
+      ]
+    ],
+    "max_observed_nearest_repair_distance": 3
+  },
+  "random_cubic_panel": {
+    "generated_trials": 20000,
+    "note": "configuration-model bounded experiment; not exhaustive and not theorem evidence",
+    "observed_sat_girth6": true,
+    "observed_unsat_girth4": false,
+    "disposition": "girth hypothesis falsified by positive witness; absence of other cases not promoted"
+  }
+}
