@@ -94,6 +94,8 @@ The balance and qualitative carriers now meet through an exact **balance-circuit
 
 A further anti-decay correction is now explicit: **incidence-component factorization** happens before conformal-event counting. The clause nonclash graph of a disjoint CNF conjunction is a graph join, so global clique counts multiply even though SAT/#SAT factor componentwise. Positive balance circuits localize to the same block-diagonal components. The live event residual is therefore incidence-connected super-cap conformal multiplicity, not raw global event count.
 
+The cubic paired residual has a new successor: the **cubic paired-NAE bond lattice**. Opposite positive/negative clauses for one hyperedge are recombined into the original bad event "this hyperedge is monochromatic." Intersections of such events depend only on the equality partition of vertices induced by the selected hyperedges, so edge-subset histories are quotiented by exact partition identity. Möbius inversion on the resulting hypergraph bond lattice gives the exact 2-color count and Homeward witness reconstruction whenever the number of distinct equality partitions is polynomially bounded. On the retained Fano/SAT-7/SAT-10 witnesses the carrier uses 37/35/227 partition states versus 73/69/495 generic signed semantic states. A 1,000-instance bounded cubic panel returned zero count or partial-extension mismatches.
+
 The current exact question is the overlap relation among those circuits:
 
 ```text
