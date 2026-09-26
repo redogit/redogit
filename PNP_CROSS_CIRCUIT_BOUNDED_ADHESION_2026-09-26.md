@@ -64,13 +64,15 @@ Thus for s<=b, every boundary-conditioned local circuit is decidable in
 
 Root T arbitrarily.
 
-For every circuit i and every assignment alpha to B_i:
+For every directed tree edge i -> parent(i), let S_i = V_i intersect V_parent(i). The message from the subtree rooted at i is not a Boolean SAT bit. It is the exact projected satisfying relation on S_i.
 
-1. decide whether the local circuit formula F_{C_i}|alpha is satisfiable;
-2. combine alpha with already-computed child boundary tables;
-3. retain alpha exactly when there exists a local satisfying extension compatible with every child message.
+Compute it bottom-up. For each assignment alpha to S_i, enumerate the assignments to the union of child separators incident with i (deduplicating shared variables), reject inconsistent combinations, and ask whether the local circuit formula F_{C_i} has a satisfying extension agreeing with alpha and all selected child-message assignments. Retain alpha iff such an extension exists.
 
-Because the running-intersection property makes every cross-subtree variable pass through the relevant boundary, standard tree/junction consistency is exact: no hidden variable relation crosses a cut outside the separator.
+Equivalently, one may form the bag boundary B_i consisting of variables shared with any adjacent bag and enumerate assignments to B_i, using exact conditioned local SAT to retain precisely those boundary assignments that extend through the local circuit and all child relations.
+
+Because the running-intersection property makes every cross-subtree variable pass through the relevant separator, these projected relations are sufficient for exact junction-tree composition. A yes/no local SAT bit is not sufficient.
+
+    LOCAL SAT BIT != PROJECTED SATISFYING RELATION
 
 The root table is nonempty iff the conjunction of all circuit formulas is satisfiable, which is exactly F because the circuit supports cover every clause.
 
@@ -80,9 +82,9 @@ Each boundary table has at most 2^b rows.
 
 There are at most t<=delta(F)<=m circuit Objects.
 
-For each table row, local conditioned SAT is bounded by the maximum-deficiency algorithm with parameter at most b+1.
+For each bag-boundary assignment, local conditioned SAT is bounded by the maximum-deficiency algorithm with parameter at most b+1. Child-message compatibility is checked over the same bag-boundary assignment, so no independent Cartesian product of child tables is required once all adjacent separator variables are included in B_i.
 
-Hence total work is
+Hence total work is bounded by
 
     t * 2^b * O(2^(b+1) poly(n))
     =
