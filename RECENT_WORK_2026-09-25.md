@@ -92,6 +92,8 @@ The conformal-clique terminal is now admission-tested by **actual event count** 
 
 The balance and qualitative carriers now meet through an exact **balance-circuit / conformal-event bridge**. In any positive balance circuit, every used variable appears in both polarities, so every circuit clause clashes with another circuit clause; therefore no positive balance circuit can itself be a nonclash clique. Every jointly falsifiable conformal event must omit at least one clause from every positive balance circuit, so its omitted-clause set hits the entire balance-circuit cover. This is structural evidence only; it does not yet bound conformal-event multiplicity.
 
+A further anti-decay correction is now explicit: **incidence-component factorization** happens before conformal-event counting. The clause nonclash graph of a disjoint CNF conjunction is a graph join, so global clique counts multiply even though SAT/#SAT factor componentwise. Positive balance circuits localize to the same block-diagonal components. The live event residual is therefore incidence-connected super-cap conformal multiplicity, not raw global event count.
+
 The current exact question is the overlap relation among those circuits:
 
 ```text
