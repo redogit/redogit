@@ -260,6 +260,8 @@ That entropy carrier is now tighter: within one conflict clique, any candidate w
 
 A 2026 external result also aligns two previously separate repair families: vertex-packing LP structure and critical-independent-set structure are equivalent views of the same independence machinery. Accordingly, LP persistency / crown / critical-set extraction are treated as one saturated degree family before moving to independent carriers such as odd-cycle frames, matching/min-cut structure, rank, and signed residual repairs.
 
+The current cubic calibration now has an exact **paired-NAE bond-lattice carrier**. Instead of splitting one NAE hyperedge into separate all-0 and all-1 clause events, it preserves the original bad event "this edge is monochromatic." Intersections of those events are identified by the exact equality partition they impose on vertices. Möbius inversion on that hypergraph bond lattice gives exact 2-color count, SAT/UNSAT, and Homeward reconstruction whenever the distinct partition-state family stays inside a declared polynomial cap. The surviving cubic object is now edge-critical cubic 3-uniform incidence with super-cap equality-partition multiplicity, not merely a large signed-clause state family.
+
 **Current mathematical status remains open.** Scoped carrier theorems, finite computations, codecs, semantic compression, and successful special cases are not promoted into a universal P=NP claim.
 
 
