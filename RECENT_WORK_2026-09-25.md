@@ -86,6 +86,8 @@ positive balance vector
 
 A new exact terminal has also been added from the qualitative-matrix side: **log conformal defect to hitting**. Clause columns are conformal exactly when the clauses do not clash. Removing a vertex cover Z of the clause nonclash graph leaves a hitting formula. For |Z|=O(log N), inclusion-exclusion over the exceptional clauses plus the closed-form model count for hitting formulas yields exact polynomial #SAT/SAT decision and Homeward witness reconstruction. A 10,000-instance bounded differential panel decided 7,089 guarded cases with zero mismatches.
 
+The qualitative-matrix branch is broader again through **nonclash-clique inclusion-exclusion**. A set of clauses can be falsified simultaneously exactly when it forms a clique in the clause nonclash / column-conformality graph. Thus exact #SAT is inclusion-exclusion over those cliques only. A degeneracy ordering with d=O(log N) enumerates all relevant cliques in polynomial total work (at most m·2^d candidate subsets). Hitting is the d=0 endpoint; the prior log conformal-vertex-cover terminal is a sufficient special case. Homeward self-reduction reuses the original clique carrier so simplification cannot silently increase the admitted degeneracy. Two bounded panels (10,000 count checks + 5,000 witness checks) returned zero mismatches.
+
 The current exact question is the overlap relation among those circuits:
 
 ```text
