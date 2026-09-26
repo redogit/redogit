@@ -605,3 +605,29 @@ The next lawful degree may alter/factor incidence ordering only through a polyno
 
 - [checker](PNP_CUBIC_FRONTIER_PROJECTION_CHECK_2026-09-26.py)
 - [bounded evidence](PNP_CUBIC_FRONTIER_PROJECTION_EVIDENCE_2026-09-26.json)
+
+
+## 2026-09-26 chronology repair / synchronization authority
+
+Current coordination packet: [PNP_SYNCHRONIZATION_PACKET_2026-09-26.md](PNP_SYNCHRONIZATION_PACKET_2026-09-26.md).
+
+A chronology audit recovered the end-of-day 2026-09-25 proof state before using later successor experiments as authority. The authoritative predecessor is `redogit/redogit@2ee9125e91d36bb417d0f99981fc4c32620eb3a2`.
+
+The live mathematical object is therefore re-anchored to:
+
+~~~text
+QUALITATIVE CELL
++
+POSITIVE BALANCE CIRCUITS
++
+SIGNED CROSS-CIRCUIT VARIABLE INCIDENCE
+~~~
+
+The overlap-only hypothesis is retained as ASH: circuit support-overlap alone does not preserve SAT/UNSAT distinction.
+
+Current RMAL execution/tooling authority is target-local in `redogit/DnD`; current head `c5d819b8ccda3ffe63e024d8ef02514fedcf896e` seals the RMAL 3.1 native C23 Windows SDK packaging/evidence line. Tooling currentness does not rewrite mathematical chronology.
+
+~~~text
+NEWEST TOOLING + CORRECT PROOF LINEAGE
+TARGET_LOCAL_EVIDENCE > CENTRAL SUMMARY
+~~~
