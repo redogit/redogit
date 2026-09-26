@@ -100,6 +100,7 @@ Then test existing certified terminals:
     binary-cluster / log-cluster-defect carriers
     other explicitly admitted scoped terminals
     log conformal-defect hitting / exact model-count terminal
+    log nonclash-degeneracy / conformal-clique inclusion-exclusion terminal
 
 ## NORMALIZATION CLOSURE THEOREM
 
@@ -226,6 +227,51 @@ This terminal is the qualitative-matrix translation of a tight-pattern neighborh
     EXACT POLYNOMIAL TERMINAL.
 
 It does not close formulas whose minimum useful conformal-defect cover is superlogarithmic.
+
+## NONCLASH-CLIQUE INCLUSION-EXCLUSION TERMINAL
+
+The qualitative-matrix carrier is broader than the hitting / vertex-cover special case.
+
+Let Q_F be the clause nonclash graph:
+
+    C--D
+    iff
+    C and D contain no complementary literal pair.
+
+Equivalently Q_F is the conformality graph of clause columns of A=M(F)^T.
+
+For every nonempty set T of clauses:
+
+    all clauses in T can be falsified simultaneously
+    iff
+    T is a clique of Q_F.
+
+Therefore:
+
+    #SAT(F)
+      =
+    2^n
+      +
+    sum_{nonempty clique T of Q_F}
+        (-1)^|T| 2^(n-|V(T)|).
+
+If Q_F has degeneracy d, a degeneracy ordering enumerates all cliques through at most
+
+    m 2^d
+
+candidate subsets.
+
+Hence:
+
+    d = O(log N_input)
+    ->
+    exact polynomial #SAT / SAT terminal.
+
+Hitting is d=0.
+
+For Homeward reconstruction, do not rebuild Q_F after partial assignments. Reuse the original clique list and intersect each original falsifying subcube with the partial assignment. This prevents the carrier guard from silently worsening during self-reduction.
+
+The next qualitative residual therefore has superlogarithmic nonclash/conformality degeneracy.
 
 ## CLAIM CEILING
 
