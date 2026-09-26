@@ -1,0 +1,88 @@
+{
+  "schema": "pnp-cubic-bond-coefficient-transfer-evidence/v1",
+  "date": "2026-09-26",
+  "claim_ceiling": "BOUNDED_VALIDATION_ONLY; theorem requires separate proof",
+  "witness_panel": {
+    "FANO": {
+      "vertices": 7,
+      "full_equality_partition_states": 37,
+      "final_nonzero_coefficient_states": 37,
+      "maximum_active_coefficient_width": 37,
+      "model_count": 0
+    },
+    "FULL_RANK_SAT7": {
+      "vertices": 7,
+      "full_equality_partition_states": 35,
+      "final_nonzero_coefficient_states": 32,
+      "maximum_active_coefficient_width": 32,
+      "model_count": 14
+    },
+    "SAT_GIRTH6_N10": {
+      "vertices": 10,
+      "full_equality_partition_states": 227,
+      "final_nonzero_coefficient_states": 226,
+      "maximum_active_coefficient_width": 226,
+      "model_count": 48
+    }
+  },
+  "random_panel": {
+    "seed": 20260926,
+    "requested_trials": 1000,
+    "tested": 1000,
+    "mismatches": 0,
+    "strongest_observed_state_reduction": {
+      "vertices": 9,
+      "edges": [
+        [
+          1,
+          5,
+          8
+        ],
+        [
+          2,
+          6,
+          7
+        ],
+        [
+          2,
+          3,
+          8
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          4,
+          7,
+          8
+        ],
+        [
+          0,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ]
+      ],
+      "full_equality_partition_states": 139,
+      "final_nonzero_coefficient_states": 100,
+      "maximum_active_coefficient_width": 100,
+      "model_count": 54
+    }
+  }
+}
