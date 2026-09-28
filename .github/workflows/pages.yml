@@ -1,43 +1,43 @@
-name: Deploy public profile and Dream to Action
+name: Verify selected public profile and Dream Pages host
 
+# The standalone profile Pages site returned Not Found in run 36457772017.
+# Publishing now uses the explicitly scoped, already-enabled Conscience64 host.
+# This workflow verifies; it does not claim to deploy a disabled Pages site.
 on:
   push:
     branches: [main]
     paths:
-      - 'docs/**'
+      - 'docs/dream-to-action/**'
+      - 'docs/about.html'
+      - 'docs/recent-work.html'
+      - 'README.md'
       - 'tools/publish_dream_pages.py'
+      - 'tools/finalize_dream_publication.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: profile-publication-verification
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  verify-publication:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-      - name: Verify exact public app and announcement scope
-        run: python3 tools/publish_dream_pages.py --check
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: docs
-      - name: Deploy Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-      - name: Verify anonymous public application and announcement pages
-        run: python3 tools/publish_dream_pages.py --live
+      - name: Materialize exact source without publishing repository internals
+        run: |
+          set -euo pipefail
+          git init "$GITHUB_WORKSPACE"
+          cd "$GITHUB_WORKSPACE"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Verify pinned application and announcement scope
+        run: python3 tools/finalize_dream_publication.py --check
+      - name: Verify selected public host anonymously over HTTPS
+        run: python3 tools/finalize_dream_publication.py --live

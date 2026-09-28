@@ -6,10 +6,23 @@
   "source_url": "https://raw.githubusercontent.com/redogit/Dream-To-Action/667e989dcad401829bb097726b3a14cc0aa90f2c/index.html",
   "sha256": "231fdadb14093df1028abe015f3c4d583b1031da5ae03048abff5244c3eac807",
   "bytes": 78619,
-  "public_url": "https://redogit.github.io/redogit/dream-to-action/",
-  "publication_host": "Existing redogit/redogit GitHub Pages site",
+  "public_url": "https://redogit.github.io/conscience64/dream-to-action/",
+  "publication_host": "Enabled redogit/conscience64 GitHub Pages host",
   "recorded_date": "2026-09-28",
   "boundary": "Exact public application projection, not project migration. Original source/history/reuse policy remain in Dream-To-Action. No journals or private data are published.",
   "dedicated_project_pages": "Not activated: the available connector lacks new-site administration. This route uses the already-enabled public Pages host.",
-  "verification": "Canonical byte identity is checked before upload; public HTTP and byte-identity checks run after deployment. This record alone is not a live-deployment claim."
+  "verification": "Canonical byte identity is checked before upload; public HTTP and byte-identity checks run after deployment. This record alone is not a live-deployment claim.",
+  "profile_public_url": "https://redogit.github.io/conscience64/about.html#announcements",
+  "prior_attempt": {
+    "url": "https://redogit.github.io/redogit/dream-to-action/",
+    "status": "NOT DEPLOYED: Pages site Not Found",
+    "run_id": 36457772017
+  },
+  "live_verification": {
+    "url": "https://github.com/redogit/conscience64/actions/runs/36459096995",
+    "http": 200,
+    "anonymous_https": true,
+    "checked_utc": "2026-09-28T17:35:22Z"
+  },
+  "profile_pages_enabled": false
 }
