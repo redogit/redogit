@@ -408,7 +408,7 @@ LOOP Runtime {
     -> Airlock
     -> Operators
     -> Transform
-    -> Verify
+    ->Verify
     -> GSFL
     -> HumanSurface
     -> Action
@@ -854,5 +854,124 @@ EVIDENCE Conscience64PublicTestbedProjection_2026_09_20 {
         ALIAS != LINEAGE
         WONDER != CLAIM
         ONE_DEGREE_TEST != UNIVERSAL_PROOF
+    }
+}
+
+
+STANDARD CurrentReconstructionStandards_2026_09_28 {
+    state = SOURCE_BACKED_DESIGN_ALIGNMENT
+    source_revision = 04e4bcf8a567ceeede3b7478a474d12e8b210acc
+    source_orientation = RMAL_RESEARCH_ORIENTATION_2026-09-25.md
+    source_orientation_blob = 9e74d1b3f4f49d9831aa00f2831a953a1c3e691a
+    source_condensation = ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md
+    source_condensation_blob = 64b2989cf4f07f9c6576cc830a8af1b629f65495
+    source_policy = redogit.json
+    source_policy_blob = 1d2b016f23a98b80bff54fa64eec30f7f21a8b09
+    paired_surface = LIBRARIES_OF_LIBRARIES_RMAL_BUILD_2026-09-19.md#42-current-reconstruction-standards--september-28-2026
+
+    ID_ROLES {
+        OccurrenceID
+        SemanticObjectID
+        SemanticContextSupportsIDs
+        SemanticClarityIDs
+    }
+
+    PRESERVE {
+        Object
+        Obligation
+        Context
+        Surface
+        Carrier
+        SourceRevision
+        TypedRelations
+        Conditions
+        Exceptions
+        Assumptions
+        Evidence
+        Counterexamples
+        Failures
+        OrderedTrace
+        Cost
+        ClaimCeiling
+        UnresolvedRemainder
+        Homeward
+    }
+
+    FORWARD {
+        Preserve -> Distinguish -> OneDegreeVary -> Observe
+        -> Counterprobe -> RetainFailureAndConsequence -> CompareInteractions
+        -> AdmitBoundedRule -> Condense
+    }
+
+    HOMEWARD {
+        CondensedRule -> Conditions -> Exceptions -> Assumptions
+        -> Evidence -> Trace -> Object -> OriginalObligation
+    }
+
+    SIDE_TO_SIDE {
+        source = TARGET_LOCAL_AUTHORITY
+        compare = SAME_DECLARED_OBLIGATION_AND_SOURCE_REVISIONS
+        directions = A_TO_B_AND_B_TO_A_SEPARATELY
+        peer_relation = EXPLICIT_TYPED_REFERENCE_ONLY
+        mismatch = PRESERVE_AND_REOPEN_SMALLEST_AFFECTED_RELATION
+        evidence_pool = KEEP_DOMAIN_LOCAL
+    }
+
+    DECAY_DIRECTION {
+        object_and_obligation = STABLE
+        carrier = MAY_MOVE
+        prefer = GREATER_VERIFIED_RECOVERABILITY
+        loss = EXPLICIT
+        unresolved_recovery = RETAIN_OR_REOPEN
+        smaller_carrier = NOT_SUFFICIENT_BY_ITSELF
+    }
+
+    MEMORY_AND_REPLAY {
+        active_state = MINIMUM_OBLIGATION_SUFFICIENT_WORKING_SET
+        recovery_receipt = SOURCE_REVISION_PLUS_DEPENDENCIES_PLUS_CHECK_PLUS_COST
+        eviction = ONLY_AFTER_REQUIRED_RECOVERY_IS_VERIFIED
+        non_recoverable_failures = RETAIN
+        history = PRESERVE_ORDER_AND_CORRECTIONS
+        generated_output = NOT_AUTOMATIC_PERSISTENCE
+        replay_idempotency = EXECUTION_ID_AND_REQUEST_BOUND
+        mathematical_transform_idempotency = NOT_ASSUMED
+        exact_byte_return = REQUIRED_ONLY_BY_DECLARED_OBLIGATION
+    }
+
+    ADMISSION {
+        generation = SEPARATE
+        verification = SEPARATE
+        admission = TARGET_LOCAL
+        no_distinguishing_witness = NOT_A_UNIVERSAL_EQUIVALENCE_CERTIFICATE
+        historical_evidence = SCOPED_TO_RECORDED_REVISION_AND_TEST
+        stale_claim = REOPEN_WITHOUT_ERASING_PREDECESSOR
+        current_snapshot = NOT_LIVE_DEPLOYMENT_ATTESTATION
+    }
+
+    RULE {
+        OBJECT != SURFACE
+        CONTEXT != SURFACE
+        RESULT != METHOD
+        METHOD != PROOF
+        TRACE != PROOF
+        COMPRESSED != RECONSTRUCTIBLE
+        FAILED_TO_DISTINGUISH != PROVEN_EQUIVALENT
+        SMALL_FINAL_CARRIER != CHEAP_CONSTRUCTION
+        REPLAY_SAFE != EVERY_TRANSFORM_IDEMPOTENT
+        REUSE != EVIDENCE_TRANSFER
+        GENERATED != PERSISTED
+        GIT_RECORD != ASSISTANT_PERSISTENT_MEMORY
+        STANDARD_ALIGNMENT != RUNTIME_IMPLEMENTATION
+        PRIVATE_HISTORY != PUBLIC_EVIDENCE
+    }
+
+    CHANGE_BOUNDARY {
+        runtime_code = UNCHANGED
+        wire_schema = UNCHANGED
+        target_local_adapters = UNCHANGED
+        compiler_claims = UNCHANGED
+        publication_permissions = UNCHANGED
+        private_library_contents = NOT_EXPORTED
+        fresh_RMALC_validation = NOT_PERFORMED
     }
 }
