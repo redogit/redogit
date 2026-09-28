@@ -1,0 +1,42 @@
+name: Finalize verified Dream public links
+on:
+  push:
+    branches: [dream-live-link-correction-20260928]
+    paths:
+      - 'tools/finalize_dream_publication.py'
+      - '.github/workflows/finalize-dream-links.yml'
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Materialize exact selected source
+        run: |
+          set -euo pipefail
+          git init "$GITHUB_WORKSPACE"
+          cd "$GITHUB_WORKSPACE"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Correct only navigation and publication status
+        run: |
+          set -euo pipefail
+          python3 tools/finalize_dream_publication.py --prepare
+          python3 tools/finalize_dream_publication.py --live
+          python3 tools/redogit.py check .
+          git diff --check
+          git diff --stat
+      - name: Commit checked documentation on staging only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md docs/dream-to-action/SOURCE.json docs/dream-to-action/PUBLISHING.md
+          git commit -m 'Point profile announcements to the verified public Pages host'
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push origin HEAD:refs/heads/dream-live-link-correction-20260928
