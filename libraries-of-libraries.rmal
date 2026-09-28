@@ -408,7 +408,7 @@ LOOP Runtime {
     -> Airlock
     -> Operators
     -> Transform
-    ->Verify
+    -> Verify
     -> GSFL
     -> HumanSurface
     -> Action
