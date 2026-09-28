@@ -1,5 +1,7 @@
 # redogit
 
+> **New public app — September 28, 2026:** [Dream to Action](https://redogit.github.io/redogit/dream-to-action/) turns a chosen goal and a real barrier into a practical next step, with a dashboard, action board, and evidence history. No account required; personal and fictional demonstration records stay separate. [Why it exists](https://redogit.github.io/redogit/about.html#dream-to-action) · [Source](https://github.com/redogit/Dream-To-Action).
+
 > **About me:** [PUBLIC ABOUT ME](https://redogit.github.io/redogit/about.html) — fire, carriers, music/language, REDOGIT, and current work
 > **Newest integrated work:** [PUBLIC RECENT WORK](https://redogit.github.io/redogit/recent-work.html) · [source](RECENT_WORK_2026-09-25.md)
 > **Start here — terms before claims:** [PUBLIC RMAL ORIENTATION](https://redogit.github.io/redogit/) · [source](RMAL_RESEARCH_ORIENTATION_2026-09-25.md)
