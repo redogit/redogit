@@ -292,8 +292,10 @@ def select_next(graph: dict[str, Any], actions: list[dict[str, Any]]) -> dict[st
     results = [_assess(graph, a) for a in actions]
     require(len({r['id'] for r in results}) == len(results), 'DUPLICATE_ACTION_ID')
     results.sort(key=lambda r: (r['priority'], r['id']))
+    deferred_priority = min((r['priority'] for r in results if r['decision'] == 'defer'), default=None)
     return {'schema': 'redogit/action-assessment/v1',
-            'selected': next((r['id'] for r in results if r['decision'] == 'candidate'), None),
+            'selected': next((r['id'] for r in results if r['decision'] == 'candidate'
+                              and (deferred_priority is None or r['priority'] <= deferred_priority)), None),
             'assessments': results, 'executes': False, 'grants_authority': False,
             'priority_binding_authenticated': False}
 

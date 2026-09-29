@@ -78,6 +78,9 @@ Priority indexes refer to the source's explicit priority list. Their association
 with a native workstream must be reviewed by the caller; the tool does not guess
 that association from natural-language names. Selection follows supplied indexes,
 then stable action IDs, and reports `priority_binding_authenticated: false`.
+An unresolved `defer` blocks candidates at later priorities, while `reject` and
+`no_change` do not; every assessment remains in the result. Equal-priority
+candidates retain stable action-ID order.
 It is a deterministic candidate ordering, not a claim of optimality or authority.
 
 ## Privacy and export

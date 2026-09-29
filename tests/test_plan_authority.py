@@ -244,6 +244,25 @@ class ActionTests(ModuleCase):
         self.assertEqual(r['selected'],'first'); self.assertEqual(len(r['assessments']),3)
         self.assertEqual(actions,original)
 
+    def test_deferred_higher_priority_blocks_later_candidate(self):
+        actions=[action(id='later',priority=2),
+                 action(id='earlier',priority=1,observed_revision='b'*40)]
+        r=self.api.select_next(self.g,actions)
+        self.assertIsNone(r['selected'])
+        self.assertEqual([(x['id'],x['decision']) for x in r['assessments']],
+                         [('earlier','defer'),('later','candidate')])
+        self.assertIn('REVISION_MOVED',r['assessments'][0]['reasons'])
+
+    def test_resolved_higher_priority_allows_later_candidate(self):
+        for changes,decision in (({'delta':'zero'},'no_change'),
+                                 ({'permission':'denied'},'reject')):
+            with self.subTest(decision=decision):
+                r=self.api.select_next(self.g,[action(id='later',priority=2),
+                                               action(id='earlier',priority=1,**changes)])
+                self.assertEqual(r['selected'],'later')
+                self.assertEqual([x['decision'] for x in r['assessments']],
+                                 [decision,'candidate'])
+
     def test_no_ready_action_selects_none(self):
         self.assertIsNone(self.api.select_next(self.g,[action(delta='zero')])['selected'])
 
