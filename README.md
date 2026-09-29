@@ -272,6 +272,14 @@ The next one-degree carrier is **future-frontier projection**. Once no unprocess
 
 **Current mathematical status remains open.** Scoped carrier theorems, finite computations, codecs, semantic compression, and successful special cases are not promoted into a universal P=NP claim.
 
+### Current Dean fixed-list counterprobe
+
+The Dean gives me the exclusion list. I do not fix it after receiving it. I keep $E$ as input, require one compatible $k$-set or a sound $\mathrm{NO}$, and count the entire method rather than only the final checker.
+
+A bounded connected five-cycle progression reconnects this step-by-step proof to my earlier odd-cycle support-frame and boundary-transfer work. For the explicitly declared chain of $t$ cycles, $\alpha=2t$, minimum omissions $\tau=3t$, and maximum disjoint pairs $\nu=\lfloor5t/2\rfloor$. Holding $k=3t$ fixed, matching already proves $\mathrm{NO}$ for $t\ge2$. At the separately declared first impossible target $k=2t+1$, the same matching and degree tests stop short while the odd-cycle bound proves $\mathrm{NO}$. The old C5 table lacked a recovered generator, so its operation counts remain historical, not a new rerun.
+
+[Exact construction, proof, cost, and provenance boundary](PNP_DEAN_FIXED_LIST_C5_CHAIN_2026-09-29.md). This is a scoped counterprobe, not the missing universal polynomial solver.
+
 
 ## September 18, 2026 convergence
 
