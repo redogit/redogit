@@ -145,6 +145,10 @@ The four-block \(\overline{C_9}\) chain has \(n=36,\alpha=8,\tau=28\). At \(k=9,
 
 The catalog stays fixed. In five odd-wheel blocks joined by hub bridges, \(n=30,\alpha=10,\tau=20\), but the complete prior linear rows admit a fractional selection of eleven at \(k=11,b=19\); no seven- or nine-vertex carrier occurs. Step 14's wheel receipt already gives \(19/5\) local omissions. Rounding **each** checked wheel to four before summing gives \(20>19\) and proves NO using existing evidence. Deleting one rim edge gives a checked eleven-person YES, so the old rim-cycle row cannot be carried to that changed input. [Exact Step 17 receipt](PNP_DEAN_FROZEN_CATALOG_WHEEL_GAP_2026-09-29.md). No new carrier, polynomial discovery guarantee, or P-versus-NP conclusion follows.
 
+### Dean overlap after local rounding — Step 18
+
+Verified local rounding composes with the existing overlap penalty. Two odd wheels sharing one hub give \(n=11,\alpha=4,\tau=7\): NO at \(k=5,b=6\), with corrected bound \(4+4-1=7\). Deleting one rim edge gives \(\alpha=5,\tau=6\) and an explicit YES at the same target; fresh local evidence gives \(3+4-1=6\). The same YES refutes both double-counting the shared hub and carrying stale local evidence across an edge deletion. [Exact Step 18 proof and retained finite probe](PNP_DEAN_OVERLAPPING_WHEEL_ROUNDING_2026-09-29.md). This is a sound composition check, with no new carrier, discovery rule, or P-versus-NP conclusion.
+
 Public live design:
 
 - https://redogit.github.io/redogit/live-design.html

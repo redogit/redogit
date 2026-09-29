@@ -312,6 +312,10 @@ Four connected copies of \(\overline{C_9}\) have \(\alpha=8\), yet \(x_v=1/4\) s
 
 Five connected six-vertex odd wheels have \(n=30,\alpha=10,\tau=20\); \(k=11,b=19\) is NO. All existing unrounded clique, odd-cycle, and exact seven-/nine-vertex rows allow the fractional point with 19 omissions, and the prior weighted LP bound is exactly 19. The key correction is that Step 14 already proves \(19/5\) omissions **inside each wheel**; integer local rounding yields four per wheel and \(20>19\), with no new carrier. Deleting one required rim edge gives an explicit eleven-person YES at the same target. [Exact Step 17 LP gap, existing local repair, and edge counterprobe](PNP_DEAN_FROZEN_CATALOG_WHEEL_GAP_2026-09-29.md). This is a bounded composition check; P ?= NP remains open.
 
+### Dean overlap after local rounding — Step 18
+
+Two six-person odd wheels sharing one hub have eleven distinct applicants. At \(k=5,b=6\), their verified local bounds compose as \(4+4-1=7\), proving NO. Deleting one rim edge gives a five-person YES: the refreshed local bounds compose as \(3+4-1=6\). Forgetting the shared identity or reusing the broken wheel's old evidence would each falsely reject that YES. [Exact Step 18 proof and reproducible probe](PNP_DEAN_OVERLAPPING_WHEEL_ROUNDING_2026-09-29.md). The existing overlap formula is sound after local rounding; this pair gives no additional gain over its unrounded bound. The catalog stays fixed and P ?= NP remains open.
+
 
 ## September 18, 2026 convergence
 
