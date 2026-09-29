@@ -6,9 +6,9 @@
 
 > **About me:** [PUBLIC ABOUT ME](https://redogit.github.io/conscience64/about.html) — fire, carriers, music/language, REDOGIT, and current work
 > **Newest integrated work:** [PUBLIC RECENT WORK](https://redogit.github.io/conscience64/recent-work.html) · [source](RECENT_WORK_2026-09-25.md)
-> **Start here — terms before claims:** [PUBLIC RMAL ORIENTATION](https://redogit.github.io/redogit/) · [source](RMAL_RESEARCH_ORIENTATION_2026-09-25.md)
-> **Algorithmic method / learned rules:** [PUBLIC ALGORITHMIC CONDENSED WISDOM](https://redogit.github.io/redogit/condensed-wisdom.html) · [source](ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md)
-> **Current live design:** [PUBLIC RMAL P vs NP — LIVE DESIGN](https://redogit.github.io/redogit/live-design.html) · [source](RMAL_PNP_LIVE_DESIGN_2026-09-25.md)
+> **Start here — terms before claims:** [RMAL orientation source](https://github.com/redogit/redogit/blob/main/RMAL_RESEARCH_ORIENTATION_2026-09-25.md)
+> **Algorithmic method / learned rules:** [Algorithmic condensed wisdom source](https://github.com/redogit/redogit/blob/main/ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md)
+> **P vs NP design carrier:** [RMAL P vs NP design source](https://github.com/redogit/redogit/blob/main/RMAL_PNP_LIVE_DESIGN_2026-09-25.md)
 
 > **Conscience64 curated Play projection — checked 2026-09-29:** the `gh-pages` branch and current manifest include [Musilanguage Studio](https://github.com/redogit/conscience64/tree/main/play/musilanguage) and [NEON//VEIL](https://github.com/redogit/conscience64/tree/main/play/neon-veil). NEON's T05 package is for local or trusted-LAN hosting; this does not establish a public authoritative backend. Other `play/` paths, repository internals, private-origin carriers, and historical predecessor music pages are not thereby published. The Dream route belongs to its separate approved overlay; the base projection manifest does not enumerate it. Public projection != canonical authority.
 
