@@ -300,6 +300,10 @@ The omission bound now accepts rational weights on verified cliques and odd cycl
 
 The limit is equally concrete: three connected copies of the complement of \(C_7\) have \(\alpha=6\), so \(k=7\) is NO, yet \(x_v=1/3\) satisfies **every** clique and odd-cycle inequality and keeps the LP inconclusive. The missing unit is integrality, not an undiscovered carrier in that family. [Exact Step 14 certificate, discovery route, counterprobes, and claim ceiling](PNP_DEAN_MIXED_FRAME_DISCOVERY_2026-09-29.md).
 
+### Dean one-degree rank repair — Step 15
+
+The Step 14 three-block gap needs one local rounding degree. On each seven-vertex complement-of-\(C_7\) occurrence, seven existing triangle rows give \(3x(H)\le7\). Since a selection is integral, \(x(H)\le2\), or at least five omissions. Rounding inside each verified block before adding yields \(5+5+5=15>b=14\) at the unchanged \(k=7\) target. The fixed-input checker requires all 14 specified edges; deleting one required edge creates a seven-person YES and rejects that block, while the Step 14 weighted overlap penalty protects shared blocks. A capped search returns UNKNOWN. [Exact Step 15 one-degree proof and counterprobes](PNP_DEAN_ONE_DEGREE_RANK_REPAIR_2026-09-29.md). P ?= NP remains open.
+
 
 ## September 18, 2026 convergence
 

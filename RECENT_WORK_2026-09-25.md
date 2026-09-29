@@ -133,6 +133,10 @@ On the exact \(K_4\) bridge-chain target from Step 12, \(t\) disjoint four-cliqu
 
 For supplied verified cliques and odd cycles, nonnegative rational weights give the sound bound \(B=\sum_i\lambda_i d_i-\sum_v\max(0,\sum_{i:v\in S_i}\lambda_i-1)\). An exact rational receipt with \(B>n-k\) proves NO. A fixed \(K_2,K_3,K_4,C_5\) catalog and its LP have polynomial total cost, but return UNKNOWN if the bound does not cross. On a connected six-person odd wheel, every disjoint frame stops at three while the weighted score \(19/5\) proves NO at budget three. On a connected three-block \(\overline{C_7}\) graph, \(\alpha=6\) but \(x_v=1/3\) satisfies all clique and odd-cycle rows at the impossible \(k=7\) target; even complete discovery within this linear family remains inconclusive. [Exact Step 14 proof and finite counterprobes](PNP_DEAN_MIXED_FRAME_DISCOVERY_2026-09-29.md). P ?= NP remains open.
 
+### Dean one-degree rank repair — Step 15
+
+Only one verified \(\overline{C_7}\) carrier is added. Its seven existing triangle constraints imply \(3x(H)\le7\); integrality rounds this locally to \(x(H)\le2\), equivalently five omissions. Three separately checked blocks give 15 omissions at the same \(k=7,b=14\) and prove the Step 14 NO. Delete one required edge and the target becomes YES; the strict 14-edge admission check rejects that block. For shared blocks the prior weighted overlap correction remains necessary. Supplied receipts are exactly checkable; a resource-capped discovery returns UNKNOWN. [Exact Step 15 receipt](PNP_DEAN_ONE_DEGREE_RANK_REPAIR_2026-09-29.md). No general rank-separation method or P-versus-NP conclusion follows.
+
 Public live design:
 
 - https://redogit.github.io/redogit/live-design.html
