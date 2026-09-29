@@ -1505,3 +1505,99 @@ PUBLIC_TESTBED_PUBLISHED != WHOLE_REPOSITORY_PUBLISHED
 NETWORK_EDGE_MATCH != SCIENTIFIC_VALIDATION
 EXPERIMENTAL_NON_AUTHORITATIVE != CANONICAL_TRUTH
 ```
+
+
+## 42. Current reconstruction standards — September 28, 2026
+
+Stable paired marker: `CurrentReconstructionStandards_2026_09_28`.
+
+**Status: SOURCE_BACKED_DESIGN_ALIGNMENT.** This continuation connects the already-admitted working definitions and condensed-wisdom method to the existing Libraries of Libraries / RMAL summaries. It does not rebuild completed adapters or declare new runtime capabilities.
+
+### Source and chronology
+
+The governing source snapshot for this alignment is `redogit/redogit@04e4bcf8a567ceeede3b7478a474d12e8b210acc`:
+
+- [RMAL Research Orientation](RMAL_RESEARCH_ORIENTATION_2026-09-25.md), blob `9e74d1b3f4f49d9831aa00f2831a953a1c3e691a`;
+- [Algorithmic Condensed Wisdom Analysis](ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md), blob `64b2989cf4f07f9c6576cc830a8af1b629f65495`;
+- [Repository policy](redogit.json), blob `1d2b016f23a98b80bff54fa64eec30f7f21a8b09`.
+
+The corresponding RMAL design block is `STANDARD CurrentReconstructionStandards_2026_09_28` in [libraries-of-libraries.rmal](libraries-of-libraries.rmal).
+
+Earlier dated sections retain their wording, anchors, failures, and verification scopes. In particular, the September 19/20 issue-status and publication snapshots above are **historical observations at their recorded revisions**, not a fresh September 28 live-deployment or whole-repository attestation. Historical federation terminology is not the current identity. Newer Library-only proposals are not exported here or promoted into repository evidence.
+
+### Keep the Object, the obligation, and four distinct identity roles
+
+```text
+OccurrenceID
+SemanticObjectID
+SemanticContextSupportsIDs
+SemanticClarityIDs
+```
+
+These identify an exact occurrence, the semantic Object, the contextual supports for that binding, and the consequential distinctions that keep the binding clear. They are distinct roles, not four names for one hash.
+
+Object, Context, Surface, and Carrier remain separate. A change of words, coordinates, frame, display, or device cannot silently change the original obligation. Result, method, explanation, trace, proof, and reconstruction are also separate records.
+
+### Forward, Homeward, and side to side
+
+Forward operation remains:
+
+```text
+Preserve -> Distinguish -> OneDegreeVary -> Observe
+-> Counterprobe -> RetainFailureAndConsequence -> CompareInteractions
+-> AdmitBoundedRule -> Condense
+```
+
+Homeward reconstruction must recover:
+
+```text
+CondensedRule -> Conditions -> Exceptions -> Assumptions
+-> Evidence -> Trace -> Object -> OriginalObligation
+```
+
+Side-to-side comparison uses the same declared obligation and pinned source revisions. Inspect `A -> B` and `B -> A` separately. Peer-to-peer relationships must be explicitly typed; neither a central summary nor a similar-looking peer grants write or evidence authority. Preserve mismatches and reopen only the smallest affected relation rather than rewriting the whole history.
+
+A test that did not find a difference is not, by itself, a certificate that no consequential difference exists. The earlier equivalence notation is scoped to its declared tests/obligation; it is not permission to infer a universal quotient from unsuccessful search.
+
+### Move away from decay; do not merely retain a slogan
+
+The carrier should move toward greater verified recoverability while Object and obligation remain stable. Keep conditions, exceptions, assumptions, evidence, counterexamples, failures, ordered trace, cost, claim ceiling, unresolved remainder, and Homeward relations when they can change use.
+
+A smaller representation is only a candidate improvement. Account separately for discovery, construction, validation, reconstruction, and retained-history costs. Do not hide expensive work behind a small final carrier or a warm cache.
+
+If recovery is unresolved, retain the endangered distinction or reopen the obligation. A recovery handle is insufficient without an available source revision, required dependencies, an appropriate reconstruction check, and its cost. Historical negative results must remain recoverable; releasing temporary computation is not permission to destroy the only remaining failure evidence.
+
+### Memory, replay, and requested surfaces
+
+Minimize the obligation-sufficient working set, not the recoverable scope of the work. Generate a file or view for the requested use without automatically making it canonical or permanently saving every intermediate result. A Git record is not proof that the assistant's persistent memory was updated.
+
+Replay safety applies to a declared execution/request identity. It does not mean that every mathematical rotation or reversible transform must be idempotent: repeating a nontrivial rotation can legitimately change its result. Preserve the transform parameters, ordering, and recovery receipt. Byte-exact reconstruction is mandatory when the obligation requires it; otherwise state the exact consequential invariants restored.
+
+### Common boundary vocabulary
+
+The paired RMAL and human-readable surfaces preserve these same distinctions:
+
+```text
+OBJECT != SURFACE
+CONTEXT != SURFACE
+RESULT != METHOD
+METHOD != PROOF
+TRACE != PROOF
+COMPRESSED != RECONSTRUCTIBLE
+FAILED_TO_DISTINGUISH != PROVEN_EQUIVALENT
+SMALL_FINAL_CARRIER != CHEAP_CONSTRUCTION
+REPLAY_SAFE != EVERY_TRANSFORM_IDEMPOTENT
+REUSE != EVIDENCE_TRANSFER
+GENERATED != PERSISTED
+GIT_RECORD != ASSISTANT_PERSISTENT_MEMORY
+STANDARD_ALIGNMENT != RUNTIME_IMPLEMENTATION
+PRIVATE_HISTORY != PUBLIC_EVIDENCE
+```
+
+### Preserved implementation limits and next action
+
+The target-local adapter records were reread for this alignment. Conscience64 continues to declare its bounded `PRIVATE_METHOD_HANDOFF` request/response runtime. Other-Projects continues to declare a controlled-surface check PASS, with fresh RMALC validation and structured/generic response runtimes **not established**. Nothing in this standards update changes those evidence classes.
+
+Runtime code, wire schemas, target-local adapters, compiler claims, publication permissions, and private Library contents are unchanged. The new RMAL block is a specification carrier; fresh RMALC validation of it was not performed.
+
+For the next actual operation: identify the Object and obligation; resolve only the needed source lineage; perform one consequential change; compare expectation with observation; preserve the failure or earned rule and its costs; test the required Homeward path; update both relevant summaries only after their target-local evidence agrees. Continue from the retained remainder, without restarting completed work.

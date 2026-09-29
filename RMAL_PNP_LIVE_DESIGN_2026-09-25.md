@@ -1,0 +1,1214 @@
+# RMAL P vs NP — Live Design — 2026-09-25
+
+> Start with [TERMS FIRST](RMAL_RESEARCH_ORIENTATION_2026-09-25.md). This page is the current design, not the dictionary.
+
+## TERMS I AM USING HERE
+
+```text
+OBJECT        := the thing I am preserving / reasoning about
+OBLIGATION    := what the result actually has to satisfy
+RESULT        := what came out
+METHOD        := repeatable lawful path + checks + cost
+CARRIER       := what currently holds / moves what matters
+TRACE         := ordered record of what changed and what was checked
+REMAINDER     := exact unresolved part after admitted work
+HOMEWARD      := way back to original obligation / witness / source
+CLAIM CEILING := strongest claim current evidence supports
+```
+
+```text
+RESULT != METHOD != PROOF != EXPLANATION
+MAKING THE DOUGHNUTS != KNOWING HOW TO MAKE THE DOUGHNUTS
+```
+
+The design below is mainly the second Object: preserving enough method, receipts, cost, and reconstruction that the result can be earned again.
+
+## THE THING I AM TRYING TO PROVE
+
+I am not trying to prove that a particular SAT solver is fast on a pile of cases.
+
+I am trying to build an exact uniform process where every admissible unresolved state does one of three lawful things:
+
+    CLOSE POSITIVE
+    CLOSE NEGATIVE
+    OR
+    MOVE TO A STRICTLY SMALLER / CHEAPER EXACT REMAINDER
+
+and where the **entire lifecycle cost** is polynomial:
+
+    recognize
+    select
+    transform
+    verify
+    store
+    reconstruct
+
+The proof obligation is not allowed to hide exponential work in the carrier.
+
+## THE DOUGHNUT SPLIT
+
+    MAKING THE DOUGHNUTS
+    !=
+    KNOWING HOW TO MAKE THE DOUGHNUTS
+
+For this project:
+
+    RESULT
+    !=
+    ALGORITHM
+    !=
+    PROOF OF THE ALGORITHM
+    !=
+    EXPLANATION OF WHY THE ALGORITHM EXISTS
+
+The current normalization theorem is specifically the **knowing how it was made** layer.
+
+## CURRENT EXECUTION SHAPE
+
+    ORIGINAL OBLIGATION
+    -> FOUR-ID SEMANTIC BINDING
+    -> EXACT NORMALIZATION
+    -> CERTIFIED TRACTABLE TERMINAL, if one applies
+    -> OTHERWISE: EXPLICIT RESIDUAL
+    -> ONE NEW CONSEQUENTIAL DEGREE
+    -> VERIFY
+    -> HOMEWARD
+    -> CONTINUE
+
+## EXACT NORMALIZATION — CURRENT ORDER
+
+Use stable IDs. Apply the first exact rule that is admitted. After any change, restart.
+
+    R0  exact cleanup / unit consequences
+    R1  maximal linear-autarky reduction
+    R2  signed cofactor dominance
+    R3  blocked-clause elimination
+    R4  certified functional-variable / gate elimination
+    R5  non-increasing Davis-Putnam merge
+
+Then test existing certified terminals:
+
+    2-SAT
+    Horn
+    dual-Horn
+    affine / GF(2), when recognized
+    beta-acyclic Choice-CNF
+    hierarchical forbidden-pair path
+    logarithmic crossing-defect path
+    skew-symmetric forbidden-pair path
+    logarithmic maximal deficiency
+    binary-cluster / log-cluster-defect carriers
+    other explicitly admitted scoped terminals
+    log conformal-defect hitting / exact model-count terminal
+    log nonclash-degeneracy / conformal-clique inclusion-exclusion terminal
+    incidence-component factorization
+    polynomial conformal-event-count / output-sensitive clique terminal
+
+## NORMALIZATION CLOSURE THEOREM
+
+Let
+
+    mu(F) = variables(F) + clauses(F).
+
+Every successful normalization step strictly decreases mu.
+
+All admitted rules have polynomial discovery / verification cost under their stated guards.
+
+The guarded representation never leaves a polynomial size envelope.
+
+Therefore:
+
+    number of successful steps <= n_0 + c_0
+
+and the complete normalization lifecycle is polynomial.
+
+Each step stores a polynomial-size proof / reconstruction receipt.
+
+Reverse replay of those receipts reconstructs the original witness or validates the negative direction.
+
+### What that closes
+
+    P5/P6 LOCAL NORMALIZATION LIFECYCLE: CLOSED FOR THE DECLARED RULE SET.
+
+### What that does not close
+
+    NORMALIZATION != SAT SOLVER
+    LOCAL POLYNOMIAL WORK != GLOBAL POLYNOMIAL COVER
+    P5/P6 != P7
+
+## CURRENT HARD CORE AFTER NORMALIZATION
+
+A residual that survives the present exact suite can be required to have:
+
+    NO LINEAR AUTARKY
+    NO CERTIFIED COFACTOR DOMINANCE
+    NO BLOCKED CLAUSE
+    NO ADMISSIBLE FUNCTIONAL VARIABLE
+    NO NON-INCREASING DP VARIABLE
+    NO ALREADY-CERTIFIED TRACTABLE TERMINAL
+
+and, in the linearly-lean matrix carrier:
+
+    full column rank
+    strictly positive clause-balance vector y
+    M^T y = 0
+    deficiency = dimension of left-nullspace
+
+If deficiency is logarithmic, the known exact deficiency algorithm closes it polynomially.
+
+The live remainder is therefore the **high-deficiency, linearly-lean, projection-growth-positive fixed point**.
+
+That is the next proof Object.
+
+## CURRENT CONDENSED WISDOM
+
+The long normalization proof compresses to:
+
+    DON'T BRANCH ON A DEGREE
+    UNTIL I HAVE FAILED TO PROVE THAT THE DEGREE IS:
+
+        REDUNDANT,
+        DOMINATED,
+        FUNCTIONALLY DETERMINED,
+        LOCALLY SATISFIED,
+        OR CHEAPLY PROJECTABLE.
+
+This rule is only useful because I can unfold it back into the exact mechanisms and receipts that earned it.
+
+## NEXT DEGREE
+
+The remaining exact structure that is present but not yet fully consumed is the positive clause-balance / left-nullspace carrier.
+
+Do not call it UNSAT.
+
+Do not call it proof of satisfiability.
+
+It is structural evidence:
+
+    POSITIVE BALANCE != UNSAT
+    HIGH DEFICIENCY != HARDNESS CERTIFICATE
+
+The next job is to determine whether that balance space yields an exact polynomial:
+
+    reduction,
+    decomposition,
+    dominance relation,
+    reusable projected consequence,
+    or negative certificate
+
+without recreating the removed Boolean degree under a new name.
+
+## LOG CONFORMAL-DEFECT / HITTING TERMINAL
+
+For the clause-column sign pattern A=M(F)^T, two columns are conformal exactly when the corresponding clauses do not clash.
+
+Build the clause nonclash graph Q_F and find a vertex cover Z.
+
+Then:
+
+    F \ Z
+
+is hitting.
+
+If
+
+    |Z| = O(log N_input),
+
+retain Z as an exception carrier and evaluate the formula exactly by inclusion-exclusion over exceptional clauses. Every inclusion-exclusion term falsifies a subset of Z, producing a partial assignment; restricting the hitting core by that assignment leaves a hitting formula, whose exact model count is
+
+    2^N - sum_C 2^(N-|C|).
+
+This yields exact SAT / UNSAT and exact model count in polynomial total work under the logarithmic guard. A positive count reconstructs a witness by self-reduction; a zero count carries an exact arithmetic receipt.
+
+This terminal is the qualitative-matrix translation of a tight-pattern neighborhood:
+
+    TIGHT / HITTING
+    +
+    LOG CONFORMAL DEFECT
+    ->
+    EXACT POLYNOMIAL TERMINAL.
+
+It does not close formulas whose minimum useful conformal-defect cover is superlogarithmic.
+
+## NONCLASH-CLIQUE INCLUSION-EXCLUSION TERMINAL
+
+The qualitative-matrix carrier is broader than the hitting / vertex-cover special case.
+
+Let Q_F be the clause nonclash graph:
+
+    C--D
+    iff
+    C and D contain no complementary literal pair.
+
+Equivalently Q_F is the conformality graph of clause columns of A=M(F)^T.
+
+For every nonempty set T of clauses:
+
+    all clauses in T can be falsified simultaneously
+    iff
+    T is a clique of Q_F.
+
+Therefore:
+
+    #SAT(F)
+      =
+    2^n
+      +
+    sum_{nonempty clique T of Q_F}
+        (-1)^|T| 2^(n-|V(T)|).
+
+If Q_F has degeneracy d, a degeneracy ordering enumerates all cliques through at most
+
+    m 2^d
+
+candidate subsets.
+
+Hence:
+
+    d = O(log N_input)
+    ->
+    exact polynomial #SAT / SAT terminal.
+
+Hitting is d=0.
+
+For Homeward reconstruction, do not rebuild Q_F after partial assignments. Reuse the original clique list and intersect each original falsifying subcube with the partial assignment. This prevents the carrier guard from silently worsening during self-reduction.
+
+The next qualitative residual therefore has superlogarithmic nonclash/conformality degeneracy.
+
+## POLYNOMIAL CONFORMAL-EVENT-COUNT TERMINAL
+
+The log-degeneracy guard is only a sufficient proxy.
+
+The exact inclusion-exclusion carrier needs one event for each nonempty clique of the clause nonclash / column-conformality graph Q_F. Use an output-sensitive all-clique enumerator with a fixed polynomial cap P(N)=N^c.
+
+    enumeration completes <= P(N)
+        -> retain every conformal event
+        -> exact inclusion-exclusion #SAT / SAT / UNSAT
+
+    more than P(N) events emitted
+        -> stop
+        -> UNRESOLVED under this carrier.
+
+This is polynomial because clique listing has polynomial work per emitted clique.
+
+Thus the admitted resource is the actual number of jointly falsifiable clause-event intersections, not merely a structural width proxy.
+
+Current qualitative residual:
+
+    SUPER-CAP CONFORMAL EVENT MULTIPLICITY.
+
+This is representation-growth evidence, not a hardness certificate.
+
+## BALANCE-CIRCUIT / CONFORMAL-EVENT BRIDGE
+
+For every positive balance circuit B:
+
+    z>0 on B
+    M^T z=0
+
+every variable used in B occurs in both polarities inside B.
+
+Therefore every clause in B clashes with at least one other clause in B, and B can never be a clique of the clause nonclash / column-conformality graph.
+
+So for every conformal event T:
+
+    B_i not-subseteq T
+    for every balance circuit B_i.
+
+Equivalently:
+
+    F \ T
+
+hits every circuit in the positive balance-circuit cover.
+
+This is the first direct exact seam between the balance carrier and the conformal-event carrier.
+
+It does not yet bound the number of conformal events. The next useful theorem must exploit the overlap structure of the balance-circuit hypergraph strongly enough to force polynomial event count, decomposition, dominance, projection, or a negative sign-central certificate.
+
+## INCIDENCE-COMPONENT FACTORIZATION
+
+Before treating global conformal-event multiplicity as a live obstruction, split the CNF by connected components of the clause-variable incidence graph.
+
+For disjoint components F_i:
+
+    SAT(F) iff every SAT(F_i)
+
+and
+
+    #SAT(F)
+      =
+    2^(free variables)
+      * product_i #SAT(F_i).
+
+The clause nonclash graph is the graph join of the component nonclash graphs, so:
+
+    K(F)+1
+      =
+    product_i (K(F_i)+1).
+
+Thus global clique/event count may be exponential solely because independent components multiply. That is not intrinsic hard-core growth.
+
+Run conformal-event enumeration and every other exact terminal componentwise.
+
+Positive balance circuits also localize componentwise because the signed incidence matrix is block diagonal and a support-minimal positive dependency cannot span two blocks.
+
+Current event-side remainder:
+
+    INCIDENCE-CONNECTED
+    +
+    SUPER-CAP CONFORMAL EVENT MULTIPLICITY.
+
+## CLAIM CEILING
+
+    ACTIVE PROOF PROGRAM
+    SCOPED EXACT THEOREMS: YES
+    POLYNOMIAL NORMALIZATION LIFECYCLE: YES
+    UNIVERSAL P=NP PROOF: NOT ESTABLISHED
+
+## SOURCE OBJECTS
+
+- [Terms-first orientation](RMAL_RESEARCH_ORIENTATION_2026-09-25.md)
+- [Live carrier/proof notebook](PNP_SIGNED_BINARY_CLUSTER_CARRIER_2026-09-25.md)
+- [Profile checkpoint](README.md)
+
+
+## POSITIVE BALANCE-CIRCUIT CARRIER
+
+On the normalized linearly-lean residual:
+
+    rank(M)=n
+    y>0
+    M^T y=0
+    k = deficiency = dim ker(M^T)
+
+the positive balance vector can be decomposed into at most k support-minimal positive row-dependency circuits.
+
+Those circuit supports cover every clause.
+
+So I can carry the continuous balance remainder as a finite typed relation set:
+
+    <= k BalanceCircuit Objects
+    + exact rational weights
+    + source clause IDs
+    + reconstruction receipts
+
+This is structural compression only.
+
+    POSITIVE BALANCE CIRCUIT != UNSAT CORE
+    CIRCUIT COVER <= DEFICIENCY != SAT ALGORITHM
+
+The new exact question is whether the **overlap relation among those positive circuits** can remove, dominate, decompose, or cheaply project one Boolean degree without recreating that degree as a fresh selector.
+
+
+## 2026-09-26 successor — semantic intersection-state quotient
+
+Successor artifact: [Semantic Intersection-State Quotient](PNP_SEMANTIC_INTERSECTION_QUOTIENT_2026-09-26.md).
+
+The conformal-clique carrier was exact but still counted descriptions rather than semantic event identities. The successor quotients all compatible clause subsets by their exact joined falsifying partial assignment, producing an intersection semilattice L(F). Möbius inversion over L(F) gives exact #SAT, SAT/UNSAT, and Homeward reconstruction whenever the number of distinct semantic states is polynomially bounded.
+
+A strict separation family has exponentially many raw conformal cliques but only polynomially many semantic intersection states, so the live qualitative remainder is now:
+
+    SUPER-CAP DISTINCT SEMANTIC INTERSECTION-STATE MULTIPLICITY
+
+not raw clique multiplicity.
+
+The balance-side counterprobe also burned an overly weak next target: pairwise support overlap among selected positive balance circuits is not enough. Two full-rank 7-variable instances have the same seven disjoint positive 2-circuit overlap object but opposite SAT status. The next relation must preserve variable/sign incidence together with canonical semantic intersection states.
+
+    DESCRIPTION MULTIPLICITY != EVENT MULTIPLICITY
+    CIRCUIT OVERLAP ALONE != UNIVERSAL NAVIGATION
+
+
+## 2026-09-26 successor — cubic 3-uniform residual calibration
+
+Successor: [PNP_CUBIC_3UNIFORM_RESIDUAL_2026-09-26.md](PNP_CUBIC_3UNIFORM_RESIDUAL_2026-09-26.md).
+
+The paired positive-balance family was pushed one degree further. Under 3-uniformity, maximum degree <=3, connectedness, and the current full-rank paired residual, the surviving boundary has m=n and every variable degree exactly 3: a cubic 3-uniform hypergraph.
+
+The external Henning-Yeo boundary makes every non-2-colorable cubic component edge-critical: deleting any hyperedge yields a 2-colorable remainder. This does not by itself reduce complexity. Flip/recolor coordinates relative to such a near-solution are a bijective XOR change of variables and therefore fail the degree-removal gate.
+
+Incidence girth was also counterprobed and rejected as a decision invariant: a 10-vertex cubic 3-uniform girth-6 instance with 48 valid 2-colorings was found.
+
+A quasi-matching theorem supplies a conditional positive certificate through perfect-matching count modulo 3, but generic permanent-mod-3 computation is not admitted as polynomial. Use it only inside independently tractable matching-count carriers.
+
+Current cubic remainder:
+
+    EDGE-CRITICAL CUBIC 3-UNIFORM INCIDENCE CARRIER
+    x
+    SEMANTIC INTERSECTION-STATE CARRIER
+    x
+    PAIRED BALANCE CIRCUITS
+
+with no NP-hardness claim attached to the exact cubic restriction.
+
+
+## 2026-09-26 successor — cubic paired-NAE bond lattice
+
+Successor: [PNP_CUBIC_BOND_LATTICE_CARRIER_2026-09-26.md](PNP_CUBIC_BOND_LATTICE_CARRIER_2026-09-26.md).
+
+The paired cubic NAE carrier now preserves the original hyperedge obligation instead of splitting it into two signed clause-falsification descriptions.
+
+For each hyperedge e:
+
+    Mono(e)
+      := all vertices of e have the same color.
+
+For any selected edge set A, the intersection of Mono(e), e in A, depends only on the equality partition pi_A induced by connected components of the selected-edge subhypergraph.
+
+Therefore:
+
+    EDGE-SUBSET HISTORY
+    !=
+    EVENT IDENTITY
+
+    EVENT IDENTITY
+    =
+    EQUALITY PARTITION.
+
+The distinct equality partitions form the hypergraph bond/intersection lattice L_H. Möbius inversion gives the exact 2-color count:
+
+    P_H(2)
+      =
+    sum_{pi in L_H}
+      mu(hat0,pi) 2^(|pi|).
+
+If the distinct partition-state count is within a declared polynomial cap, the carrier yields exact SAT/UNSAT/#2-color plus Homeward witness reconstruction in polynomial total work.
+
+The retained cubic witnesses compress further in this carrier:
+
+    Fano:
+        73 signed semantic states
+        -> 37 equality-partition states
+        -> 0 colorings
+
+    full-rank SAT-7:
+        69
+        -> 35
+        -> 14 colorings
+
+    SAT girth-6 n=10:
+        495
+        -> 227
+        -> 48 colorings.
+
+A 1,000-instance bounded cubic differential panel returned zero total-count mismatches and zero partial-extension mismatches.
+
+Current cubic remainder:
+
+    EDGE-CRITICAL CUBIC 3-UNIFORM
+    +
+    SUPER-CAP EQUALITY-PARTITION MULTIPLICITY.
+
+Do not return to generic recoloring coordinates.
+
+    PAIRED OBLIGATION PRESERVED
+    !=
+    UNIVERSAL P=NP CLOSURE.
+
+
+## 2026-09-26 successor — signed partition-coefficient transfer
+
+Inside the cubic paired-NAE bond lattice, edge-subset histories can be aggregated during execution rather than only after the full lattice is built.
+
+For every active equality partition pi carry one signed coefficient c(pi).
+
+Processing one hyperedge e performs exactly:
+
+    absent:
+        new[pi] += c(pi)
+
+    present:
+        new[join(pi,e)] -= c(pi).
+
+After aggregation, a state with coefficient zero is deleted exactly: both of its future linear contributions are zero.
+
+The final exact count is:
+
+    #2-colorings
+      =
+    sum_pi c(pi) 2^(blocks(pi)).
+
+Coefficient magnitude has only O(m) bits.
+
+The admitted execution measure is now:
+
+    W_coeff
+      =
+    maximum number of active nonzero coefficient partitions
+    under the fixed stable hyperedge order.
+
+If W_coeff is polynomially capped, exact solve and Homeward reconstruction are polynomial even when the full generated bond lattice is larger.
+
+Bounded cubic validation:
+
+    1,000 instances
+    count mismatches: 0
+
+strongest observed reduction:
+
+    139 full equality states
+    ->
+    100 active coefficient states.
+
+Current cubic remainder:
+
+    EDGE-CRITICAL CUBIC 3-UNIFORM
+    +
+    SUPER-CAP ACTIVE PARTITION-COEFFICIENT WIDTH.
+
+Successor/source:
+
+- [Cubic Paired-NAE Bond-Lattice Carrier](PNP_CUBIC_BOND_LATTICE_CARRIER_2026-09-26.md)
+- [checker](PNP_CUBIC_BOND_COEFFICIENT_CHECK_2026-09-26.py)
+- [bounded evidence](PNP_CUBIC_BOND_COEFFICIENT_EVIDENCE_2026-09-26.json)
+
+
+## 2026-09-26 successor — future-frontier projection carrier
+
+Successor: [Cubic Paired-NAE Future-Frontier Projection Carrier](PNP_CUBIC_FRONTIER_PROJECTION_CARRIER_2026-09-26.md).
+
+The signed bond-lattice execution now projects an equality coordinate as soon as no unprocessed hyperedge can touch it again.
+
+When an entire equality block closes:
+
+    unfixed block -> multiply by 2
+    fixed-color block -> multiply by 1.
+
+Decision uses nonzero signed equality-partition states on the future-active frontier.
+
+Homeward is separately guarded: partial-color queries attach only one minimal status per active block:
+
+    UNFIXED / 0 / 1.
+
+A 0/1 conflict inside a joined block is an empty event and drops.
+
+The complete terminal is admitted only when both actual widths stay inside the fixed polynomial cap:
+
+    W_front  = projected decision-state width
+    W_home   = maximum labeled state width during self-reduction.
+
+Bounded validation:
+
+    decision panel: 1,000 cubic instances, 0 mismatches
+    Homeward panel: 1,000 cubic instances, 0 failures
+    strongest observed global->frontier width reduction: 118 -> 12
+    maximum labeled Homeward width observed: 66.
+
+Current cubic remainder:
+
+    EDGE-CRITICAL CUBIC 3-UNIFORM
+    +
+    SUPER-CAP PROJECTED FRONTIER WIDTH
+    OR
+    SUPER-CAP LABELED HOMEWARD WIDTH.
+
+The next lawful degree may alter/factor incidence ordering only through a polynomially discoverable certificate.
+
+- [checker](PNP_CUBIC_FRONTIER_PROJECTION_CHECK_2026-09-26.py)
+- [bounded evidence](PNP_CUBIC_FRONTIER_PROJECTION_EVIDENCE_2026-09-26.json)
+
+
+## 2026-09-26 chronology repair / synchronization authority
+
+Current coordination packet: [PNP_SYNCHRONIZATION_PACKET_2026-09-26.md](PNP_SYNCHRONIZATION_PACKET_2026-09-26.md).
+
+A chronology audit recovered the end-of-day 2026-09-25 proof state before using later successor experiments as authority. The authoritative predecessor is `redogit/redogit@2ee9125e91d36bb417d0f99981fc4c32620eb3a2`.
+
+The live mathematical object is therefore re-anchored to:
+
+~~~text
+QUALITATIVE CELL
++
+POSITIVE BALANCE CIRCUITS
++
+SIGNED CROSS-CIRCUIT VARIABLE INCIDENCE
+~~~
+
+The overlap-only hypothesis is retained as ASH: circuit support-overlap alone does not preserve SAT/UNSAT distinction.
+
+Current RMAL execution/tooling authority is target-local in `redogit/DnD`; current head `c5d819b8ccda3ffe63e024d8ef02514fedcf896e` seals the RMAL 3.1 native C23 Windows SDK packaging/evidence line. Tooling currentness does not rewrite mathematical chronology.
+
+~~~text
+NEWEST TOOLING + CORRECT PROOF LINEAGE
+TARGET_LOCAL_EVIDENCE > CENTRAL SUMMARY
+~~~
+
+
+## 2026-09-26 positive-circuit local closure
+
+Successors:
+
+- [Positive Balance-Circuit Local Decision](PNP_POSITIVE_CIRCUIT_LOCAL_DECISION_2026-09-26.md)
+- [Cross-Circuit Bounded-Adhesion Terminal](PNP_CROSS_CIRCUIT_BOUNDED_ADHESION_2026-09-26.md)
+
+For every support-minimal positive balance circuit C, row-circuit minimality implies maximum clause-subset deficiency at most one. If its clause support is UNSAT, Tarsi's deficiency bound forces the entire support to be minimally UNSAT with deficiency exactly one. This yields an exact polynomial local SAT/UNSAT terminal using the known bounded/max-deficiency algorithms.
+
+Therefore internal hardness of one positive circuit is removed from the live remainder.
+
+A second exact terminal closes circuit systems admitting a running-intersection tree whose signed variable boundary per circuit is O(log n): boundary conditioning raises local maximum deficiency by at most the boundary size, and exact maximum-deficiency SAT plus tree compatibility gives polynomial total work.
+
+Current remainder:
+
+~~~text
+ALL POSITIVE CIRCUITS LOCALLY SAT
++
+NO ADMITTED LOG-BOUNDARY RUNNING-INTERSECTION DECOMPOSITION
++
+GLOBAL QUALITATIVE CENTRALITY UNRESOLVED
+~~~
+
+Next degree: large/irreducible signed cross-circuit compatibility. Existence of a small decomposition is not discovery; discovery cost remains charged.
+
+
+## 2026-09-26 R6 — surplus / non-Mersenne autarky-object reduction
+
+Successor: [PNP_SURPLUS_AUTARKY_OBJECT_REDUCTION_2026-09-26.md](PNP_SURPLUS_AUTARKY_OBJECT_REDUCTION_2026-09-26.md).
+
+The normalization lifecycle gains an exact polynomial SAT-decision reduction from Kullmann-Zhao Theorem 10.2.
+
+After matching-autarky saturation, compute surplus sigma(F) and a minimum-surplus variable set V. If
+
+~~~text
+muvd(F) > nM(sigma(F)),
+~~~
+
+remove every clause touching V and restart normalization. The reduced clause-set is polynomially computable and satisfiability-equivalent to the predecessor because some autarky realizes exactly that reduction.
+
+Important Homeward boundary:
+
+~~~text
+POLYTIME REDUCED CLAUSE OBJECT
+!=
+POLYTIME WITNESS AUTARKY ASSIGNMENT.
+~~~
+
+The latter is the explicit MLCR / Conjecture 10.3 seam in the source literature.
+
+For SAT/UNSAT decision, R6 is admitted now. For polynomial SAT-witness reconstruction, the removed block remains a Homeward obligation.
+
+At the new R6 fixed point:
+
+~~~text
+sigma(F) >= 1
+muvd(F) <= nM(sigma(F))
+        <= sigma(F) + 1 + log2(sigma(F)).
+~~~
+
+This does not justify branching: sigma may grow with input size.
+
+Current one-degree theorem target:
+
+~~~text
+R6-SATURATED
++
+LINEARLY LEAN
++
+STRICT POSITIVE BALANCE
++
+POSITIVE-CIRCUIT COVER
+->
+DOES SOME GUARANTEED LOW-DEGREE VARIABLE
+HAVE EXTRA STRUCTURE:
+  singular polarity,
+  non-increasing DP,
+  functional/dominance removal,
+  few-circuit concentration,
+  or reusable polynomial projection?
+~~~
+
+No stronger published guarantee for this exact subclass has been admitted yet.
+
+
+## 2026-09-26 R5+1 — charged additive bounded variable elimination
+
+Successors:
+
+- [R5 + R6 Surplus Floor and Tight 2x3 DP Crown](PNP_R5_R6_SURPLUS_FLOOR_2X3_CROWN_2026-09-26.md)
+- [R5+1 Additive Bounded Variable Elimination](PNP_R5_PLUS1_ADDITIVE_BVE_2026-09-26.md)
+
+The previous zero-growth R5 guard was stronger than the polynomial lifecycle requires.
+
+Allow exact DP elimination when cleaned clause count grows by at most one:
+
+~~~text
+c' <= c + 1.
+~~~
+
+At most n_0 variables can be eliminated, so R5+1 contributes at most n_0 additional clauses globally. Hence:
+
+~~~text
+c(F) <= c_0 + n_0
+~~~
+
+from this rule, and discovery/trace/Homeward remain polynomial.
+
+This consumes the exact tight 2x3 crown at surplus 3. Therefore every unresolved R5+1 + R6 fixed point satisfies:
+
+~~~text
+sigma(F) >= 4.
+~~~
+
+At sigma=4:
+
+~~~text
+muvd(F)=6
+polarity profile in {2+4,3+3,4+2}.
+~~~
+
+Raw local DP debt is at most +3.
+
+Do not silently raise the growth guard without a global cumulative-size proof. A fixed positive bound is safe; an uncharged growing bound can reproduce ordinary DP explosion.
+
+Current quantitative remainder:
+
+~~~text
+SIGMA >= 4
++
+R5+1 IRREDUCIBLE
++
+R6 IRREDUCIBLE
++
+STRICT POSITIVE BALANCE
++
+LOCALLY TRACTABLE POSITIVE CIRCUITS
++
+GLOBAL QUALITATIVE CENTRALITY OPEN
+~~~
+
+Next one-degree experiment: test whether the sigma=4 degree-6 profiles receive enough exact redundancy from existing R2-R4 or positive-circuit incidence to reduce their cleaned DP debt to <=1; otherwise evaluate a separately charged global growth budget.
+
+
+## 2026-09-26 core-climb / tight-edge successors
+
+New target-local successors:
+
+- [Fixed-B Additive BVE and Uniformity Edge](PNP_FIXED_B_BVE_UNIFORMITY_EDGE_2026-09-26.md)
+- [Surplus Inflation Uniform Edge](PNP_SURPLUS_INFLATION_UNIFORM_EDGE_2026-09-26.md)
+- [Surplus Inflation Counterprobe](PNP_SURPLUS_INFLATION_COUNTERPROBE_2026-09-26.md)
+- [Minimum-Surplus Fork](PNP_MINIMUM_SURPLUS_FORK_2026-09-26.md)
+- [Logarithmic-Surplus Tight-Edge Closure](PNP_LOG_SURPLUS_TIGHT_EDGE_CLOSURE_2026-09-26.md)
+- [Tight-Block Balance Inheritance](PNP_TIGHT_BLOCK_BALANCE_INHERITANCE_2026-09-26.md)
+- [Tight-Block Cofactor Deficiency — corrected scope](PNP_TIGHT_BLOCK_COFACTOR_DEFICIENCY_2026-09-26.md)
+- [Tight-Block Parent Interface Lift](PNP_TIGHT_BLOCK_INTERFACE_LIFT_2026-09-26.md)
+
+Core-climb correction:
+
+~~~text
+INITIAL UNBOUNDED SURPLUS
+!=
+THE ACTUAL UNIFORM EDGE.
+
+ACTUAL EDGE:
+PROJECTION
+-> SURPLUS / EXPANSION-WITNESS CHANGE
+-> NEXT DEGREE / INTERFACE COST.
+~~~
+
+Surplus is not paid by clause growth alone: exact zero-clause-growth DP counterexamples increase surplus.
+
+For a minimum-surplus set V, G=F[V] gives the exact fork:
+
+~~~text
+G SAT
+-> parent autarky / clause removal
+
+G UNSAT
+-> internal low-degree structure
+-> DOES NOT by itself force a parent literal.
+~~~
+
+The first version of the tight-block cofactor artifact incorrectly lifted internal UNSAT forcing to the parent. This was adversarially detected and corrected at commit:
+
+~~~text
+24caddc99aa1f62df397bc2f8d98e261b18f7fa8
+~~~
+
+Preserved Ash:
+
+~~~text
+INTERNAL FORCING != PARENT FORCING
+RESTRICTION != EQUIVALENCE
+QUASI-POLYNOMIAL RECURRENCE BASED ON THAT LIFT = REJECTED
+~~~
+
+Parent-safe replacement:
+
+~~~text
+restricted resolution proof
+-> annotate deleted outside literals
+-> replay on parent clauses
+-> outside-interface clause
+
+non-tautological interface clause
+-> valid parent consequence.
+~~~
+
+A tautological lifted clause is a failed lift, not progress.
+
+The exact parent-safe boundary Object is:
+
+~~~text
+exists V . conjunction(clauses touching V)
+~~~
+
+not the strengthened restriction G alone.
+
+Current nearest edge:
+
+~~~text
+TIGHT INTERNAL BLOCK
++
+STRICT POSITIVE BALANCE
++
+OUTSIDE INTERFACE
+->
+POLYNOMIALLY COMPACT, NONTAUTOLOGICAL,
+PARENT-LIFTABLE CONSEQUENCE / PROJECTION?
+~~~
+
+Liftability/Homeward is now first-class in every internal carrier experiment.
+
+
+## BEND update — seam between tight restriction and parent interface
+
+BEND is used here in the authored sense:
+
+~~~text
+PRESERVE OBJECT
+-> PRESS EDGE FROM ONE / MANY / ALL ANGLES
+-> ALLOW DIRECT CONFLICT
+-> INSPECT WHAT MOVES / SURVIVES / FAILS
+-> IDENTIFY WHAT THE EDGE IS MADE OF
+-> REPAIR THE ACTUAL CONFLICT
+-> PRESS AGAIN
+~~~
+
+New target-local carriers:
+
+- [BEND First Mixed Layer](PNP_BEND_FIRST_MIXED_LAYER_2026-09-26.md)
+- [Boundary Residual Map](PNP_BOUNDARY_RESIDUAL_MAP_2026-09-26.md)
+- [Boundary Residual Orthant Arrangement](PNP_BOUNDARY_RESIDUAL_ORTHANTS_2026-09-26.md)
+
+The tight restriction G=F[V] and exact parent projection are no longer conflated.
+
+The seam now has explicit layers:
+
+~~~text
+INTERNAL TIGHT PROOF
+<-> FIRST MIXED RESOLUTION LAYER
+<-> BOUNDARY RESIDUAL SUBSPACE / SIGN ARRANGEMENT
+<-> EXACT BOOLEAN EXISTENTIAL INTERFACE.
+~~~
+
+Exact survivors:
+
+1. an internal proof whose source outside remainders are sign-compatible lifts to a non-tautological parent interface clause;
+2. internal positive-circuit minimality does not prevent outside-sign conflict;
+3. for touched parent matrix A=[A_V|A_B],
+
+       rho_B : ker(A_V^T) -> R^B
+       rho_B(z)=A_B^T z
+
+   exactly records boundary residual pressure of internal balances;
+4. global parent positive balance cancels the tight-block residual against the outside-parent residual;
+5. if beta=rank(rho_B) is fixed, the linear residual subspace has only polynomially many coordinate-sign regimes.
+
+Preserved boundaries:
+
+~~~text
+SMALL beta != PROVED SMALL BOOLEAN INTERFACE
+INTERNAL CIRCUIT != CLEAN PARENT LIFT
+SMALL PROOF != SMALL INTERPOLANT
+FORGETTING CAN BE EXPONENTIAL
+~~~
+
+Current nearest seam:
+
+> Find the smallest Boolean distinction that survives after quotienting by the boundary-residual sign arrangement. Press with first-mixed proof structure, outside-sign conflict, surplus, and positive balance until either a polynomial joint carrier survives or the quotient is shown insufficient.
+
+
+## Minimal rho-identical / Boolean-different seam pair
+
+New successors:
+
+- [Minimal Linear-Seam / Boolean-Seam Separation Pair](PNP_MINIMAL_LINEAR_BOOLEAN_SEAM_PAIR_2026-09-26.md)
+- [Replay checker](PNP_MINIMAL_LINEAR_BOOLEAN_SEAM_PAIR_CHECK_2026-09-26.py)
+- [Boolean Shear Fiber Theorem](PNP_BOOLEAN_SHEAR_FIBER_THEOREM_2026-09-26.md)
+
+The smallest fully parent-valid witness under the declared seam contract has:
+
+~~~text
+3 variables
+4 clauses
+tight V={x,y}
+boundary B={a}
+same internal A_V
+same exact rho_B
+same beta=1
+same full column rank
+same strictly positive global balance
+same outside clause
+different exact Boolean interface
+different final SAT status.
+~~~
+
+Witness:
+
+~~~text
+F_A =
+(x or a)
+and y
+and (not x or not y)
+and (not a)
+
+F_B =
+(x or a)
+and (y or a)
+and (not x or not y or not a)
+and (not a)
+~~~
+
+Both restrict on V to:
+
+~~~text
+x
+and y
+and (not x or not y).
+~~~
+
+Boundary columns satisfy:
+
+~~~text
+e_B - e_A = A_V[:,y].
+~~~
+
+Therefore for every internal balance z:
+
+~~~text
+e_A^T z = e_B^T z,
+~~~
+
+so rho is identical.
+
+But:
+
+~~~text
+exists x,y touched(F_A) = a
+exists x,y touched(F_B) = TRUE
+
+F_A = UNSAT
+F_B = SAT.
+~~~
+
+### What is hidden
+
+For fixed full-column-rank A_V:
+
+~~~text
+rho_E = rho_E'
+iff
+E' - E = A_V T
+~~~
+
+for a unique shear coordinate T.
+
+The linear seam sees only the coset:
+
+~~~text
+E + col(A_V).
+~~~
+
+Boolean semantics also needs the discrete representative inside that coset: the clausewise ownership/complement coupling of signed literal occurrences.
+
+Thus:
+
+~~~text
+LINEAR CANCELLATION
+!=
+BOOLEAN VARIABLE OWNERSHIP.
+~~~
+
+### Normalization caveat
+
+The minimal witness's shear copies the complete y-sign column onto boundary a.
+
+That makes every y-resolvent tautological, so BCE / bounded DP removes y.
+
+Hence the first witness is:
+
+~~~text
+BOOLEAN-CHANGING
+BUT
+NORMALIZER-VISIBLE.
+~~~
+
+It proves rho alone is insufficient in general, but does not yet defeat rho after full normalization.
+
+### Current nearest edge
+
+Partition admissible shears T into:
+
+~~~text
+BOOLEAN STABILIZER
+NORMALIZER-VISIBLE SHEAR
+HARD SHEAR
+~~~
+
+where a HARD SHEAR changes the Boolean interface and both sides remain normalization-irreducible.
+
+Current decisive question:
+
+~~~text
+DOES ANY HARD SHEAR EXIST
+IN A FULLY NORMALIZED TIGHT BLOCK?
+~~~
+
+If no, the linear seam becomes sufficient after normalization.
+
+If yes, the smallest hard shear is the next missing Object.
+
+Do not broaden the search until this fork is resolved.
+
+
+## Boundary rescue / correction-set seam
+
+Successor:
+
+- [Boundary Rescue / Correction-Set Seam](PNP_BOUNDARY_RESCUE_CORRECTION_SET_SEAM_2026-09-26.md)
+
+The exact Boolean information omitted by the linear residual quotient is now identified.
+
+For tight block (G=F[V]), each boundary assignment (alpha) satisfies some outside clause remainders and thereby rescues/removes a clause set:
+
+~~~text
+R(alpha) = { tight clauses already satisfied by outside literals }.
+~~~
+
+Exact interface law:
+
+~~~text
+I_V(alpha)=SAT
+iff
+G \ R(alpha) is SAT.
+~~~
+
+For UNSAT G:
+
+~~~text
+I_V(alpha)=SAT
+iff
+R(alpha) is a correction set
+iff
+R(alpha) hits every MUS of G.
+~~~
+
+Thus the hidden Boolean seam is:
+
+~~~text
+BOUNDARY ASSIGNMENT
+-> CLAUSE-RESCUE OWNERSHIP
+-> CORRECTION SET
+-> MUS TRANSVERSAL.
+~~~
+
+This explains the minimal rho-identical pair exactly: the two instances have the same linear residual map but map the boundary truth values to different correction sets.
+
+The positive-circuit and interface lines now converge:
+
+~~~text
+MU(1)
+=
+UNSAT POSITIVE-BALANCE CIRCUIT.
+
+HIGHER-DEFICIENCY MUS
+=
+GLOBAL INCOMPATIBILITY
+AMONG LOCALLY SAT POSITIVE CIRCUITS.
+~~~
+
+Current nearest edge:
+
+> Represent/query the MUS-transversal predicate of a fully normalized tight block in polynomial work from its positive-circuit compatibility structure, without enumerating all MUSes or all correction sets.
+
+Do not revert to generic interface compilation; the exact missing Object is now correction-set/MUS structure.
+
+
+## Full positive-circuit signature completeness
+
+Successor:
+
+- [Positive-Circuit Signature Completeness for Correction Status](PNP_POSITIVE_CIRCUIT_SIGNATURE_COMPLETENESS_2026-09-26.md)
+
+The selected positive-circuit cover was counterprobed and is insufficient: two rescue sets can hit the same selected cover circuits yet have opposite correction status.
+
+The **full** positive-circuit family is different.
+
+For rescue/deletion sets C,D:
+
+~~~text
+same hit signature against every support-minimal positive row circuit
+->
+G\C SAT iff G\D SAT.
+~~~
+
+Proof: if one remaining formula were UNSAT, choose a MUS H. Its strictly positive balance decomposes into positive circuits covering every clause of H. Signature equality transfers survival of every one of those circuits, hence of all H, to the other formula.
+
+Thus the exact Boolean rescue interface factors through:
+
+~~~text
+BOUNDARY ASSIGNMENT
+-> RESCUE SET
+-> FULL POSITIVE-CIRCUIT HIT SIGNATURE
+-> CORRECTION STATUS.
+~~~
+
+The full circuit family need not be enumerated. It is the extreme-ray structure of:
+
+~~~text
+M^T y = 0
+y >= 0.
+~~~
+
+Signature difference/equality and clause membership in a surviving positive circuit are polynomially queryable by LP.
+
+For C define:
+
+~~~text
+U(C) =
+union of all positive circuits disjoint from C.
+~~~
+
+Then U(C) is polynomially constructible with clausewise LP tests and:
+
+~~~text
+G\C SAT
+iff
+U(C) SAT.
+~~~
+
+So boundary rescue followed by positive-circuit closure is exactly another entrance into the linear-autarky / linearly-lean normalization core.
+
+Current nearest edge:
+
+~~~text
+EVALUATE SAT ON THE
+NORMALIZED SURVIVING POSITIVE-CIRCUIT CORE
+WITHOUT ENUMERATING BOOLEAN ASSIGNMENTS
+OR HIGHER-ORDER COMPATIBILITY STATES.
+~~~
+
+This is the remaining compatibility function. P=NP remains open.
+
+
+## Dean fixed-list lens — connected five-cycle counterprobe
+
+[Step 11 exact receipt](PNP_DEAN_FIXED_LIST_C5_CHAIN_2026-09-29.md) treats $E$ as supplied input and checks a freshly specified connected five-cycle chain against the degree, matching, and odd-cycle bounds. It preserves the earlier $k=3t$ target separately from the first impossible $k=2t+1$ target, relates to the historical C5 boundary-transfer work without calling that unrecovered run new evidence, and charges discovery/verification/output costs at their actual scope. This is a bounded Dean/Independent-Set lens; it does not replace the normalized SAT residual above or close its universal polynomial obligation.
+
+
+## Dean fixed-list lens — verify, discover, select
+
+[Step 12 exact receipt](PNP_DEAN_CYCLE_CERTIFICATE_DISCOVERY_2026-09-29.md) records the valid partial odd-cycle omission bound, corrects its relation to the earlier *spanning* support-frame theorem, and charges a check of a supplied witness separately from construction and selection. The explicit \(H_t\) chain is easy to recognize; a valid matching frame there may be too weak even when the all-cycle frame proves NO. The exact arbitrary-input decision of whether any odd-cycle list exceeds the omission budget is NP-complete by triangle partition, while a connected \(K_4\) chain shows the rule does not certify every Dean NO. This is a precise certificate-search boundary, not a universal lower bound or a change to the normalized SAT residual above.
+
+
+## Dean fixed-list lens — clique frame and overlap
+
+[Step 13 exact receipt](PNP_DEAN_CLIQUE_OVERLAP_2026-09-29.md) repairs the Step 12 \(K_4\) chain with a displayed clique frame at the same \(k=2t\) target. Its adversarial six-vertex graph shows why a clique obligation and an odd-cycle obligation cannot simply be summed when their vertex sets meet. A corrected bound retains vertex identity and subtracts repeated incidences; checking a supplied mixed frame is polynomial. This resembles established stable-set cutting inequalities and transfers to a fixed symmetric conflict graph in scheduling, but it does not prove polynomial discovery of a complete mixed frame. Odd-cycle fractional-LP separation and Step 12 disjoint integral cycle-list search remain distinct obligations; the normalized SAT residual above is unchanged.

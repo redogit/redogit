@@ -1,0 +1,43 @@
+name: Verify selected public profile and Dream Pages host
+
+# The standalone profile Pages site returned Not Found in run 36457772017.
+# Publishing now uses the explicitly scoped, already-enabled Conscience64 host.
+# This workflow verifies; it does not claim to deploy a disabled Pages site.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/dream-to-action/**'
+      - 'docs/about.html'
+      - 'docs/recent-work.html'
+      - 'README.md'
+      - 'tools/publish_dream_pages.py'
+      - 'tools/finalize_dream_publication.py'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-publication-verification
+  cancel-in-progress: true
+
+jobs:
+  verify-publication:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Materialize exact source without publishing repository internals
+        run: |
+          set -euo pipefail
+          git init "$GITHUB_WORKSPACE"
+          cd "$GITHUB_WORKSPACE"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: Verify pinned application and announcement scope
+        run: python3 tools/finalize_dream_publication.py --check
+      - name: Verify selected public host anonymously over HTTPS
+        run: python3 tools/finalize_dream_publication.py --live
