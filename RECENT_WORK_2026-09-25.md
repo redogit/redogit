@@ -445,3 +445,18 @@ Current remainder:
     INCIDENCE-AWARE BALANCE / EVENT COUPLING
 
 Source: [PNP_SEMANTIC_INTERSECTION_QUOTIENT_2026-09-26.md](PNP_SEMANTIC_INTERSECTION_QUOTIENT_2026-09-26.md)
+
+## 12. Work research ↔ GitHub coverage (2026-09-29)
+
+This is a status comparison, not a transfer of evidence or publication of Work artifacts. The [Dean Step 13 exact receipt](PNP_DEAN_CLIQUE_OVERLAP_2026-09-29.md) is already repository source and is linked above. The public Dream to Action app is a narrower Operations 0.2 release than the later Work v0.3 delivery.
+
+| Line | Current GitHub coverage | Additional Work state / remaining seam |
+| --- | --- | --- |
+| [FIG-5](https://github.com/redogit/Other-Projects-/pull/89) | Open **draft** PR #89, v0.25 width-4/density-4 panel. Of 30 rows, 25 passed cap-160 admission; all five at n=11 evaluated, but n=12 and n=13 did not meet the exact-five rule. Status: `WIDTH4_DENSITY4_INCONCLUSIVE_ADMISSION`. | The result is bounded and does not establish width transfer, failure of transfer, an asymptotic law, or P versus NP. The PR is not main. |
+| [AnyFunctor / RMAL](docs/about.html#rmal-homeward-update) | The public About Me note describes one bounded Mirror → verification → checkpoint → restart → Homeward path. | The later structural-evaluator and planner program is Work research design; its ten proposed evaluators are not a claim of a complete public implementation. |
+| Invariant Atlas | No current repository counterpart is linked here. | Work has a recovered, source-attributed catalog. Its source-reported results were not rerun by cataloging, and its record count is not a count of proved invariants. |
+| 13D Origami / G002 | No current repository counterpart is linked here. | A Work artifact and corrected accepted visual interpretation exist. Earlier interpretations remain failure evidence; production/repository promotion is separate. |
+| [NEON//VEIL](https://github.com/redogit/conscience64/tree/main/play/neon-veil) | A curated T05 checkpoint and system-specific packages are in Conscience64 source and its Pages projection; it is a local/trusted-LAN hosting release, not a public authoritative game backend. | R11 has a separate local Linux verification receipt; the later research bridge changes no gameplay or gate, and the NRAP roadmap is a written specification with implementation still separate. |
+| [Dream to Action](https://github.com/redogit/Dream-To-Action) | Public app and repository source identify **Operations 0.2**. | The Work v0.3 delivery has not been reconciled into repository source. A local API pilot is not a deployed backend. |
+
+`WORK_RESEARCH != GITHUB_SOURCE` · `DRAFT_PR != MAIN` · `CATALOG != RERUN` · `LOCAL_VERIFICATION != TARGET_DEVICE_CERTIFICATION` · `SPEC != IMPLEMENTATION`
