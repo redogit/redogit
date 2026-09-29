@@ -1,0 +1,2 @@
+PASS Steps 19-25: pair, old-row control, identity counterexample, tree gate, context separation, safe fixed-context quotient, one-entry boundary
+{"context_pairs": 5334, "count_summary_false_value": 5, "family": {"alpha": 101, "local_candidates": 6400, "max_message_states": 5, "vertices": 303, "wheels": 100}, "fixture_alphas": {"count_only_false_yes": 4, "intact": 3, "one_edge_yes": 4}, "old_row_dual": "29/5"}

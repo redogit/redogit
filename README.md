@@ -316,6 +316,10 @@ Five connected six-vertex odd wheels have \(n=30,\alpha=10,\tau=20\); \(k=11,b=1
 
 Two six-person odd wheels sharing one hub have eleven distinct applicants. At \(k=5,b=6\), their verified local bounds compose as \(4+4-1=7\), proving NO. Deleting one rim edge gives a five-person YES: the refreshed local bounds compose as \(3+4-1=6\). Forgetting the shared identity or reusing the broken wheel's old evidence would each falsely reject that YES. [Exact Step 18 proof and reproducible probe](PNP_DEAN_OVERLAPPING_WHEEL_ROUNDING_2026-09-29.md). The existing overlap formula is sound after local rounding; this pair gives no additional gain over its unrounded bound. The catalog stays fixed and P ?= NP remains open.
 
+### Dean boundary identity and computation cost — Steps 19–25
+
+Two rounded wheel totals can lose conditional information: their overlap score is five where six omissions are necessary, although reweighting the older rows already gives a decisive 29/5. Keeping the actual shared assignment makes composition exact; keeping only its count produces an explicit false YES. A verified tree of regions capped at six vertices, with overlaps capped at three, gives exact results, including a constructed 303-vertex case. A quotient for the fixed context reduces the tested tables to two classes while preserving witnesses. The remaining obligation is computational: even a one-entry table can contain the whole unrestricted independent-set problem. [Proofs, counterexamples, code, and bounded-run evidence](PNP_DEAN_BOUNDARY_STATE_PROGRESSION_2026-09-29.md). P ?= NP remains open.
+
 
 ## September 18, 2026 convergence
 

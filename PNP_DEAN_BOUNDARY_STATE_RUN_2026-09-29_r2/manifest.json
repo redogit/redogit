@@ -1,0 +1,138 @@
+{
+  "schema_version": 2,
+  "claim_id": "DEAN_STEPS_19_25_BOUNDARY_COMPOSITION",
+  "repository": {
+    "commit": "unavailable",
+    "dirty": true
+  },
+  "command": [
+    "python3",
+    "PNP_DEAN_BOUNDARY_STATE_PROBE_2026-09-29.py",
+    "PNP_DEAN_BOUNDARY_STATE_RUN_2026-09-29_r2/result.json"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.12.14"
+      },
+      {
+        "name": "CPython",
+        "version": "3.12.14"
+      }
+    ],
+    "hardware": "Linux-6.18.44-x86_64-with-glibc2.39"
+  },
+  "mathematics": {
+    "assertion_tested": "Exact fixture optima, rational 29/5 control, false count-only join, admitted fixed-size tree recurrence, finite state distinguishers, safe fixed-context quotients with witnesses, and the zero-boundary single-entry case.",
+    "coefficient_domain": "Exact integers, rational Fraction arithmetic, finite vertex-ID sets",
+    "conventions": "Simple undirected fixed graphs; binary selection; bags at most six vertices and tree-edge intersections at most three; no random sampling.",
+    "inputs": [
+      "PNP_DEAN_BOUNDARY_STATE_PROBE_2026-09-29.py",
+      "Remote source checkpoint redogit/redogit@cd6d3329109cf114a3466332487dc69a7aff2104; fresh probe added after that checkpoint"
+    ],
+    "bounds": {
+      "fixture_vertices": 9,
+      "fixture_count": 3,
+      "subsets_per_fixture": 512,
+      "fork_vertices": 13,
+      "fork_subsets": 8192,
+      "family_wheels": 100,
+      "family_vertices": 303,
+      "bag_max_vertices": 6,
+      "separator_max_vertices": 3,
+      "distinguishing_boundary_sizes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "ordered_distinct_state_pairs": 5334,
+      "fixed_context_quotient_fixtures": 3,
+      "zero_boundary_fixture_vertices": 5
+    },
+    "non_claims": [
+      "No complete solver for arbitrary Dean inputs",
+      "No claim that every graph admits this fixed-size decomposition",
+      "Finite checks do not replace the separate symbolic proofs",
+      "No P-versus-NP resolution",
+      "No novelty claim for tree-decomposition dynamic programming"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-09-29T23:38:40.302368+00:00",
+    "runtime_seconds": 0.115988,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 30.0,
+    "max_output_bytes": 1048576,
+    "resource_limits": {
+      "memory_bytes": 1073741824,
+      "cpu_seconds": 20,
+      "max_cores": 1,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "PNP_DEAN_BOUNDARY_STATE_PROBE_2026-09-29.py"
+  ],
+  "input_artifacts": [
+    {
+      "path": "PNP_DEAN_BOUNDARY_STATE_PROBE_2026-09-29.py",
+      "sha256": "c4c51a43248dc01b205e06ae43c8f0169ca920b0196bad92adba850c3558a59e",
+      "sha256_after": "c4c51a43248dc01b205e06ae43c8f0169ca920b0196bad92adba850c3558a59e"
+    }
+  ],
+  "output_directory": "PNP_DEAN_BOUNDARY_STATE_RUN_2026-09-29_r2",
+  "declared_results": [
+    "PNP_DEAN_BOUNDARY_STATE_RUN_2026-09-29_r2/result.json"
+  ],
+  "outputs": [
+    {
+      "path": "PNP_DEAN_BOUNDARY_STATE_RUN_2026-09-29_r2/stdout.txt",
+      "sha256": "5873fc4b542290d5b95bc879e6e0b13de6dfe64b9ace62ae2e6003bb5a198340",
+      "kind": "log"
+    },
+    {
+      "path": "PNP_DEAN_BOUNDARY_STATE_RUN_2026-09-29_r2/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "PNP_DEAN_BOUNDARY_STATE_RUN_2026-09-29_r2/result.json",
+      "sha256": "904137cb1108c52faeb4e4934c8c7014ab5e92c3611d17b861ff1de5191a9f3e",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them.",
+    "The POSIX CPU-time limit is per process, not an aggregate descendant budget."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "claim_id": "DEAN_STEPS_19_25_BOUNDARY_COMPOSITION",
+  "mathematics": {
+    "assertion_tested": "Exact fixture optima, rational 29/5 control, false count-only join, admitted fixed-size tree recurrence, finite state distinguishers, safe fixed-context quotients with witnesses, and the zero-boundary single-entry case.",
+    "coefficient_domain": "Exact integers, rational Fraction arithmetic, finite vertex-ID sets",
+    "conventions": "Simple undirected fixed graphs; binary selection; bags at most six vertices and tree-edge intersections at most three; no random sampling.",
+    "inputs": ["PNP_DEAN_BOUNDARY_STATE_PROBE_2026-09-29.py", "Remote source checkpoint redogit/redogit@cd6d3329109cf114a3466332487dc69a7aff2104; fresh probe added after that checkpoint"],
+    "bounds": {
+      "fixture_vertices": 9,
+      "fixture_count": 3,
+      "subsets_per_fixture": 512,
+      "fork_vertices": 13,
+      "fork_subsets": 8192,
+      "family_wheels": 100,
+      "family_vertices": 303,
+      "bag_max_vertices": 6,
+      "separator_max_vertices": 3,
+      "distinguishing_boundary_sizes": [0, 1, 2, 3, 4, 5, 6],
+      "ordered_distinct_state_pairs": 5334,
+      "fixed_context_quotient_fixtures": 3,
+      "zero_boundary_fixture_vertices": 5
+    },
+    "non_claims": ["No complete solver for arbitrary Dean inputs", "No claim that every graph admits this fixed-size decomposition", "Finite checks do not replace the separate symbolic proofs", "No P-versus-NP resolution", "No novelty claim for tree-decomposition dynamic programming"]
+  },
+  "execution_artifacts": ["PNP_DEAN_BOUNDARY_STATE_PROBE_2026-09-29.py"],
+  "software": [{"name": "CPython", "version": "3.12.14"}],
+  "randomness": {"used": false, "generator": "", "seed": null}
+}

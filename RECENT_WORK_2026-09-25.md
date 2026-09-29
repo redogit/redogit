@@ -149,6 +149,10 @@ The catalog stays fixed. In five odd-wheel blocks joined by hub bridges, \(n=30,
 
 Verified local rounding composes with the existing overlap penalty. Two odd wheels sharing one hub give \(n=11,\alpha=4,\tau=7\): NO at \(k=5,b=6\), with corrected bound \(4+4-1=7\). Deleting one rim edge gives \(\alpha=5,\tau=6\) and an explicit YES at the same target; fresh local evidence gives \(3+4-1=6\). The same YES refutes both double-counting the shared hub and carrying stale local evidence across an edge deletion. [Exact Step 18 proof and retained finite probe](PNP_DEAN_OVERLAPPING_WHEEL_ROUNDING_2026-09-29.md). This is a sound composition check, with no new carrier, discovery rule, or P-versus-NP conclusion.
 
+### Dean boundary identity and computation cost — Steps 19–25
+
+The sustained overlap progression found a loss in two rounded summaries and recovered the older 29/5 source-row certificate. Exact shared assignments repair composition; a count-only join invents a false YES. A supplied tree with at most six vertices per region and three per overlap supports a proved exact recurrence, checked on a constructed 303-vertex case. Fixed-context classes preserve scores and witnesses on the tested pairs. Small class count alone is insufficient: constructing and evaluating classes must also have a proved cost bound. [Full progression and reproducible evidence](PNP_DEAN_BOUNDARY_STATE_PROGRESSION_2026-09-29.md). The unrestricted polynomial obligation remains open.
+
 Public live design:
 
 - https://redogit.github.io/redogit/live-design.html
