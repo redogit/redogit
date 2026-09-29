@@ -448,7 +448,7 @@ Source: [PNP_SEMANTIC_INTERSECTION_QUOTIENT_2026-09-26.md](PNP_SEMANTIC_INTERSEC
 
 ## 12. Work research ↔ GitHub coverage (2026-09-29)
 
-This is a status comparison, not a transfer of evidence or publication of Work artifacts. The [Dean Step 13 exact receipt](PNP_DEAN_CLIQUE_OVERLAP_2026-09-29.md) is already repository source and is linked above. The public Dream to Action app is a narrower Operations 0.2 release than the later Work v0.3 delivery.
+This is a status comparison, not a transfer of evidence or publication of Work artifacts. The [Dean Step 13 exact receipt](PNP_DEAN_CLIQUE_OVERLAP_2026-09-29.md) is already repository source and is linked above. Dream to Action has an Operations 0.2 source and a separately approved, pinned `gh-pages` overlay with its own publication record. This update did not independently recheck the live HTTP edge; the later Work v0.3 delivery is separate.
 
 | Line | Current GitHub coverage | Additional Work state / remaining seam |
 | --- | --- | --- |
@@ -457,6 +457,6 @@ This is a status comparison, not a transfer of evidence or publication of Work a
 | Invariant Atlas | No current repository counterpart is linked here. | Work has a recovered, source-attributed catalog. Its source-reported results were not rerun by cataloging, and its record count is not a count of proved invariants. |
 | 13D Origami / G002 | No current repository counterpart is linked here. | A Work artifact and corrected accepted visual interpretation exist. Earlier interpretations remain failure evidence; production/repository promotion is separate. |
 | [NEON//VEIL](https://github.com/redogit/conscience64/tree/main/play/neon-veil) | A curated T05 checkpoint and system-specific packages are in Conscience64 source and its Pages projection; it is a local/trusted-LAN hosting release, not a public authoritative game backend. | R11 has a separate local Linux verification receipt; the later research bridge changes no gameplay or gate, and the NRAP roadmap is a written specification with implementation still separate. |
-| [Dream to Action](https://github.com/redogit/Dream-To-Action) | Public app and repository source identify **Operations 0.2**. | The Work v0.3 delivery has not been reconciled into repository source. A local API pilot is not a deployed backend. |
+| [Dream to Action](https://github.com/redogit/Dream-To-Action) | Repository source identifies **Operations 0.2**; a separately approved overlay places the pinned route in `gh-pages`. Live edge was not rechecked in this update. | The Work v0.3 delivery has not been reconciled into repository source. A local API pilot is not a deployed backend. |
 
 `WORK_RESEARCH != GITHUB_SOURCE` · `DRAFT_PR != MAIN` · `CATALOG != RERUN` · `LOCAL_VERIFICATION != TARGET_DEVICE_CERTIFICATION` · `SPEC != IMPLEMENTATION`
