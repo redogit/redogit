@@ -1,6 +1,8 @@
 # redogit
 
-> **Dream to Action — Operations 0.2:** the [Pages route](https://redogit.github.io/conscience64/dream-to-action/) is a separately approved, pinned overlay in the `gh-pages` branch, with its own publication record. The [repository source](https://github.com/redogit/Dream-To-Action) and [purpose](https://redogit.github.io/conscience64/about.html#dream-to-action) remain linked. A previous anonymous edge check is documented; live HTTP availability was not independently rechecked in this update. The later Work v0.3 delivery is not repository source.
+> **New public app — September 28, 2026:** [Dream to Action](https://redogit.github.io/conscience64/dream-to-action/) turns a chosen goal and a real barrier into a practical next step, with a dashboard, action board, and evidence history. No account required; personal and fictional demonstration records stay separate. [Why it exists](https://redogit.github.io/conscience64/about.html#dream-to-action) · [Source](https://github.com/redogit/Dream-To-Action).
+
+> **September 29 coverage status:** the Dream route is a separately approved, pinned Pages overlay with its own publication record. The later Work v0.3 delivery is not repository source; live HTTP availability was not independently rechecked here.
 
 > **About me:** [PUBLIC ABOUT ME](https://redogit.github.io/conscience64/about.html) — fire, carriers, music/language, REDOGIT, and current work
 > **Newest integrated work:** [PUBLIC RECENT WORK](https://redogit.github.io/conscience64/recent-work.html) · [source](RECENT_WORK_2026-09-25.md)
