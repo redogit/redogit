@@ -125,6 +125,10 @@ The supplied exclusions remain fixed. A freshly specified connected chain of $t$
 
 For a supplied list of vertex-disjoint odd cycles, \(W=\sum_i(|C_i|+1)/2\) is a sound lower bound on required omissions; the list and \(W>n-k\) are polynomially checkable. The historical \((n-c)/2\) form applies to a spanning support frame, not an arbitrary partial cycle list. The explicit \(H_t\) list is also polynomially findable, but for even \(t\) another valid matching support frame of the same input is inconclusive. For arbitrary given \(E\), deciding whether *some* decisive odd-cycle list exists is NP-complete by triangle partition, even at maximum degree four. A connected \(K_4\) chain demonstrates that this cycle certificate is incomplete for Dean NO. [Exact Step 12 receipt](PNP_DEAN_CYCLE_CERTIFICATE_DISCOVERY_2026-09-29.md). No universal runtime lower bound or solver follows.
 
+### Dean mixed clique/cycle frame — Step 13
+
+On the exact \(K_4\) bridge-chain target from Step 12, \(t\) disjoint four-cliques require \(3t\) omissions and repair the cycle-only incompleteness for this family. A \(K_4\) and a triangle sharing one vertex give a six-vertex YES counterprobe to naive addition: \(3+2>b=4\) falsely says NO, while subtracting the one shared vertex gives the sharp bound \(4\). The supplied mixed carrier and overlap arithmetic are polynomially checkable; arbitrary decisive-frame discovery remains unproved. The odd-cycle fractional-LP separation problem is distinct from the Step 12 disjoint integral cycle-list search. [Exact Step 13 receipt](PNP_DEAN_CLIQUE_OVERLAP_2026-09-29.md).
+
 Public live design:
 
 - https://redogit.github.io/redogit/live-design.html
