@@ -286,6 +286,12 @@ I can check a supplied list of vertex-disjoint odd cycles against the given excl
 
 [Step 12 theorem, checker, reduction, and incompleteness witness](PNP_DEAN_CYCLE_CERTIFICATE_DISCOVERY_2026-09-29.md).
 
+### Dean clique frame and overlap seam — Step 13
+
+The given \(K_4\) bridge chain is a NO at its declared \(k=2t\) target. A supplied disjoint clique frame proves it with \(3t\) necessary omissions where matching and the disjoint odd-cycle count reach only \(2t\). But I cannot simply add clique and cycle counts if they share a vertex. A six-vertex YES graph consisting of a \(K_4\) and a triangle meeting at one vertex would be falsely rejected by that sum. Retaining the shared vertex ID and subtracting at most one repeated omission repairs the bound exactly in this case. [Exact Step 13 construction, overlap proof, and world relation](PNP_DEAN_CLIQUE_OVERLAP_2026-09-29.md).
+
+A single violated odd-cycle *fractional LP inequality* can be found in polynomial time; that is a different task from Step 12's NP-complete search for a decisive disjoint integral cycle list. Neither result closes the universal Dean algorithm.
+
 
 ## September 18, 2026 convergence
 
