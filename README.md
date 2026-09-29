@@ -294,6 +294,12 @@ The given \(K_4\) bridge chain is a NO at its declared \(k=2t\) target. A suppli
 
 A single violated odd-cycle *fractional LP inequality* can be found in polynomial time; that is a different task from Step 12's NP-complete search for a decisive disjoint integral cycle list. Neither result closes the universal Dean algorithm.
 
+### Dean mixed-frame discovery — Step 14
+
+The omission bound now accepts rational weights on verified cliques and odd cycles while charging each person's repeated load once. On a six-person wheel, every vertex-disjoint frame scores at most three, but a checked overlapping frame scores \(19/5>3\) and proves NO. A fixed \(K_2,K_3,K_4,C_5\) catalog can be enumerated and its LP checked in polynomial total cost; a six-person greedy failure shows why choosing the largest carrier first is insufficient.
+
+The limit is equally concrete: three connected copies of the complement of \(C_7\) have \(\alpha=6\), so \(k=7\) is NO, yet \(x_v=1/3\) satisfies **every** clique and odd-cycle inequality and keeps the LP inconclusive. The missing unit is integrality, not an undiscovered carrier in that family. [Exact Step 14 certificate, discovery route, counterprobes, and claim ceiling](PNP_DEAN_MIXED_FRAME_DISCOVERY_2026-09-29.md).
+
 
 ## September 18, 2026 convergence
 

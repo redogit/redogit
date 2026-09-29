@@ -129,6 +129,10 @@ For a supplied list of vertex-disjoint odd cycles, \(W=\sum_i(|C_i|+1)/2\) is a 
 
 On the exact \(K_4\) bridge-chain target from Step 12, \(t\) disjoint four-cliques require \(3t\) omissions and repair the cycle-only incompleteness for this family. A \(K_4\) and a triangle sharing one vertex give a six-vertex YES counterprobe to naive addition: \(3+2>b=4\) falsely says NO, while subtracting the one shared vertex gives the sharp bound \(4\). The supplied mixed carrier and overlap arithmetic are polynomially checkable; arbitrary decisive-frame discovery remains unproved. The odd-cycle fractional-LP separation problem is distinct from the Step 12 disjoint integral cycle-list search. [Exact Step 13 receipt](PNP_DEAN_CLIQUE_OVERLAP_2026-09-29.md).
 
+### Dean mixed-frame discovery and its limit — Step 14
+
+For supplied verified cliques and odd cycles, nonnegative rational weights give the sound bound \(B=\sum_i\lambda_i d_i-\sum_v\max(0,\sum_{i:v\in S_i}\lambda_i-1)\). An exact rational receipt with \(B>n-k\) proves NO. A fixed \(K_2,K_3,K_4,C_5\) catalog and its LP have polynomial total cost, but return UNKNOWN if the bound does not cross. On a connected six-person odd wheel, every disjoint frame stops at three while the weighted score \(19/5\) proves NO at budget three. On a connected three-block \(\overline{C_7}\) graph, \(\alpha=6\) but \(x_v=1/3\) satisfies all clique and odd-cycle rows at the impossible \(k=7\) target; even complete discovery within this linear family remains inconclusive. [Exact Step 14 proof and finite counterprobes](PNP_DEAN_MIXED_FRAME_DISCOVERY_2026-09-29.md). P ?= NP remains open.
+
 Public live design:
 
 - https://redogit.github.io/redogit/live-design.html
