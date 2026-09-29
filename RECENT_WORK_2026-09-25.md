@@ -117,6 +117,10 @@ BALANCE-CIRCUIT DECOMPOSITION = SCOPED EXACT CARRIER
 UNIVERSAL P=NP PROOF = NOT ESTABLISHED
 ```
 
+### Dean fixed-list progression — bounded proof receipt
+
+The supplied exclusions remain fixed. A freshly specified connected chain of $t$ five-cycles has $\alpha=2t$, $\tau=3t$, and maximum matching $\nu=\lfloor5t/2\rfloor$. At the old $k=3t$ target, the matching NO test succeeds for $t\ge2$; at the separately declared $k=2t+1$ target, it is inconclusive while the odd-cycle bound proves NO. The September 11 boundary-transfer table is related historical evidence, not a reproduced run because its generator was not recovered. [Exact Step 11 receipt](PNP_DEAN_FIXED_LIST_C5_CHAIN_2026-09-29.md). This does not advance the universal proof status.
+
 Public live design:
 
 - https://redogit.github.io/redogit/live-design.html
