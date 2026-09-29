@@ -1,0 +1,26 @@
+[
+  {
+    "schema": "redogit/action-proposal/v1",
+    "id": "probe",
+    "node": "workstream:sample",
+    "priority": 2,
+    "operation": "inspect",
+    "expected_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "observed_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "observed_state": "open",
+    "permission": "granted",
+    "target_decision": "pending",
+    "target_decision_ref": null,
+    "active_writer": false,
+    "privacy": "private",
+    "bounded": true,
+    "reconstructible": true,
+    "delta": "consequential",
+    "dependencies": [],
+    "usefulness": "Avoid repeating an already settled probe.",
+    "expectation": "An exact receipt exists.",
+    "observation": "Receipt not yet inspected.",
+    "counterprobe": "Compare the native revision and its receipt.",
+    "way_back": "Input is immutable; discard this assessment."
+  }
+]

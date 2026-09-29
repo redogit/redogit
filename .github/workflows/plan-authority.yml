@@ -1,0 +1,54 @@
+name: Plan Authority Checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/plan_authority.py'
+      - 'tests/test_plan_authority.py'
+      - 'plan-authority/**'
+      - '.github/workflows/plan-authority.yml'
+  pull_request:
+    paths:
+      - 'tools/plan_authority.py'
+      - 'tests/test_plan_authority.py'
+      - 'plan-authority/**'
+      - '.github/workflows/plan-authority.yml'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: plan-authority-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      VERIFY_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - name: Materialize exact public verification commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$VERIFY_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git init "$GITHUB_WORKSPACE"
+          cd "$GITHUB_WORKSPACE"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "$VERIFY_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$VERIFY_SHA"
+      - name: Run tests and synthetic exact reconstruction
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests -v
+          python3 tools/plan_authority.py graph plan-authority/example-overlay.json > "$RUNNER_TEMP/plan-graph.json"
+          python3 tools/plan_authority.py validate "$RUNNER_TEMP/plan-graph.json"
+          python3 tools/plan_authority.py restore "$RUNNER_TEMP/plan-graph.json" > "$RUNNER_TEMP/plan-restored.json"
+          cmp plan-authority/example-overlay.json "$RUNNER_TEMP/plan-restored.json"
+          python3 tools/plan_authority.py next "$RUNNER_TEMP/plan-graph.json" --actions plan-authority/example-actions.json > "$RUNNER_TEMP/plan-next.json"
+          python3 -c 'import json,sys; d=json.load(open(sys.argv[1])); assert d["selected"] == "probe"; assert d["executes"] is False; assert d["grants_authority"] is False' "$RUNNER_TEMP/plan-next.json"
+          git diff --exit-code
