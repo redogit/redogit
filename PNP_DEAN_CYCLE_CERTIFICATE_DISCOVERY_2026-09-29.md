@@ -45,6 +45,10 @@ with equality only for \(\ell=3\). The cycles are disjoint, so \(W\le 2n/3=2q\).
 
 This is a statement about *this certificate-search decision*. It does not prove an exponential lower bound, a P-versus-NP separation, or that every Dean NO instance needs this certificate. If a polynomial algorithm decided this search on all inputs, it would solve the cited NP-complete source problem and hence imply P=NP.
 
+### Distinguish the fractional LP question
+
+The NP-completeness result immediately above concerns one **vertex-disjoint integral cycle list whose combined omission count exceeds \(b\)**. A different task takes a proposed fractional stable-set vector and finds one violated odd-cycle inequality; [de Vries and Perscheid](https://optimization-online.org/wp-content/uploads/2019/09/7365.pdf) describe polynomial-time separation and an extended LP formulation for those inequalities. The tasks have different inputs and success conditions. A new clique/cycle rule also needs its own complexity analysis; the cycle-only reduction does not transfer automatically. See the [Step 13 overlap and clique receipt](PNP_DEAN_CLIQUE_OVERLAP_2026-09-29.md).
+
 ## 4. Completeness guard and research lineage
 
 The cycle rule cannot certify every NO. Join \(t\ge2\) disjoint copies of \(K_4\) in a path with bridges, using different bridge endpoints in each internal copy. Here \(n=4t\), \(\alpha=t\), matching number \(2t\), and maximum degree \(4\). At target \(k=2t\), \(b=2t\), so the true answer is NO. The degree and matching checks stop at the budget. No odd cycle crosses a bridge; each \(K_4\) contains at most one vertex-disjoint odd cycle, a triangle worth two omissions. Thus every cycle list has \(W\le2t=b\). A clique-component argument proves NO for this explicit family, but that is another certificate rule with its own discovery cost.
