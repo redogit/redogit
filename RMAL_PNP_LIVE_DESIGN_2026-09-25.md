@@ -1202,3 +1202,8 @@ This is the remaining compatibility function. P=NP remains open.
 ## Dean fixed-list lens — connected five-cycle counterprobe
 
 [Step 11 exact receipt](PNP_DEAN_FIXED_LIST_C5_CHAIN_2026-09-29.md) treats $E$ as supplied input and checks a freshly specified connected five-cycle chain against the degree, matching, and odd-cycle bounds. It preserves the earlier $k=3t$ target separately from the first impossible $k=2t+1$ target, relates to the historical C5 boundary-transfer work without calling that unrecovered run new evidence, and charges discovery/verification/output costs at their actual scope. This is a bounded Dean/Independent-Set lens; it does not replace the normalized SAT residual above or close its universal polynomial obligation.
+
+
+## Dean fixed-list lens — verify, discover, select
+
+[Step 12 exact receipt](PNP_DEAN_CYCLE_CERTIFICATE_DISCOVERY_2026-09-29.md) records the valid partial odd-cycle omission bound, corrects its relation to the earlier *spanning* support-frame theorem, and charges a check of a supplied witness separately from construction and selection. The explicit \(H_t\) chain is easy to recognize; a valid matching frame there may be too weak even when the all-cycle frame proves NO. The exact arbitrary-input decision of whether any odd-cycle list exceeds the omission budget is NP-complete by triangle partition, while a connected \(K_4\) chain shows the rule does not certify every Dean NO. This is a precise certificate-search boundary, not a universal lower bound or a change to the normalized SAT residual above.
