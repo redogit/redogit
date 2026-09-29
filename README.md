@@ -280,6 +280,12 @@ A bounded connected five-cycle progression reconnects this step-by-step proof to
 
 [Exact construction, proof, cost, and provenance boundary](PNP_DEAN_FIXED_LIST_C5_CHAIN_2026-09-29.md). This is a scoped counterprobe, not the missing universal polynomial solver.
 
+### Dean cycle-certificate discovery — Step 12
+
+I can check a supplied list of vertex-disjoint odd cycles against the given exclusion list in polynomial time. For a partial list the valid omission bound counts \(\sum_i(|C_i|+1)/2\); the older \((n-c)/2\) formula needs a spanning frame that also accounts for every remaining vertex. On \(H_t\), two valid frames of the *same* input differ: a matching frame can miss the target while the all-cycle frame proves NO. The exact decision "does any decisive cycle list exist?" is NP-complete by reduction from triangle partition, even at maximum degree four. That is the cost boundary for this named certificate search, not a lower bound for every possible solver. A connected \(K_4\) chain is a NO case this cycle rule cannot certify.
+
+[Step 12 theorem, checker, reduction, and incompleteness witness](PNP_DEAN_CYCLE_CERTIFICATE_DISCOVERY_2026-09-29.md).
+
 
 ## September 18, 2026 convergence
 
