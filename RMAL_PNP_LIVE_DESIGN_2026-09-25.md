@@ -1207,3 +1207,8 @@ This is the remaining compatibility function. P=NP remains open.
 ## Dean fixed-list lens — verify, discover, select
 
 [Step 12 exact receipt](PNP_DEAN_CYCLE_CERTIFICATE_DISCOVERY_2026-09-29.md) records the valid partial odd-cycle omission bound, corrects its relation to the earlier *spanning* support-frame theorem, and charges a check of a supplied witness separately from construction and selection. The explicit \(H_t\) chain is easy to recognize; a valid matching frame there may be too weak even when the all-cycle frame proves NO. The exact arbitrary-input decision of whether any odd-cycle list exceeds the omission budget is NP-complete by triangle partition, while a connected \(K_4\) chain shows the rule does not certify every Dean NO. This is a precise certificate-search boundary, not a universal lower bound or a change to the normalized SAT residual above.
+
+
+## Dean fixed-list lens — clique frame and overlap
+
+[Step 13 exact receipt](PNP_DEAN_CLIQUE_OVERLAP_2026-09-29.md) repairs the Step 12 \(K_4\) chain with a displayed clique frame at the same \(k=2t\) target. Its adversarial six-vertex graph shows why a clique obligation and an odd-cycle obligation cannot simply be summed when their vertex sets meet. A corrected bound retains vertex identity and subtracts repeated incidences; checking a supplied mixed frame is polynomial. This resembles established stable-set cutting inequalities and transfers to a fixed symmetric conflict graph in scheduling, but it does not prove polynomial discovery of a complete mixed frame. Odd-cycle fractional-LP separation and Step 12 disjoint integral cycle-list search remain distinct obligations; the normalized SAT residual above is unchanged.
