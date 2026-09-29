@@ -304,6 +304,10 @@ The limit is equally concrete: three connected copies of the complement of \(C_7
 
 The Step 14 three-block gap needs one local rounding degree. On each seven-vertex complement-of-\(C_7\) occurrence, seven existing triangle rows give \(3x(H)\le7\). Since a selection is integral, \(x(H)\le2\), or at least five omissions. Rounding inside each verified block before adding yields \(5+5+5=15>b=14\) at the unchanged \(k=7\) target. The fixed-input checker requires all 14 specified edges; deleting one required edge creates a seven-person YES and rejects that block, while the Step 14 weighted overlap penalty protects shared blocks. A capped search returns UNKNOWN. [Exact Step 15 one-degree proof and counterprobes](PNP_DEAN_ONE_DEGREE_RANK_REPAIR_2026-09-29.md). P ?= NP remains open.
 
+### Dean fixed nine-vertex local rounding — Step 16
+
+Four connected copies of \(\overline{C_9}\) have \(\alpha=8\), yet \(x_v=1/4\) satisfies all prior clique, odd-cycle, and Step 15 seven-vertex rows at the impossible \(k=9,b=27\) target. Nine existing four-cliques inside each exact nine-vertex occurrence give \(4x(H)\le9\), locally rounded to \(x(H)\le2\). Their four checked rank rows require \(28>27\) omissions. A single missing required edge makes the target YES; all 27 positive edges must be verified. The earlier overlap charge prevents double counting, and a capped search returns UNKNOWN. [Exact Step 16 proof, counterprobes, and cost boundary](PNP_DEAN_NINE_VERTEX_LOCAL_ROUNDING_2026-09-29.md). This fixes only one more carrier; P ?= NP remains open.
+
 
 ## September 18, 2026 convergence
 

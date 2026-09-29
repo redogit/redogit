@@ -137,6 +137,10 @@ For supplied verified cliques and odd cycles, nonnegative rational weights give 
 
 Only one verified \(\overline{C_7}\) carrier is added. Its seven existing triangle constraints imply \(3x(H)\le7\); integrality rounds this locally to \(x(H)\le2\), equivalently five omissions. Three separately checked blocks give 15 omissions at the same \(k=7,b=14\) and prove the Step 14 NO. Delete one required edge and the target becomes YES; the strict 14-edge admission check rejects that block. For shared blocks the prior weighted overlap correction remains necessary. Supplied receipts are exactly checkable; a resource-capped discovery returns UNKNOWN. [Exact Step 15 receipt](PNP_DEAN_ONE_DEGREE_RANK_REPAIR_2026-09-29.md). No general rank-separation method or P-versus-NP conclusion follows.
 
+### Dean fixed nine-vertex local rounding — Step 16
+
+The four-block \(\overline{C_9}\) chain has \(n=36,\alpha=8,\tau=28\). At \(k=9,b=27\), the old full clique/odd-cycle plus Step 15 seven-vertex linear system still accepts \(x_v=1/4\) with exactly 27 omissions. On one verified nine-vertex block, nine four-cliques imply \(4x(H)\le9\), then integrality gives \(x(H)\le2\). Round inside each block to prove the declared NO. The 27-edge check rejects a one-edge deletion that has an explicit nine-person YES witness; shared blocks reuse the overlap penalty. Only this fixed pattern is admitted, with UNKNOWN on a discovery cap. [Exact Step 16 receipt](PNP_DEAN_NINE_VERTEX_LOCAL_ROUNDING_2026-09-29.md). No complete Dean solver or P-versus-NP conclusion follows.
+
 Public live design:
 
 - https://redogit.github.io/redogit/live-design.html
