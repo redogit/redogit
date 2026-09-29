@@ -5,6 +5,25 @@
 **Status:** active navigation layer — not a central authority  
 **Predecessor:** [`BODY_OF_WORK.md`](BODY_OF_WORK.md), preserved as the first broad recovery snapshot
 
+## September 25 current additions — terms / proof / executable language game
+
+**Navigation only. Project-local evidence and source authority remain local.**
+
+- [Recent Work — 2026-09-25](RECENT_WORK_2026-09-25.md) — current cross-project update with explicit status boundaries.
+- [RMAL Research Orientation — TERMS FIRST](RMAL_RESEARCH_ORIENTATION_2026-09-25.md) — definitions before claims.
+- [Algorithmic Condensed Wisdom Analysis](ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md) — current synthesis; not retroactive naming.
+- [RMAL P vs NP — Live Design](RMAL_PNP_LIVE_DESIGN_2026-09-25.md) — current proof-program execution shape and exact remainder.
+- Current local reversible 3D roguelike artifact — hackable `let`/`iff` planning language, rollback/look-ahead, state-aware IntelliSense, searchable docs, Musilanguage timing/world carrier, local PIV_FONT use, and bounded Decision-Field/gammoid route mechanics. **Local artifact != repository source; repository/CI promotion remains open.**
+- PIV / Polymath Invariant Variable — current repaired local build remains bounded-verified; public summaries may describe it, but font bytes remain local unless separately promoted.
+
+```text
+RESULT != METHOD
+DESIGN != IMPLEMENTED
+IMPLEMENTED != VERIFIED
+LOCAL ARTIFACT != REPO SOURCE
+GAME MECHANIC != MATHEMATICAL EVIDENCE
+```
+
 This index exists to make years of work easier to **find, separate, combine, test, play with, leave alone, revisit, or discard**.
 
 It is deliberately *not* a master theory and not a command center.
@@ -497,7 +516,7 @@ adversarial stress successor
   PR #79 -> 4c9dbad649653eebb69b30eafcfd41288c2ed037
 ```
 
-The pre-witness integrated head `4c9dbad649653eebb69b30eafcfd41288c2ed037` remains preserved. The current Other-Projects head `16a6823aa563e86455ec709700d06f0b9e22b467` adds the first native Decision Field relation witness and passed post-merge run `35508603278` with 119/119 tests, all existing reproducibility audits, scale×4 adversarial stress, and frozen default stress 5,376 cases / 13/13 checks.
+The pre-witness integrated head `4c9dbad649653eebb69b30eafcfd41288c2ed037` remains preserved. The first native Decision Field relation witness remains PR #81 / `16a6823aa563e86455ec709700d06f0b9e22b467`. The current verified RMAPL/Ω runtime head is `e42f652b380eb1d68d14679d44b9328dfb2faa55` from PR #90. Post-merge run `35525090965` passed 193/193 tests, the existing reproducibility audits, contextual multicarrier 14/14, the S′ Carrier–Surface four-carrier replay, RMAPL Ω 9/9, scale×4 adversarial stress, and frozen default stress 5,376 cases / 13/13 checks.
 
 The sidecar schema is `rmapl-omega-relational-field/v0` and binds removable typed relations plus the exact consequence vector:
 
@@ -506,6 +525,23 @@ self / neighbor / shared / ambient / delayed
 ```
 
 It also carries currentness and a way-back reference while leaving Ω v0 unchanged.
+
+Current runtime hardening additionally prevents a FITTER from rewriting:
+
+```text
+nativeIdentity
+sourceRefs
+evidence
+claimCeiling
+provenance
+```
+
+while preserving ordinary non-authority fitting under its existing `PRESERVES` contract.
+
+```text
+FITTER != AUTHORITY_REWRITER
+FIT != EVIDENCE_PROMOTION
+```
 
 First native witness:
 

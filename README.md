@@ -1,31 +1,296 @@
 # redogit
 
-> **Public projection status — 2026-09-18:** Conscience64 GitHub Pages is intentionally held at a minimal privacy surface pending explicit owner approval of an exact reviewed revision. Project/research state is independent of public availability. Public URLs are projections, not canonical authority.
+> **New public app — September 28, 2026:** [Dream to Action](https://redogit.github.io/conscience64/dream-to-action/) turns a chosen goal and a real barrier into a practical next step, with a dashboard, action board, and evidence history. No account required; personal and fictional demonstration records stay separate. [Why it exists](https://redogit.github.io/conscience64/about.html#dream-to-action) · [Source](https://github.com/redogit/Dream-To-Action).
+
+> **About me:** [PUBLIC ABOUT ME](https://redogit.github.io/conscience64/about.html) — fire, carriers, music/language, REDOGIT, and current work
+> **Newest integrated work:** [PUBLIC RECENT WORK](https://redogit.github.io/conscience64/recent-work.html) · [source](RECENT_WORK_2026-09-25.md)
+> **Start here — terms before claims:** [PUBLIC RMAL ORIENTATION](https://redogit.github.io/redogit/) · [source](RMAL_RESEARCH_ORIENTATION_2026-09-25.md)
+> **Algorithmic method / learned rules:** [PUBLIC ALGORITHMIC CONDENSED WISDOM](https://redogit.github.io/redogit/condensed-wisdom.html) · [source](ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md)
+> **Current live design:** [PUBLIC RMAL P vs NP — LIVE DESIGN](https://redogit.github.io/redogit/live-design.html) · [source](RMAL_PNP_LIVE_DESIGN_2026-09-25.md)
+
+> **Conscience64 public projection — updated 2026-09-25:** the generated public testbed remains isolated, and **Musilanguage Studio is now the one explicitly restored public Play application** at https://redogit.github.io/conscience64/play/musilanguage/. The rest of `play/`, repository internals, private-origin carriers, and historical predecessor music pages are not thereby published. Public projection != canonical authority.
 
 
 ## About me
 
-I’m a data specialist, reverse engineer, and generalist builder. I take complicated systems apart, look for the distinction that actually changes the result, and try to turn what survives into something people can inspect, reuse, and improve.
+I did not get here by starting with complexity theory, reading the P versus NP problem, and deciding I was going to prove `P = NP`.
 
-The central idea behind my work is simple to state and large in consequence:
+I got here sideways.
 
-**higher organization = differentiation + relation + coordination**
+I’m a data specialist, reverse engineer, builder, and mostly a random guy with a knack for ideation, imagination, pattern matching, and being stubbornly honest when something does **not** work. I usually take a problem apart until I can see what actually has to remain true, strip away the names that are not doing any work, keep the relations that are, and then ask what the smallest next change has to be.
 
-I am interested in how this pattern scales outward: from bounded self-maintaining cells, to multicellular organisms, to animals acting in environments, to social coordination, language and culture, technical extension, distributed human-machine cognition, civilization, planetary coupling, meta-coordination, and collective self-modeling.
+The first clue did not come from P versus NP at all. It came from practical education-sector algorithms. I was trying to serialize algorithms and their data properly. I found that when I stripped away the domain semantics and kept a minimal representation of the data, the relations, and the transforms it went through, the same machinery could survive outside the problem it was written for.
 
-I do **not** treat those levels as literally identical. A civilization is not simply a giant animal, and a machine is not made equivalent to a person by participating in a feedback loop. The structural question is more careful: how can heterogeneous components retain their distinctions while coordinating well enough to sense, distinguish, remember, model, value, act, repair, learn, and reorganize together?
+My own rough description at the time was basically:
 
-That is the technical **we** I want my work to help: humans, animals and other living systems, tools and machines, institutions, durable information, networks, and environments working together without erasing agency, boundaries, provenance, or evidence. The higher-level whole should not require its parts to become the same.
+```text
+minimal representation
++ algorithm
++ stripped semantics
++ relations between the data
++ the transforms it went through
+```
 
-A recurring working motif is:
+That was the beginning.
 
-`SENSE → DISTINGUISH → REMEMBER → MODEL → VALUE → COORDINATE → ACT → REPAIR → LEARN → REORGANIZE`
+I was not asking, “How do I prove P = NP?”
 
-At the highest level I currently use, **adaptive organization** means the ability of a system to modify its own organization while preserving enough continuity to remain meaningfully the same system. That turns a decision field into something stronger: a field capable of changing its own decision operators.
+I was asking things like:
 
-My work crosses software, language, knowledge organization, accessibility, games, mathematics, and experimental research. The common thread is human-directed problem solving: preserve context, make assumptions visible, keep provenance, test bounded changes, and do not confuse a useful representation with proof.
+```text
+What was this solver actually for?
+What obligation was it supposed to satisfy?
+What did it learn by solving one case?
+Can I describe why and how it worked faithfully enough to reuse it?
+What is still unresolved?
+What is the smallest thing I have to change next?
+```
 
-I expect my working model to change. Better evidence can change my mind; negative results can change the design; an interpretation error becomes part of the record rather than something to hide.
+The direction that kept surviving was:
+
+```text
+OBLIGATION
+→ MINIMAL REPRESENTATION
+→ RELATIONS
+→ TRANSFORMS
+→ RESULT
+→ WHY THE RESULT IS VALID
+→ WHAT REMAINS
+→ REUSE WHAT WAS LEARNED
+```
+
+I kept finding that the names of things could change while the relational behavior stayed useful. So I started treating the **reason for the solver + the knowledge needed to describe it faithfully** as part of the thing being solved, not as documentation added afterward.
+
+The housing / Dean problem came later. I had my own messy formulation about selecting students under exclusions, capacity, and an output requirement. I treated it as a practical obligation: get the requested valid result, preserve the constraints that actually matter, and do not silently lose the reason the answer is valid.
+
+Only later did that line up with Independent Set, NP-completeness, the Dean-style example, and eventually Stephen Cook’s formal statement of the P versus NP problem.
+
+I did not begin by reading Cook’s paper. I read it **after** following this path far enough that the formal language started looking uncomfortably familiar. Cook defines NP through a polynomial-time checking relation and asks whether every problem with that kind of efficiently checkable witness also has a deterministic polynomial-time solution. That is very close to the boundary I had reached from the other direction: start with the obligation and the witness/output, preserve exactly what makes it valid, and ask whether the path that produces it can be made as disciplined as the path that checks it.
+
+Stephen Cook’s official Clay problem description is here:
+
+[The P Versus NP Problem — Stephen Cook](https://www.claymath.org/wp-content/uploads/2022/06/pvsnp.pdf)
+
+The weird part for me is that getting this far was not mostly calculation.
+
+The calculations matter. The code matters. The proofs of the small pieces matter. The searches matter. But the route here was mostly **deductive reasoning over the mathematics of the problem**:
+
+```text
+state the obligation
+→ preserve the exact distinctions that can change it
+→ derive what follows
+→ change one degree
+→ repair only what that change damages
+→ keep the negative result if it fails
+→ reconstruct the way back
+→ continue
+```
+
+That is how I ended up working with things I did not set out to study: Independent Set, matching, matroids, gammoids, series-parallel graphs, GF(2), odd-cycle structure, roof duality, fixed points, proof certificates, codecs, and complexity bounds.
+
+I did not pick those subjects because I wanted a collection of advanced words. They kept appearing because the previous step forced the next one.
+
+That distinction matters to me.
+
+I am not claiming that I have solved P versus NP. I have a proof program, a growing set of scoped exact results, a lot of preserved failures, and a much narrower universal remainder than I started with. Until the universal polynomial step is actually proved, `P ?= NP` remains open.
+
+If this does eventually close, the story will not be that I sat down knowing the right mathematics and calculated my way to an answer.
+
+It will be that I kept asking what the problem was actually obligated to do, refused to throw away failed information, kept representations separate from truth, changed one thing at a time, and followed the deductions wherever they went.
+
+That is also how I work outside mathematics.
+
+```text
+DO THE THING
+→ INSPECT WHAT ACTUALLY HAPPENED
+→ KEEP WHAT SURVIVED
+→ REPAIR THE SMALLEST FAILURE
+→ DO IT AGAIN
+```
+
+That is REDOGIT.
+
+## Musilanguage Studio — public again
+
+[Open Musilanguage Studio](https://redogit.github.io/conscience64/play/musilanguage/)
+
+Musilanguage is now one public application rather than separate current single / radio / Word Forge surfaces.
+
+```text
+language / symbols / emoji / exact UTF-8
+→ MUSIC64
+→ 64 arrangement profiles
+→ guitar / bass / keys-harp / strings / lead / drums
+→ tempo / meter / mode / tonic / motif transform
+→ reversible variations
+→ playback / MIDI / WAV / session
+→ preserved history inside the app
+```
+
+The older **Carry the Fire**, **Musilanguage Radio**, and **Word Forge / MUSIC64** surfaces remain preserved in repository and Git history. The unified Studio carries their lineage forward rather than erasing it.
+
+```text
+ONE PUBLIC APP != DELETION OF HISTORY
+LANGUAGE-TO-MUSIC != SEMANTIC TRUTH
+STYLE PROFILE != CULTURAL AUTHENTICITY
+INSTRUMENT MIX != SOURCE MUTATION
+```
+
+## September 25, 2026 — P vs NP proof-program checkpoint
+
+The current P-versus-NP research line is being carried forward as an **exact obligation-preserving proof program**, not as a solved claim. The working Dean/Independent-Set obligation is used as the concrete NP-complete carrier.
+
+Current proof architecture:
+
+```text
+ORIGINAL OBLIGATION
+→ four-ID semantic catalog
+→ bounded-arity exact facts
+→ one signed degree of change
+→ minimal dynamic repair
+→ Homeward reconstruction
+→ verified residual
+```
+
+Each semantic object/relation is tracked through four distinct ID roles:
+
+```text
+OccurrenceID
+SemanticObjectID
+SemanticContextSupportsIDs
+SemanticClarityIDs
+```
+
+The active anti-decay rule is:
+
+```text
+OBJECT / OBLIGATION STAYS
+CARRIER MAY MOVE
+MOVE AWAY FROM IRREVERSIBLE KNOWLEDGE LOSS
+```
+
+The current one-degree progress carrier maintains a certified interval
+
+```text
+L <= alpha(G) <= U
+```
+
+for the graph independence number. A positive move is an exact augmentation `L -> L+1`; a negative move is a certified upper-bound improvement `U -> U-1`. Inclusion-minimal augmentation gives an exact +1 move whenever a larger independent set is available, but finding such a move is not yet proved polynomial on arbitrary graphs. Existing exact scoped negative carriers include LP/dual and odd-cycle support-frame bounds.
+
+The semantic-event/storage side has been narrowed substantially: under a fixed finite bounded-arity vocabulary, the number of possible authoritative semantic facts is polynomial in the catalog domain size. This controls storage/fixed-point event growth, but **does not by itself prove obligation completeness**.
+
+Current universal proof obligation:
+
+```text
+For every unresolved Dean / Independent-Set state with L < q <= U,
+produce in polynomial total cost either:
+
+  (+) a certified exact augmentation L -> L+1
+
+or
+
+  (-) a certified exact upper-bound improvement U -> U-1
+
+while preserving the original obligation, provenance, exactness,
+Knowledge-Decay protections, and Homeward witness reconstruction.
+```
+
+If that signed-progress theorem is proved uniformly, the gap `U-L` can shrink at most `n` times, yielding a polynomial exact Independent-Set solver and therefore `P = NP`.
+
+
+
+Current refinement: relative to a present independent cohort `S`, the candidate-to-`S` support graph defines a **transversal matroid**: a candidate subset is matroid-independent exactly when it can be matched into `S`. A +1 augmentation exists exactly when this matroid has a circuit that is also independent in the candidate-candidate conflict graph. Every such circuit has support deficiency exactly one and replaces its supported members of `S` with one additional candidate. The uniform-transversal special case recovers ordinary size-`k` Stable Set, so this positive augmentation subproblem is itself a genuine hardness locus rather than a hidden matching shortcut.
+
+A new scoped exact carrier is now recorded in [Signed Binary-Cluster Augmentation Carrier](PNP_SIGNED_BINARY_CLUSTER_CARRIER_2026-09-25.md). When the support matroid has an exact binary GF(2) representation of rank r and the candidate conflicts form exactly r disjoint cliques, one arbitrary rainbow transversal either is already dependent or becomes a basis. In basis coordinates, a zero same-color diagonal coordinate gives an immediate positive circuit; otherwise an off-diagonal color-dependency digraph controls the result. A shortest directed cycle constructs a singular rainbow transversal and therefore an exact +1 augmentation, while an acyclic dependency digraph makes every rainbow transversal unit-triangular and certifies that no +1 augmentation exists. This is polynomial inside its stated scope. A separate exhaustive canonical check covered 262,160 rank-2/rank-3 configurations with zero mismatches; that finite check supports the implementation logic but is not the proof.
+
+The same carrier now has an exact **log-cluster-defect extension**. Candidate-conflict vertices that obstruct cluster structure are retained as an explicit exception carrier Z rather than semantically deleted. Stable choices A⊆Z are enumerated, chosen exceptions are contracted in the binary support matroid, and the remaining cluster carrier is solved exactly when its nonempty clique count is at least its residual matroid rank. With |Z|=O(log n), Cluster Vertex Deletion plus the 2^|Z| exact exception branches remains polynomial. Branches with fewer residual cliques than residual rank remain explicitly UNRESOLVED.
+
+The support-side admission is now broader and more concrete. The candidate-to-current-cohort support relation is a transversal matroid, hence a gammoid. Classical matroid theory identifies the **binary gammoids** exactly with graphic matroids of series-parallel networks. Using only the original bipartite support graph, matroid rank remains a maximum-matching computation, including after tracked contractions/deletions. This allows a polynomial one-degree loop/coloop/parallel/series reduction that either constructs a series-parallel graphic carrier or leaves an exact nonbinary support residual. In the binary case, augmentation circuits become ordinary cycles of the reconstructed series-parallel graph. When this carrier fails, the next minimal representability obstruction is a U2,4 minor; the next declared repair degree is GF(2) -> GF(3), with no assumption that the binary rainbow-circuit theorem transfers automatically.
+
+Two adjacent repair directions are now explicitly saturated. Moving the support representation from GF(2) to GF(3) repairs the local U2,4 representability obstruction but does not preserve the binary rainbow-circuit / monochromatic-cocircuit progress theorem; U2,4 is itself the standard nonbinary counterexample. Strong base orderability is also not the missing ingredient, because transversal matroids and gammoids already have it. The live binary-support frontier is therefore restated graphically: after series-parallel reconstruction, +1 augmentation is exactly a simple support-cycle whose edge set is independent in the candidate-conflict graph.
+
+That graphic frontier now has a new exact conflict-side carrier. In each biconnected series-parallel support block, anchoring a non-tree support edge converts a candidate support-cycle into a directed two-terminal SP path. Candidate-conflict edge pairs become forbidden marker pairs on that DAG. When those forbidden pairs are hierarchical/non-crossing in the induced reachability order, the classical polynomial Path-Avoiding-Forbidden-Pairs reductions solve the branch exactly. More generally, build a crossing graph whose vertices are forbidden pairs and whose edges record interlacing pairs; if this crossing graph has a vertex cover of O(log n), enumerate only the two lawful endpoint exclusions for those modulator pairs and solve the remaining hierarchical instance. This is an exact polynomial carrier under the stated guard and is distinct from the earlier small conflict-vertex-cover theorem.
+
+The same SP path branch now has two more exact representations. **Choice-CNF** assigns one Boolean variable to each parallel-composition decision; every support edge is a partial choice signature, and every candidate-conflict pair compiles to one clause forbidding the simultaneous signatures. Safe path existence is exactly Choice-CNF satisfiability, so recognized 2-SAT, Horn, dual-Horn, and beta-acyclic instances reuse their existing polynomial solvers and certificates. Separately, mutually disjoint forbidden pairs satisfying the classical skew-symmetry condition form another polynomial island with a true signed dual: a safe path exists iff there is no forbidden-pair F-cut. These are scoped carrier additions, not a universal SAT reduction.
+
+The binary-transversal support class has now been tightened further using Edmonds' forest-presentation theorem. A circuit in a bipartite forest presentation is exactly a connected selected-candidate/support tree in which every touched support has degree two into the circuit. This exposes a canonical hard core: arbitrary CNF SAT reduces to a radius-two forest presentation with one root candidate, one support per clause, literal-occurrence leaves, same-clause exclusion, and complementary-literal exclusion. A conflict-free support circuit exists exactly when the CNF is satisfiable. A 1,500-instance bounded differential panel had zero mismatches. This is a scope calibration, not a P!=NP claim: it shows that the unresolved difficulty can live entirely in semantic consistency among occurrence choices even when the support carrier is almost trivial.
+
+That clause-star core now has an exact matching-based reduction lane as well. Matching autarkies satisfy every clause they touch and therefore remove those clauses without changing the untouched remainder. The largest matching-lean kernel is polynomially computable. On that kernel, maximal deficiency collapses to the visible value k = clauses - variables. Szeider's exact SAT algorithm runs in O(2^k n^3), so k=O(log n) is another polynomial terminal with either a satisfying assignment or a regular resolution refutation. The unresolved residue is therefore sharper: a matching-lean kernel with superlogarithmic deficiency, where assigning either polarity can lower deficiency but retaining both signed children still costs exponential branching mass.
+
+A second exact merge lane is now admitted before any binary branch: non-increasing Davis-Putnam elimination. If resolving out one variable produces no more clauses than the current formula, the two truth directions are merged into one equisatisfiable successor and the variable is genuinely removed; repeated use is polynomial because variables strictly decrease and clause count never exceeds the starting bound. After alternating this with matching-autarky normalization, the unresolved core is matching-lean, high-deficiency, and DP-growth-positive for every remaining variable. Thus the live obstruction is now exact projection growth, not merely "which truth value should I guess?"
+
+The normalization is now stronger again through **linear autarkies**. For the signed clause-variable matrix M, polynomial-time linear programming gives an exact alternative: either there is a nonzero direction z with Mz>=0, yielding a linear autarky and an exact satisfiability-preserving removal, or the residual has full column rank together with a strictly positive clause weighting y satisfying M^T y=0. In that negative-balance case every variable's weighted positive and negative clause incidences cancel exactly, and the ordinary deficiency m-n equals the dimension of the left-nullspace. This balance certificate is not an UNSAT certificate; it records that the polynomial linear-autarky family is saturated and exposes a new exact residual coordinate.
+
+The same normalized core now has a **signed cofactor-dominance** rule before branching or projection. For a variable x, if the x=0 cofactor logically implies the x=1 cofactor, keep only x=1; if the reverse implication holds, keep only x=0. This removes one Boolean degree exactly and needs no projected resolvents. General implication is not assumed cheap, so the move is admitted only with polynomial receipts such as clause subsumption, unit-resolution, or implication checks inside an already certified tractable carrier.
+
+The linearly-lean balance carrier now has an exact qualitative-matrix interpretation too. For A=M(F)^T, the concrete unit-weight matrix is already strict-central: it has a positive null vector. SAT is equivalent to the existence of some matrix B with the **same sign/zero pattern** that becomes noncentral; a separating vector s with s^T B>0 directly reconstructs a satisfying truth assignment. UNSAT is exactly the stronger robustness statement that every same-sign reweighting remains central, i.e. A is sign-central. A satisfiable witness reweighting needs only polynomial-size integer magnitudes, so a polynomial-length one-coordinate reweighting path always exists—but selecting that path in polynomial total work remains open.
+
+The qualitative-matrix branch now also has an exact **log conformal-defect / hitting** terminal. Clause columns are conformal exactly when the corresponding clauses do not clash. A logarithmic vertex cover of the clause nonclash graph isolates a hitting core; inclusion-exclusion over the exceptional clauses plus exact hitting model counting decides SAT/#SAT in polynomial total work and reconstructs a witness Homeward. This is a scoped terminal, not a universal collapse; superlogarithmic conformal defect remains open.
+
+That terminal is now strictly broader through **nonclash-clique inclusion-exclusion**. Simultaneous falsification sets are exactly cliques of the clause nonclash / column-conformality graph. If that graph has degeneracy O(log N), all contributing cliques can be enumerated in polynomial total work and exact inclusion-exclusion yields #SAT/SAT plus Homeward reconstruction. Hitting is the zero-degeneracy endpoint; log conformal vertex cover is only one sufficient route into the broader terminal. The surviving qualitative residual therefore has superlogarithmic conformality degeneracy.
+
+The guard is broader once more: degeneracy is only a sufficient proxy. An output-sensitive all-clique enumerator is run under a declared fixed polynomial cap, so any instance with a polynomial **actual conformal-event count** is solved exactly by the same inclusion-exclusion carrier even when the nonclash graph has high degeneracy. The remaining qualitative-matrix obstruction is now super-cap multiplicity of jointly falsifiable clause-event intersections, not graph density by itself.
+
+The event carrier is now factored by the clause-variable incidence graph before any global multiplicity judgment. Independent CNF components multiply conformal cliques through graph join even though SAT/#SAT decomposes exactly as a product, so that multiplication is not treated as intrinsic complexity. Balance circuits localize to the same components. The surviving event-side object is now **incidence-connected super-cap conformal multiplicity**.
+
+
+
+
+
+The four-ID catalog compresses that normal form without changing its logic: literal occurrences retain OccurrenceIDs, repeated signed literals share SemanticObjectIDs, clause membership is ContextSupport, and positive/negative polarity is linked by one Clarity/COMPLEMENT relation rather than repeated pairwise conflict storage.
+
+The binary-support seam has now narrowed further: a binary support transversal matroid is a binary gammoid, hence has a K4-minor-free graphic realization; equivalently the support circuit problem can be carried by a **series-parallel graph**. A +1 Dean augmentation is therefore a cycle in that support graph whose candidate edges contain no conflict pair. This shifts the remaining difficulty from the support matroid itself to the coupling with the candidate-conflict graph.
+
+The support-carrier discovery cost is now explicitly charged rather than assumed. The original Dean candidate-to-current-cohort support graph gives a transversal-matroid independence oracle through bipartite matching. Seymour's polynomial independence-oracle algorithm can test whether that support matroid is graphic and construct a realizing graph when it is. Since an accepted support matroid is both transversal/gammoid and graphic/binary, the binary-gammoid characterization places it in the K4-minor-free series-parallel carrier directly. A rejection does not answer the Dean problem; it records a NONBINARY_SUPPORT remainder. This avoids silently assuming a cheaply available GF(2) representation.
+
+The rejected support branch is now constructive too. Every active support minor remains a gammoid. Within gammoids, binary and graphic coincide, so one-element deletion or contraction can be guided by repeated polynomial graphic-recognition tests. Continuing the smallest surviving non-graphic move reaches a minor-minimal nonbinary gammoid; Tutte's excluded-minor theorem identifies the terminal obstruction as U2,4. The four surviving elements and the exact delete/contract trace are retained as a Homeward-recoverable support certificate.
+
+The log-conflict-cover carrier is now stronger than its first series-parallel formulation. If the candidate-conflict graph has a vertex cover Z of size O(log n), **no binary/graphic support assumption is needed**: enumerate the signed independent choices A⊆Z, delete only outside candidates conflicting with A, contract A in the Dean support transversal matroid, and test the remaining outside set for dependence using exact matching rank. Because Q-Z has no conflict edges, any residual matroid circuit is automatically candidate-compatible. A direct proof establishes completeness, and a bounded 20,000-instance differential panel returned zero mismatches. The earlier series-parallel cycle carrier remains useful as an alternate exact representation, not as a prerequisite for this theorem.
+
+A coupling-graph calibration caught an important false promotion: the proposed Dean coupling graph J_S is exactly the original graph G, because S is already independent and the candidate-conflict plus candidate-to-S support edges reconstruct all edges of G. In fact max_B(|B|-|N(B)∩S|)=alpha(G)-|S| over conflict-stable B. Therefore bounded-treewidth DP on J_S is correct but is only the standard bounded-treewidth Independent-Set island in renamed coordinates, not a new universal carrier. The separate log-conflict-cover theorem remains genuine because it parameterizes only candidate-candidate conflict structure while handling arbitrary support edges by matching rank.
+
+A further support-side admission theorem removes another hidden representation cost: when the candidate→current-cohort support graph is a bipartite forest, its ordinary 0/1 adjacency matrix is an exact GF(2) representation of the support transversal matroid. Matching a candidate subset into the current cohort is equivalent to linear independence of its adjacency columns; uniqueness of perfect matchings in a forest prevents determinant cancellation. This lets the binary signed carrier operate directly on original Dean relations for that family.
+
+The next one-degree support move is now bounded by an explicit obstruction: a single K2,2 support cycle with two one-sided candidates realizes the nonbinary transversal matroid U(2,4), and deleting any cycle edge changes a previously valid matching. So cyclic support is not silently simplified to the forest carrier; U(2,4)/nonbinary structure is retained as a first-class residual for the next carrier.
+
+That obstruction is now locally closed without changing fields. The bipartite support presentation decomposes into connected components, and the corresponding transversal matroid is their direct sum; every augmentation circuit therefore lives entirely in one support component. Any support component of fixed rank d has circuits of size at most d+1, so exact circuit enumeration is polynomial for constant d. In particular, the U(2,4) rank-2 obstruction is solved by checking conflict-free circuits of size at most three. The live support-side remainder has moved to connected support components of unbounded rank that are outside the existing binary/cluster carriers.
+
+A second exact cluster-conflict carrier now removes duplicate choice entropy without losing identity. Inside one conflict clique, candidates with identical current support neighborhoods are interchangeable for support matching, so they share a derived support-signature coordinate while retaining every original OccurrenceID for Homeward reconstruction. A conflict-free circuit exists iff some full one-per-clique rainbow transversal is support-dependent; therefore only the Cartesian product of distinct support signatures needs to be checked. If the support-signature product is polynomial (equivalently its log entropy is O(log n) under a fixed bound), arbitrary transversal support is decidable exactly by signature enumeration plus bipartite matching.
+
+That entropy carrier is now tighter: within one conflict clique, any candidate whose current support neighborhood strictly contains another same-clique candidate's neighborhood is dominated for augmentation dependence. Replacing the larger neighborhood by the smaller cannot increase support-matching rank, so every dependent rainbow choice has a dependent representative using only inclusion-minimal support neighborhoods. The live enumeration parameter is therefore the product of the minimal support-signature antichain sizes, not raw candidate count or even raw distinct-signature count.
+
+
+A 2026 external result also aligns two previously separate repair families: vertex-packing LP structure and critical-independent-set structure are equivalent views of the same independence machinery. Accordingly, LP persistency / crown / critical-set extraction are treated as one saturated degree family before moving to independent carriers such as odd-cycle frames, matching/min-cut structure, rank, and signed residual repairs.
+
+The current cubic calibration now has an exact **paired-NAE bond-lattice carrier**. Instead of splitting one NAE hyperedge into separate all-0 and all-1 clause events, it preserves the original bad event "this edge is monochromatic." Intersections of those events are identified by the exact equality partition they impose on vertices. Möbius inversion on that hypergraph bond lattice gives exact 2-color count, SAT/UNSAT, and Homeward reconstruction whenever the distinct partition-state family stays inside a declared polynomial cap. The surviving cubic object is now edge-critical cubic 3-uniform incidence with super-cap equality-partition multiplicity, not merely a large signed-clause state family.
+
+That carrier now streams its inclusion-exclusion coefficients instead of retaining every generated equality partition. Each hyperedge performs one absent/present signed transition; histories reaching the same partition merge immediately, and exact zero coefficients are discarded because their future contribution is identically zero. The tighter execution resource is therefore **active partition-coefficient width** under a fixed charged hyperedge order, not full bond-lattice size. A 1,000-instance bounded cubic panel returned zero count mismatches; the strongest observed reduction was 139 full states to 100 active states.
+
+The next one-degree carrier is **future-frontier projection**. Once no unprocessed hyperedge can touch a vertex again, that equality coordinate leaves the hot carrier; a fully closed block pays its exact color factor immediately. The decision guard is actual nonzero projected state width, not frontier size alone. Homeward is separately protected with UNFIXED/0/1 block labels during conditional-count self-reduction and fails closed if that labeled width exceeds the polynomial cap. Bounded decision and witness panels each covered 1,000 cubic instances with zero failures; one observed execution shrank global active coefficient width 118 to projected width 12.
+
+
+
+**Current mathematical status remains open.** Scoped carrier theorems, finite computations, codecs, semantic compression, and successful special cases are not promoted into a universal P=NP claim.
+
+### Current Dean fixed-list counterprobe
+
+The Dean gives me the exclusion list. I do not fix it after receiving it. I keep $E$ as input, require one compatible $k$-set or a sound $\mathrm{NO}$, and count the entire method rather than only the final checker.
+
+A bounded connected five-cycle progression reconnects this step-by-step proof to my earlier odd-cycle support-frame and boundary-transfer work. For the explicitly declared chain of $t$ cycles, $\alpha=2t$, minimum omissions $\tau=3t$, and maximum disjoint pairs $\nu=\lfloor5t/2\rfloor$. Holding $k=3t$ fixed, matching already proves $\mathrm{NO}$ for $t\ge2$. At the separately declared first impossible target $k=2t+1$, the same matching and degree tests stop short while the odd-cycle bound proves $\mathrm{NO}$. The old C5 table lacked a recovered generator, so its operation counts remain historical, not a new rerun.
+
+[Exact construction, proof, cost, and provenance boundary](PNP_DEAN_FIXED_LIST_C5_CHAIN_2026-09-29.md). This is a scoped counterprobe, not the missing universal polynomial solver.
+
+### Dean cycle-certificate discovery — Step 12
+
+I can check a supplied list of vertex-disjoint odd cycles against the given exclusion list in polynomial time. For a partial list the valid omission bound counts \(\sum_i(|C_i|+1)/2\); the older \((n-c)/2\) formula needs a spanning frame that also accounts for every remaining vertex. On \(H_t\), two valid frames of the *same* input differ: a matching frame can miss the target while the all-cycle frame proves NO. The exact decision "does any decisive cycle list exist?" is NP-complete by reduction from triangle partition, even at maximum degree four. That is the cost boundary for this named certificate search, not a lower bound for every possible solver. A connected \(K_4\) chain is a NO case this cycle rule cannot certify.
+
+[Step 12 theorem, checker, reduction, and incompleteness witness](PNP_DEAN_CYCLE_CERTIFICATE_DISCOVERY_2026-09-29.md).
+
+### Dean clique frame and overlap seam — Step 13
+
+The given \(K_4\) bridge chain is a NO at its declared \(k=2t\) target. A supplied disjoint clique frame proves it with \(3t\) necessary omissions where matching and the disjoint odd-cycle count reach only \(2t\). But I cannot simply add clique and cycle counts if they share a vertex. A six-vertex YES graph consisting of a \(K_4\) and a triangle meeting at one vertex would be falsely rejected by that sum. Retaining the shared vertex ID and subtracting at most one repeated omission repairs the bound exactly in this case. [Exact Step 13 construction, overlap proof, and world relation](PNP_DEAN_CLIQUE_OVERLAP_2026-09-29.md).
+
+A single violated odd-cycle *fractional LP inequality* can be found in polynomial time; that is a different task from Step 12's NP-complete search for a decisive disjoint integral cycle list. Neither result closes the universal Dean algorithm.
 
 
 ## September 18, 2026 convergence
