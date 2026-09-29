@@ -146,3 +146,30 @@ Public source anchors at the profile baseline above:
 Local planning input: `CURRENT_PLAN_AUTHORITY_OVERLAY_2026-09-20.md`, recovered as a user-owned Library artifact. Only the relevant work priorities and operating boundaries are summarized here. The private retrieval locator, conversational corpus, unrelated personal context, and original full local artifact are not published.
 
 Predecessor plans, contracts, evidence files, branches, and local authority artifacts remain unchanged. This is an additive proposal/navigation document, not a replacement of any source or a transfer of authority.
+
+
+## 9. September 29 currentness reconciliation
+
+This section updates **navigation**, not the September 20 predecessor observations above. The earlier priority table remains recoverable as the plan state that generated later work.
+
+Current side-to-side readings:
+
+| September 20 plan item | September 29 target-local state | Consequence |
+|---|---|---|
+| Authority map / Knowledge Decay | Profile PR #43 implements an offline reversible authority/lineage assessor with exact reconstruction and synthetic regression controls, but its own PR body explicitly says **do not auto-merge** pending review/admission. | Preserve #43 as the active implementation candidate; do not create a competing authority engine or treat its green CI as admission. |
+| RMAL / RMALKDVMLLL / RMALC 2.1.1 | Canonical current implementation has moved to RMAL/RMALC 3.1 C23 in `redogit/DnD`. PR #3 merged executable Mirror → RMAL → checkpoint/restart → Homeward; PR #4 merged a design/status crosswalk for the later structural-evaluator research. | Treat 2.1.1 as historical release evidence, not current compiler authority. Continue from DnD current state; structural evaluators remain design targets until separately implemented/verified. |
+| Conscience64 publication | The public surface is now curated rather than whole-repository: public testbed + Musilanguage + NEON//VEIL, with Dream/About/Recent Work handled by separate pinned overlay authority. | Publication success for one route does not authorize another route or repository-wide source publication. Preserve exact pins and route-specific approvals. |
+| Other-Projects- PR #84 | Subsequently observed merged at `242635d4d8b5296e9cc3c937a62e0aa69536a4c9`. | `OBSERVED_MERGED -> NO_DUPLICATE_REPAIR_OR_MERGE`; retain the earlier open-state observation as chronology. |
+| AnyFunctor structural program | DnD PR #4 merged at `593546f96d4e9040d5f73f0896655d9ffaf49321`, documenting the gap between the verified v0.7 Mirror runtime and ten proposed structural evaluators. | Reuse the bounded Mirror evidence; do not transfer that evidence to the proposed evaluator family. |
+
+The governing currentness rule is:
+
+```text
+PREDECESSOR PLAN != CURRENT IMPLEMENTATION STATE
+CURRENT IMPLEMENTATION != REWRITE OF PREDECESSOR PLAN
+REOBSERVE TARGET-LOCAL AUTHORITY BEFORE ACTION
+METHOD TRANSFER != EVIDENCE TRANSFER
+DELTA_ZERO -> NO_CHANGE
+```
+
+This plan therefore remains a **navigation/proposal artifact**. It supplies purpose, order, and recovery relations; target-local repositories decide implementation, verification, admission, merge, release, and publication.
