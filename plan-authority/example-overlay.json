@@ -1,0 +1,65 @@
+{
+  "schema": "rmal/plan-authority-overlay/v1",
+  "date": "2026-09-20",
+  "predecessor": {
+    "name": "PREVIOUS.json",
+    "date": "2026-09-19",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "policy": "PRESERVE_PREDECESSOR; APPLY_ONLY_EXPLICIT_OVERRIDES"
+  },
+  "root_goal": "Help someone recover a plan without turning it into evidence.",
+  "global_rules": [
+    "PLAN != SOLUTION",
+    "UNKNOWN != ABSENT"
+  ],
+  "shared_execution_stack": [
+    "SUBJECT",
+    "CHECK",
+    "REMAINDER"
+  ],
+  "overrides": {
+    "sample": {
+      "current_addendum": "Reported failed probe stays reported.",
+      "next_priority": [
+        "Read exact native evidence first."
+      ]
+    }
+  },
+  "new_shared_machinery": {
+    "VIEW": {
+      "status": "ACTIVE_SUPPORT",
+      "next": "Preserve roles."
+    }
+  },
+  "portfolio": [
+    {
+      "id": "authority",
+      "title": "Authority map",
+      "status": "ACTIVE_CORE",
+      "base_next": [
+        "Build the local map."
+      ],
+      "override_applied": false
+    },
+    {
+      "id": "sample",
+      "title": "Sample lab",
+      "status": "ACTIVE_RESEARCH",
+      "base_next": [
+        "Earlier bounded probe."
+      ],
+      "override_applied": true
+    }
+  ],
+  "retained_or_parked": [
+    {
+      "name": "Retained lab",
+      "status": "RETAINED_LINEAGE",
+      "rule": "No reactivation by inventory."
+    }
+  ],
+  "priority_order_now": [
+    "1. Preserve authority.",
+    "2. Read sample evidence."
+  ]
+}
