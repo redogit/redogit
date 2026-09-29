@@ -308,6 +308,10 @@ The Step 14 three-block gap needs one local rounding degree. On each seven-verte
 
 Four connected copies of \(\overline{C_9}\) have \(\alpha=8\), yet \(x_v=1/4\) satisfies all prior clique, odd-cycle, and Step 15 seven-vertex rows at the impossible \(k=9,b=27\) target. Nine existing four-cliques inside each exact nine-vertex occurrence give \(4x(H)\le9\), locally rounded to \(x(H)\le2\). Their four checked rank rows require \(28>27\) omissions. A single missing required edge makes the target YES; all 27 positive edges must be verified. The earlier overlap charge prevents double counting, and a capped search returns UNKNOWN. [Exact Step 16 proof, counterprobes, and cost boundary](PNP_DEAN_NINE_VERTEX_LOCAL_ROUNDING_2026-09-29.md). This fixes only one more carrier; P ?= NP remains open.
 
+### Dean frozen-catalog wheel gap — Step 17
+
+Five connected six-vertex odd wheels have \(n=30,\alpha=10,\tau=20\); \(k=11,b=19\) is NO. All existing unrounded clique, odd-cycle, and exact seven-/nine-vertex rows allow the fractional point with 19 omissions, and the prior weighted LP bound is exactly 19. The key correction is that Step 14 already proves \(19/5\) omissions **inside each wheel**; integer local rounding yields four per wheel and \(20>19\), with no new carrier. Deleting one required rim edge gives an explicit eleven-person YES at the same target. [Exact Step 17 LP gap, existing local repair, and edge counterprobe](PNP_DEAN_FROZEN_CATALOG_WHEEL_GAP_2026-09-29.md). This is a bounded composition check; P ?= NP remains open.
+
 
 ## September 18, 2026 convergence
 

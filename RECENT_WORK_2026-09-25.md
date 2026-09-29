@@ -141,6 +141,10 @@ Only one verified \(\overline{C_7}\) carrier is added. Its seven existing triang
 
 The four-block \(\overline{C_9}\) chain has \(n=36,\alpha=8,\tau=28\). At \(k=9,b=27\), the old full clique/odd-cycle plus Step 15 seven-vertex linear system still accepts \(x_v=1/4\) with exactly 27 omissions. On one verified nine-vertex block, nine four-cliques imply \(4x(H)\le9\), then integrality gives \(x(H)\le2\). Round inside each block to prove the declared NO. The 27-edge check rejects a one-edge deletion that has an explicit nine-person YES witness; shared blocks reuse the overlap penalty. Only this fixed pattern is admitted, with UNKNOWN on a discovery cap. [Exact Step 16 receipt](PNP_DEAN_NINE_VERTEX_LOCAL_ROUNDING_2026-09-29.md). No complete Dean solver or P-versus-NP conclusion follows.
 
+### Dean frozen-catalog wheel gap — Step 17
+
+The catalog stays fixed. In five odd-wheel blocks joined by hub bridges, \(n=30,\alpha=10,\tau=20\), but the complete prior linear rows admit a fractional selection of eleven at \(k=11,b=19\); no seven- or nine-vertex carrier occurs. Step 14's wheel receipt already gives \(19/5\) local omissions. Rounding **each** checked wheel to four before summing gives \(20>19\) and proves NO using existing evidence. Deleting one rim edge gives a checked eleven-person YES, so the old rim-cycle row cannot be carried to that changed input. [Exact Step 17 receipt](PNP_DEAN_FROZEN_CATALOG_WHEEL_GAP_2026-09-29.md). No new carrier, polynomial discovery guarantee, or P-versus-NP conclusion follows.
+
 Public live design:
 
 - https://redogit.github.io/redogit/live-design.html
