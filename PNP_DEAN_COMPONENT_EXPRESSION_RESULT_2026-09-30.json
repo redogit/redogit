@@ -1,0 +1,78 @@
+{
+  "schema": "dean-component-expression-finite-result-v1",
+  "status": "PASS",
+  "arithmetic": "exact small integers; no random sampling",
+  "assertions": 16645,
+  "componentExpression": {
+    "sourceGraphs": 76,
+    "partitions": 1099,
+    "admitted": 1061,
+    "rejected": 38,
+    "feasibleStatesChecked": 4073,
+    "maxSourceVertices": 4,
+    "privateComponentCap": 3,
+    "additionalThreeVertexComponentStates": 6
+  },
+  "reduction": {
+    "sourceGraphs": 76,
+    "maxSourceVertices": 4,
+    "maxTransformedVertices": 16,
+    "transformedSubsetsChecked": 251023,
+    "boundaryStatesChecked": 1099
+  },
+  "bipartite": {
+    "graphs": 533,
+    "subsetsChecked": 33049,
+    "dimensions": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "algorithm": "one augmenting-path search per left vertex; alternating-reachability cover"
+  },
+  "oneEdgeRepair": {
+    "n": 9,
+    "beforeEdges": 9,
+    "afterEdges": 8,
+    "removedEdge": [
+      0,
+      3
+    ],
+    "target": 5,
+    "omissionBudget": 4,
+    "beforeAlpha": 4,
+    "afterAlpha": 5,
+    "witness": [
+      0,
+      1,
+      3,
+      6,
+      8
+    ],
+    "changedFactors": 1,
+    "unchangedFactors": 2,
+    "staleExpressionRejected": true
+  },
+  "claimCeiling": "Finite exact corroboration only. Symbolic proofs are separate. No unrestricted polynomial independent-set solver or P-versus-NP resolution."
+}

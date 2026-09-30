@@ -1,0 +1,51 @@
+{
+  "schema": "dean-component-expression-execution-record-v1",
+  "recordedUTC": "2026-09-30T00:36:15.782Z",
+  "researchSteps": [
+    26,
+    27,
+    28,
+    29
+  ],
+  "sourceBase": "redogit/redogit@67f7f98c46f6d1b85553d70f11b8268e79d0f884",
+  "execution": {
+    "runtime": "functions.exec JavaScript/V8",
+    "hostVersion": "not exposed",
+    "startedUTC": "2026-09-30T00:36:15.164Z",
+    "finishedUTC": "2026-09-30T00:36:15.782Z",
+    "elapsedMilliseconds": 618,
+    "pythonRun": false,
+    "mathboxManifestValidated": false,
+    "limitation": "Local exec-server unavailable; retained function executed directly in functions.exec. Node wrapper retained for reproduction, not run here."
+  },
+  "source": {
+    "path": "PNP_DEAN_COMPONENT_EXPRESSION_PROBE_2026-09-30.mjs",
+    "gitBlob": "61cd2e133e42799ab05f21c8ca661c419ae55153",
+    "identityMethod": "GitHub content-addressed blob retained from the function.toString() of the function executed in the same tool invocation; trailing Node JSON-output wrapper was not executed here"
+  },
+  "result": {
+    "path": "PNP_DEAN_COMPONENT_EXPRESSION_RESULT_2026-09-30.json",
+    "gitBlob": "1879920a0d6d206d4aceeb17309ccc798afd81c9",
+    "status": "PASS"
+  },
+  "scope": {
+    "privateComponentCap": 3,
+    "smallGraphMaxVertices": 4,
+    "reductionSourceMaxVertices": 4,
+    "reductionImageMaxVertices": 16,
+    "oracleHardCap": 18,
+    "bipartiteMaxSides": [
+      3,
+      3
+    ],
+    "randomSampling": false,
+    "universalClaim": false
+  },
+  "review": "Self-reviewed symbolic proof and separate exhaustive finite oracle comparisons. No independent audit claimed.",
+  "limitations": [
+    "No local shell, Node, or Python process was available.",
+    "No new Mathbox runner-v2 manifest or validation is claimed.",
+    "No process-level resource limits were imposed by this retained probe; finite loop bounds are explicit.",
+    "Finite implementation uses small exact integers and bit masks within its stated oracle cap; asymptotic proofs are separate."
+  ]
+}

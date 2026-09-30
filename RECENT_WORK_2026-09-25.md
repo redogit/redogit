@@ -153,6 +153,10 @@ Verified local rounding composes with the existing overlap penalty. Two odd whee
 
 The sustained overlap progression found a loss in two rounded summaries and recovered the older 29/5 source-row certificate. Exact shared assignments repair composition; a count-only join invents a false YES. A supplied tree with at most six vertices per region and three per overlap supports a proved exact recurrence, checked on a constructed 303-vertex case. Fixed-context classes preserve scores and witnesses on the tested pairs. Small class count alone is insufficient: constructing and evaluating classes must also have a proved cost bound. [Full progression and reproducible evidence](PNP_DEAN_BOUNDARY_STATE_PROGRESSION_2026-09-29.md). The unrestricted polynomial obligation remains open.
 
+### Dean compact expressions and optimization — Steps 26–29
+
+Small private components now give an exact expression that can be built and evaluated without enumerating every shared assignment. The next check exposes the remaining cost: even two-vertex components can encode the entire original independent-set problem. An edgeless two-sided special case is solved by matching with an equal-sized cover certificate. A single-edge C9-to-P9 counterprobe changes NO to YES at the same target and updates exactly one factor; stale evidence is rejected. [Proofs, retained code, and 16,645 exact finite assertions](PNP_DEAN_COMPONENT_EXPRESSION_2026-09-30.md). These are bounded results; P ?= NP remains open.
+
 Public live design:
 
 - https://redogit.github.io/redogit/live-design.html

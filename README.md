@@ -321,6 +321,10 @@ Two six-person odd wheels sharing one hub have eleven distinct applicants. At \(
 Two rounded wheel totals can lose conditional information: their overlap score is five where six omissions are necessary, although reweighting the older rows already gives a decisive 29/5. Keeping the actual shared assignment makes composition exact; keeping only its count produces an explicit false YES. A verified tree of regions capped at six vertices, with overlaps capped at three, gives exact results, including a constructed 303-vertex case. A quotient for the fixed context reduces the tested tables to two classes while preserving witnesses. The remaining obligation is computational: even a one-entry table can contain the whole unrestricted independent-set problem. [Proofs, counterexamples, code, and bounded-run evidence](PNP_DEAN_BOUNDARY_STATE_PROGRESSION_2026-09-29.md). P ?= NP remains open.
 
 
+### Dean compact expressions and optimization — Steps 26–29
+
+Small private components now give an exact expression that can be built and evaluated without enumerating every shared assignment. The next check exposes the remaining cost: even two-vertex components can encode the entire original independent-set problem. An edgeless two-sided special case is solved by matching with an equal-sized cover certificate. A single-edge C9-to-P9 counterprobe changes NO to YES at the same target and updates exactly one factor; stale evidence is rejected. [Proofs, retained code, and 16,645 exact finite assertions](PNP_DEAN_COMPONENT_EXPRESSION_2026-09-30.md). These are bounded results; P ?= NP remains open.
+
 ## September 18, 2026 convergence
 
 The current forward-only convergence pass is governed by [GITHUB_CONVERGENCE_PLAN_2026-09-18.md](GITHUB_CONVERGENCE_PLAN_2026-09-18.md). Its exact-head verification and closure evidence are recorded in [GITHUB_CONVERGENCE_RESULT_2026-09-18.md](GITHUB_CONVERGENCE_RESULT_2026-09-18.md).
