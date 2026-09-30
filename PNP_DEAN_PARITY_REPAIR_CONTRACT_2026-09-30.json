@@ -1,0 +1,62 @@
+{
+  "claim_id": "DEAN_STEPS_30_34_PARITY_ONE_VERTEX_REPAIR",
+  "mathematics": {
+    "assertion_tested": "Bit-flip mixed-difference criterion, exact discovery of a transversal of size at most one, matching-and-cover branch certificates, stale/corrupt certificate rejection, supplied two-vertex cap controls, and a large single-repair block plus many-small-block control.",
+    "coefficient_domain": "Exact integers and finite original vertex-ID sets",
+    "conventions": "Finite simple undirected graphs. Default admission cap one vertex; supplied cap two only for explicit countercontrols. UNKNOWN is not a graph NO. Coordinate switch is x_v=y_v xor b_v.",
+    "inputs": [
+      "PNP_DEAN_PARITY_REPAIR_PROBE_2026-09-30.py",
+      "Remote research base redogit/redogit@e76004c44d4fc470f3d82a3c6ad795d92b4fecbc; new local script added after that base"
+    ],
+    "bounds": {
+      "exhaustive_graph_vertex_counts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "expected_labeled_graphs": 1100,
+      "default_transversal_cap": 1,
+      "supplied_countercontrol_cap": 2,
+      "exhaustive_oracle_vertex_cap": 18,
+      "odd_cycle_fixture_vertices": 9,
+      "large_apex_vertices": 41,
+      "large_apex_parts": [
+        20,
+        20
+      ],
+      "triangle_chain_blocks": 100,
+      "triangle_chain_vertices": 300,
+      "wall_seconds": 45,
+      "cpu_seconds": 30,
+      "memory_bytes": 1073741824,
+      "cores": 1,
+      "cooperative_threads": 1
+    },
+    "non_claims": [
+      "No unrestricted polynomial Independent-Set algorithm",
+      "No unconditional runtime lower bound",
+      "No P-versus-NP resolution",
+      "No novelty claim for bipartization or conditioning on a small deletion set",
+      "Finite computations do not replace the symbolic proofs",
+      "No general graph-cut representation theorem is assumed",
+      "No advanced OCT discovery complexity is imported from an unchecked paper"
+    ]
+  },
+  "execution_artifacts": [
+    "PNP_DEAN_PARITY_REPAIR_PROBE_2026-09-30.py"
+  ],
+  "software": [
+    {
+      "name": "CPython",
+      "version": "3.12.14"
+    }
+  ],
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  }
+}

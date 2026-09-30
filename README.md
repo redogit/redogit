@@ -325,6 +325,10 @@ Two rounded wheel totals can lose conditional information: their overlap score i
 
 Small private components now give an exact expression that can be built and evaluated without enumerating every shared assignment. The next check exposes the remaining cost: even two-vertex components can encode the entire original independent-set problem. An edgeless two-sided special case is solved by matching with an equal-sized cover certificate. A single-edge C9-to-P9 counterprobe changes NO to YES at the same target and updates exactly one factor; stale evidence is rejected. [Proofs, retained code, and 16,645 exact finite assertions](PNP_DEAN_COMPONENT_EXPRESSION_2026-09-30.md). These are bounded results; P ?= NP remains open.
 
+### Dean parity and one-vertex repair — Steps 30–34
+
+A reversible bit flip makes every pair interaction submodular exactly when the conflict graph is bipartite. The next exact branch permits one exceptional vertex: discover it in polynomial time, then certify both its selected and omitted cases by matching and covers. All 1,100 graphs through five vertices were checked: 1,033 admitted cases solved exactly, 67 correctly outside scope. A 41-vertex case shows the whole region need not be small; a 300-vertex triangle chain shows many global repairs need not mean a difficult graph. [Proofs, counterprobes, and bounded-run evidence](PNP_DEAN_PARITY_REPAIR_2026-09-30.md). The unrestricted polynomial obligation remains open.
+
 ## September 18, 2026 convergence
 
 The current forward-only convergence pass is governed by [GITHUB_CONVERGENCE_PLAN_2026-09-18.md](GITHUB_CONVERGENCE_PLAN_2026-09-18.md). Its exact-head verification and closure evidence are recorded in [GITHUB_CONVERGENCE_RESULT_2026-09-18.md](GITHUB_CONVERGENCE_RESULT_2026-09-18.md).
