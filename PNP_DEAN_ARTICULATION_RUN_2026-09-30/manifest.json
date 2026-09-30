@@ -1,0 +1,131 @@
+{
+  "schema_version": 2,
+  "claim_id": "DEAN_ARTICULATION_35_39",
+  "repository": {
+    "commit": "unavailable",
+    "dirty": true
+  },
+  "command": [
+    "python3",
+    "PNP_DEAN_ARTICULATION_PROBE_2026-09-30.py",
+    "PNP_DEAN_ARTICULATION_RUN_2026-09-30/result.json"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.12.14"
+      },
+      {
+        "name": "CPython",
+        "version": "3.12.14"
+      }
+    ],
+    "hardware": "Linux-6.18.44-x86_64-with-glibc2.39"
+  },
+  "mathematics": {
+    "assertion_tested": "Exact maximum independent set on the class recognized by articulation decomposition with at most one exceptional vertex per atom; singleton conditional messages have nonpositive loss and all positive effective weights equal one.",
+    "coefficient_domain": "Z, exact cardinalities and integer message differences",
+    "conventions": "Finite simple undirected graph; frozen original IDs/edges; empty graph allowed; UNKNOWN on an atom outside local cap one; one shared vertex at most per adjacent bag.",
+    "inputs": [
+      "All labeled simple graphs on zero through five vertices",
+      "All 75 by 75 ordered pairs of labeled graphs on one through four vertices glued at vertex zero",
+      "10 copies of K_12,12 plus local apex, joined by apex bridges",
+      "12-triangle chain and invalid-interface/stale-certificate controls"
+    ],
+    "bounds": {
+      "max_exhaustive_graph_vertices": 5,
+      "ordered_glued_pairs": 5625,
+      "max_glued_vertices": 7,
+      "large_vertices": 250,
+      "local_transversal_cap": 1,
+      "whole_graph_original_cap_unchanged": true
+    },
+    "non_claims": [
+      "No universal cover theorem for arbitrary Independent Set or SAT",
+      "No proof of P=NP or P!=NP",
+      "No general signed-weight, hypergraph, or wider-separator algorithm",
+      "No external theorem audit of the recovered SAT or Work meta-theory records",
+      "Supplied source review is not independent corroboration"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-09-30T03:47:41.462545+00:00",
+    "runtime_seconds": 11.399185,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 120.0,
+    "max_output_bytes": 1048576,
+    "resource_limits": {
+      "memory_bytes": 1073741824,
+      "cpu_seconds": 90,
+      "max_cores": 1,
+      "max_threads": 1
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "PNP_DEAN_ARTICULATION_PROBE_2026-09-30.py",
+    "PNP_DEAN_PARITY_REPAIR_PROBE_2026-09-30.py"
+  ],
+  "input_artifacts": [
+    {
+      "path": "PNP_DEAN_ARTICULATION_PROBE_2026-09-30.py",
+      "sha256": "fea7dcb37cdeb575e8aba747fd32645989eaf4ddc5ebdf9e38d71baa5d177c53",
+      "sha256_after": "fea7dcb37cdeb575e8aba747fd32645989eaf4ddc5ebdf9e38d71baa5d177c53"
+    },
+    {
+      "path": "PNP_DEAN_PARITY_REPAIR_PROBE_2026-09-30.py",
+      "sha256": "709c2f6933e414ebc9a1034dc53f565bc1b57211544f8da6a8c4b212aa6905d5",
+      "sha256_after": "709c2f6933e414ebc9a1034dc53f565bc1b57211544f8da6a8c4b212aa6905d5"
+    }
+  ],
+  "output_directory": "PNP_DEAN_ARTICULATION_RUN_2026-09-30",
+  "declared_results": [
+    "PNP_DEAN_ARTICULATION_RUN_2026-09-30/result.json"
+  ],
+  "outputs": [
+    {
+      "path": "PNP_DEAN_ARTICULATION_RUN_2026-09-30/stdout.txt",
+      "sha256": "fcfaab598239b4f457f576adc1b6493ed9e4f391ef8b52ca43a2035dc41825eb",
+      "kind": "log"
+    },
+    {
+      "path": "PNP_DEAN_ARTICULATION_RUN_2026-09-30/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "PNP_DEAN_ARTICULATION_RUN_2026-09-30/result.json",
+      "sha256": "f7acf72dd42172b1004e0e2a1c28f65adb6d600cd71f98979a927d778166fbad",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them.",
+    "The POSIX CPU-time limit is per process, not an aggregate descendant budget."
+  ]
+}

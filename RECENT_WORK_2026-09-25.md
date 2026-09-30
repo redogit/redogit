@@ -161,6 +161,10 @@ Small private components now give an exact expression that can be built and eval
 
 A reversible bit flip makes every pair interaction submodular exactly when the conflict graph is bipartite. The next exact branch permits one exceptional vertex: discover it in polynomial time, then certify both its selected and omitted cases by matching and covers. All 1,100 graphs through five vertices were checked: 1,033 admitted cases solved exactly, 67 correctly outside scope. A 41-vertex case shows the whole region need not be small; a 300-vertex triangle chain shows many global repairs need not mean a difficult graph. [Proofs, counterprobes, and bounded-run evidence](PNP_DEAN_PARITY_REPAIR_2026-09-30.md). The unrestricted polynomial obligation remains open.
 
+### Dean discovered articulation composition — Steps 35–39
+
+The one-vertex repair now composes across articulation pieces without enumerating all combinations of local repairs. The procedure discovers the pieces, carries both states of each shared vertex, and returns exact original-ID witnesses. All 5,625 shared-vertex test pairs were checked; a 250-vertex example with ten necessary global deletions was solved using at most one exceptional vertex per piece. Two-vertex interfaces already admit a coupling counterexample. [Proof and reproducible evidence](PNP_DEAN_ARTICULATION_2026-09-30.md) · [Latest GitHub/Work problem map](PNP_CURRENT_PROBLEM_MAP_2026-09-30.md). Universal normalized-core evaluation and planner coverage remain open.
+
 Public live design:
 
 - https://redogit.github.io/redogit/live-design.html
