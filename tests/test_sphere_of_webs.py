@@ -14,6 +14,7 @@ import sphere_of_webs as sphere  # noqa: E402
 
 MANIFEST = ROOT / "sphere-of-webs" / "pr52-continuity-successor-2026-09-30.json"
 ARCHITECTURE = ROOT / "sphere-of-webs" / "architecture-expansion-2026-10-01.json"
+SOURCE_CLASSIFICATION = ROOT / "sphere-of-webs" / "next-ring-source-classification-2026-10-01.json"
 LIBRARIES = ROOT / "libraries-of-libraries.rmal"
 
 EXPECTED_LABELS = [
@@ -204,8 +205,8 @@ class SphereArchitectureExpansionTests(unittest.TestCase):
     def test_architecture_expansion_validates(self):
         data = self.fresh()
         sphere.validate_architecture_manifest(data)
-        self.assertEqual(len(data["fragments"]), 12)
-        self.assertEqual(sum(1 for item in data["connections"] if item["active"]), 11)
+        self.assertEqual(len(data["fragments"]), 15)
+        self.assertEqual(sum(1 for item in data["connections"] if item["active"]), 14)
         self.assertEqual(sum(1 for item in data["connections"] if not item["active"]), 1)
 
     def test_first_expansion_set_is_connected_to_architecture(self):
@@ -311,6 +312,82 @@ class SphereArchitectureExpansionTests(unittest.TestCase):
         data["connections"][0]["authority_transfer"] = True
         with self.assertRaisesRegex(sphere.SphereError, "cannot transfer authority"):
             sphere.validate_architecture_manifest(data)
+
+
+class SphereNextRingClassificationTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.classification = json.loads(SOURCE_CLASSIFICATION.read_text(encoding="utf-8"))
+        cls.architecture = json.loads(ARCHITECTURE.read_text(encoding="utf-8"))
+
+    def test_only_source_native_nonduplicate_candidates_are_admitted(self):
+        admitted = self.classification["admitted_relation_sources"]
+        self.assertEqual(
+            admitted,
+            [
+                "conscience64:companions",
+                "conscience64:current-plan",
+                "conscience64:hodge-integration-map",
+            ],
+        )
+        by_id = {item["source_id"]: item for item in self.classification["sources"]}
+        for source_id in admitted:
+            self.assertEqual(by_id[source_id]["currentness"], "CURRENT_SOURCE_NATIVE")
+            self.assertEqual(by_id[source_id]["mirror_status"], "CANONICAL_NOT_MIRROR")
+            self.assertEqual(by_id[source_id]["admission"], "ADMIT_NEXT_RING")
+
+    def test_mirrored_copy_double_counting_is_rejected_by_classification(self):
+        by_id = {item["source_id"]: item for item in self.classification["sources"]}
+        mirrors = [item for item in by_id.values() if item["relation_type"] == "PROVENANCE_MIRROR"]
+        self.assertTrue(mirrors)
+        self.assertTrue(all(item["admission"] == "DO_NOT_COUNT_INDEPENDENTLY" for item in mirrors))
+        admitted = set(self.classification["admitted_relation_sources"])
+        self.assertTrue(all(item["source_id"] not in admitted for item in mirrors))
+        self.assertEqual(
+            by_id["dnd:companions-provenance"]["canonical_source_id"],
+            "conscience64:companions",
+        )
+        self.assertEqual(
+            by_id["dnd:current-plan-provenance"]["mirror_status"],
+            "STALE_MIRROR_DIFFERENT_BLOB",
+        )
+
+    def test_already_bound_source_is_not_readded_as_next_ring(self):
+        by_id = {item["source_id"]: item for item in self.classification["sources"]}
+        field = by_id["redogit:all-directional-field"]
+        self.assertEqual(field["admission"], "ALREADY_BOUND_NOT_NEW_RING")
+        self.assertNotIn(field["source_id"], self.classification["admitted_relation_sources"])
+
+    def test_next_ring_relations_do_not_promote_authority_or_evidence(self):
+        targets = {
+            "cooperative-library-relations",
+            "cooperative-lateral-retrieval-plan",
+            "hodge-candidate-evidence-boundary",
+        }
+        connections = [item for item in self.architecture["connections"] if item["to"] in targets]
+        self.assertEqual({item["to"] for item in connections}, targets)
+        for connection in connections:
+            self.assertFalse(connection["authority_transfer"])
+            self.assertFalse(connection["evidence_transfer"])
+            self.assertFalse(connection["infer_reverse"])
+
+    def test_next_ring_cannot_inject_chronology(self):
+        targets = {
+            "cooperative-library-relations",
+            "cooperative-lateral-retrieval-plan",
+            "hodge-candidate-evidence-boundary",
+        }
+        connections = [item for item in self.architecture["connections"] if item["to"] in targets]
+        self.assertTrue(all(item["axis"] != "chronology" for item in connections))
+
+    def test_coexisting_lineages_remain_distinct_occurrences(self):
+        by_id = {item["source_id"]: item for item in self.classification["sources"]}
+        current = by_id["conscience64:current-plan"]
+        historical = by_id["dnd:current-plan-provenance"]
+        self.assertNotEqual(current["source_id"], historical["source_id"])
+        self.assertNotEqual(current["blob_sha"], historical["blob_sha"])
+        self.assertEqual(current["canonical_source_id"], historical["canonical_source_id"])
+        self.assertEqual(historical["admission"], "DO_NOT_COUNT_INDEPENDENTLY")
 
 
 if __name__ == "__main__":
