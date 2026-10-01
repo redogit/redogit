@@ -8,6 +8,7 @@ on:
       - 'tools/sphere_of_webs.py'
       - 'tests/test_sphere_of_webs.py'
       - 'CONTINUITY_SUCCESSORS_2026-09-30.md'
+      - 'libraries-of-libraries.rmal'
       - '.github/workflows/sphere-of-webs.yml'
   pull_request:
     paths:
@@ -15,6 +16,7 @@ on:
       - 'tools/sphere_of_webs.py'
       - 'tests/test_sphere_of_webs.py'
       - 'CONTINUITY_SUCCESSORS_2026-09-30.md'
+      - 'libraries-of-libraries.rmal'
       - '.github/workflows/sphere-of-webs.yml'
   workflow_dispatch:
 
@@ -49,6 +51,7 @@ jobs:
           set -euo pipefail
           python3 -m unittest tests.test_sphere_of_webs -v
           python3 tools/sphere_of_webs.py validate sphere-of-webs/pr52-continuity-successor-2026-09-30.json
+          python3 tools/sphere_of_webs.py validate-architecture sphere-of-webs/architecture-expansion-2026-10-01.json
           python3 tools/sphere_of_webs.py restore sphere-of-webs/pr52-continuity-successor-2026-09-30.json > "$RUNNER_TEMP/pr52-trail.txt"
           python3 - "$RUNNER_TEMP/pr52-trail.txt" <<'PY'
           from pathlib import Path

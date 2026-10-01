@@ -1,0 +1,779 @@
+{
+  "schema": "redogit/sphere-architecture-expansion/v1",
+  "id": "sphere-architecture-expansion-2026-10-01",
+  "status": "NAVIGATION_AND_RECONSTRUCTION_ONLY",
+  "seed": {
+    "schema": "redogit/sphere-of-webs/v1",
+    "id": "pr52-continuity-successor-2026-09-30",
+    "path": "sphere-of-webs/pr52-continuity-successor-2026-09-30.json",
+    "predecessor_head": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+    "authority_transfer": false,
+    "evidence_transfer": false
+  },
+  "architecture": {
+    "predecessor_head": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+    "local_authority": "redogit/redogit",
+    "root": "NONE",
+    "bindings": [
+      {
+        "binding_id": "thing",
+        "construct": "Thing",
+        "role": "OCCURRENCE_IDENTITY_AND_PROVENANCE",
+        "source": {
+          "repository": "redogit/redogit",
+          "path": "libraries-of-libraries.rmal",
+          "ref": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+          "blob_sha": "6acd9e2a7bbe5a8d4863769e2442ee2224158594",
+          "role": "ARCHITECTURE_PREDECESSOR"
+        }
+      },
+      {
+        "binding_id": "orbit-related",
+        "construct": "Orbit.Related",
+        "role": "EXACT_TYPED_DIRECTIONAL_LOOKUP",
+        "source": {
+          "repository": "redogit/redogit",
+          "path": "libraries-of-libraries.rmal",
+          "ref": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+          "blob_sha": "6acd9e2a7bbe5a8d4863769e2442ee2224158594",
+          "role": "ARCHITECTURE_PREDECESSOR"
+        }
+      },
+      {
+        "binding_id": "pairity-check",
+        "construct": "PairityCheck",
+        "role": "FORWARD_AND_REVERSE_EXPLICIT_COMPARISON",
+        "source": {
+          "repository": "redogit/redogit",
+          "path": "libraries-of-libraries.rmal",
+          "ref": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+          "blob_sha": "6acd9e2a7bbe5a8d4863769e2442ee2224158594",
+          "role": "ARCHITECTURE_PREDECESSOR"
+        }
+      },
+      {
+        "binding_id": "git-chronology",
+        "construct": "ADAPTER Git",
+        "role": "CHRONOLOGY_PROVENANCE_ACTION_HISTORY",
+        "source": {
+          "repository": "redogit/redogit",
+          "path": "libraries-of-libraries.rmal",
+          "ref": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+          "blob_sha": "6acd9e2a7bbe5a8d4863769e2442ee2224158594",
+          "role": "ARCHITECTURE_PREDECESSOR"
+        }
+      },
+      {
+        "binding_id": "way-back",
+        "construct": "LAW WayBack",
+        "role": "PRESERVE_RECONSTRUCTION_AND_CHRONOLOGY",
+        "source": {
+          "repository": "redogit/redogit",
+          "path": "libraries-of-libraries.rmal",
+          "ref": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+          "blob_sha": "6acd9e2a7bbe5a8d4863769e2442ee2224158594",
+          "role": "ARCHITECTURE_PREDECESSOR"
+        }
+      },
+      {
+        "binding_id": "current-reconstruction",
+        "construct": "STANDARD CurrentReconstructionStandards_2026_09_28",
+        "role": "OCCURRENCE_SEMANTIC_IDS_TYPED_RELATIONS_HOMEWARD",
+        "source": {
+          "repository": "redogit/redogit",
+          "path": "libraries-of-libraries.rmal",
+          "ref": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+          "blob_sha": "6acd9e2a7bbe5a8d4863769e2442ee2224158594",
+          "role": "ARCHITECTURE_PREDECESSOR"
+        }
+      },
+      {
+        "binding_id": "all-directional-field",
+        "construct": "Four simultaneous axes + Relation",
+        "role": "VERTICAL_LATERAL_TEMPORAL_AMBIENT_MAPPING",
+        "source": {
+          "repository": "redogit/redogit",
+          "path": "ALL_DIRECTIONAL_RELATIONAL_FIELD_2026-09-20.md",
+          "ref": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+          "blob_sha": "66ecfb881045be1d707476d2e5227b1a786194e8",
+          "role": "METHOD_PREDECESSOR"
+        }
+      }
+    ],
+    "axes": [
+      {
+        "id": "chronology",
+        "purpose": "IMMUTABLE_OCCURRENCE_ORDER",
+        "cycle_policy": "ACYCLIC_REQUIRED",
+        "field_directions": [
+          "TEMPORAL"
+        ],
+        "chronology_effect": "IMMUTABLE_ORDERING"
+      },
+      {
+        "id": "semantic_ancestry",
+        "purpose": "TYPED_SEMANTIC_LINEAGE",
+        "cycle_policy": "CYCLES_ALLOWED_NOT_IMPLIED",
+        "field_directions": [
+          "TEMPORAL",
+          "LATERAL"
+        ],
+        "chronology_effect": "NONE"
+      },
+      {
+        "id": "occurrence_provenance",
+        "purpose": "SOURCE_OCCURRENCE_AND_PROVENANCE",
+        "cycle_policy": "CYCLES_ALLOWED_NOT_IMPLIED",
+        "field_directions": [
+          "VERTICAL",
+          "TEMPORAL"
+        ],
+        "chronology_effect": "NONE"
+      },
+      {
+        "id": "dependency",
+        "purpose": "OBLIGATION_AND_REQUIREMENT_DEPENDENCIES",
+        "cycle_policy": "CYCLES_ALLOWED_NOT_IMPLIED",
+        "field_directions": [
+          "LATERAL"
+        ],
+        "chronology_effect": "NONE"
+      },
+      {
+        "id": "federation",
+        "purpose": "CROSS_REPOSITORY_POINTERS",
+        "cycle_policy": "CYCLES_ALLOWED_NOT_IMPLIED",
+        "field_directions": [
+          "LATERAL",
+          "AMBIENT"
+        ],
+        "chronology_effect": "NONE"
+      },
+      {
+        "id": "communication",
+        "purpose": "REQUEST_RESPONSE_AND_HANDOFF",
+        "cycle_policy": "CYCLES_ALLOWED_NOT_IMPLIED",
+        "field_directions": [
+          "LATERAL"
+        ],
+        "chronology_effect": "NONE"
+      },
+      {
+        "id": "currentness",
+        "purpose": "CURRENT_STATE_POINTERS_NOT_HISTORY_REWRITE",
+        "cycle_policy": "CYCLES_ALLOWED_NOT_IMPLIED",
+        "field_directions": [
+          "TEMPORAL"
+        ],
+        "chronology_effect": "NONE"
+      },
+      {
+        "id": "discovery",
+        "purpose": "DISCOVERED_REFERENCE_FRONTIER",
+        "cycle_policy": "CYCLES_ALLOWED_NOT_IMPLIED",
+        "field_directions": [
+          "AMBIENT"
+        ],
+        "chronology_effect": "NONE"
+      },
+      {
+        "id": "carrier_transform",
+        "purpose": "CARRIER_TRANSFORM_RECONSTRUCTION",
+        "cycle_policy": "CYCLES_ALLOWED_NOT_IMPLIED",
+        "field_directions": [
+          "VERTICAL",
+          "LATERAL"
+        ],
+        "chronology_effect": "NONE"
+      },
+      {
+        "id": "relation_namespace",
+        "purpose": "SHARED_RELATION_TYPE_VOCABULARY",
+        "cycle_policy": "CYCLES_ALLOWED_NOT_IMPLIED",
+        "field_directions": [
+          "AMBIENT"
+        ],
+        "chronology_effect": "NONE"
+      },
+      {
+        "id": "method_lineage",
+        "purpose": "METHOD_SUCCESSOR_AND_RECOVERY_POINTERS",
+        "cycle_policy": "CYCLES_ALLOWED_NOT_IMPLIED",
+        "field_directions": [
+          "TEMPORAL",
+          "LATERAL"
+        ],
+        "chronology_effect": "NONE"
+      }
+    ]
+  },
+  "fragments": [
+    {
+      "fragment_id": "research-production-relation-namespace",
+      "label": "Research + Production typed bridge vocabulary",
+      "axis": "relation_namespace",
+      "relation": "SUPPLIES_RELATION_TYPES",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/redogit",
+      "sources": [
+        {
+          "repository": "redogit/redogit",
+          "path": "research-production-map.json",
+          "ref": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+          "blob_sha": "213ff5f8e8197b594cb1c8aeda2370a9ce270c1f",
+          "role": "RELATION_TYPE_NAMESPACE"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "KEEP_DOMAIN_LOCAL",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research-production-map.json"
+        ]
+      },
+      "notes": "Provides bridge relation names; vocabulary membership is not evidence."
+    },
+    {
+      "fragment_id": "goal-topology",
+      "label": "Conversation goal dependency topology",
+      "axis": "dependency",
+      "relation": "EXPANDS_DEPENDENCY_GRAPH",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/redogit",
+      "sources": [
+        {
+          "repository": "redogit/redogit",
+          "path": "goal-topology-2026-09-15.json",
+          "ref": "e7f442b17a769af3667c34475e49165fcdfe3d89",
+          "blob_sha": "9704821c122e256ecbd7e0a347b23d552e28003b",
+          "role": "DEPENDENCY_GRAPH"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "KEEP_DOMAIN_LOCAL",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "goal-topology-2026-09-15.json"
+        ]
+      },
+      "notes": "Dependency does not imply authority transfer and does not rewrite chronology."
+    },
+    {
+      "fragment_id": "invariant-atlas",
+      "label": "Invariant Atlas occurrence/provenance crosswalk",
+      "axis": "occurrence_provenance",
+      "relation": "EXPANDS_OCCURRENCE_PROVENANCE",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/conscience64",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/invariant-atlas/manifest.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "c4bdad86459555ece5e4d48149ac30de8fadb4e4",
+          "role": "INTEGRITY_ENVELOPE"
+        },
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/invariant-atlas/crosswalk.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "29bd03612b96634ef7f65cafeb2e9a86e7e987ed",
+          "role": "OCCURRENCE_CROSSWALK"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "CANDIDATE_RECORDS_AND_SOURCE_INTEGRITY_ONLY",
+      "duplicate_policy": "PRESERVE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/invariant-atlas/manifest.json",
+          "research/invariant-atlas/crosswalk.json"
+        ]
+      },
+      "notes": "Equal/repeated source material is not independent corroboration."
+    },
+    {
+      "fragment_id": "redogit-federation-bridge",
+      "label": "Conscience64 redogit federation bridge",
+      "axis": "federation",
+      "relation": "EXPANDS_FEDERATION_POINTERS",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/conscience64",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/bridges/redogit-federation/bridge.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "bbf156f80448efc01028bb459f4a0d63fab3b044",
+          "role": "FEDERATION_POINTERS"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "KEEP_DOMAIN_LOCAL",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/bridges/redogit-federation/bridge.json"
+        ]
+      },
+      "notes": "Navigation-only external/local relation pointers."
+    },
+    {
+      "fragment_id": "carrier-surface",
+      "label": "Carrier-Surface identity/transform/reconstruction pointer",
+      "axis": "carrier_transform",
+      "relation": "EXPANDS_CARRIER_TRANSFORM_KERNEL",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/conscience64",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/carrier-surface.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "05e29d7e10caf55e06348bf8772f25a40618b605",
+          "role": "CARRIER_SURFACE_POINTER"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "METHOD_TRANSFER_NOT_EVIDENCE_TRANSFER",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/carrier-surface.json"
+        ]
+      },
+      "notes": "Binds Thing/Relation/Carrier/Transform/Invariant/Provenance and RETURN_HOME semantics without copying owner implementation."
+    },
+    {
+      "fragment_id": "s1-model-map",
+      "label": "S1 external verified-model federation map",
+      "axis": "federation",
+      "relation": "EXPANDS_EXTERNAL_MODEL_MAP",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/conscience64",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/federation/s1-models.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "049add6a7d7eb60acc0825978e5d231c6b914bf6",
+          "role": "EXTERNAL_MODEL_MAP"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "SOFTWARE_VERIFICATION_STAYS_OWNER_LOCAL",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/federation/s1-models.json"
+        ]
+      },
+      "notes": "Observed external model map; no research admission or automatic ingest."
+    },
+    {
+      "fragment_id": "conversation-radar",
+      "label": "Conversation-wide radar currentness pointer",
+      "axis": "currentness",
+      "relation": "EXPANDS_CURRENTNESS_POINTERS",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/conscience64",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/radar/conversation_radar_pointer_2026-09-20.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "fb558a5f83d5aa766f97f1a756ac5e0ad4cf648b",
+          "role": "CURRENTNESS_POINTER"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "CURRENTNESS_NOT_TRUTH",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/radar/conversation_radar_pointer_2026-09-20.json"
+        ]
+      },
+      "notes": "Currentness is a separate relation axis and cannot mutate immutable chronology."
+    },
+    {
+      "fragment_id": "bidirectional-handoff",
+      "label": "Libraries-of-Libraries bidirectional handoff and target-local response",
+      "axis": "communication",
+      "relation": "EXPANDS_HANDOFF_RELATIONS",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "SOURCE_LOCAL_PER_FILE",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/bridges/libraries-of-libraries/BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "e49e5a5b5142d0ef6f348f38bb5b19aa69843963",
+          "role": "CONSCIENCE64_LOCAL_ADAPTER"
+        },
+        {
+          "repository": "redogit/Other-Projects-",
+          "path": "docs/RMAL_BIDIRECTIONAL_HANDOFF_RESPONSE.rmal",
+          "ref": "02a523bcc20e62b8d99de5f780b67fa2ea7bfdc0",
+          "blob_sha": "ae6147ca1c706374f52dd9675c842d51d4bdc0e6",
+          "role": "TARGET_LOCAL_RESPONSE_CARRIER"
+        },
+        {
+          "repository": "redogit/Other-Projects-",
+          "path": "evidence/RMAL_BIDIRECTIONAL_HANDOFF_RESPONSE_2026-09-20.json",
+          "ref": "02a523bcc20e62b8d99de5f780b67fa2ea7bfdc0",
+          "blob_sha": "6b222c3820b86f0e57fff008d40367e221360bcb",
+          "role": "TARGET_LOCAL_VALIDATION_RECEIPT"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "RESPONSE_AND_EVIDENCE_REMAIN_TARGET_LOCAL",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/bridges/libraries-of-libraries/BIDIRECTIONAL_HANDOFF_ADAPTER_2026-09-20.json",
+          "docs/RMAL_BIDIRECTIONAL_HANDOFF_RESPONSE.rmal",
+          "evidence/RMAL_BIDIRECTIONAL_HANDOFF_RESPONSE_2026-09-20.json"
+        ]
+      },
+      "notes": "Request/response/counterproposal relations preserve prior decisions, provenance and way back."
+    },
+    {
+      "fragment_id": "decision-field-federation-pointer",
+      "label": "Decision Field canonical/implementation federation pointer",
+      "axis": "federation",
+      "relation": "EXPANDS_DECISION_FIELD_FEDERATION",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/conscience64",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/decision-field/decision-field-federation-pointer.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "c5bee9d37e22ddc25a917cd3d7201405028546a0",
+          "role": "DECISION_FIELD_POINTER"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "RELATION_NOT_EVIDENCE_TRANSFER",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/decision-field/decision-field-federation-pointer.json"
+        ]
+      },
+      "notes": "Connects canonical spec/synthesis/registry to target-local implementation without merging them."
+    },
+    {
+      "fragment_id": "research-claims-backbone",
+      "label": "Research Claims Backbone semantic web",
+      "axis": "semantic_ancestry",
+      "relation": "FRONTIER_REQUIRES_DUPLICATE_SAFE_ADAPTER",
+      "connection_state": "FRONTIER_ADAPTER_REQUIRED",
+      "source_authority": "redogit/DnD",
+      "sources": [
+        {
+          "repository": "redogit/DnD",
+          "path": "provenance/library/RESEARCH_CLAIMS_BACKBONE_2026-09-22.md",
+          "ref": "2f9fbe3b1964194d8f7b525c6fc90a22b3ff7df9",
+          "blob_sha": "6c7ac3e42d705e695f2d18d20963ec52d684c8de",
+          "role": "SOURCE_REPORTED_SEMANTIC_WEB"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "SOURCE_REPORTED_COUNTS_NOT_REPARSED_OR_PROMOTED",
+      "duplicate_policy": "PRESERVE_OCCURRENCES_BEFORE_SEMANTIC_COALESCENCE",
+      "adapter_state": "ADAPTER_REQUIRED_DO_NOT_INGEST",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "provenance/library/RESEARCH_CLAIMS_BACKBONE_2026-09-22.md"
+        ]
+      },
+      "notes": "Source reports 1,391 entries and 1,113 typed connections; remain a pinned frontier until an occurrence-safe adapter is built."
+    },
+    {
+      "fragment_id": "rmal-github-discovery",
+      "label": "RMAL GitHub discovery index",
+      "axis": "discovery",
+      "relation": "EXPANDS_DISCOVERY_FRONTIER",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/DnD",
+      "sources": [
+        {
+          "repository": "redogit/DnD",
+          "path": "provenance/discovery/RMAL_GITHUB_DISCOVERY_2026-09-26.json",
+          "ref": "2f9fbe3b1964194d8f7b525c6fc90a22b3ff7df9",
+          "blob_sha": "3d2e9662973583e40f316c481c2bab78bf041e03",
+          "role": "DISCOVERY_INDEX"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "DISCOVERY_NOT_ADMISSION",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "provenance/discovery/RMAL_GITHUB_DISCOVERY_2026-09-26.json"
+        ]
+      },
+      "notes": "Discovered repository references expand the frontier but do not establish ancestry, evidence or currentness."
+    },
+    {
+      "fragment_id": "gsfl-bridge-family",
+      "label": "GSFL bridge/successor family",
+      "axis": "method_lineage",
+      "relation": "EXPANDS_METHOD_LINEAGE",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/conscience64",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/bridges/gsfl/bridge.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "e61e03a245ec7378e34a4a03adf9a4cb7e5be4fa",
+          "role": "BASE_BRIDGE"
+        },
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/bridges/gsfl/operator-projection.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "5aff796e36d8f30b061e3918e20443a4267ed500",
+          "role": "OPERATOR_PROJECTION"
+        },
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/bridges/gsfl/bidirectional-macro-successor.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "89caeca402f6f61e3f615a41a0d655e693897885",
+          "role": "BIDIRECTIONAL_SUCCESSOR"
+        },
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/bridges/gsfl/contextual-multicarrier-successor.json",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "a57682158a7075128687e0003819d87921aef0a6",
+          "role": "MULTICARRIER_SUCCESSOR"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "METHOD_AND_RECOVERY_REFERENCE_ONLY",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/bridges/gsfl/bridge.json",
+          "research/bridges/gsfl/operator-projection.json",
+          "research/bridges/gsfl/bidirectional-macro-successor.json",
+          "research/bridges/gsfl/contextual-multicarrier-successor.json"
+        ]
+      },
+      "notes": "Preserves GSFL base, operator projection, bidirectional macro and contextual multicarrier successor lineage as references."
+    }
+  ],
+  "connections": [
+    {
+      "connection_id": "architecture:00:research-production-relation-namespace",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "research-production-relation-namespace",
+      "axis": "relation_namespace",
+      "type": "SUPPLIES_RELATION_TYPES",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:01:goal-topology",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "goal-topology",
+      "axis": "dependency",
+      "type": "EXPANDS_DEPENDENCY_GRAPH",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:02:invariant-atlas",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "invariant-atlas",
+      "axis": "occurrence_provenance",
+      "type": "EXPANDS_OCCURRENCE_PROVENANCE",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:03:redogit-federation-bridge",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "redogit-federation-bridge",
+      "axis": "federation",
+      "type": "EXPANDS_FEDERATION_POINTERS",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:04:carrier-surface",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "carrier-surface",
+      "axis": "carrier_transform",
+      "type": "EXPANDS_CARRIER_TRANSFORM_KERNEL",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:05:s1-model-map",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "s1-model-map",
+      "axis": "federation",
+      "type": "EXPANDS_EXTERNAL_MODEL_MAP",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:06:conversation-radar",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "conversation-radar",
+      "axis": "currentness",
+      "type": "EXPANDS_CURRENTNESS_POINTERS",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:07:bidirectional-handoff",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "bidirectional-handoff",
+      "axis": "communication",
+      "type": "EXPANDS_HANDOFF_RELATIONS",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:08:decision-field-federation-pointer",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "decision-field-federation-pointer",
+      "axis": "federation",
+      "type": "EXPANDS_DECISION_FIELD_FEDERATION",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:09:research-claims-backbone",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "research-claims-backbone",
+      "axis": "semantic_ancestry",
+      "type": "FRONTIER_REQUIRES_DUPLICATE_SAFE_ADAPTER",
+      "active": false,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:10:rmal-github-discovery",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "rmal-github-discovery",
+      "axis": "discovery",
+      "type": "EXPANDS_DISCOVERY_FRONTIER",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:11:gsfl-bridge-family",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "gsfl-bridge-family",
+      "axis": "method_lineage",
+      "type": "EXPANDS_METHOD_LINEAGE",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    }
+  ],
+  "rules": [
+    "SPHERE != CENTER",
+    "CONNECTION != AUTHORITY_TRANSFER",
+    "REFERENCE != EVIDENCE_TRANSFER",
+    "CURRENTNESS != CHRONOLOGY",
+    "DISCOVERY != ADMISSION",
+    "DUPLICATE_OCCURRENCE != INDEPENDENT_EVIDENCE",
+    "FRONTIER_REFERENCE != INGESTION",
+    "TARGET_LOCAL_IMPLEMENTATION != COPIED_IMPLEMENTATION",
+    "SEMANTIC_CYCLE != CHRONOLOGY_CYCLE",
+    "HOMEWARD_REQUIRES_PINNED_SOURCE"
+  ],
+  "claim_ceiling": "PINNED_NAVIGATION_RELATIONS_AND_ARCHITECTURE_BINDINGS_ONLY"
+}

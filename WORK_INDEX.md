@@ -11,6 +11,7 @@
 
 - [Continuity Successors — 2026-09-30](CONTINUITY_SUCCESSORS_2026-09-30.md) — real Word Carrier → AnyFunctor/Decision Field → Orbit execution; successor package/source reconciliation; Homeward/retrieval/custody counterprobes; structured package custody. Predecessors remain preserved and no domain evidence is transferred through this index.
 - [Sphere of Webs seed — PR #52](sphere-of-webs/pr52-continuity-successor-2026-09-30.json) — machine-readable six-occurrence/five-relation carrier for the exact source trail; chronology and semantic ancestry remain separate, duplicates stay occurrence-distinct, and authority/evidence do not transfer.
+- [Sphere of Webs architecture expansion](sphere-of-webs/architecture-expansion-2026-10-01.json) — pins the first cross-repository occurrence/provenance, dependency, federation, handoff, discovery, carrier, currentness and method-lineage fragments into existing Libraries-of-Libraries / All-Directional architecture without copying target-local implementations; the Claims Backbone remains adapter-gated.
 
 ```text
 HARD WORK != META DESCRIPTION

@@ -191,7 +191,47 @@ Exact reconstructed trail SHA-256:
 
 Claim ceiling: machine-readable navigation, relation integrity, and reconstruction only. This does not authenticate target-local source, promote evidence, or centralize project authority.
 
-## 8. Current unresolved remainder
+## 8. Architecture-connected sphere expansion
+
+The sphere seed now has an additive architecture layer at [`sphere-of-webs/architecture-expansion-2026-10-01.json`](sphere-of-webs/architecture-expansion-2026-10-01.json), bound from the exact predecessor head `e7f442b17a769af3667c34475e49165fcdfe3d89`.
+
+The layer binds to existing architecture rather than replacing it:
+
+```text
+Thing
++ Orbit.Related
++ PairityCheck
++ Git chronology/provenance
++ WayBack
++ CurrentReconstructionStandards Homeward
++ All-Directional Relational Field
+-> Sphere-of-Webs architecture
+```
+
+The first connected expansion set is:
+
+- Invariant Atlas -> occurrence/provenance axis;
+- Goal Topology -> dependency axis;
+- Conscience64 redogit federation bridge -> federation axis;
+- Bidirectional Handoff -> communication axis;
+- RMAL GitHub Discovery -> discovery axis.
+
+Additional pinned fragments connect the Research/Production relation vocabulary, Carrier-Surface, S1 model map, Conversation Radar currentness, Decision Field federation pointer, and GSFL bridge family.
+
+The Research Claims Backbone is intentionally **not ingested**. Its source reports 1,391 entries and 1,113 typed connections, but it remains an inactive `ADAPTER_REQUIRED_DO_NOT_INGEST` frontier until occurrence/source duplication can be preserved by a dedicated adapter.
+
+Chronology remains a separate immutable acyclic axis. Currentness, discovery, dependency, semantic ancestry, federation, communication, carrier transforms, relation vocabulary, and method lineage cannot write chronology. Every fragment has an exact repository/commit/blob/path Homeward set; connections remain removable and transfer neither authority nor evidence.
+
+```text
+SPHERE != CENTER
+CURRENTNESS != CHRONOLOGY
+SEMANTIC_CYCLE != CHRONOLOGY_CYCLE
+FRONTIER_REFERENCE != INGESTION
+```
+
+Claim ceiling: pinned navigation relations and architecture bindings only.
+
+## 9. Current unresolved remainder
 
 - Project-local promotion/merge remains a target-local decision.
 - No independent signing/authorship infrastructure was added.
