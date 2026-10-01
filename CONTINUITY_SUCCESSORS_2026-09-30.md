@@ -159,7 +159,39 @@ ARCHIVE CONTAINER BYTES != DECLARED PACKAGE CONTENT IDENTITY
 
 This is a software observation for the tested package contracts, not a general theorem about semantic equivalence, signatures, reproducible builds, or supply-chain security.
 
-## 7. Current unresolved remainder
+## 7. Machine-readable sphere-of-webs seed
+
+The first reusable typed carrier is [`sphere-of-webs/pr52-continuity-successor-2026-09-30.json`](sphere-of-webs/pr52-continuity-successor-2026-09-30.json). Its immutable source seed is PR #52 head `eda709f1ea361cd298cda9700f846ada23a9fb6a`, section 1. The canonical manifest contains exactly six occurrence nodes and five `EXECUTED_TRAIL_SUCCESSOR` relations from that source trail; no target-local implementation is copied.
+
+The carrier binds the existing Libraries-of-Libraries semantics rather than creating new authority: `Thing` identity/provenance, exact-direction `Orbit.Related`, separate `PairityCheck`, `RELATION != AUTHORITY_TRANSFER`, and Homeward source reconstruction.
+
+Its two axes remain distinct:
+
+- chronology is an immutable acyclic occurrence order;
+- semantic ancestry is an explicit typed relation graph and may be cyclic;
+- duplicate semantic objects may have multiple occurrence identities;
+- reverse edges are never inferred;
+- authority and evidence remain source-local and never transfer through a relation.
+
+Executable verification is additive and standard-library only:
+
+```text
+python3 tools/sphere_of_webs.py validate sphere-of-webs/pr52-continuity-successor-2026-09-30.json
+python3 tools/sphere_of_webs.py restore sphere-of-webs/pr52-continuity-successor-2026-09-30.json
+python3 -m unittest tests.test_sphere_of_webs -v
+```
+
+The eight focused checks cover exact seed membership, exact trail round-trip, reversed-edge inference, duplicate-occurrence preservation, forged authority transfer, forged evidence transfer, chronology-cycle injection, and a semantic-cycle counterprobe that leaves chronology acyclic.
+
+Exact reconstructed trail SHA-256:
+
+```text
+4af787f47845320fd0b213c4962ef5e4e5c33b6755566baa59554368b5e2b0fb
+```
+
+Claim ceiling: machine-readable navigation, relation integrity, and reconstruction only. This does not authenticate target-local source, promote evidence, or centralize project authority.
+
+## 8. Current unresolved remainder
 
 - Project-local promotion/merge remains a target-local decision.
 - No independent signing/authorship infrastructure was added.
