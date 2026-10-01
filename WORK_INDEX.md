@@ -5,6 +5,20 @@
 **Status:** active navigation layer — not a central authority  
 **Predecessor:** [`BODY_OF_WORK.md`](BODY_OF_WORK.md), preserved as the first broad recovery snapshot
 
+## September 30 continuity successors — hard-work execution trail
+
+**Navigation only. Project-local evidence and source authority remain local.**
+
+- [Continuity Successors — 2026-09-30](CONTINUITY_SUCCESSORS_2026-09-30.md) — real Word Carrier → AnyFunctor/Decision Field → Orbit execution; successor package/source reconciliation; Homeward/retrieval/custody counterprobes; structured package custody. Predecessors remain preserved and no domain evidence is transferred through this index.
+
+```text
+HARD WORK != META DESCRIPTION
+SUCCESSOR != PREDECESSOR REWRITE
+NAVIGATION != AUTHORITY
+RETRIEVAL != SUPPORT
+PACKAGE VERIFICATION != SEMANTIC PROOF
+```
+
 ## September 25 current additions — terms / proof / executable language game
 
 **Navigation only. Project-local evidence and source authority remain local.**
