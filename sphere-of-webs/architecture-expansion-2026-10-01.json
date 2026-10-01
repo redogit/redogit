@@ -615,6 +615,96 @@
         ]
       },
       "notes": "Preserves GSFL base, operator projection, bidirectional macro and contextual multicarrier successor lineage as references."
+    },
+    {
+      "fragment_id": "cooperative-library-relations",
+      "label": "Cooperative Field Library of Libraries / RuntimeRelationIndex semantics",
+      "axis": "relation_namespace",
+      "relation": "EXPANDS_NON_CORRUPTING_LIBRARY_RELATIONS",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/conscience64",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/cooperative-field/COMPANIONS.md",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "5139fc32b3b367d89c4c77eac5b3b53674e692f3",
+          "role": "CURRENT_SOURCE_NATIVE_RELATION_SEMANTICS"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "RELATION_SEMANTICS_ONLY_NOT_EVIDENCE",
+      "duplicate_policy": "MIRRORS_ARE_PROVENANCE_OCCURRENCES_NOT_INDEPENDENT_EVIDENCE",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/cooperative-field/COMPANIONS.md"
+        ]
+      },
+      "notes": "Source-native current registry defines Library of Libraries as removable typed bridges with relation != merge and RuntimeRelationIndex as non-corrupting endpoint indexing. DnD provenance copy is classified separately and is not an independent relation source."
+    },
+    {
+      "fragment_id": "cooperative-lateral-retrieval-plan",
+      "label": "Cooperative Field current lateral retrieval plan",
+      "axis": "discovery",
+      "relation": "EXPANDS_LATERAL_RETRIEVAL_POLICY",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/conscience64",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/cooperative-field/CURRENT_PLAN.md",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "da2ca8a7e4e054e2182db0956e18b30d9e370281",
+          "role": "CURRENT_SOURCE_NATIVE_PLAN"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "PLAN_AND_RETRIEVAL_POLICY_ONLY",
+      "duplicate_policy": "MIRRORS_ARE_PROVENANCE_OCCURRENCES_NOT_INDEPENDENT_EVIDENCE",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/cooperative-field/CURRENT_PLAN.md"
+        ]
+      },
+      "notes": "Current local plan requires lateral retrieval and non-corrupting relation indexes while retaining local authority. The DnD provenance snapshot has a different blob and remains historical provenance, not current source identity."
+    },
+    {
+      "fragment_id": "hodge-candidate-evidence-boundary",
+      "label": "Hodge research integration candidate/evidence relation boundary",
+      "axis": "relation_namespace",
+      "relation": "EXPANDS_CANDIDATE_EVIDENCE_BOUNDARY",
+      "connection_state": "CONNECTED_PINNED_REFERENCE",
+      "source_authority": "redogit/conscience64",
+      "sources": [
+        {
+          "repository": "redogit/conscience64",
+          "path": "research/hodge/RESEARCH_INTEGRATION_MAP.md",
+          "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+          "blob_sha": "c983b5296207bd07dda0bd34989ec0ab07d74cb0",
+          "role": "CURRENT_SOURCE_NATIVE_EVIDENCE_BOUNDARY"
+        }
+      ],
+      "authority_policy": "PRESERVE_EACH_SOURCE",
+      "evidence_policy": "BOUNDARY_REFERENCE_ONLY_NO_HODGE_EVIDENCE_TRANSFER",
+      "duplicate_policy": "PRESERVE_SOURCE_OCCURRENCES",
+      "adapter_state": "DIRECT_PINNED_REFERENCE",
+      "copy_target_local_implementation": false,
+      "infer_reverse": false,
+      "homeward": {
+        "mode": "PINNED_SOURCE_SET",
+        "source_paths": [
+          "research/hodge/RESEARCH_INTEGRATION_MAP.md"
+        ]
+      },
+      "notes": "Current Hodge integration map explicitly separates RuntimeRelationIndex candidate retrieval from evidence relations and defaults imports to BRIDGE_CANDIDATE. This relation carries the boundary only; it carries no Hodge mathematical evidence."
     }
   ],
   "connections": [
@@ -756,6 +846,42 @@
       "to": "gsfl-bridge-family",
       "axis": "method_lineage",
       "type": "EXPANDS_METHOD_LINEAGE",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:12:cooperative-library-relations",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "cooperative-library-relations",
+      "axis": "relation_namespace",
+      "type": "EXPANDS_NON_CORRUPTING_LIBRARY_RELATIONS",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:13:cooperative-lateral-retrieval-plan",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "cooperative-lateral-retrieval-plan",
+      "axis": "discovery",
+      "type": "EXPANDS_LATERAL_RETRIEVAL_POLICY",
+      "active": true,
+      "removable": true,
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "connection_id": "architecture:14:hodge-candidate-evidence-boundary",
+      "from": "sphere:pr52-continuity-successor-2026-09-30",
+      "to": "hodge-candidate-evidence-boundary",
+      "axis": "relation_namespace",
+      "type": "EXPANDS_CANDIDATE_EVIDENCE_BOUNDARY",
       "active": true,
       "removable": true,
       "infer_reverse": false,
