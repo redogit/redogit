@@ -2,11 +2,6 @@ name: Bootstrap GitHub Pages sites
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'tools/bootstrap_github_pages.py'
-      - '.github/workflows/pages-bootstrap.yml'
 
 permissions:
   contents: read
