@@ -1,0 +1,163 @@
+name: Probe Actions token name
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/probe-actions-token-name.yml'
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Secret PAGES_ADMIN_TOKEN
+        if: ${{ secrets.PAGES_ADMIN_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=PAGES_ADMIN_TOKEN"
+      - name: Secret PAGES_TOKEN
+        if: ${{ secrets.PAGES_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=PAGES_TOKEN"
+      - name: Secret PAGES_PAT
+        if: ${{ secrets.PAGES_PAT != '' }}
+        run: echo "FOUND_SECRET_NAME=PAGES_PAT"
+      - name: Secret GH_PAGES_TOKEN
+        if: ${{ secrets.GH_PAGES_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=GH_PAGES_TOKEN"
+      - name: Secret GH_PAGES_PAT
+        if: ${{ secrets.GH_PAGES_PAT != '' }}
+        run: echo "FOUND_SECRET_NAME=GH_PAGES_PAT"
+      - name: Secret GITHUB_PAGES_TOKEN
+        if: ${{ secrets.GITHUB_PAGES_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=GITHUB_PAGES_TOKEN"
+      - name: Secret GITHUB_PAGES_PAT
+        if: ${{ secrets.GITHUB_PAGES_PAT != '' }}
+        run: echo "FOUND_SECRET_NAME=GITHUB_PAGES_PAT"
+      - name: Secret ADMIN_TOKEN
+        if: ${{ secrets.ADMIN_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=ADMIN_TOKEN"
+      - name: Secret ADMIN_PAT
+        if: ${{ secrets.ADMIN_PAT != '' }}
+        run: echo "FOUND_SECRET_NAME=ADMIN_PAT"
+      - name: Secret GH_PAT
+        if: ${{ secrets.GH_PAT != '' }}
+        run: echo "FOUND_SECRET_NAME=GH_PAT"
+      - name: Secret PAT
+        if: ${{ secrets.PAT != '' }}
+        run: echo "FOUND_SECRET_NAME=PAT"
+      - name: Secret PAT_TOKEN
+        if: ${{ secrets.PAT_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=PAT_TOKEN"
+      - name: Secret TOKEN
+        if: ${{ secrets.TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=TOKEN"
+      - name: Secret ACCESS_TOKEN
+        if: ${{ secrets.ACCESS_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=ACCESS_TOKEN"
+      - name: Secret PERSONAL_ACCESS_TOKEN
+        if: ${{ secrets.PERSONAL_ACCESS_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=PERSONAL_ACCESS_TOKEN"
+      - name: Secret GIT_TOKEN
+        if: ${{ secrets.GIT_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=GIT_TOKEN"
+      - name: Secret GITHUB_ACCESS_TOKEN
+        if: ${{ secrets.GITHUB_ACCESS_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=GITHUB_ACCESS_TOKEN"
+      - name: Secret CODEX_TOKEN
+        if: ${{ secrets.CODEX_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=CODEX_TOKEN"
+      - name: Secret CODEX_PAT
+        if: ${{ secrets.CODEX_PAT != '' }}
+        run: echo "FOUND_SECRET_NAME=CODEX_PAT"
+      - name: Secret CODEX_GITHUB_TOKEN
+        if: ${{ secrets.CODEX_GITHUB_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=CODEX_GITHUB_TOKEN"
+      - name: Secret CODEX_GITHUB_PAT
+        if: ${{ secrets.CODEX_GITHUB_PAT != '' }}
+        run: echo "FOUND_SECRET_NAME=CODEX_GITHUB_PAT"
+      - name: Secret ACTIONS_TOKEN
+        if: ${{ secrets.ACTIONS_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=ACTIONS_TOKEN"
+      - name: Secret ACTIONS_PAT
+        if: ${{ secrets.ACTIONS_PAT != '' }}
+        run: echo "FOUND_SECRET_NAME=ACTIONS_PAT"
+      - name: Secret GH_ADMIN_TOKEN
+        if: ${{ secrets.GH_ADMIN_TOKEN != '' }}
+        run: echo "FOUND_SECRET_NAME=GH_ADMIN_TOKEN"
+      - name: Secret GH_ADMIN_PAT
+        if: ${{ secrets.GH_ADMIN_PAT != '' }}
+        run: echo "FOUND_SECRET_NAME=GH_ADMIN_PAT"
+      - name: Variable PAGES_ADMIN_TOKEN
+        if: ${{ vars.PAGES_ADMIN_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=PAGES_ADMIN_TOKEN"
+      - name: Variable PAGES_TOKEN
+        if: ${{ vars.PAGES_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=PAGES_TOKEN"
+      - name: Variable PAGES_PAT
+        if: ${{ vars.PAGES_PAT != '' }}
+        run: echo "FOUND_VARIABLE_NAME=PAGES_PAT"
+      - name: Variable GH_PAGES_TOKEN
+        if: ${{ vars.GH_PAGES_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=GH_PAGES_TOKEN"
+      - name: Variable GH_PAGES_PAT
+        if: ${{ vars.GH_PAGES_PAT != '' }}
+        run: echo "FOUND_VARIABLE_NAME=GH_PAGES_PAT"
+      - name: Variable GITHUB_PAGES_TOKEN
+        if: ${{ vars.GITHUB_PAGES_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=GITHUB_PAGES_TOKEN"
+      - name: Variable GITHUB_PAGES_PAT
+        if: ${{ vars.GITHUB_PAGES_PAT != '' }}
+        run: echo "FOUND_VARIABLE_NAME=GITHUB_PAGES_PAT"
+      - name: Variable ADMIN_TOKEN
+        if: ${{ vars.ADMIN_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=ADMIN_TOKEN"
+      - name: Variable ADMIN_PAT
+        if: ${{ vars.ADMIN_PAT != '' }}
+        run: echo "FOUND_VARIABLE_NAME=ADMIN_PAT"
+      - name: Variable GH_PAT
+        if: ${{ vars.GH_PAT != '' }}
+        run: echo "FOUND_VARIABLE_NAME=GH_PAT"
+      - name: Variable PAT
+        if: ${{ vars.PAT != '' }}
+        run: echo "FOUND_VARIABLE_NAME=PAT"
+      - name: Variable PAT_TOKEN
+        if: ${{ vars.PAT_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=PAT_TOKEN"
+      - name: Variable TOKEN
+        if: ${{ vars.TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=TOKEN"
+      - name: Variable ACCESS_TOKEN
+        if: ${{ vars.ACCESS_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=ACCESS_TOKEN"
+      - name: Variable PERSONAL_ACCESS_TOKEN
+        if: ${{ vars.PERSONAL_ACCESS_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=PERSONAL_ACCESS_TOKEN"
+      - name: Variable GIT_TOKEN
+        if: ${{ vars.GIT_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=GIT_TOKEN"
+      - name: Variable GITHUB_ACCESS_TOKEN
+        if: ${{ vars.GITHUB_ACCESS_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=GITHUB_ACCESS_TOKEN"
+      - name: Variable CODEX_TOKEN
+        if: ${{ vars.CODEX_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=CODEX_TOKEN"
+      - name: Variable CODEX_PAT
+        if: ${{ vars.CODEX_PAT != '' }}
+        run: echo "FOUND_VARIABLE_NAME=CODEX_PAT"
+      - name: Variable CODEX_GITHUB_TOKEN
+        if: ${{ vars.CODEX_GITHUB_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=CODEX_GITHUB_TOKEN"
+      - name: Variable CODEX_GITHUB_PAT
+        if: ${{ vars.CODEX_GITHUB_PAT != '' }}
+        run: echo "FOUND_VARIABLE_NAME=CODEX_GITHUB_PAT"
+      - name: Variable ACTIONS_TOKEN
+        if: ${{ vars.ACTIONS_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=ACTIONS_TOKEN"
+      - name: Variable ACTIONS_PAT
+        if: ${{ vars.ACTIONS_PAT != '' }}
+        run: echo "FOUND_VARIABLE_NAME=ACTIONS_PAT"
+      - name: Variable GH_ADMIN_TOKEN
+        if: ${{ vars.GH_ADMIN_TOKEN != '' }}
+        run: echo "FOUND_VARIABLE_NAME=GH_ADMIN_TOKEN"
+      - name: Variable GH_ADMIN_PAT
+        if: ${{ vars.GH_ADMIN_PAT != '' }}
+        run: echo "FOUND_VARIABLE_NAME=GH_ADMIN_PAT"
