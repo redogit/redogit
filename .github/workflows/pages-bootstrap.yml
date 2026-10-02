@@ -13,6 +13,7 @@ permissions:
 
 jobs:
   bootstrap:
+    environment: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
