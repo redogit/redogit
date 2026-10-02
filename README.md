@@ -1,10 +1,10 @@
 # redogit
 
-> 🚧 **About page under construction — October 2, 2026.**
+> 🚧 **Main/About page under construction — October 2, 2026.**\n> **Canonical public hub:** `redogit/redogit` → https://redogit.github.io/redogit/
 
 I am rewriting the public surface so it shows what is active **today** instead of carrying every historical update on the front page.
 
-**About me:** https://redogit.github.io/conscience64/about.html
+**About me:** https://redogit.github.io/redogit/
 
 ## Today
 
