@@ -1,0 +1,45 @@
+name: Deploy redogit project page
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/index.html"
+      - ".github/workflows/pages-self.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "redogit-pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: GET GitHub Pages site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2026-03-10" \
+            "repos/${GITHUB_REPOSITORY}/pages" > "$RUNNER_TEMP/pages-site.json"
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload landing
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./docs
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
