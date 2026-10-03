@@ -1,0 +1,149 @@
+{
+  "schema": "redogit/public-pages/v1",
+  "recorded_date": "2026-10-02",
+  "main": {
+    "repository": "redogit/redogit",
+    "page_url": "https://redogit.github.io/redogit/",
+    "build_type": "workflow",
+    "role": "main-about-project-index"
+  },
+  "projects": [
+    {
+      "repository": "redogit/orbit",
+      "page_url": "https://redogit.github.io/orbit/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/orbit",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/MauiBrickBreak",
+      "page_url": "https://redogit.github.io/MauiBrickBreak/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/MauiBrickBreak",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/DnD",
+      "page_url": "https://redogit.github.io/DnD/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/DnD",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/FirstNeuralNetwork",
+      "page_url": "https://redogit.github.io/FirstNeuralNetwork/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/FirstNeuralNetwork",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/conscience64",
+      "page_url": "https://redogit.github.io/conscience64/",
+      "build_type": "legacy",
+      "source_url": "https://github.com/redogit/conscience64",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/Dream-To-Action",
+      "page_url": "https://redogit.github.io/Dream-To-Action/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/Dream-To-Action",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/Other-Projects-",
+      "page_url": "https://redogit.github.io/Other-Projects-/",
+      "build_type": "legacy",
+      "source_url": "https://github.com/redogit/Other-Projects-",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/RMAL",
+      "page_url": "https://redogit.github.io/RMAL/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/RMAL",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/pnp-dean",
+      "page_url": "https://redogit.github.io/pnp-dean/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/pnp-dean",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/hodge",
+      "page_url": "https://redogit.github.io/hodge/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/hodge",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/conscience64-platform",
+      "page_url": "https://redogit.github.io/conscience64-platform/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/conscience64-platform",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/games",
+      "page_url": "https://redogit.github.io/games/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/games",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/language-carriers",
+      "page_url": "https://redogit.github.io/language-carriers/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/language-carriers",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/archives-knowledge",
+      "page_url": "https://redogit.github.io/archives-knowledge/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/archives-knowledge",
+      "backlink_required": true,
+      "state": "live"
+    },
+    {
+      "repository": "redogit/portfolio",
+      "page_url": "https://redogit.github.io/portfolio/",
+      "build_type": "workflow",
+      "source_url": "https://github.com/redogit/portfolio",
+      "backlink_required": true,
+      "state": "live"
+    }
+  ],
+  "extra_public_routes": [
+    {
+      "id": "dream-operational-app",
+      "url": "https://redogit.github.io/conscience64/dream-to-action/",
+      "role": "verified-operational-app",
+      "source_repository": "redogit/Dream-To-Action"
+    }
+  ],
+  "evidence": {
+    "pages_bootstrap_run": 37026244915,
+    "initial_full_graph_run": 37092737285
+  },
+  "boundaries": [
+    "PUBLIC_PAGE != SOURCE_AUTHORITY",
+    "PUBLIC_PAGE != SCIENTIFIC_VALIDATION",
+    "PROJECT_RELATION != AUTHORITY_TRANSFER"
+  ]
+}
