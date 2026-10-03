@@ -1,29 +1,37 @@
-# Dream to Action — verified public Pages route
+# Dream to Action — public routes
 
 **Live application:** https://redogit.github.io/conscience64/dream-to-action/
 
-**About Me announcement:** https://redogit.github.io/conscience64/about.html#announcements
+**Dedicated project page:** https://redogit.github.io/Dream-To-Action/
 
-**Why it exists:** https://redogit.github.io/conscience64/about.html#dream-to-action
+**Main / About hub:** https://redogit.github.io/redogit/
 
-**Recent Work:** https://redogit.github.io/conscience64/recent-work.html#dream-to-action
+**Recent Work archive:** https://redogit.github.io/conscience64/recent-work.html#dream-to-action
 
-The canonical application and its development history remain in `redogit/Dream-To-Action`. The canonical public profile pages remain in this repository under `docs/`. Conscience64's existing Pages service publishes only exact pinned copies of the three explicitly selected public files, plus a provenance manifest. This is a hosting projection, not a project migration or a new license.
+The canonical application and development history remain in `redogit/Dream-To-Action`. The operational app remains on the proven Conscience64 Pages route. The dedicated `/Dream-To-Action/` Pages site is now an intentionally small project door that links back to the canonical `redogit/redogit` hub. These are different public roles, not duplicate authorities.
 
 ## Deployment evidence
 
-Native Pages deployment succeeded in run https://github.com/redogit/conscience64/actions/runs/36459090437 . The separate live verifier https://github.com/redogit/conscience64/actions/runs/36459096995 requested each route anonymously over HTTPS and verified the delivered app and profile source bytes at 2026-09-28T17:35:22Z. The app SHA-256 is `231fdadb14093df1028abe015f3c4d583b1031da5ae03048abff5244c3eac807`, matching the tested Operations 0.2 release.
+The operational application deployment succeeded in run https://github.com/redogit/conscience64/actions/runs/36459090437 . The separate live verifier https://github.com/redogit/conscience64/actions/runs/36459096995 requested the application anonymously over HTTPS and verified the delivered app bytes at 2026-09-28T17:35:22Z. The app SHA-256 is `231fdadb14093df1028abe015f3c4d583b1031da5ae03048abff5244c3eac807`, matching the tested Operations 0.2 release.
 
-## Corrected hosting assumption
+On October 2, 2026, the previously missing dedicated Pages site objects were created through the GitHub Pages REST API. `redogit/Dream-To-Action` now has its own workflow-based project page, while `redogit/redogit` is the canonical main/About site.
 
-The first profile-host attempt, run 36457772017, failed at Configure Pages: site Not Found. The earlier `/redogit/dream-to-action/` URL was not successfully deployed and is superseded by the live route above. Neither a repository's public visibility nor an existing workflow file proves Pages is enabled. The dedicated `/Dream-To-Action/` route was also not activated. This history remains in Git; it is not relabeled as a success.
+## Historical hosting correction
+
+The first profile-host attempt, run 36457772017, failed at Configure Pages because the Pages site object did not yet exist. That failure remains historical evidence. It is **not** the current state: the `redogit/redogit` and `Dream-To-Action` Pages sites are now enabled and deployed.
+
+The earlier Conscience64 application route remains valid because it is the verified operational app route; activating the dedicated project page does not silently move or replace the app.
 
 ## Preserved boundaries
 
-No participant journals, browser backups, private-origin About page, source-repository internals, or unrelated private content are published. Demo data is fictional and separate. Browser records and optional exports/backups remain unencrypted. Existing testbed/Musilanguage publication scope and private-route counterprobes remain intact, with the new routes authorized separately.
+No participant journals, browser backups, private-origin material, source-repository internals, or unrelated private content are published by the app route. Demo data is fictional and separate. Browser records and optional exports/backups remain unencrypted. Public project navigation does not change licensing, evidence authority, or source ownership.
 
-The profile workflow now verifies source integrity and the selected public host; it does not pretend to deploy a disabled profile Pages service. Actual publishing is the narrowly scoped Conscience64 Pages pipeline. To update the public copy, explicitly advance its pinned source revisions and hashes after review; changing an unrelated source file is not automatic publication permission.
+Current navigation rule:
 
-Current checks: `python tools/finalize_dream_publication.py --check` and `python tools/finalize_dream_publication.py --live`. `tools/publish_dream_pages.py` remains the historical first-attempt preparer; the current wrapper supplies the corrected live host and notice.
+```text
+redogit/redogit = MAIN / ABOUT / PROJECT INDEX
+Dream-To-Action = PROJECT DOOR / CANONICAL SOURCE
+conscience64/dream-to-action = VERIFIED OPERATIONAL APP
+```
 
-The broad Conscience64 REDOGIT check retains an unrelated Cooperative Field v3/v2 mismatch already present before this publication. The publication, exact-byte, private-route, and live HTTP checks passed; no all-repository-green or real-world-benefit claim is made.
+Historical deployment records are preserved rather than rewritten as if the dedicated Pages sites had always existed.
