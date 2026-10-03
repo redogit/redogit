@@ -13,13 +13,16 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "PROJECT_PAGES.json"
 
 
-def fetch(url: str, attempts: int = 5) -> tuple[int, str]:
+def fetch(url: str, attempts: int = 5, accept: str | None = None) -> tuple[int, str]:
     last: Exception | None = None
     for attempt in range(1, attempts + 1):
         try:
+            headers = {"User-Agent": "redogit-project-page-audit/2"}
+            if accept:
+                headers["Accept"] = accept
             req = urllib.request.Request(
                 url,
-                headers={"User-Agent": "redogit-project-page-audit/1"},
+                headers=headers,
                 method="GET",
             )
             with urllib.request.urlopen(req, timeout=30) as response:
@@ -31,10 +34,10 @@ def fetch(url: str, attempts: int = 5) -> tuple[int, str]:
     raise RuntimeError(f"{url} unavailable after {attempts} attempts: {last!r}")
 
 
-def raw_url(repository: str, branch: str, path: str) -> str:
-    owner, repo = repository.split("/", 1)
-    quoted = urllib.parse.quote(path, safe="/")
-    return f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{quoted}"
+def source_api_url(repository: str, branch: str, path: str) -> str:
+    quoted_path = urllib.parse.quote(path, safe="/")
+    quoted_branch = urllib.parse.quote(branch, safe="")
+    return f"https://api.github.com/repos/{repository}/contents/{quoted_path}?ref={quoted_branch}"
 
 
 def require(ok: bool, message: str) -> None:
@@ -52,7 +55,8 @@ def main() -> int:
         page_id = page["id"]
         try:
             source_status, source_body = fetch(
-                raw_url(page["repository"], page["branch"], page["path"])
+                source_api_url(page["repository"], page["branch"], page["path"]),
+                accept="application/vnd.github.raw+json",
             )
             require(source_status == 200, f"source returned HTTP {source_status}")
 
