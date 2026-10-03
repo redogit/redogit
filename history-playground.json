@@ -78,7 +78,10 @@
       "artifacts": [
         {"name": "MauiBrickBreak", "url": "https://github.com/redogit/MauiBrickBreak", "kind": "project"},
         {"name": "FirstNeuralNetwork", "url": "https://github.com/redogit/FirstNeuralNetwork", "kind": "project"},
-        {"name": "Other Projects", "url": "https://github.com/redogit/Other-Projects-", "kind": "project"}
+        {"name": "Other Projects", "url": "https://github.com/redogit/Other-Projects-", "kind": "project"},
+        {"name": "Independent Browser source", "url": "https://github.com/redogit/Other-Projects-/tree/main/Decision%20Field%20Operator%20Lab", "kind": "linked-project"},
+        {"name": "Browser RMAL progress", "url": "https://github.com/redogit/Other-Projects-/blob/main/Decision%20Field%20Operator%20Lab/rmal-browser/README.md", "kind": "linked-status"},
+        {"name": "Browser checks", "url": "https://github.com/redogit/Other-Projects-/actions/workflows/rmal-browser-bootstrap.yml", "kind": "linked-ci"}
       ],
       "challenge": "Write input -> operation -> observable output -> verifier, then prove one mutation is actually exercised.",
       "teach": "Give a learner a bug plus a weak test and let them repair the test first.",
