@@ -10,9 +10,9 @@
   "publication_host": "Enabled redogit/conscience64 GitHub Pages host",
   "recorded_date": "2026-09-28",
   "boundary": "Exact public application projection, not project migration. Original source/history/reuse policy remain in Dream-To-Action. No journals or private data are published.",
-  "dedicated_project_pages": "Not activated: the available connector lacks new-site administration. This route uses the already-enabled public Pages host.",
+  "dedicated_project_pages": "Enabled: https://redogit.github.io/Dream-To-Action/ is the project door; the operational app remains at the verified Conscience64 route.",
   "verification": "Canonical byte identity is checked before upload; public HTTP and byte-identity checks run after deployment. This record alone is not a live-deployment claim.",
-  "profile_public_url": "https://redogit.github.io/conscience64/about.html#announcements",
+  "profile_public_url": "https://redogit.github.io/redogit/",
   "prior_attempt": {
     "url": "https://redogit.github.io/redogit/dream-to-action/",
     "status": "NOT DEPLOYED: Pages site Not Found",
@@ -24,5 +24,7 @@
     "anonymous_https": true,
     "checked_utc": "2026-09-28T17:35:22Z"
   },
-  "profile_pages_enabled": false
+  "profile_pages_enabled": true,
+  "current_project_page": "https://redogit.github.io/Dream-To-Action/",
+  "current_pages_topology_recorded_date": "2026-10-02"
 }
