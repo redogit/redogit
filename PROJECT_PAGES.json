@@ -752,7 +752,7 @@
     "schema": "redogit/project-page-source-verification/v1",
     "verified_date": "2026-10-02",
     "repository_heads": {
-      "redogit/conscience64": "71173f18f69486766a343eea9df067a3eba94c99",
+      "redogit/conscience64": "b41b0f90db4b98b7562b59df09585c3e135a7c7c",
       "redogit/Other-Projects-": "547c6001b628ab47472dee2c8d8b47cb241646f8",
       "redogit/redogit": "16f1bffc0831a186b7edd58b62dca6a2f18b483d"
     },
@@ -770,7 +770,8 @@
       "Marked S′1 Experiment 0 and September 14 PNP discriminator as preserved snapshots with current-source pointers.",
       "Marked September 25 PNP Live Design and September 29 Recent Work as dated reference/archive surfaces.",
       "Updated History & Restore current repository catalog to the 16 public repositories visible on 2026-10-02.",
-      "Added current RMAO Simple Core, advanced MMO, Arcade Forge, predecessor Forge, and unlisted Fuzzball pages to the inventory."
+      "Added current RMAO Simple Core, advanced MMO, Arcade Forge, predecessor Forge, and unlisted Fuzzball pages to the inventory.",
+      "Exposed controlling CURRENT/README/contract links on the newly inventoried RMAO, Forge, Fuzzball, and predecessor Forge pages."
     ]
   }
 }
