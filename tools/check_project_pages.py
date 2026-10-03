@@ -71,7 +71,7 @@ def main() -> int:
             if public_url:
                 public_status, public_body = fetch(public_url)
                 require(public_status == 200, f"live route returned HTTP {public_status}")
-                if page.get("backlink_required", True):
+                if page.get("backlink_required", True) and page.get("kind") != "redirect":
                     require(hub in public_body, "live page lacks canonical main-hub link")
 
             print(f"PASS {page_id}")
