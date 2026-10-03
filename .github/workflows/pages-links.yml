@@ -6,6 +6,7 @@ on:
     paths:
       - 'README.md'
       - 'docs/index.html'
+      - 'PUBLIC_PAGES.json'
       - 'tools/check_public_pages.py'
       - '.github/workflows/pages-links.yml'
   workflow_dispatch:
