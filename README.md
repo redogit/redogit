@@ -31,6 +31,6 @@ Today I am reducing the public surface to clear project doors while preserving o
 - [Archives & Knowledge](https://redogit.github.io/archives-knowledge/) · [source](https://github.com/redogit/archives-knowledge)
 - [Portfolio](https://redogit.github.io/portfolio/) · [source](https://github.com/redogit/portfolio)
 
-Every child project page links back to this main hub. Older updates are intentionally not duplicated here; they remain recoverable from repository history, dated records, issues, pull requests, and project-local evidence.
+Every child project page links back to this main hub. [Machine-readable Pages registry](PUBLIC_PAGES.json) records the current public topology and build type. Older updates are intentionally not duplicated here; they remain recoverable from repository history, dated records, issues, pull requests, and project-local evidence.
 
 **REDOGIT:** do it → inspect what happened → preserve what matters → repair the smallest failure → do it again.
