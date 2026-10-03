@@ -752,9 +752,70 @@
     "schema": "redogit/project-page-source-verification/v1",
     "verified_date": "2026-10-02",
     "repository_heads": {
-      "redogit/conscience64": "b41b0f90db4b98b7562b59df09585c3e135a7c7c",
-      "redogit/Other-Projects-": "547c6001b628ab47472dee2c8d8b47cb241646f8",
-      "redogit/redogit": "16f1bffc0831a186b7edd58b62dca6a2f18b483d"
+      "redogit/conscience64": {
+        "branch": "main",
+        "sha": "ea546a415261ca21ae3be39dbe070e8ecade19f6"
+      },
+      "redogit/Other-Projects-": {
+        "branch": "main",
+        "sha": "547c6001b628ab47472dee2c8d8b47cb241646f8"
+      },
+      "redogit/redogit": {
+        "branch": "main",
+        "sha": "f1905adfaa945f1cf05f87893c148a7a5703504b"
+      },
+      "redogit/Dream-To-Action": {
+        "branch": "main",
+        "sha": "f31e80176029e0922c1394d8d4d77f9e837fd83a"
+      },
+      "redogit/DnD": {
+        "branch": "master",
+        "sha": "f4aef51833103cc182faf893b70786fef4f91bb6"
+      },
+      "redogit/pnp-dean": {
+        "branch": "main",
+        "sha": "2134a06657f5195b8209cd6874e27c6dffea4d0e"
+      },
+      "redogit/hodge": {
+        "branch": "main",
+        "sha": "f9e6ab78cbfbd309f9f014c20a88565ce00905c2"
+      },
+      "redogit/conscience64-platform": {
+        "branch": "main",
+        "sha": "3433a2719d6261a0f470f9551a2de61610f0d92e"
+      },
+      "redogit/games": {
+        "branch": "main",
+        "sha": "d5b4c3c690e69381ff31db2f98e124298b6d02d1"
+      },
+      "redogit/language-carriers": {
+        "branch": "main",
+        "sha": "d8e9f2c0ec680f893d307b5636a3a5450a47cef9"
+      },
+      "redogit/archives-knowledge": {
+        "branch": "main",
+        "sha": "69ad42991b9debaf8a0bc415e8baf2cdb11f8542"
+      },
+      "redogit/portfolio": {
+        "branch": "main",
+        "sha": "c1370265cb002e5a405468fce7f0296fc76e193e"
+      },
+      "redogit/orbit": {
+        "branch": "main",
+        "sha": "dc8e0c5f23745a5e12693e7cd122bc646c934a11"
+      },
+      "redogit/MauiBrickBreak": {
+        "branch": "master",
+        "sha": "ce162bb1a0e51d5608cfcdbf2b0391b61ef74061"
+      },
+      "redogit/FirstNeuralNetwork": {
+        "branch": "master",
+        "sha": "bd80601d641ddaa00c492c93894e2afec33f5558"
+      },
+      "redogit/RMAL": {
+        "branch": "main",
+        "sha": "235e2a29b09e757e14aa253fca417a2142f1f3d4"
+      }
     },
     "hierarchy": [
       "ROOT/CURRENT README OR MANIFEST CONTROLS CURRENT PUBLICATION STATUS",
@@ -771,7 +832,23 @@
       "Marked September 25 PNP Live Design and September 29 Recent Work as dated reference/archive surfaces.",
       "Updated History & Restore current repository catalog to the 16 public repositories visible on 2026-10-02.",
       "Added current RMAO Simple Core, advanced MMO, Arcade Forge, predecessor Forge, and unlisted Fuzzball pages to the inventory.",
-      "Exposed controlling CURRENT/README/contract links on the newly inventoried RMAO, Forge, Fuzzball, and predecessor Forge pages."
-    ]
+      "Exposed controlling CURRENT/README/contract links on the newly inventoried RMAO, Forge, Fuzzball, and predecessor Forge pages.",
+      "Corrected current Play documentation so source-only tools no longer masquerade as current Pages routes.",
+      "Marked Conscience64 About and dated PNP/S1 surfaces as historical/bounded snapshots instead of current authority.",
+      "Corrected Analytics, Coordinate Space, Explorer World, MMO World, advanced MMO, and public-research-update publication boundaries.",
+      "Updated History & Restore from the historical seven-public-repository catalog to the current 16-public-repository catalog while preserving dated counts.",
+      "Reconciled Simple Core implementation truth (12 activities) with play/mmo/CURRENT.md, distinguishing it from the advanced surface's 10 built-in+starter slots.",
+      "Promoted PUBLIC_PAGES.json and PROJECT_PAGES.json as current Portfolio navigation authorities; preserved older workspace organization as exported history.",
+      "Verified standalone landing source-material targets, including RMAL/DnD, PNP Repair Lab, Hodge spine/W114, Knowledge Garden, Human Expression Archive, Orbit/Maui/FirstNeuralNetwork, and Dream operations."
+    ],
+    "evidence": {
+      "structural_project_page_run": 37095352991,
+      "semantic_source_contract_run": 37095803702,
+      "repo_level_public_graph_run": 37095243715,
+      "main_dream_route_run": 37095243708
+    },
+    "semantic_result": "PASS_AFTER_SOURCE_REPAIRS",
+    "verified_declared_pages": 39,
+    "unresolved_semantic_mismatches": []
   }
 }
