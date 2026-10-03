@@ -1,0 +1,163 @@
+{
+  "schema": "redogit/project-page-source-verification/v1",
+  "verified_date": "2026-10-02",
+  "registry": {
+    "repository": "redogit/redogit",
+    "path": "PROJECT_PAGES.json",
+    "commit": "302d84d486fbf04155fdb612014f6c525222255e",
+    "declared_pages": 39
+  },
+  "acceptance": {
+    "structural": {
+      "workflow": "Verify source-aware project pages",
+      "run_id": 37095881692,
+      "conclusion": "success",
+      "url": "https://github.com/redogit/redogit/actions/runs/37095881692"
+    },
+    "semantic": {
+      "workflow": "Verify project-page source semantics",
+      "run_id": 37095881688,
+      "conclusion": "success",
+      "url": "https://github.com/redogit/redogit/actions/runs/37095881688"
+    },
+    "repo_level_public_graph": {
+      "run_id": 37095243715,
+      "conclusion": "success",
+      "url": "https://github.com/redogit/redogit/actions/runs/37095243715"
+    },
+    "main_and_dream_routes": {
+      "run_id": 37095243708,
+      "conclusion": "success",
+      "url": "https://github.com/redogit/redogit/actions/runs/37095243708"
+    }
+  },
+  "classifications": {
+    "verified_current_live_projection": 6,
+    "verified_current_source_only": 23,
+    "verified_historical_or_bounded_snapshot": 5,
+    "verified_current_source_preserved_predecessor": 2,
+    "verified_current_reference": 1,
+    "verified_redirect": 2
+  },
+  "source_authority_order": [
+    "Current repository root README / current manifest controls present publication/status.",
+    "Project README / contract / CURRENT file controls project-specific claims.",
+    "Executable implementation controls concrete implementation facts when prose is stale.",
+    "Source-native HTML may remain runnable without being a current published Pages route.",
+    "Dated snapshot bodies remain preserved but must point forward to current authority.",
+    "Standalone export copies do not override source-native repository authority."
+  ],
+  "exact_source_heads": {
+    "redogit/conscience64": {
+      "branch": "main",
+      "sha": "ea546a415261ca21ae3be39dbe070e8ecade19f6"
+    },
+    "redogit/Other-Projects-": {
+      "branch": "main",
+      "sha": "547c6001b628ab47472dee2c8d8b47cb241646f8"
+    },
+    "redogit/redogit": {
+      "branch": "main",
+      "sha": "302d84d486fbf04155fdb612014f6c525222255e"
+    },
+    "redogit/Dream-To-Action": {
+      "branch": "main",
+      "sha": "f31e80176029e0922c1394d8d4d77f9e837fd83a"
+    },
+    "redogit/DnD": {
+      "branch": "master",
+      "sha": "f4aef51833103cc182faf893b70786fef4f91bb6"
+    },
+    "redogit/pnp-dean": {
+      "branch": "main",
+      "sha": "2134a06657f5195b8209cd6874e27c6dffea4d0e"
+    },
+    "redogit/hodge": {
+      "branch": "main",
+      "sha": "f9e6ab78cbfbd309f9f014c20a88565ce00905c2"
+    },
+    "redogit/conscience64-platform": {
+      "branch": "main",
+      "sha": "3433a2719d6261a0f470f9551a2de61610f0d92e"
+    },
+    "redogit/games": {
+      "branch": "main",
+      "sha": "d5b4c3c690e69381ff31db2f98e124298b6d02d1"
+    },
+    "redogit/language-carriers": {
+      "branch": "main",
+      "sha": "d8e9f2c0ec680f893d307b5636a3a5450a47cef9"
+    },
+    "redogit/archives-knowledge": {
+      "branch": "main",
+      "sha": "69ad42991b9debaf8a0bc415e8baf2cdb11f8542"
+    },
+    "redogit/portfolio": {
+      "branch": "main",
+      "sha": "c1370265cb002e5a405468fce7f0296fc76e193e"
+    },
+    "redogit/orbit": {
+      "branch": "main",
+      "sha": "dc8e0c5f23745a5e12693e7cd122bc646c934a11"
+    },
+    "redogit/MauiBrickBreak": {
+      "branch": "master",
+      "sha": "ce162bb1a0e51d5608cfcdbf2b0391b61ef74061"
+    },
+    "redogit/FirstNeuralNetwork": {
+      "branch": "master",
+      "sha": "bd80601d641ddaa00c492c93894e2afec33f5558"
+    },
+    "redogit/RMAL": {
+      "branch": "main",
+      "sha": "235e2a29b09e757e14aa253fca417a2142f1f3d4"
+    }
+  },
+  "substantive_mismatches_found_and_repaired": [
+    {
+      "id": "conscience64-about-count",
+      "finding": "Conscience64 About still presented the old eight-repository snapshot as current.",
+      "repair": "Marked page and README as a historical September 13–14 snapshot and pointed to redogit/redogit for current inventory."
+    },
+    {
+      "id": "play-publication-boundary",
+      "finding": "Play README advertised multiple source/local tools using github.io links although the current curated projection publishes only the Play hub, Musilanguage, NEON//VEIL, plus the separate Dream overlay.",
+      "repair": "Converted source-only rows to repository paths and made the curated-vs-source-only rule explicit."
+    },
+    {
+      "id": "source-only-publication-claims",
+      "finding": "Explorer World, MMO World, Analytics, Coordinate Space, advanced MMO, and public research updates contained stale or ambiguous current Pages claims.",
+      "repair": "Aligned README/page notices to current curated projection; retained historical deployment evidence as historical."
+    },
+    {
+      "id": "dated-snapshot-authority",
+      "finding": "S′1 Experiment 0, the September 14 PNP discriminator, September 25 PNP Live Design, and September 29 Recent Work could be misread as current authority.",
+      "repair": "Marked them as bounded/historical/reference snapshots with forward pointers to current sources."
+    },
+    {
+      "id": "history-repository-catalog",
+      "finding": "History & Restore still linked seven public repositories.",
+      "repair": "Updated current versions.json to all 16 public repositories while retaining old counts in dated historical records."
+    },
+    {
+      "id": "simple-mmo-activity-count",
+      "finding": "play/mmo/CURRENT.md said the current mix still had a 10→12 activity gap, but play/mmo/simple/core.mjs actually implements 12 activities.",
+      "repair": "Reconciled CURRENT.md: advanced surface retains 10 built-in+starter slots; current primary Simple Core has the full 12, including Sidewalk Slalom and Parcel Relay."
+    },
+    {
+      "id": "portfolio-source-path",
+      "finding": "Portfolio landing pointed to canonical redogit/docs/organization, which no longer exists there.",
+      "repair": "Promoted PUBLIC_PAGES.json and PROJECT_PAGES.json as current authorities; retained portfolio/redogit/docs/organization as exported history."
+    }
+  ],
+  "verified_key_boundaries": [
+    "P versus NP remains open; finite/bounded results do not establish P=NP or P!=NP.",
+    "The Hodge conjecture remains open; software/game carriers are not mathematical proof.",
+    "W114 game score/robustness is not algebraic-cycle evidence.",
+    "Dream-To-Action source authority, dedicated project page, and operational app route remain distinct.",
+    "RMAL canonical repository is redogit/DnD and the current implementation contract is ISO C23.",
+    "Fuzzball Hidden Game remains intentionally unlisted and distinct from the unresolved historical Fuzzball carrier.",
+    "Current Conscience64 Pages is a generated curated projection, not the repository tree."
+  ],
+  "unresolved_semantic_mismatches": []
+}
