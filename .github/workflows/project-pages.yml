@@ -1,0 +1,27 @@
+name: Verify source-aware project pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'PROJECT_PAGES.json'
+      - 'tools/check_project_pages.py'
+      - '.github/workflows/project-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: project-pages-audit
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Verify declared project pages
+        run: python3 tools/check_project_pages.py
