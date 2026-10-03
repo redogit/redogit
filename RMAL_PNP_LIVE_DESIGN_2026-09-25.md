@@ -1,6 +1,8 @@
 # RMAL P vs NP — Live Design — 2026-09-25
 
-> Start with [TERMS FIRST](RMAL_RESEARCH_ORIENTATION_2026-09-25.md). This page is the current design, not the dictionary.
+> **HISTORICAL DESIGN SNAPSHOT.** This file preserves the September 25 design state. The active P-vs-NP / Dean work has continued beyond this snapshot; use the current `redogit/pnp-dean` repository and later dated proof records for present state. The body below is preserved rather than rewritten to impersonate the successor.
+
+> Start with [TERMS FIRST](RMAL_RESEARCH_ORIENTATION_2026-09-25.md). Within its September 25 time scope, this page records the live design rather than the dictionary.
 
 ## TERMS I AM USING HERE
 
