@@ -975,3 +975,87 @@ STANDARD CurrentReconstructionStandards_2026_09_28 {
         fresh_RMALC_validation = NOT_PERFORMED
     }
 }
+
+
+SYSTEM SphereOfWebsArchitecture_2026_10_01 {
+    STATE ADDITIVE_NAVIGATION_AND_RECONSTRUCTION_ONLY
+
+    predecessor_revision = e7f442b17a769af3667c34475e49165fcdfe3d89
+    seed = sphere-of-webs/pr52-continuity-successor-2026-09-30.json
+    expansion = sphere-of-webs/architecture-expansion-2026-10-01.json
+    root = NONE
+
+    BIND {
+        occurrence_identity_and_provenance -> Thing
+        exact_typed_lookup -> Orbit.Related
+        directional_comparison -> PairityCheck
+        chronology_provenance_action_history -> Git
+        reconstructible_way_back -> WayBack
+        occurrence_semantic_ids_and_homeward -> CurrentReconstructionStandards_2026_09_28
+        lateral_temporal_ambient_semantics -> ALL_DIRECTIONAL_RELATIONAL_FIELD_2026-09-20
+    }
+
+    AXES {
+        chronology = IMMUTABLE_ACYCLIC_ORDERING
+        semantic_ancestry = TYPED_MAY_CYCLE
+        occurrence_provenance = TYPED_MAY_CYCLE
+        dependency = TYPED_MAY_CYCLE
+        federation = TYPED_MAY_CYCLE
+        communication = TYPED_MAY_CYCLE
+        currentness = TYPED_MAY_CYCLE
+        discovery = TYPED_MAY_CYCLE
+        carrier_transform = TYPED_MAY_CYCLE
+        relation_namespace = TYPED_MAY_CYCLE
+        method_lineage = TYPED_MAY_CYCLE
+    }
+
+    FIRST_EXPANSION {
+        InvariantAtlas = PINNED_OCCURRENCE_PROVENANCE
+        GoalTopology = PINNED_DEPENDENCY
+        RedogitFederationBridge = PINNED_FEDERATION
+        BidirectionalHandoff = PINNED_COMMUNICATION
+        RMALGitHubDiscovery = PINNED_DISCOVERY
+    }
+
+    ADDITIONAL_PINNED_FRAGMENTS {
+        ResearchProductionRelationNamespace
+        CarrierSurface
+        S1ModelMap
+        ConversationRadar
+        DecisionFieldFederationPointer
+        GSFLBridgeFamily
+    }
+
+    FRONTIER {
+        ResearchClaimsBackbone = ADAPTER_REQUIRED_DO_NOT_INGEST
+    }
+
+    HOMEWARD {
+        every_fragment -> exact_repository + exact_commit + exact_blob + exact_path
+        removal -> detach_relation_without_endpoint_mutation
+        reconstruction -> source_local_authority
+    }
+
+    RULE {
+        SPHERE != CENTER
+        CONNECTION != AUTHORITY_TRANSFER
+        REFERENCE != EVIDENCE_TRANSFER
+        CURRENTNESS != CHRONOLOGY
+        DISCOVERY != ADMISSION
+        DUPLICATE_OCCURRENCE != INDEPENDENT_EVIDENCE
+        FRONTIER_REFERENCE != INGESTION
+        TARGET_LOCAL_IMPLEMENTATION != COPIED_IMPLEMENTATION
+        SEMANTIC_CYCLE != CHRONOLOGY_CYCLE
+        HOMEWARD_REQUIRES_PINNED_SOURCE
+    }
+
+    CHANGE_BOUNDARY {
+        target_local_implementations = UNCHANGED
+        target_local_authority = UNCHANGED
+        target_local_evidence = UNCHANGED
+        chronology = UNCHANGED
+        publication_permissions = UNCHANGED
+    }
+
+    claim_ceiling = PINNED_NAVIGATION_RELATIONS_AND_ARCHITECTURE_BINDINGS_ONLY
+}

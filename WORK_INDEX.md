@@ -5,6 +5,22 @@
 **Status:** active navigation layer — not a central authority  
 **Predecessor:** [`BODY_OF_WORK.md`](BODY_OF_WORK.md), preserved as the first broad recovery snapshot
 
+## September 30 continuity successors — hard-work execution trail
+
+**Navigation only. Project-local evidence and source authority remain local.**
+
+- [Continuity Successors — 2026-09-30](CONTINUITY_SUCCESSORS_2026-09-30.md) — real Word Carrier → AnyFunctor/Decision Field → Orbit execution; successor package/source reconciliation; Homeward/retrieval/custody counterprobes; structured package custody. Predecessors remain preserved and no domain evidence is transferred through this index.
+- [Sphere of Webs seed — PR #52](sphere-of-webs/pr52-continuity-successor-2026-09-30.json) — machine-readable six-occurrence/five-relation carrier for the exact source trail; chronology and semantic ancestry remain separate, duplicates stay occurrence-distinct, and authority/evidence do not transfer.
+- [Sphere of Webs architecture expansion](sphere-of-webs/architecture-expansion-2026-10-01.json) — pins the first cross-repository occurrence/provenance, dependency, federation, handoff, discovery, carrier, currentness and method-lineage fragments into existing Libraries-of-Libraries / All-Directional architecture without copying target-local implementations; the Claims Backbone remains adapter-gated.
+
+```text
+HARD WORK != META DESCRIPTION
+SUCCESSOR != PREDECESSOR REWRITE
+NAVIGATION != AUTHORITY
+RETRIEVAL != SUPPORT
+PACKAGE VERIFICATION != SEMANTIC PROOF
+```
+
 ## September 25 current additions — terms / proof / executable language game
 
 **Navigation only. Project-local evidence and source authority remain local.**
