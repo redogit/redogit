@@ -38,10 +38,10 @@
       "id": "conscience64-play",
       "repository": "redogit/conscience64",
       "branch": "main",
-      "path": "play/index.html",
+      "path": "play/public-index.html",
       "kind": "live-nested",
       "public_url": "https://redogit.github.io/conscience64/play/",
-      "source_url": "https://github.com/redogit/conscience64/tree/main/play",
+      "source_url": "https://github.com/redogit/conscience64/blob/main/play/public-index.html",
       "authority": "source-native",
       "backlink_required": true,
       "materials": []
@@ -398,6 +398,17 @@
       "authority": "redirect",
       "backlink_required": true,
       "materials": []
+    },
+    {
+      "id": "conscience64-play-workspace",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play",
+      "authority": "source-native",
+      "materials": [],
+      "backlink_required": true
     }
   ],
   "preserved_copy_policy": {
