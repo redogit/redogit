@@ -20,7 +20,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/public-testbed/site/carrier-surface",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-live-projection",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": null
+      }
     },
     {
       "id": "conscience64-s1-models",
@@ -32,7 +38,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/public-testbed/site/s1-models",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-live-projection",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": null
+      }
     },
     {
       "id": "conscience64-play",
@@ -44,7 +56,13 @@
       "source_url": "https://github.com/redogit/conscience64/blob/main/play/public-index.html",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-live-projection",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": null
+      }
     },
     {
       "id": "musilanguage",
@@ -56,7 +74,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play/musilanguage",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-live-projection",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": null
+      }
     },
     {
       "id": "neon-veil",
@@ -68,7 +92,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play/neon-veil",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-live-projection",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": null
+      }
     },
     {
       "id": "dream-operational-app",
@@ -80,7 +110,13 @@
       "source_url": "https://github.com/redogit/Dream-To-Action",
       "authority": "canonical-source-separate-projection",
       "backlink_required": false,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-live-projection",
+        "verified_date": "2026-10-02",
+        "repository_head": null,
+        "note": null
+      }
     },
     {
       "id": "decision-field-mmorpg",
@@ -94,7 +130,13 @@
         "https://github.com/redogit/Other-Projects-/blob/main/Decision%20Field%20MMORPG/README.md",
         "https://github.com/redogit/Other-Projects-/blob/main/Decision%20Field%20MMORPG/RMAO_WORLD.md"
       ],
-      "backlink_required": true
+      "backlink_required": true,
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "547c6001b628ab47472dee2c8d8b47cb241646f8",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "w114-perturbation-lab",
@@ -108,7 +150,13 @@
         "https://github.com/redogit/Other-Projects-/blob/main/Decision%20Field%20Operator%20Lab/hodge-perturbation-game/README.md",
         "https://github.com/redogit/conscience64/tree/main/research/hodge"
       ],
-      "backlink_required": true
+      "backlink_required": true,
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "547c6001b628ab47472dee2c8d8b47cb241646f8",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "pnp-discriminators",
@@ -122,7 +170,13 @@
         "https://github.com/redogit/Other-Projects-/blob/main/P%20versus%20NP%20Repair%20Lab/CURRENT.md",
         "https://github.com/redogit/pnp-dean"
       ],
-      "backlink_required": true
+      "backlink_required": true,
+      "source_verification": {
+        "status": "verified-historical-or-bounded-snapshot",
+        "verified_date": "2026-10-02",
+        "repository_head": "547c6001b628ab47472dee2c8d8b47cb241646f8",
+        "note": "Body retained in its original time/experiment scope; current successor/source pointer is explicit."
+      }
     },
     {
       "id": "s1-models-lab",
@@ -136,7 +190,13 @@
         "https://github.com/redogit/Other-Projects-/blob/main/S1%20Models%20Lab/README.md",
         "https://redogit.github.io/conscience64/s1-models/"
       ],
-      "backlink_required": true
+      "backlink_required": true,
+      "source_verification": {
+        "status": "verified-historical-or-bounded-snapshot",
+        "verified_date": "2026-10-02",
+        "repository_head": "547c6001b628ab47472dee2c8d8b47cb241646f8",
+        "note": "Body retained in its original time/experiment scope; current successor/source pointer is explicit."
+      }
     },
     {
       "id": "knowledge-garden",
@@ -150,7 +210,13 @@
         "https://github.com/redogit/Other-Projects-/blob/main/knowledge-garden/README.md",
         "https://github.com/redogit/archives-knowledge"
       ],
-      "backlink_required": true
+      "backlink_required": true,
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "547c6001b628ab47472dee2c8d8b47cb241646f8",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "conscience64-root",
@@ -161,7 +227,13 @@
       "source_url": "https://github.com/redogit/conscience64",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "conscience64-about-source",
@@ -172,7 +244,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/about",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-historical-or-bounded-snapshot",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Body retained in its original time/experiment scope; current successor/source pointer is explicit."
+      }
     },
     {
       "id": "research-analytics",
@@ -183,7 +261,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/analytics",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "coordinate-space",
@@ -194,7 +278,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/coordinate-space",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "history-restore",
@@ -205,7 +295,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/history",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "context-horizon",
@@ -216,7 +312,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/navigation/context-horizon",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "source-compare",
@@ -227,7 +329,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play/compare",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "computational-chorus",
@@ -238,7 +346,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play/computational-chorus",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "explorer-world",
@@ -249,7 +363,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play/explorer-world",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "pattern-garden",
@@ -260,7 +380,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play/garden",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "mmo-world",
@@ -271,7 +397,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play/mmo-world",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-preserved-predecessor",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Runnable repository/local predecessor; not a current curated Pages route."
+      }
     },
     {
       "id": "orbit-shelf",
@@ -282,7 +414,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play/orbit",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "small-steps",
@@ -293,7 +431,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play/steps",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "word-weave",
@@ -304,7 +448,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play/weave",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "carrier-surface-source",
@@ -315,7 +465,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/research/carrier-surface",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "research-project-records",
@@ -326,7 +482,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/research/projects",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "research-public-updates",
@@ -337,7 +499,13 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/research/projects/public-updates",
       "authority": "source-native",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
     },
     {
       "id": "condensed-wisdom",
@@ -349,7 +517,13 @@
       "source_url": "https://github.com/redogit/redogit/blob/main/ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md",
       "authority": "reference-surface",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-current-reference",
+        "verified_date": "2026-10-02",
+        "repository_head": "16f1bffc0831a186b7edd58b62dca6a2f18b483d",
+        "note": null
+      }
     },
     {
       "id": "pnp-live-design",
@@ -361,7 +535,13 @@
       "source_url": "https://github.com/redogit/redogit/blob/main/RMAL_PNP_LIVE_DESIGN_2026-09-25.md",
       "authority": "reference-surface",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-historical-or-bounded-snapshot",
+        "verified_date": "2026-10-02",
+        "repository_head": "16f1bffc0831a186b7edd58b62dca6a2f18b483d",
+        "note": "Body retained in its original time/experiment scope; current successor/source pointer is explicit."
+      }
     },
     {
       "id": "recent-work-archive",
@@ -373,7 +553,13 @@
       "source_url": "https://github.com/redogit/redogit",
       "authority": "archive-surface",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-historical-or-bounded-snapshot",
+        "verified_date": "2026-10-02",
+        "repository_head": "16f1bffc0831a186b7edd58b62dca6a2f18b483d",
+        "note": "Body retained in its original time/experiment scope; current successor/source pointer is explicit."
+      }
     },
     {
       "id": "old-about-redirect",
@@ -385,7 +571,13 @@
       "source_url": "https://redogit.github.io/redogit/",
       "authority": "redirect",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-redirect",
+        "verified_date": "2026-10-02",
+        "repository_head": "16f1bffc0831a186b7edd58b62dca6a2f18b483d",
+        "note": null
+      }
     },
     {
       "id": "old-dream-route-redirect",
@@ -397,7 +589,13 @@
       "source_url": "https://redogit.github.io/conscience64/dream-to-action/",
       "authority": "redirect",
       "backlink_required": true,
-      "materials": []
+      "materials": [],
+      "source_verification": {
+        "status": "verified-redirect",
+        "verified_date": "2026-10-02",
+        "repository_head": "16f1bffc0831a186b7edd58b62dca6a2f18b483d",
+        "note": null
+      }
     },
     {
       "id": "conscience64-play-workspace",
@@ -408,7 +606,118 @@
       "source_url": "https://github.com/redogit/conscience64/tree/main/play",
       "authority": "source-native",
       "materials": [],
-      "backlink_required": true
+      "backlink_required": true,
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
+    },
+    {
+      "id": "rmao-simple-core",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/mmo/simple/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/mmo/simple",
+      "authority": "source-native",
+      "materials": [
+        "https://github.com/redogit/conscience64/blob/main/play/mmo/CURRENT.md",
+        "https://github.com/redogit/conscience64/blob/main/play/mmo/REALITY_CANON.md"
+      ],
+      "backlink_required": true,
+      "listed_on_main": true,
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
+    },
+    {
+      "id": "rmao-advanced-mmo",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/mmo/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/mmo",
+      "authority": "source-native",
+      "materials": [
+        "https://github.com/redogit/conscience64/blob/main/play/mmo/CURRENT.md",
+        "https://github.com/redogit/conscience64/blob/main/play/mmo/RMAO_WORLD_CANON.md"
+      ],
+      "backlink_required": true,
+      "listed_on_main": true,
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
+    },
+    {
+      "id": "arcade-forge-current",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/mmo/forge.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/mmo",
+      "authority": "source-native",
+      "materials": [
+        "https://github.com/redogit/conscience64/blob/main/play/mmo/plugin-contract.json",
+        "https://github.com/redogit/conscience64/blob/main/play/mmo/REALITY_CANON.md"
+      ],
+      "backlink_required": true,
+      "listed_on_main": true,
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
+    },
+    {
+      "id": "fuzzball-hidden-alpha",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/fuzzball-hidden/index.html",
+      "kind": "source-native-unlisted",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/fuzzball-hidden",
+      "authority": "source-native",
+      "materials": [
+        "https://github.com/redogit/conscience64/blob/main/play/fuzzball-hidden/README.md"
+      ],
+      "backlink_required": true,
+      "listed_on_main": false,
+      "distribution": "UNLISTED_NO_PUBLIC_PLAY_CATALOG_LINK",
+      "source_verification": {
+        "status": "verified-current-source-only",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Current repository/local source; not implied to be in the curated Pages projection unless separately declared."
+      }
+    },
+    {
+      "id": "mmo-world-forge",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/mmo-world/forge/index.html",
+      "kind": "source-native-predecessor",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/mmo-world/forge",
+      "authority": "source-native",
+      "materials": [
+        "https://github.com/redogit/conscience64/blob/main/play/mmo-world/README.md",
+        "https://github.com/redogit/conscience64/blob/main/play/mmo-world/plugin-contract.json"
+      ],
+      "backlink_required": true,
+      "listed_on_main": false,
+      "source_verification": {
+        "status": "verified-current-source-preserved-predecessor",
+        "verified_date": "2026-10-02",
+        "repository_head": "71173f18f69486766a343eea9df067a3eba94c99",
+        "note": "Runnable repository/local predecessor; not a current curated Pages route."
+      }
     }
   ],
   "preserved_copy_policy": {
@@ -438,5 +747,30 @@
     },
     "conscience64_live_page_mapping": "68b4829b70b67d4107e706aa05cc4f33b5140d19",
     "recorded_at": "2026-10-02"
+  },
+  "source_verification": {
+    "schema": "redogit/project-page-source-verification/v1",
+    "verified_date": "2026-10-02",
+    "repository_heads": {
+      "redogit/conscience64": "71173f18f69486766a343eea9df067a3eba94c99",
+      "redogit/Other-Projects-": "547c6001b628ab47472dee2c8d8b47cb241646f8",
+      "redogit/redogit": "16f1bffc0831a186b7edd58b62dca6a2f18b483d"
+    },
+    "hierarchy": [
+      "ROOT/CURRENT README OR MANIFEST CONTROLS CURRENT PUBLICATION STATUS",
+      "PROJECT README/CONTRACT CONTROLS PROJECT CLAIMS",
+      "SOURCE_NATIVE HTML MAY BE RUNNABLE WITHOUT BEING A PUBLISHED PAGES ROUTE",
+      "DATED SNAPSHOT KEEPS ITS BODY BUT MUST POINT FORWARD TO CURRENT SOURCE",
+      "EXPORT COPY DOES NOT OVERRIDE SOURCE-NATIVE AUTHORITY"
+    ],
+    "corrections_made": [
+      "Marked Conscience64 About as a historical September 13–14 snapshot.",
+      "Corrected Play README links for source-only projects.",
+      "Corrected Explorer World, MMO World, advanced MMO, Analytics, Coordinate Space, and public-updates publication boundaries.",
+      "Marked S′1 Experiment 0 and September 14 PNP discriminator as preserved snapshots with current-source pointers.",
+      "Marked September 25 PNP Live Design and September 29 Recent Work as dated reference/archive surfaces.",
+      "Updated History & Restore current repository catalog to the 16 public repositories visible on 2026-10-02.",
+      "Added current RMAO Simple Core, advanced MMO, Arcade Forge, predecessor Forge, and unlisted Fuzzball pages to the inventory."
+    ]
   }
 }
