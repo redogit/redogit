@@ -429,5 +429,14 @@
     "**/visual-samples/**",
     "**/internal-update/**/legacy/**",
     "**/app/src/main/assets/**"
-  ]
+  ],
+  "evidence": {
+    "other_projects_native_page_repairs": {
+      "decision_field_mmorpg": "e43f882a41e06504f48e629f908708224c34a419",
+      "w114_perturbation_lab": "dae08a45676b9cc675d08ba43bead6339c7df36a",
+      "s1_models_lab": "67d1716050c07f7ddcb7e4dd3dd1c59c016de25e"
+    },
+    "conscience64_live_page_mapping": "68b4829b70b67d4107e706aa05cc4f33b5140d19",
+    "recorded_at": "2026-10-02"
+  }
 }
