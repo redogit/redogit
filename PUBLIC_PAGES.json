@@ -139,7 +139,10 @@
   ],
   "evidence": {
     "pages_bootstrap_run": 37026244915,
-    "initial_full_graph_run": 37092737285
+    "initial_full_graph_run": 37092737285,
+    "conscience64_projection_sync_run": 37092985719,
+    "conscience64_live_verify_run": 37092995292,
+    "legacy_backlinks_completed_date": "2026-10-02"
   },
   "boundaries": [
     "PUBLIC_PAGE != SOURCE_AUTHORITY",
