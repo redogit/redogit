@@ -1,32 +1,16 @@
 #!/usr/bin/env python3
-"""Verify the live redogit Pages hub and child-page graph."""
+"""Verify the live public Pages graph declared in PUBLIC_PAGES.json."""
 from __future__ import annotations
 
+import json
 import time
 import urllib.error
 import urllib.request
+from pathlib import Path
 
-HUB = "https://redogit.github.io/redogit/"
-CHILDREN = [
-    ("orbit", "https://redogit.github.io/orbit/", True),
-    ("MauiBrickBreak", "https://redogit.github.io/MauiBrickBreak/", True),
-    ("DnD", "https://redogit.github.io/DnD/", True),
-    ("FirstNeuralNetwork", "https://redogit.github.io/FirstNeuralNetwork/", True),
-    ("Conscience64", "https://redogit.github.io/conscience64/", True),
-    ("Dream-To-Action", "https://redogit.github.io/Dream-To-Action/", True),
-    ("Other-Projects-", "https://redogit.github.io/Other-Projects-/", True),
-    ("RMAL", "https://redogit.github.io/RMAL/", True),
-    ("pnp-dean", "https://redogit.github.io/pnp-dean/", True),
-    ("hodge", "https://redogit.github.io/hodge/", True),
-    ("conscience64-platform", "https://redogit.github.io/conscience64-platform/", True),
-    ("games", "https://redogit.github.io/games/", True),
-    ("language-carriers", "https://redogit.github.io/language-carriers/", True),
-    ("archives-knowledge", "https://redogit.github.io/archives-knowledge/", True),
-    ("portfolio", "https://redogit.github.io/portfolio/", True),
-]
-EXTRA = [
-    ("Dream operational app", "https://redogit.github.io/conscience64/dream-to-action/"),
-]
+ROOT = Path(__file__).resolve().parents[1]
+REGISTRY = ROOT / "PUBLIC_PAGES.json"
+
 
 def fetch(url: str, attempts: int = 6) -> tuple[int, str]:
     last: Exception | None = None
@@ -34,7 +18,7 @@ def fetch(url: str, attempts: int = 6) -> tuple[int, str]:
         try:
             req = urllib.request.Request(
                 url,
-                headers={"User-Agent": "redogit-pages-integrity/1"},
+                headers={"User-Agent": "redogit-pages-integrity/2"},
                 method="GET",
             )
             with urllib.request.urlopen(req, timeout=30) as response:
@@ -45,28 +29,41 @@ def fetch(url: str, attempts: int = 6) -> tuple[int, str]:
                 time.sleep(3)
     raise RuntimeError(f"{url} unavailable after {attempts} attempts: {last!r}")
 
+
 def require(ok: bool, message: str) -> None:
     if not ok:
         raise RuntimeError(message)
 
+
 def main() -> int:
-    status, hub = fetch(HUB)
+    registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
+    require(registry.get("schema") == "redogit/public-pages/v1", "unexpected registry schema")
+
+    hub_url = registry["main"]["page_url"]
+    status, hub = fetch(hub_url)
     require(status == 200, f"main hub returned HTTP {status}")
     require("redogit" in hub.lower(), "main hub missing redogit marker")
 
     failures: list[str] = []
-    for name, url, require_backlink in CHILDREN:
+    projects = registry.get("projects", [])
+    for project in projects:
+        name = project["repository"]
+        url = project["page_url"]
+        source = project["source_url"]
         try:
             code, body = fetch(url)
             require(code == 200, f"HTTP {code}")
             require(url in hub, f"main hub does not link to {url}")
-            if require_backlink:
-                require(HUB in body, f"child page lacks backlink to {HUB}")
+            require(source in hub, f"main hub does not link to source {source}")
+            if project.get("backlink_required", False):
+                require(hub_url in body, f"child page lacks backlink to {hub_url}")
             print(f"PASS {name}: {url}")
         except Exception as exc:
             failures.append(f"{name}: {exc}")
 
-    for name, url in EXTRA:
+    for route in registry.get("extra_public_routes", []):
+        name = route["id"]
+        url = route["url"]
         try:
             code, _ = fetch(url)
             require(code == 200, f"HTTP {code}")
@@ -80,8 +77,12 @@ def main() -> int:
             print(" - " + failure)
         return 1
 
-    print(f"PASS: main hub + {len(CHILDREN)} child Pages + {len(EXTRA)} extra public route(s)")
+    print(
+        f"PASS: main hub + {len(projects)} child Pages + "
+        f"{len(registry.get('extra_public_routes', []))} extra public route(s)"
+    )
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
