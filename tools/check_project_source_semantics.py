@@ -48,9 +48,10 @@ def main() -> int:
     checks = []
 
     c64 = get("redogit/conscience64", "README.md")
-    need(c64, "only explicitly owner-authorized curated routes", "Conscience64 publication scope")
-    need(c64, "MMO World Beta", "Conscience64 source-only project list")
-    need(c64, "not routes in the current `gh-pages` projection", "Conscience64 source-only boundary")
+    need(c64, "generated curated base projection plus a separately approved, exact-source Dream/profile overlay", "Conscience64 publication scope")
+    need(c64, "`research/**`", "Conscience64 excluded research route boundary")
+    need(c64, "`play/mmo/index.html`", "Conscience64 excluded MMO route boundary")
+    need(c64, "required to remain absent", "Conscience64 source-only boundary")
     checks.append("Conscience64 root publication boundary")
 
     play = get("redogit/conscience64", "play/README.md")
