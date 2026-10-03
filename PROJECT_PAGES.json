@@ -1,0 +1,422 @@
+{
+  "schema": "redogit/project-pages/v1",
+  "recorded_date": "2026-10-02",
+  "main_url": "https://redogit.github.io/redogit/",
+  "repository_pages_registry": "PUBLIC_PAGES.json",
+  "rules": [
+    "SOURCE_NATIVE_PAGE != EXPORT_COPY",
+    "PUBLIC_PROJECTION != SOURCE_AUTHORITY",
+    "HISTORICAL_COPY != CURRENT_SOURCE",
+    "MAIN_BACKLINK_REQUIRED_FOR_CURRENT_PROJECT_PAGE"
+  ],
+  "pages": [
+    {
+      "id": "conscience64-carrier-surface",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "public-testbed/site/carrier-surface/index.html",
+      "kind": "live-nested",
+      "public_url": "https://redogit.github.io/conscience64/carrier-surface/",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/public-testbed/site/carrier-surface",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "conscience64-s1-models",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "public-testbed/site/s1-models/index.html",
+      "kind": "live-nested",
+      "public_url": "https://redogit.github.io/conscience64/s1-models/",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/public-testbed/site/s1-models",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "conscience64-play",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/index.html",
+      "kind": "live-nested",
+      "public_url": "https://redogit.github.io/conscience64/play/",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "musilanguage",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/musilanguage/index.html",
+      "kind": "live-nested",
+      "public_url": "https://redogit.github.io/conscience64/play/musilanguage/",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/musilanguage",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "neon-veil",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/neon-veil/index.html",
+      "kind": "live-nested",
+      "public_url": "https://redogit.github.io/conscience64/play/neon-veil/",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/neon-veil",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "dream-operational-app",
+      "repository": "redogit/Dream-To-Action",
+      "branch": "main",
+      "path": "index.html",
+      "kind": "live-projection",
+      "public_url": "https://redogit.github.io/conscience64/dream-to-action/",
+      "source_url": "https://github.com/redogit/Dream-To-Action",
+      "authority": "canonical-source-separate-projection",
+      "backlink_required": false,
+      "materials": []
+    },
+    {
+      "id": "decision-field-mmorpg",
+      "repository": "redogit/Other-Projects-",
+      "branch": "main",
+      "path": "Decision Field MMORPG/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/Other-Projects-/tree/main/Decision%20Field%20MMORPG",
+      "authority": "source-native",
+      "materials": [
+        "https://github.com/redogit/Other-Projects-/blob/main/Decision%20Field%20MMORPG/README.md",
+        "https://github.com/redogit/Other-Projects-/blob/main/Decision%20Field%20MMORPG/RMAO_WORLD.md"
+      ],
+      "backlink_required": true
+    },
+    {
+      "id": "w114-perturbation-lab",
+      "repository": "redogit/Other-Projects-",
+      "branch": "main",
+      "path": "Decision Field Operator Lab/hodge-perturbation-game/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/Other-Projects-/tree/main/Decision%20Field%20Operator%20Lab/hodge-perturbation-game",
+      "authority": "source-native",
+      "materials": [
+        "https://github.com/redogit/Other-Projects-/blob/main/Decision%20Field%20Operator%20Lab/hodge-perturbation-game/README.md",
+        "https://github.com/redogit/conscience64/tree/main/research/hodge"
+      ],
+      "backlink_required": true
+    },
+    {
+      "id": "pnp-discriminators",
+      "repository": "redogit/Other-Projects-",
+      "branch": "main",
+      "path": "P versus NP Repair Lab/decision_field/discriminators_2026_09_14/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/Other-Projects-/tree/main/P%20versus%20NP%20Repair%20Lab",
+      "authority": "source-native",
+      "materials": [
+        "https://github.com/redogit/Other-Projects-/blob/main/P%20versus%20NP%20Repair%20Lab/CURRENT.md",
+        "https://github.com/redogit/pnp-dean"
+      ],
+      "backlink_required": true
+    },
+    {
+      "id": "s1-models-lab",
+      "repository": "redogit/Other-Projects-",
+      "branch": "main",
+      "path": "S1 Models Lab/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/Other-Projects-/tree/main/S1%20Models%20Lab",
+      "authority": "source-native",
+      "materials": [
+        "https://github.com/redogit/Other-Projects-/blob/main/S1%20Models%20Lab/README.md",
+        "https://redogit.github.io/conscience64/s1-models/"
+      ],
+      "backlink_required": true
+    },
+    {
+      "id": "knowledge-garden",
+      "repository": "redogit/Other-Projects-",
+      "branch": "main",
+      "path": "knowledge-garden/public/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/Other-Projects-/tree/main/knowledge-garden",
+      "authority": "source-native",
+      "materials": [
+        "https://github.com/redogit/Other-Projects-/blob/main/knowledge-garden/README.md",
+        "https://github.com/redogit/archives-knowledge"
+      ],
+      "backlink_required": true
+    },
+    {
+      "id": "conscience64-root",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "conscience64-about-source",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "about/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/about",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "research-analytics",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "analytics/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/analytics",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "coordinate-space",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "coordinate-space/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/coordinate-space",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "history-restore",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "history/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/history",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "context-horizon",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "navigation/context-horizon/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/navigation/context-horizon",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "source-compare",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/compare/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/compare",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "computational-chorus",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/computational-chorus/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/computational-chorus",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "explorer-world",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/explorer-world/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/explorer-world",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "pattern-garden",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/garden/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/garden",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "mmo-world",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/mmo-world/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/mmo-world",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "orbit-shelf",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/orbit/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/orbit",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "small-steps",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/steps/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/steps",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "word-weave",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "play/weave/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/play/weave",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "carrier-surface-source",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "research/carrier-surface/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/research/carrier-surface",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "research-project-records",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "research/projects/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/research/projects",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "research-public-updates",
+      "repository": "redogit/conscience64",
+      "branch": "main",
+      "path": "research/projects/public-updates/index.html",
+      "kind": "source-native",
+      "source_url": "https://github.com/redogit/conscience64/tree/main/research/projects/public-updates",
+      "authority": "source-native",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "condensed-wisdom",
+      "repository": "redogit/redogit",
+      "branch": "main",
+      "path": "docs/condensed-wisdom.html",
+      "kind": "live-reference",
+      "public_url": "https://redogit.github.io/redogit/condensed-wisdom.html",
+      "source_url": "https://github.com/redogit/redogit/blob/main/ALGORITHMIC_CONDENSED_WISDOM_ANALYSIS_2026-09-25.md",
+      "authority": "reference-surface",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "pnp-live-design",
+      "repository": "redogit/redogit",
+      "branch": "main",
+      "path": "docs/live-design.html",
+      "kind": "live-reference",
+      "public_url": "https://redogit.github.io/redogit/live-design.html",
+      "source_url": "https://github.com/redogit/redogit/blob/main/RMAL_PNP_LIVE_DESIGN_2026-09-25.md",
+      "authority": "reference-surface",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "recent-work-archive",
+      "repository": "redogit/redogit",
+      "branch": "main",
+      "path": "docs/recent-work.html",
+      "kind": "live-archive",
+      "public_url": "https://redogit.github.io/redogit/recent-work.html",
+      "source_url": "https://github.com/redogit/redogit",
+      "authority": "archive-surface",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "old-about-redirect",
+      "repository": "redogit/redogit",
+      "branch": "main",
+      "path": "docs/about.html",
+      "kind": "redirect",
+      "public_url": "https://redogit.github.io/redogit/about.html",
+      "source_url": "https://redogit.github.io/redogit/",
+      "authority": "redirect",
+      "backlink_required": true,
+      "materials": []
+    },
+    {
+      "id": "old-dream-route-redirect",
+      "repository": "redogit/redogit",
+      "branch": "main",
+      "path": "docs/dream-to-action/index.html",
+      "kind": "redirect",
+      "public_url": "https://redogit.github.io/redogit/dream-to-action/",
+      "source_url": "https://redogit.github.io/conscience64/dream-to-action/",
+      "authority": "redirect",
+      "backlink_required": true,
+      "materials": []
+    }
+  ],
+  "preserved_copy_policy": {
+    "repositories": [
+      "redogit/RMAL",
+      "redogit/pnp-dean",
+      "redogit/hodge",
+      "redogit/conscience64-platform",
+      "redogit/games",
+      "redogit/language-carriers",
+      "redogit/archives-knowledge",
+      "redogit/portfolio"
+    ],
+    "rule": "Nested copied HTML is provenance/export material unless explicitly promoted; update the source-native page and the export landing rather than silently rewriting copied historical bytes."
+  },
+  "excluded_reference_patterns": [
+    "**/reference-js/**",
+    "**/visual-samples/**",
+    "**/internal-update/**/legacy/**",
+    "**/app/src/main/assets/**"
+  ]
+}
