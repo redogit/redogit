@@ -1,0 +1,106 @@
+{
+  "schema": "sphere-of-webs/source-classification/v1",
+  "id": "pr52-next-ring-source-classification-2026-10-01",
+  "status": "NAVIGATION_CLASSIFICATION_ONLY",
+  "rules": [
+    "SOURCE_IDENTITY_PRECEDES_RELATION_ADMISSION",
+    "MIRROR_COPY != INDEPENDENT_EVIDENCE",
+    "STALE_MIRROR != CURRENT_SOURCE",
+    "ALREADY_BOUND != NEW_RING_RELATION",
+    "RELATION != AUTHORITY_TRANSFER",
+    "CHRONOLOGY != SEMANTIC_ANCESTRY",
+    "COEXISTING_LINEAGE != MERGE"
+  ],
+  "sources": [
+    {
+      "source_id": "conscience64:companions",
+      "repository": "redogit/conscience64",
+      "path": "research/cooperative-field/COMPANIONS.md",
+      "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+      "blob_sha": "5139fc32b3b367d89c4c77eac5b3b53674e692f3",
+      "currentness": "CURRENT_SOURCE_NATIVE",
+      "mirror_status": "CANONICAL_NOT_MIRROR",
+      "canonical_source_id": "conscience64:companions",
+      "relation_type": "EXPANDS_NON_CORRUPTING_LIBRARY_RELATIONS",
+      "admission": "ADMIT_NEXT_RING"
+    },
+    {
+      "source_id": "conscience64:current-plan",
+      "repository": "redogit/conscience64",
+      "path": "research/cooperative-field/CURRENT_PLAN.md",
+      "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+      "blob_sha": "da2ca8a7e4e054e2182db0956e18b30d9e370281",
+      "currentness": "CURRENT_SOURCE_NATIVE",
+      "mirror_status": "CANONICAL_NOT_MIRROR",
+      "canonical_source_id": "conscience64:current-plan",
+      "relation_type": "EXPANDS_LATERAL_RETRIEVAL_POLICY",
+      "admission": "ADMIT_NEXT_RING"
+    },
+    {
+      "source_id": "conscience64:hodge-integration-map",
+      "repository": "redogit/conscience64",
+      "path": "research/hodge/RESEARCH_INTEGRATION_MAP.md",
+      "ref": "0bb90fe9a655715163711c1a8df7f06a78dfb495",
+      "blob_sha": "c983b5296207bd07dda0bd34989ec0ab07d74cb0",
+      "currentness": "CURRENT_SOURCE_NATIVE",
+      "mirror_status": "CANONICAL_NOT_MIRROR",
+      "canonical_source_id": "conscience64:hodge-integration-map",
+      "relation_type": "EXPANDS_CANDIDATE_EVIDENCE_BOUNDARY",
+      "admission": "ADMIT_NEXT_RING"
+    },
+    {
+      "source_id": "redogit:all-directional-field",
+      "repository": "redogit/redogit",
+      "path": "ALL_DIRECTIONAL_RELATIONAL_FIELD_2026-09-20.md",
+      "ref": "afe1b0b99bd3cf3da7b27b3ed6ea15976356b0ad",
+      "blob_sha": "66ecfb881045be1d707476d2e5227b1a786194e8",
+      "currentness": "CURRENT_SOURCE_NATIVE",
+      "mirror_status": "CANONICAL_NOT_MIRROR",
+      "canonical_source_id": "redogit:all-directional-field",
+      "relation_type": "ARCHITECTURE_BINDING",
+      "admission": "ALREADY_BOUND_NOT_NEW_RING"
+    },
+    {
+      "source_id": "dnd:companions-provenance",
+      "repository": "redogit/DnD",
+      "path": "provenance/conscience64/research/cooperative-field/COMPANIONS.md",
+      "ref": "2f9fbe3b1964194d8f7b525c6fc90a22b3ff7df9",
+      "blob_sha": "5139fc32b3b367d89c4c77eac5b3b53674e692f3",
+      "currentness": "PROVENANCE_COPY",
+      "mirror_status": "EXACT_BLOB_MIRROR",
+      "canonical_source_id": "conscience64:companions",
+      "relation_type": "PROVENANCE_MIRROR",
+      "admission": "DO_NOT_COUNT_INDEPENDENTLY"
+    },
+    {
+      "source_id": "dnd:current-plan-provenance",
+      "repository": "redogit/DnD",
+      "path": "provenance/conscience64/research/cooperative-field/CURRENT_PLAN.md",
+      "ref": "2f9fbe3b1964194d8f7b525c6fc90a22b3ff7df9",
+      "blob_sha": "818eed634d57be4a329d1ef2279a0136daa34647",
+      "currentness": "HISTORICAL_PROVENANCE_SNAPSHOT",
+      "mirror_status": "STALE_MIRROR_DIFFERENT_BLOB",
+      "canonical_source_id": "conscience64:current-plan",
+      "relation_type": "PROVENANCE_MIRROR",
+      "admission": "DO_NOT_COUNT_INDEPENDENTLY"
+    },
+    {
+      "source_id": "dnd:all-directional-provenance",
+      "repository": "redogit/DnD",
+      "path": "provenance/related/redogit/ALL_DIRECTIONAL_RELATIONAL_FIELD_2026-09-20.md",
+      "ref": "2f9fbe3b1964194d8f7b525c6fc90a22b3ff7df9",
+      "blob_sha": "66ecfb881045be1d707476d2e5227b1a786194e8",
+      "currentness": "PROVENANCE_COPY",
+      "mirror_status": "EXACT_BLOB_MIRROR",
+      "canonical_source_id": "redogit:all-directional-field",
+      "relation_type": "PROVENANCE_MIRROR",
+      "admission": "DO_NOT_COUNT_INDEPENDENTLY"
+    }
+  ],
+  "admitted_relation_sources": [
+    "conscience64:companions",
+    "conscience64:current-plan",
+    "conscience64:hodge-integration-map"
+  ],
+  "claim_ceiling": "SOURCE_IDENTITY_CURRENTNESS_DUPLICATION_AND_RELATION_CLASSIFICATION_ONLY"
+}

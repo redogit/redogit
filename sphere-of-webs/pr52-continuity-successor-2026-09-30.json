@@ -1,0 +1,221 @@
+{
+  "schema": "redogit/sphere-of-webs/v1",
+  "id": "pr52-continuity-successor-2026-09-30",
+  "status": "NAVIGATION_ONLY",
+  "source_refs": {
+    "pr52-continuity-section-1": {
+      "repository": "redogit/redogit",
+      "pull_request": 52,
+      "head_sha": "eda709f1ea361cd298cda9700f846ada23a9fb6a",
+      "path": "CONTINUITY_SUCCESSORS_2026-09-30.md",
+      "section": "1. Executed three-node path",
+      "authority_effect": "NONE"
+    }
+  },
+  "bindings": {
+    "thing": "IDENTITY_PROVENANCE_CARRIER_ONLY",
+    "orbit_related": "EXACT_DIRECTION_AND_TYPE_ONLY",
+    "pairity_check": "FORWARD_AND_REVERSE_CHECKED_SEPARATELY",
+    "authority_rule": "RELATION != AUTHORITY_TRANSFER",
+    "homeward": "SOURCE_REF_RECONSTRUCTION"
+  },
+  "policy": {
+    "chronology": "SEPARATE_IMMUTABLE_ACYCLIC_AXIS",
+    "semantic_relations": "EXPLICIT_TYPED_MAY_CYCLE",
+    "duplicates": "PRESERVE_OCCURRENCES",
+    "source_local_authority": "PRESERVE",
+    "authority_transfer": "DENY",
+    "evidence_transfer": "DENY",
+    "reverse_inference": "DENY",
+    "homeward": "REQUIRED"
+  },
+  "nodes": [
+    {
+      "occurrence_id": "pr52:trail:00:word-carrier-native-occurrence",
+      "semantic_object_id": "word-carrier/native-occurrence",
+      "label": "Word Carrier native occurrence",
+      "kind": "TRAIL_OCCURRENCE",
+      "source_refs": [
+        "pr52-continuity-section-1"
+      ],
+      "authority_scope": "SOURCE_LOCAL",
+      "evidence_scope": "SOURCE_LOCAL",
+      "homeward_ref": "pr52-continuity-section-1"
+    },
+    {
+      "occurrence_id": "pr52:trail:01:native-anyinvocation-export",
+      "semantic_object_id": "word-carrier/native-anyinvocation-export",
+      "label": "native AnyInvocation export",
+      "kind": "TRAIL_OCCURRENCE",
+      "source_refs": [
+        "pr52-continuity-section-1"
+      ],
+      "authority_scope": "SOURCE_LOCAL",
+      "evidence_scope": "SOURCE_LOCAL",
+      "homeward_ref": "pr52-continuity-section-1"
+    },
+    {
+      "occurrence_id": "pr52:trail:02:anyfunctor-decision-field",
+      "semantic_object_id": "anyfunctor/decision-field",
+      "label": "AnyFunctor / Decision Field",
+      "kind": "TRAIL_OCCURRENCE",
+      "source_refs": [
+        "pr52-continuity-section-1"
+      ],
+      "authority_scope": "SOURCE_LOCAL",
+      "evidence_scope": "SOURCE_LOCAL",
+      "homeward_ref": "pr52-continuity-section-1"
+    },
+    {
+      "occurrence_id": "pr52:trail:03:continuity-receipt",
+      "semantic_object_id": "continuity/receipt",
+      "label": "continuity receipt",
+      "kind": "TRAIL_OCCURRENCE",
+      "source_refs": [
+        "pr52-continuity-section-1"
+      ],
+      "authority_scope": "SOURCE_LOCAL",
+      "evidence_scope": "SOURCE_LOCAL",
+      "homeward_ref": "pr52-continuity-section-1"
+    },
+    {
+      "occurrence_id": "pr52:trail:04:orbit-reflow-persistence-retrieval",
+      "semantic_object_id": "orbit-reflow/persistence-retrieval",
+      "label": "Orbit Reflow persistence/retrieval",
+      "kind": "TRAIL_OCCURRENCE",
+      "source_refs": [
+        "pr52-continuity-section-1"
+      ],
+      "authority_scope": "SOURCE_LOCAL",
+      "evidence_scope": "SOURCE_LOCAL",
+      "homeward_ref": "pr52-continuity-section-1"
+    },
+    {
+      "occurrence_id": "pr52:trail:05:homeward",
+      "semantic_object_id": "homeward",
+      "label": "Homeward",
+      "kind": "TRAIL_OCCURRENCE",
+      "source_refs": [
+        "pr52-continuity-section-1"
+      ],
+      "authority_scope": "SOURCE_LOCAL",
+      "evidence_scope": "SOURCE_LOCAL",
+      "homeward_ref": "pr52-continuity-section-1"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "pr52:relation:00",
+      "axis": "semantic_ancestry",
+      "from_occurrence": "pr52:trail:00:word-carrier-native-occurrence",
+      "to_occurrence": "pr52:trail:01:native-anyinvocation-export",
+      "type": "EXECUTED_TRAIL_SUCCESSOR",
+      "source_ref": "pr52-continuity-section-1",
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "relation_id": "pr52:relation:01",
+      "axis": "semantic_ancestry",
+      "from_occurrence": "pr52:trail:01:native-anyinvocation-export",
+      "to_occurrence": "pr52:trail:02:anyfunctor-decision-field",
+      "type": "EXECUTED_TRAIL_SUCCESSOR",
+      "source_ref": "pr52-continuity-section-1",
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "relation_id": "pr52:relation:02",
+      "axis": "semantic_ancestry",
+      "from_occurrence": "pr52:trail:02:anyfunctor-decision-field",
+      "to_occurrence": "pr52:trail:03:continuity-receipt",
+      "type": "EXECUTED_TRAIL_SUCCESSOR",
+      "source_ref": "pr52-continuity-section-1",
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "relation_id": "pr52:relation:03",
+      "axis": "semantic_ancestry",
+      "from_occurrence": "pr52:trail:03:continuity-receipt",
+      "to_occurrence": "pr52:trail:04:orbit-reflow-persistence-retrieval",
+      "type": "EXECUTED_TRAIL_SUCCESSOR",
+      "source_ref": "pr52-continuity-section-1",
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    },
+    {
+      "relation_id": "pr52:relation:04",
+      "axis": "semantic_ancestry",
+      "from_occurrence": "pr52:trail:04:orbit-reflow-persistence-retrieval",
+      "to_occurrence": "pr52:trail:05:homeward",
+      "type": "EXECUTED_TRAIL_SUCCESSOR",
+      "source_ref": "pr52-continuity-section-1",
+      "infer_reverse": false,
+      "authority_transfer": false,
+      "evidence_transfer": false
+    }
+  ],
+  "chronology": {
+    "immutable": true,
+    "entries": [
+      {
+        "ordinal": 0,
+        "occurrence_id": "pr52:trail:00:word-carrier-native-occurrence"
+      },
+      {
+        "ordinal": 1,
+        "occurrence_id": "pr52:trail:01:native-anyinvocation-export"
+      },
+      {
+        "ordinal": 2,
+        "occurrence_id": "pr52:trail:02:anyfunctor-decision-field"
+      },
+      {
+        "ordinal": 3,
+        "occurrence_id": "pr52:trail:03:continuity-receipt"
+      },
+      {
+        "ordinal": 4,
+        "occurrence_id": "pr52:trail:04:orbit-reflow-persistence-retrieval"
+      },
+      {
+        "ordinal": 5,
+        "occurrence_id": "pr52:trail:05:homeward"
+      }
+    ],
+    "precedence": [
+      {
+        "before": "pr52:trail:00:word-carrier-native-occurrence",
+        "after": "pr52:trail:01:native-anyinvocation-export"
+      },
+      {
+        "before": "pr52:trail:01:native-anyinvocation-export",
+        "after": "pr52:trail:02:anyfunctor-decision-field"
+      },
+      {
+        "before": "pr52:trail:02:anyfunctor-decision-field",
+        "after": "pr52:trail:03:continuity-receipt"
+      },
+      {
+        "before": "pr52:trail:03:continuity-receipt",
+        "after": "pr52:trail:04:orbit-reflow-persistence-retrieval"
+      },
+      {
+        "before": "pr52:trail:04:orbit-reflow-persistence-retrieval",
+        "after": "pr52:trail:05:homeward"
+      }
+    ]
+  },
+  "round_trip": {
+    "source_ref": "pr52-continuity-section-1",
+    "format": "trail-lines/v1",
+    "separator": "\n-> ",
+    "trailing_newline": true,
+    "sha256": "4af787f47845320fd0b213c4962ef5e4e5c33b6755566baa59554368b5e2b0fb"
+  }
+}
