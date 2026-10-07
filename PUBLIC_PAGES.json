@@ -1,6 +1,6 @@
 {
   "schema": "redogit/public-pages/v1",
-  "recorded_date": "2026-10-02",
+  "recorded_date": "2026-10-07",
   "main": {
     "repository": "redogit/redogit",
     "page_url": "https://redogit.github.io/redogit/",
@@ -145,8 +145,31 @@
     "legacy_backlinks_completed_date": "2026-10-02"
   },
   "boundaries": [
+    "PUBLIC_REPOSITORY != PUBLIC_PAGE",
     "PUBLIC_PAGE != SOURCE_AUTHORITY",
     "PUBLIC_PAGE != SCIENTIFIC_VALIDATION",
     "PROJECT_RELATION != AUTHORITY_TRANSFER"
+  ],
+  "public_repository_inventory": {
+    "observed_date": "2026-10-07",
+    "public_repository_count": 17,
+    "topology_repository_count": 16,
+    "topology_breakdown": {
+      "main_hub": 1,
+      "project_pages": 15
+    },
+    "delta_from_2026_10_02": 1,
+    "delta_repository": "redogit/knowledge-decay"
+  },
+  "intentional_exclusions": [
+    {
+      "repository": "redogit/knowledge-decay",
+      "observed_date": "2026-10-07",
+      "classification": "public-source-repository-not-published-page",
+      "source_authority": "repository-native documentation controls project claims; public visibility does not transfer authority",
+      "publication_basis": "PUBLICATION_POLICY.md distinguishes source custody/access from publication permission; no project Pages route is declared in this registry",
+      "preserved_copy_rule": "no copied/exported material is promoted by this registry; archival/private source remains distinct from public summaries",
+      "navigation_effect": "excluded from current Pages topology until an explicit project Page is published and admitted"
+    }
   ]
 }
