@@ -1,9 +1,10 @@
 {
   "schema": "redogit/project-pages/v1",
-  "recorded_date": "2026-10-02",
+  "recorded_date": "2026-10-07",
   "main_url": "https://redogit.github.io/redogit/",
   "repository_pages_registry": "PUBLIC_PAGES.json",
   "rules": [
+    "PUBLIC_REPOSITORY != PUBLISHED_PAGE",
     "SOURCE_NATIVE_PAGE != EXPORT_COPY",
     "PUBLIC_PROJECTION != SOURCE_AUTHORITY",
     "HISTORICAL_COPY != CURRENT_SOURCE",
@@ -839,7 +840,8 @@
       "Updated History & Restore from the historical seven-public-repository catalog to the current 16-public-repository catalog while preserving dated counts.",
       "Reconciled Simple Core implementation truth (12 activities) with play/mmo/CURRENT.md, distinguishing it from the advanced surface's 10 built-in+starter slots.",
       "Promoted PUBLIC_PAGES.json and PROJECT_PAGES.json as current Portfolio navigation authorities; preserved older workspace organization as exported history.",
-      "Verified standalone landing source-material targets, including RMAL/DnD, PNP Repair Lab, Hodge spine/W114, Knowledge Garden, Human Expression Archive, Orbit/Maui/FirstNeuralNetwork, and Dream operations."
+      "Verified standalone landing source-material targets, including RMAL/DnD, PNP Repair Lab, Hodge spine/W114, Knowledge Garden, Human Expression Archive, Orbit/Maui/FirstNeuralNetwork, and Dream operations.",
+      "Recorded redogit/knowledge-decay as the 17th public repository and intentionally excluded it from the 16-repository Pages topology pending an explicitly published/admitted project Page."
     ],
     "evidence": {
       "structural_project_page_run": 37095352991,
@@ -850,5 +852,27 @@
     "semantic_result": "PASS_AFTER_SOURCE_REPAIRS",
     "verified_declared_pages": 39,
     "unresolved_semantic_mismatches": []
-  }
+  },
+  "public_repository_inventory": {
+    "observed_date": "2026-10-07",
+    "public_repository_count": 17,
+    "published_topology_repository_count": 16,
+    "delta_repository": "redogit/knowledge-decay"
+  },
+  "intentional_repository_exclusions": [
+    {
+      "repository": "redogit/knowledge-decay",
+      "observed_date": "2026-10-07",
+      "status": "public-source-only-no-declared-page",
+      "authority": "source-native-repository",
+      "publication": "not-admitted-to-PUBLIC_PAGES",
+      "preserved_copy_policy": "source/public-summary custody remains distinct; no export copy is promoted to current authority",
+      "controlling_materials": [
+        "https://github.com/redogit/knowledge-decay/blob/main/README.md",
+        "https://github.com/redogit/knowledge-decay/blob/main/PUBLICATION_POLICY.md",
+        "https://github.com/redogit/knowledge-decay/blob/main/provenance/PUBLIC_EXPORT.md"
+      ],
+      "reason": "The repository is public, but its publication policy separates access/preservation from publication permission, and no project Page is currently declared. Therefore the 17-repository account inventory and 16-repository public navigation topology intentionally differ by one."
+    }
+  ]
 }
